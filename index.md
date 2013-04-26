@@ -15,8 +15,27 @@ with the community whenever possible. We develop a wide range of solutions,
 from academic and administrative processes to general purpose software
 libraries.
 
-This page is mainly intended for developers and will soon contain information
-about the development processes adopted by [DSI][DSI].
+
+### Getting Involved
+
+There are many ways to get involved in Project FénixEdu.
+
+
+#### Roadmap Discussion
+
+...
+
+
+#### Contributing
+
+...
+
+
+#### Joining Team Team
+
+If you wish to participate further in the project, drop us an email with your CV at: dsi@ist.utl.pt. We're always looking to expand our community.
+
+
 
 [Técnico Lisboa]: http://www.ist.utl.pt/
 [DSI]: http://dsi.ist.utl.pt/
