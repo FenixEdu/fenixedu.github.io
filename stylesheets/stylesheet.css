@@ -124,6 +124,27 @@ aside#sidebar p.repo-owner a {
   font-weight: bold;
 }
 
+aside#sidebar ul li {
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+aside#sidebar > ul > li {
+  padding-left: 0px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+aside#sidebar ul li a {
+  color: rgb(102, 102, 102);
+}
+
+aside#sidebar ul li a:hover{
+  text-decoration: underline;
+}
+
+
 #downloads {
   margin-bottom: 40px;
 }
