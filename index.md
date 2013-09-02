@@ -16,31 +16,32 @@ from academic and administrative processes to general purpose software
 libraries.
 
 ### Quickstart
-To quickly get a Fenix instalation up and running on your computer, you should use Vagrant to run a virtual machine where we pre-configured all the environment for you. Once you have installed the Vagrant tool in your machine, you just have to run the following commands:
+To quickly get a FenixEDU instalation up and running on your computer, you should use
+Vagrant to run a virtual machine that we pre-configured with the necessary environment.
+Once you have installed the [Vagrant][Vagrant] tool in your machine, you just have to run the
+following commands:
 
-	vagrant box add fenixbox http://fenix-ashes.ist.utl.pt/fenix32.box
+	vagrant box add dsi32 http://fenix-ashes.ist.utl.pt/dsi32.box
 	vagrant init
 	vagrant up
 
-Yes, is that simple!
+Now all you have to do is access http://localhost:9090 and you have a FenixEDU installation
+running in the virtualbox that you just setup using Vagrant.
 
-Now all you have to do is access your localhost:8080 and you have a Fenix installation running in the virtualbox that you just setup using Vagrant.
+Yes, it is that simple!
 
-If you intend to develop, we recommend you to setup a development environment in your system instead of using this pre-configured virtual machine. For that, you should follow this tutorial.
+NOTE: If you intend to develop, we recommend you to setup a development environment in your
+system instead of using this pre-configured virtual machine. For that, you should follow
+[this tutorial][Setup your development environment].
 
+### Create Your Own Application
+
+You can start by developing your own application by using [this tutorial][Create your own application].
 
 ### Explore the Sub-Projects
 
 Feel free to browse some of our sub-projects and their respective documentation in the list
 on the right side of this page.
-
-
-### Create Your Own Application
-
-You can easily create your own application using our  application development environment.
-Our web applications are mainly Java based, and as so, we use Maven to manage our software projects.
-Maven takes care of both the projects' lifecycle and their dependency resolution. Therefore, it is quite easy to
-start developing a sub-project application of your own. To do so, you just need to follow this tutorial.
 
 ### Getting Involved
 
@@ -82,4 +83,7 @@ community.
 [Técnico Lisboa]: http://www.ist.utl.pt/
 [DSI]: http://dsi.ist.utl.pt/
 [methodology]: methodology
+[Setup your development environment]: /tutorials/setup-your-development-environment/
+[Create your own application]: /tutorials/create-your-own-application/
+[Vagrant]: http://vagrantup.com/
 [dsi@ist.utl.pt]: mailto:dsi@ist.utl.pt
