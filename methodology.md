@@ -31,13 +31,13 @@ safely without breaking the code.
 #### Contributions
 
 At DSI, we manage a considerable number of projects, and as such, we assign a main team of developers to each project.
-Developers outside of that main team can still contribute to the projects, nevertheless, they must provide that contribution
+Developers outside of that main team can still contribute to the project, nevertheless, they must provide that contribution
 through a Github Pull Request feature. This way, each main development team also acts as the quality assurance team for that
 project. Hence, in order to contribute or request a change to a particular project, the developer must:
 
 1. Explain the rationale for the contribution or change
 2. If the contribution is accepted the developer must fork the project
-3. The developer commits the discussed and agreeed changes to his fork
+3. The developer commits the discussed and agreed changes to his fork
 4. The developer submits a pull-request to merge the respective modifications
 
 [Técnico Lisboa]: http://www.ist.utl.pt/
