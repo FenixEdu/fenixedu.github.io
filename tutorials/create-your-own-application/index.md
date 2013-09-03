@@ -96,7 +96,7 @@ The above command will compile, build the WAR artifact, and finally run a Jetty 
 
 [Understand the DML]: /tutorials/understand-the-dml
 [Setup your development environment]: /tutorials/setup-your-development-environment/
-[Renderers]: /technologies/front-end/renderers
-[Vaadin]: /technologies/front-end/vaadin
-[Bankai]: /technologies/front-end/bankai
+[Renderers]: /tutorials/create-your-own-application/renderers
+[Vaadin]: /tutorials/create-your-own-application/vaadin
+[Bankai]: /tutorials/create-your-own-application/bankai
 [Bennu Development Team]: /teams/bennu

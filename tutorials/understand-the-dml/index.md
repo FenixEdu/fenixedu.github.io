@@ -41,18 +41,20 @@ If we consider the example described in Step 1, it would translate to the follow
 
 #### Step 3 - Generate the Source Code
 
-FenixFramework can parse the DML file created in Step 2 and generate the respective Java classes that contain all the relational code already considering transactional and persistence concerns. Hence, it is transparent to the developer how the entities of its application domain are persisted in a consistent state to the database.
+FenixFramework can parse the DML file created in Step 2 and generate the respective Java classes containing all the relational code already considering transactional and persistence concerns. Hence, it is transparent to the developer how the entities of its application domain are persisted in a consistent state to the database.
 
 However, it is important to understand how this code is generated. For each class defined in the DML file, the FenixFramework may generate two classes: base and non-base classes.
 
 Base Classes   
-Base classes are the ones that are always generated in the compilation process, and as such, the classes whose definition you should not edit since they are re-written everytime you compile your code.
+Base classes are the ones that are always generated in the compilation process, and as such, the classes whose definition you should not edit since they are re-written everytime you re-compile your code. The source code of these classes is always generated into ```target/generated-sources/dml-maven-plugin```, so after you clean your project they will be deleted.
 
 Non-base Classes   
-Non-base classes are the classes that FenixFramework will only generate if they do not exist yet. Hence, you should edit these classes to add business logic to your domain entities. Non-base classes inherit from base classes to inherit all the persistence and transactional code.
+Non-base classes are the classes that FenixFramework will only generate if they do not exist yet. Hence, you should edit these classes to add business logic to your domain entities. Non-base classes inherit from base classes all the persistence and transactional code.
 
+#### Step 3 - Define Transactions
 
-
+Although the relation and persistence behavior is transparent to the programmer, you still need to define where a given transaction begins and ends.
+In our infrastructure, there is a Servlet Filter that contextualizes all Servlet requests within a read-only transaction. If your service needs to make some write to the database, then you can redefine the strategy of the transaction by annotating the service method with ```@Atomic```.
 
 
 [Semantic Versioning]: http://semver.org/
