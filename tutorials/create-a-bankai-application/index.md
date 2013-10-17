@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: default
+slug: create-a-bankai-application
+name: "Create a Bankai Application"
 root: "../../"
 ---
 

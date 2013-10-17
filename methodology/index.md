@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: default
+slug: methodology
+name: "Methodology"
 root: "../"
 ---
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://ist-dsi.github.io/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en" dir="ltr">
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>FenixEdu™ For Developers</title>
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Description" content="The FenixEdu™ is an open-source academic information platform" />
+    <meta name="Keywords" content="FenixEdu, open-source, academic, information, platform, academic administration, higher education, e-learning, developers, documentation, dev" />
+    <meta name="Language" content="en" />
+    <meta name="Robots" content="all" />
+    <meta name="Author" content="FenixEdu" />
+    <meta name="Email" content="mail@fenixedu.org" />
+    <meta name="Copyright" content="Técnico Lisboa — Instituto Superior Técnico" />
+    <meta name="Distribution" content="Global" />
+    <meta name="Rating" content="General" />
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/reset/reset.css">
+    <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/normalize/normalize_v_2_1_3.css">
+    <link rel="stylesheet" href="{{page.root}}stylesheets/main.css">
+    <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/skeleton/skeleton_v_1_2.css">
+    <link rel="stylesheet" href="{{page.root}}stylesheets/fenixedu_dev.css">
+    <!--<link rel="stylesheet" type="text/css" media="print" href="print.css">-->
+    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script>
+    <script src="http://static.tecnico.ulisboa.pt/js/modernizr/modernizr-2.6.2.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <!--<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
+
+</head>
+<body screen_capture_injected="true">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="container">
+        <div class="three columns alpha" id="logo">
+            <a href="/">FenixEdu</a>
+        </div>
+        <span>for developers</span>
+    </header>
+
+    <div class="container">
+        <main class="twelve columns alpha">
+            {% include breadcrumbs.html %}
+            {{content}}
+         </main>
+        {% include right-nav.html %}
+    </div>
+    {% include footer.html %}
+</body>
+</html>

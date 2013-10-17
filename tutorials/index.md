@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: default
+slug: tutorials
+name: "Tutorials"
 root: "../"
 ---
 

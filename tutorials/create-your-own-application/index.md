@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: default
+slug: create-your-own-application
+name: "Create your own application"
 root: "../../"
 ---
 

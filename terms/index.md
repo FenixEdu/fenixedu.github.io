@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: default
+slug: terms
+name: "Terms and Conditions"
 root: "../../"
 ---
 
