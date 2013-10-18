@@ -1,6 +1,7 @@
 ---
 layout: default
 slug: overview
+breadcrumbs: [{ "text": "Overview", "url": "/overview"}]
 name: "Overview"
 root: "../"
 ---
@@ -28,14 +29,15 @@ following commands:
 	vagrant init
 	vagrant up
 
-Now all you have to do is access http://localhost:9090 and you have a FenixEDU installation
+Now all you have to do is access ```http://localhost:9090``` and you have a FenixEDU installation
 running in the virtualbox that you just setup using Vagrant.
 
 Yes, it is that simple!
 
-NOTE: If you intend to develop, we recommend you to setup a development environment in your
-system instead of using this pre-configured virtual machine. For that, you should follow
-[this tutorial][Setup your development environment].
+> <span>note</span>
+> If you intend to develop, we recommend you to setup a development environment in your
+> system instead of using this pre-configured virtual machine. For that, you should follow
+> [this tutorial][Setup your development environment].
 
 ### Create Your Own Application
 

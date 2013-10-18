@@ -1,8 +1,10 @@
 <nav>
     <ul>
         <li><a href="{{page.root}}"></a></li>
-        {% if page.name %}
-        <li><a href="{{page.base_url}}">{{page.name}}</a></li>
+        {% if page.breadcrumbs %}
+        	{% for crumble in page.breadcrumbs %}
+        	<li><a href="{{crumble.url}}">{{crumble.text}}</a></li>
+        	{% endfor %}
 		{% endif %}
     </ul>
 </nav>

@@ -1,0 +1,17 @@
+{
+	"mainMenu" : [
+		{ "text": "Overview", "relativeUrl": "overview" },
+		{ "text": "Methodology", "relativeUrl": "methodology" },
+		{ "text": "Tutorials", "relativeUrl": "tutorials" }
+	],
+	"subProjectsMenu": [
+		{ "text": "Organization", "relativeUrl": "organization" },
+		{ "text": "Workflow", "relativeUrl": "workflow", "subMenus": [
+			{ "text": "Domain Model", "relativeUrl": "workflow/domain-model" },
+			{ "text": "API", "relativeUrl": "workflow/api" },
+			{ "text": "Roadmap", "relativeUrl": "workflow/roadmap" },
+			{ "text": "Javadoc", "relativeUrl": "workflow/javadoc" },
+			{ "text": "Team", "relativeUrl": "workflow/team" }]
+		}
+	]
+}

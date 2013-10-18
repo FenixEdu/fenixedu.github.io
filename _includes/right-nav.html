@@ -1,25 +1,13 @@
 <aside id="sidebar" class="four columns omega">
 	<nav>
 	<span>documentation</span>
-	    <ul>
-	        <li><a href="{{ page.root }}overview">overview</a></li>
-	        <li><a href="{{ page.root }}methodology">methodology</a></li>
-	        <li><a href="{{ page.root }}tutorials">tutorials</a></li>
+	    <ul id="main-menu">
 	    </ul>
 	    <ul>
 	        <li>Sub-Projects</li>
 	        <li>
-	            <ul>    
-	                <li><a href="http://ist-dsi.github.io/organization">organization</a></li>
-	                <li><a href="http://ist-dsi.github.io/workflow">workflow</a>
-	                    <ul>
-	                        <li><a href="">domain model</a></li>
-	                        <li><a href="">api</a></li>
-	                        <li><a href="">roadmap</a></li>
-	                        <li><a href="">javadoc</a></li>
-	                        <li><a href="">team</a></li>
-	                    </ul>
-	                </li>
+	            <ul id="subprojects-menu">    
+	                
 	            </ul>
 	        </li>
 	    </ul>
@@ -35,3 +23,29 @@
 	<img title="LGPL Version 3 Logo" alt="LGPL Version 3" src="images/license.png">
 	</nav>
 </aside>
+<script type="text/javascript">
+	window.populateMenu = function(element, entries) {
+		$.each(entries, function(i, entry) {
+			element.append("<li><a href=\"{{page.root}}"+entry.relativeUrl+"\"></a>"+entry.text+"</li>");
+		});
+	}
+	$.get("{{page.root}}right-nav.json", function(data) {
+		$.each(data.mainMenu, function(i, entry) {
+			var text = entry.text;
+			var relativeUrl = entry.relativeUrl;
+			$("#main-menu").append("<li><a href=\"{{page.root}}"+relativeUrl+"\">"+text+"</a></li>");
+		});
+		$.each(data.subProjectsMenu, function(i, entry) {
+			var text = entry.text;
+			var relativeUrl = entry.relativeUrl;
+			var subMenu = $("<ul></ul>");
+			var subMenus = entry.subMenus;
+			if(entry.subMenus) {
+				populateMenu(subMenu, entry.subMenus);
+				$("#subprojects-menu").append("<li><a href=\"{{page.root}}"+relativeUrl+"\">"+text+"</a><ul>"+subMenu.html()+"</ul></li>");
+			} else {
+				$("#subprojects-menu").append("<li><a href=\"{{page.root}}"+relativeUrl+"\">"+text+"</a></li>");
+			}
+		});
+	});
+</script>

@@ -1,26 +1,26 @@
 ---
-layout: page
+layout: default
+breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Setup your development environment", "url": "/tutorials/setup-your-development-environment/" }]
 root: "../../"
 ---
-
 ## Setup your development environment
 
-This tutorial walks you through the system requirements necessary to develop applications within the Project FénixEDU software ecosystem. It also provides guidelines on how to setup an efficient development environment.
+This tutorial walks you through the system requirements necessary to develop applications within the FenixEdu™ software ecosystem. It is intended for developers that want to either contribute to the existing code base, or use the infrastrcture to develop new applications.
 
-NOTE: This tutorial should not be used as a reference for preparing a production environment
+> <span>Attention</span>
+> The suggestions highlighted in this tutorial are for development environments only. Be aware that they may not be adequate for other purposes, in particular for production environments. Also, since we love pinguins, most tweaks are mainly intended for GNU/Linux Operating Systems.
 
 ### Step 1 - Choose your Operating System
 
-The applications developed in Project Fénix are all Java-based, so they can run on any platform for which a Java Virtual Machine (JVM) is available. Our development team uses multiple operating systems including Linux, Mac OS X and Windows. Usually operating systems and/or distributions are oriented towards a specific type of user. Note that the requirements for a normal desktop or media workstation differ from those requiring intensive video processing or data manipulation. The suggestions we make in this tutorial are for development environments only. Be aware they may not be adequate for other purposes, in particular for production environments.
+The applications within the FenixEdu™ ecosystem are mainly developed using the Java programming language, hence, they can run on any platform for which a Java Virtual Machine (JVM) is available. Our development team uses multiple operating systems including Linux, Mac OS X and Windows. Usually operating systems and/or distributions are oriented towards a specific type of user. Note that the requirements for a normal desktop or media workstation differ from those requiring intensive video processing or data manipulation.
 
 ### Step 2 - Tweak your Filesystem
 
-Different File Systems (FSs) have very different behaviors, especially regarding performance. In a development environment we prefer data throughput performance over data consistency or integrity. Note that even in the case of a total system loss, setting up a new environment should not be an issue. This is safe to assume as long as each developer regularly backs up code that has not yet been committed and pushed to a central repository.
+Different file systems have very different behaviors, especially regarding performance. In a development environment we prefer data throughput performance over data consistency or integrity. Note that even in the case of a total system loss, setting up a new environment should not be an issue. This is safe to assume as long as each developer regularly backs up code that has not yet been committed and pushed to a code repository.
 
-These tweaks are for GNU/Linux Operating Systems only.
-If it is an option, XFS is a good choice for your FS. For this FS we recommend the following options be used in your /etc/fstab:
+If it is an option, XFS is a good choice for your FS. For the XFS file system we recommend you include the following options in your ```/etc/fstab```:
 
-```noatime,nodiratime,nobarrier,logbufs=4,osyncisdsync```
+	noatime,nodiratime,nobarrier,logbufs=4,osyncisdsync
 
 ### Step 3 - Turn Off Unused and Unnecessary Services
 

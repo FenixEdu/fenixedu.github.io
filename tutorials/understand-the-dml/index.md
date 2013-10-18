@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: default
+breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Understand the Domain Modeling Language (DML)", "url": "/tutorials/understand-the-dml/" }]
 root: "../../"
 ---
 

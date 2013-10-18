@@ -1,7 +1,7 @@
 ---
 layout: default
 slug: methodology
-name: "Methodology"
+breadcrumbs: [{ "text": "Methodology", "url": "/methodology"}]
 root: "../"
 ---
 

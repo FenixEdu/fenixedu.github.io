@@ -1,6 +1,7 @@
 ---
 layout: default
 slug: create-your-own-application
+breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Create your own application", "url": "/tutorials/create-your-own-application" }]
 name: "Create your own application"
 root: "../../"
 ---

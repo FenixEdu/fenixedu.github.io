@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: default
+breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Design a new Theme", "url": "/tutorials/design-a-new-theme" }]
 root: "../../"
 ---
 
