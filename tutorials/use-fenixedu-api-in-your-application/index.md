@@ -4,13 +4,40 @@ breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Use FenixE
 root: "../../"
 ---
 
-### Use FénixEDU API in your application
+## Use FenixEdu API in your application
 
-In this tutorial, you will learn how to use our Java SDK to invoke our REST-based API. Although you can use a HTTP client to invoke the endpoints on your own, we developed a SDK that eases the invocation of our webservices and builds Data Transfer Objects (DTOs) so that you can easily retrieve its data.
+In this tutorial, you will learn how to register your third-party application to use the FenixEdu API, and how to use one of the SDKs that we developed to ease the API invocation. Note that you can still use any HTTP client to invoke the endpoints on your own, or perhaps, contribute with a SDK of your favorite language.
 
-#### Step 1 - Update your Maven Dependencies
+## Step 1 - Register your Application
 
-In order to ease the use of the FénixEDU API we developed a Java client that you can use in your project by specifying a Maven dependency
+The first thing you need to start using the FenixEdu API is to register your aplication within the system running the FenixEdu application server. To do so, you need two things:
+
+![Create Application Form]({{site.url}}/assets/create-application-form.png)
+
+### Ensure that you have the Developer role
+
+When you have the developer role, you will be able to see the sub-menu entry ```Manage Applications``` under the Personal tab. If you don't, you must send us an email and ask for the developer role.
+
+> <span>Note</span>
+> In case you don't have the ```Personal > External Applications > Manage Applications``` menu, you must send us an email asking for the Developer role.
+
+### Create a third-party application
+
+When you have the developer role, you will be able to see the sub-menu entry ```Manage Applications``` under the Personal tab.
+
+To register your third-party application, you'll need to provide the following information:
+1. The application's name.
+2. A brief description of the application.
+3. The website URL of your application.
+4. The private information scopes that your application will need to access.
+5. A redirect URL that FenixEdu will invoke after the user authorization step.
+6. An avatar that identifies your application (e.g. your application logo).
+
+During the process of authorizing your application, the users will see part of this information, as exemplified in Figure 1.
+
+### Step 1 - Update your Maven Dependencies
+
+In order to ease the use of the FenixEdu API we developed a Java client that you can use in your project by specifying a Maven dependency
 to the latest version:
 
 	<dependency>

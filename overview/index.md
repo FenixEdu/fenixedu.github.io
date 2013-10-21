@@ -2,7 +2,6 @@
 layout: default
 slug: overview
 breadcrumbs: [{ "text": "Overview", "url": "/overview"}]
-name: "Overview"
 root: "../"
 ---
 
