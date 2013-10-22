@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Use FenixEdu API in your application", "url": "/tutorials/use-fenixedu-api-in-your-application" }]
+breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Use FenixEdu™ API in your application", "url": "/tutorials/use-fenixedu-api-in-your-application" }]
 root: "../../"
 ---
 
@@ -13,7 +13,7 @@ In this tutorial, you will learn how to register your third-party application to
 * [Step 2 - Invoke the REST API Endpoints](#step_2__invoke_the_rest_api_endpoints)
 	* [Step 2.1 - Use one of the official SDKs](#step_21__use_one_of_the_official_sdks)
 	* [Step 2.2 - Request the User Permission](#step_22__request_the_user_permission)
-	* [Step 2.3 - Request the User Permission](#step_23__request_the_access_token)
+	* [Step 2.3 - Request the Access Token](#step_23__request_the_access_token)
 	* [Step 2.4 - Refresh the Access Token](#step_24__refresh_the_access_token)
 * [Troubleshooting](#troubleshooting)
 
@@ -24,7 +24,6 @@ The first thing you need to start using the FenixEdu™ API is to register your 
 To register your third-party application, you'll need to provide some information about your application. To do this, you need to fill up the form shown in Figure 1.
 
 ![Create Application Form]({{site.url}}/assets/create-application-form.png)
-
 
 * __Logo__ - A 64x64 pixel-wide image that identifies your application.
 * __Application Name__ - The name of your application.

@@ -5,38 +5,40 @@ breadcrumbs: [{ "text": "Overview", "url": "/overview"}]
 root: "../"
 ---
 
-### Overview
+## Overview
 
-[Técnico Lisboa][Técnico Lisboa] is Portugal's most prestigious school of
-engineering. [DSI][DSI] is the school's computer and network services. We have
-been developing open source software, mainly directed at solving problems for
-higher education institutions, since 2001. Every institution involved in higher
-education is different and has its own needs and processes. However, this is
-not incompatible with different institutions sharing ideas, resources and
-solutions. Hoping our solutions may be useful to others, we share our software
-with the community whenever possible. We develop a wide range of solutions,
-from academic and administrative processes to general purpose software
-libraries.
+[Getting started](#quickstart) with the FenixEdu™ project is easy. You can learn more about our [methodology][Methodology],
+learn how to contribute with our [tutorials][Tutorias], and explore our sub-projects.
+
+Hoping that FenixEdu™ solutions may be useful to others, we share our software
+with the community whenever possible. FenixEdu™ comprehends a range of solutions,
+from academic and administrative processes to general purpose software libraries.
+
+We also share our methodology and our knowledge through tutorials. This documentation page intends
+to get you started or help you resolve any issue that you might encounter while con
+
 
 ### Quickstart
-To quickly get a FenixEDU instalation up and running on your computer, you should use
+To quickly get a FenixEdu™ installation up and running on your machine, you should use
 Vagrant to run a virtual machine that we pre-configured with the necessary environment.
 Once you have installed the [Vagrant][Vagrant] tool in your machine, you just have to run the
 following commands:
 
-	vagrant box add dsi32 http://fenix-ashes.ist.utl.pt/dsi32.box
-	vagrant init
-	vagrant up
+{% highlight bash %}
+vagrant box add fenixedu http://fenix-ashes.ist.utl.pt/fenixedu.box
+vagrant init
+vagrant up
+{% endhighlight %}
 
-Now all you have to do is access ```http://localhost:9090``` and you have a FenixEDU installation
+
+Now all you have to do is access ```http://localhost:9090``` and you have a FenixEdu™ installation
 running in the virtualbox that you just setup using Vagrant.
 
 Yes, it is that simple!
 
 > <span>note</span>
-> If you intend to develop, we recommend you to setup a development environment in your
-> system instead of using this pre-configured virtual machine. For that, you should follow
-> [this tutorial][Setup your development environment].
+> If you intend to develop, we recommend you to [setup a development environment][Setup your development environment] in your
+> system instead of using this pre-configured virtual machine.
 
 ### Create Your Own Application
 
@@ -44,7 +46,7 @@ If you wish to develop your own application under our software ecosystem, you ca
 
 ### Explore the Sub-Projects
 
-Our software ecosystem is composed by several sub-projects that can be deployed within the same instalation. If you want to know more about these sub-projects, feel free to browse their respective documentation in the list on the right side of this page.
+The FenixEdu™ project comprehends several sub-projects that can be composed and deployed within the same instalation. If you want to know more about these sub-projects, feel free to browse their respective documentation.
 
 ### Getting Involved
 
@@ -80,7 +82,8 @@ community.
 
 [Técnico Lisboa]: http://www.ist.utl.pt/
 [DSI]: http://dsi.ist.utl.pt/
-[methodology]: methodology
+[Methodology]: /methodology
+[Tutorials]: /tutorials
 [Setup your development environment]: /tutorials/setup-your-development-environment/
 [Create your own application]: /tutorials/create-your-own-application/
 [Vagrant]: http://vagrantup.com/

@@ -19,9 +19,12 @@ Note that altought Renderers is widely used within our applications, it is a dep
 
 To generate a Renderers application project from scratch, you just need to execute the following interactive Maven command:
 
-	mvn archetype:generate
-		-DarchetypeGroupId=pt.ist
-		-DarchetypeArtifactId=renderers-project-archetype
+{% highlight bash %}
+mvn archetype:generate \
+   -DarchetypeGroupId=pt.ist \
+   -DarchetypeArtifactId=renderers-project-archetype
+{% endhighlight %}
+
 
 After you run the above command, you will be prompted by a set of properties that are required to scaffold your Renderers project. When Maven finishes scaffolding your project, you will have a folder named after the artifactId that you choosed during the process.
 

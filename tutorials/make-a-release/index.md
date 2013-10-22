@@ -17,7 +17,9 @@ To make a release of your software, you must prepare the necessary artifacts bef
 
 After you identified the commit hash from which you want to release your software, you can create your release branch using the following Git command:   
 	
-	git checkout -b releases/<release-version> <commit-hash>
+{% highlight bash %}
+git checkout -b releases/<release-version> <commit-hash>
+{% endhighlight %}
 
 If you have some scripts or any binary files that are required, or you just want to associate them to that release, you should group them inside a folder not to be commited to the Git repository.
 

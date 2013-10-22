@@ -41,28 +41,32 @@ A ```POST``` on ```/books```.
 
 And the parameters to pass on that ```POST``` invocation should be the following JSON:
 
-	{
-		"title": "The Hobbit",
-		"isbn": 3423123421213
-	}
+{% highlight json %}
+{
+  "title": "The Hobbit",
+  "isbn": 3423123421213
+}
+{% endhighlight %}
 
 If successful, this invocation should provide the following JSON response, but it is optional:
 	
-	{
-		"id": 1542341141,
-		"title": "The Hobbit",
-		"isbn": 3423123421213
-	}
-
+{% highlight json %}
+{
+  "id": 1542341141,
+  "title": "The Hobbit",
+  "isbn": 3423123421213
+}
+{% endhighlight %}
 
 Consequently, invoking a ```GET``` on ```/books/1542341141```, we should obtain a similar response, i.e. a JSON describing a possible representation of the book with object id 1542341141:
-	
-	{
-		"id": 1542341141,
-		"title": "The Hobbit",
-		"isbn": 3423123421213
-	}
 
+{% highlight javascript %}	
+{
+  "id": 1542341141,
+  "title": "The Hobbit",
+  "isbn": 3423123421213
+}
+{% endhighlight %}
 
 #### Step 3 - Externalize your resources
 
@@ -76,35 +80,38 @@ Before you get to implement the endpoints that you identified in the previous st
 
 An example of a BookAdapter that implements the JsonAdapter interface, i.e. all three JsonViewer, JsonCreator and JsonUpdater interfaces:
 
-	@DefaultJsonAdapter(Book.class)
-	public class BookAdapter implements JsonAdapter<Book> {
+{% highlight java %}
+@DefaultJsonAdapter(Book.class)
+public class BookAdapter implements JsonAdapter<Book> {
 
-		@Override
-		public Book create(JsonElement jsonElement, JsonBuilder ctx) {
-			final JsonObject json = jsonElement.asJsonObject();
-			String name = json.get("title");
-			String isbn = json.get("isbn");
-			return BookManager.createBook(title, isbn);
-		}
+  @Override
+  public Book create(JsonElement jsonElement, JsonBuilder ctx) {
+    final JsonObject json = jsonElement.asJsonObject();
+    String name = json.get("title");
+    String isbn = json.get("isbn");
+    return BookManager.createBook(title, isbn);
+  }
 
-	
-		@Override
-		public Book update(JsonElement jsonElement, Book book, JsonBuilder ctx) {
-			final JsonObject json = jsonElement.asJsonObject();
-			String name = json.get("title");
-			String isbn = json.get("isbn");
-			return book.update(title, isbn);
-		}
- 		
-		@Override
-		public JsonElement view(Book book, JsonBuilder ctx) {
-			final JsonObject json = new JsonObject();
-			json.addProperty("id", book.getExternalId());
-			json.addProperty("title", book.getTitle());
-			json.addProperty("isbn", book.getIsbn());
-			return json;
-		}
-	}
+
+  @Override
+  public Book update(JsonElement jsonElement, Book book, JsonBuilder ctx) {
+    final JsonObject json = jsonElement.asJsonObject();
+    String name = json.get("title");
+    String isbn = json.get("isbn");
+    return book.update(title, isbn);
+  }
+		
+  @Override
+  public JsonElement view(Book book, JsonBuilder ctx) {
+    final JsonObject json = new JsonObject();
+    json.addProperty("id", book.getExternalId());
+    json.addProperty("title", book.getTitle());
+    json.addProperty("isbn", book.getIsbn());
+    return json;
+  }
+}
+{% endhighlight %}
+
 
 The annotation ```@DefaultJsonAdapter(Book.class)``` registers this Adapter class in the the JSON library, so it knowns what adapter to use when handling a object of the Book class.
 
@@ -114,27 +121,20 @@ Now that you identified the necessary endpoints, you should implement them on th
 
 Then, to expose a particular endpoint, the Bennu infrastructure also provides another context class, from which you can extend you should create a new class that extends the ```BennuRestResource``` class, like in the example:
 
-	
-	public class OrderResource extends BennuRestResource {
+{% highlight java %}
+public class OrderResource extends BennuRestResource {
 
-		@POST
-		@Path("/orders")
-		@Produces(MediaType.APPLICATION_JSON)
-		public String createOrder(JsonElement jsonElement) {
-			accessControl("#users");
-			return create(jsonElement);
-		}
+  @POST
+  @Path("/orders")
+  @Produces(MediaType.APPLICATION_JSON)
+  public String createOrder(JsonElement jsonElement) {
+    accessControl("#users");
+    return create(jsonElement);
+  }
 
-		...
+  ...
 
-	}
-
-
-
-
-
-
-
-
+}
+{% endhighlight %}
 
 [Semantic Versioning]: http://semver.org/

@@ -22,22 +22,24 @@ Now that you identified some entities and relations you want to persist, you may
 
 If we consider the example described in Step 1, it would translate to the following DML:
 
-	package module.books.domain;
+{% highlight java %}
+package module.books.domain;
 
-	class Book {
-		String title;
-		String isbn;
-	}
+class Book {
+	String title;
+	String isbn;
+}
 
-	class Requisition {
-		DateTime requisitionTimestamp;
-		DateTime returnTimestamp;
-	}
+class Requisition {
+	DateTime requisitionTimestamp;
+	DateTime returnTimestamp;
+}
 
-	relation BooksHasRequisitions {
-		Book playsRole book { multiplicity 1..1; }
-		Requisition playsRole requisition { multiplicity 0..*; }
-	}
+relation BooksHasRequisitions {
+	Book playsRole book { multiplicity 1..1; }
+	Requisition playsRole requisition { multiplicity 0..*; }
+}
+{% endhighlight %}
 
 
 #### Step 3 - Generate the Source Code

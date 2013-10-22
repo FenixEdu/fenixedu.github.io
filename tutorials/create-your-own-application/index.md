@@ -24,9 +24,12 @@ to scaffold a project with a particular configuration, and we prepared an archet
 
 To generate an application you just need to execute the following interactive Maven command:
 
-	mvn archetype:generate \
-		-DarchetypeGroupId=pt.ist.bennu \
-		-DarchetypeArtifactId=bennu-project-archetype
+{% highlight bash %}
+mvn archetype:generate \
+   -DarchetypeGroupId=pt.ist.bennu \
+   -DarchetypeArtifactId=bennu-project-archetype
+{% endhighlight %}
+
 
 After you run the above command, you will be prompted by a set of properties that are required to scaffold your project. Most of these properties are Maven properties like the ```groupId```, ```artifactId``` and ```version``` of the artifact.
 
@@ -43,35 +46,43 @@ edit the ```src/main/dml/domain.dml``` file and describe your application persis
 
 If you're creating a new module with a domain that is mostly independent of the other modules, we suggest you define a root object to which you can relate your module entities, with the objective of later ease their retrieval. To do this, you must define a class (singleton) to represent your module, and relate it to the FenixFramework DomainRoot singleton object. For instance, if your application is called Banana, the DML code to accomplish this task follows:
 
-	class Banana;
+{% highlight java %}
+class Banana;
 
-	relation BennuBanana {
-		.pt.ist.fenixframework.DomainRoot playsRole root {
-			multiplicity 1..1;
-		}
-		Banana playsRole banana {
-			multiplicity 0..1;
-		}
+relation BennuBanana {
+	.pt.ist.fenixframework.DomainRoot playsRole root {
+		multiplicity 1..1;
 	}
+	Banana playsRole banana {
+		multiplicity 0..1;
+	}
+}
+{% endhighlight %}
+
 
 Then, in your Banana class, you should define the constructor as private, and define a static ```getInstance()``` method:
 
-	private Banana() {
-		setRoot(FenixFramework.getDomainRoot());
-	}
+{% highlight java %}
+private Banana() {
+	setRoot(FenixFramework.getDomainRoot());
+}
 
-	...
+...
 
-	public static Banana getInstance() {
-		if(FenixFramework.getDomainRoot().getBanana() == null) {
-			new Banana();
-		}
-		return FenixFramework.getDomainRoot().getBanana();
+public static Banana getInstance() {
+	if(FenixFramework.getDomainRoot().getBanana() == null) {
+		new Banana();
 	}
+	return FenixFramework.getDomainRoot().getBanana();
+}
+{% endhighlight %}
+
 
 Now, you should define the rest of your domain entities and their respective relations. After you completed such task, you can run a mojo of the FenixFramework Maven Plugin to generate the base classes:
 
-	mvn ff:ff-generate-domain
+{% highlight bash %}
+mvn ff:ff-generate-domain
+{% endhighlight %}
 
 Such base classes are generated into ```target/generated-sources/dml-maven-plugin```. You should go to Eclipse and right click this folder in your package explorer and select the option ```Build Path > Add as source folder``` in order to resolve any classpath errors related to the existance of these base classes.
 
@@ -89,11 +100,16 @@ listed above. If you wish to do so, please contact the [Bennu Development Team][
 
 Now, all you need to do is build and run the project. To do so, you must install both your application core and ui modules using the following Maven command:
 
-	mvn clean package install
+{% highlight bash %}
+mvn clean package install
+{% endhighlight %}
+
 
 If everything runs smoothly, after you run this command you should have both JAR libraries installed in your local Maven repository. The idea is to have a webapp project that depends on both JAR libraries and run that project using the following Maven command:
 
-	mvn clean package jetty:start
+{% highlight bash %}
+mvn clean package jetty:start
+{% endhighlight %}
 
 The above command will compile, build the WAR artifact, and finally run a Jetty Server with the resulting WAR deployed. After the Jetty Server starts, your application should be up and running at ```http://localhost:8080/```.
 

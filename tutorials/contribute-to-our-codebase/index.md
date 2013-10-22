@@ -18,7 +18,9 @@ To be able to make pull requests, you must fork the original repository, i.e. te
 
 After you fork the project, you'll have that project under your Github account. Now, you must clone the forked project to your workspace using something like this in your command line:
 
-	git clone --origin fork git@github.com:<your-github-username>/<project-name>.git
+{% highlight bash %}
+git clone --origin fork git@github.com:<your-github-username>/<project-name>.git
+{% endhighlight %}
 
 > <span>Note</span>
 > The ```--origin fork``` parametrization is to name your remote fork instead of origin. This ensures that your upstream remote is in fact your fork instead of the main repository where you may don't have push priviledges.
@@ -29,7 +31,9 @@ As other commits get into the main repository, you must keep your fork codebase 
 
 To pull new commits from the main repository, i.e. changes made in the ```origin``` remote, you should hit the following command in your command line:
 
-	git pull --rebase origin master
+{% highlight bash %}
+git pull --rebase origin master
+{% endhighlight %}
 
 The ```--rebase``` option will ensure that your commits will be rewritten on top of the last commit considered in the master branch. This keeps the commit history clean and easy to read, avoiding a bunch of merge commits that will be hard to understand. 
 
@@ -37,7 +41,9 @@ The ```--rebase``` option will ensure that your commits will be rewritten on top
 
 After you resolve any possible conflicts, you should push your changes to your Github forked repository, i.e. the remote named ```fork```. Pushing such changes can be achieved through the following changes:
 
-	git push fork master
+{% highlight bash %}
+git push fork master
+{% endhighlight %}
 
 After you have your changes on Github, you can go and create the pull request.
 

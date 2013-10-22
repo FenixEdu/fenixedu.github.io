@@ -23,9 +23,11 @@ The main advantage of using Bankai, or any other Javascript client-side technolo
 
 To generate a Bankai application project from scratch, you just need to execute the following interactive Maven command:
 
-	mvn archetype:generate
-		-DarchetypeGroupId=pt.ist
-		-DarchetypeArtifactId=bankai-project-archetype
+{% highlight bash %}
+mvn archetype:generate \
+   -DarchetypeGroupId=pt.ist \
+   -DarchetypeArtifactId=bankai-project-archetype
+{% endhighlight %}
 
 After you run the above command, you will be prompted by a set of properties that are required to scaffold your Bankai project. When Maven finishes scaffolding your project, you will have a folder named after the artifactId that you choosed during the process.
 
@@ -41,20 +43,22 @@ In the ```router.js``` file, you define both your application routes, i.e. URL p
 
 Bellow, there is a simple example of this ```router.js``` file, containing only one route:
 
-	define(['backbone', 'marionette', 'app', 'views/Home'],
-		function(Backbone, Marionette, App, HomeView) {
+{% highlight javascript %}
+define(['backbone', 'marionette', 'app', 'views/Home'],
+  function(Backbone, Marionette, App, HomeView) {
 
-			return Backbone.Marionette.AppRouter.extend({
-				appRoutes : {
-					"home" : "showHome"
-				},
-				controller : {
-					showHome : function() {
-						App.page.show(new HomeView());
-					}
-				}
-			});
-		});
+    return Backbone.Marionette.AppRouter.extend({
+	  appRoutes : {
+	    "home" : "showHome"
+	  },
+	  controller : {
+	  	showHome : function() {
+		  App.page.show(new HomeView());
+		}
+	});
+});
+{% endhighlight %}
+
 
 The ```router.js``` file exemplified above defines a single route that shows the Home view. This means that in a context where the fragment identifier #home is present in the URL, the Javascript function ```showHome``` is called. Additional routes and controllers should be added as needed. You can always use placeholders when defining routes and pass the matches as parameters into the controller functions. You can learn more about the router entitiy by reading [Backbone's documentation][Backbone].
 
@@ -74,14 +78,14 @@ Models manage the lifecycle of your application data, exposing CRUD operations o
 
 A Collection is basically a set of Backbone models, to which you can add new models, or delete existing ones.
 
-	define(['backbone'],
-		function(Backbone) {
-			return Backbone.Model.extend({
-			
-				urlRoot : "../api/banana/fruits"
-
-			});
-		});
+{% highlight javascript %}
+define(['backbone'],
+  function(Backbone) {
+    return Backbone.Model.extend({	
+      urlRoot : "../api/banana/fruits"
+    });
+});
+{% endhighlight %}
 
 The ```models/Fruit.js``` file above exemplifies a Backbone model that defines its URL root. URL root is essentially the path where models of the Fruit type are located.
 
@@ -91,10 +95,11 @@ After you finish developing your Bankai application, you can enable the minifica
 
 To do this, you should go to your application ```pom.xml``` file and change the ```bankai.skip.js.optimization``` property to false:
 
-	<properties>
-		<bankai.skip.js.optimization>false</bankai.skip.js.optimization>
-	</properties>
-
+{% highlight xml %}
+<properties>
+  <bankai.skip.js.optimization>false</bankai.skip.js.optimization>
+</properties>
+{% endhighlight %}
 
 [Backbone]: http://backbonejs.com/
 [Marionette]: http://marionettejs.com/
