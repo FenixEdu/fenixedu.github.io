@@ -7,5 +7,5 @@ permalink: "/blog/:year/:month/:day/:title"
 
 # Server
 destination:      ./_gh_pages
-exclude:          [".gitignore", "README.md", "less"]
+exclude:          [".gitignore", "README.md", "stylesheets/less"]
 port:             9001
