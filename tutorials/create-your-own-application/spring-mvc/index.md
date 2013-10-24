@@ -64,5 +64,5 @@ An excerpt of the ```bananas/list.jsp``` could be:
 ...
 {% endhighlight %}
 
-
+[Create your own application]: /tutorials/create-your-own-application/
 
