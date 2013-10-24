@@ -3,7 +3,7 @@ markdown: redcarpet
 pygments: true
 
 redcarpet:
-  extensions: ["with_toc_data"]
+  extensions: ["with_toc_data", "tables"]
 
 # Permalinks
 permalink: "/blog/:year/:month/:day/:title"
