@@ -20,17 +20,17 @@
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link href="{{ page.root}}stylesheets/pygment_trac.css" rel="stylesheet">
+    <link href="/stylesheets/pygment_trac.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/reset/reset.css">
     <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/normalize/normalize_v_2_1_3.css">
-    <link rel="stylesheet" href="{{page.root}}stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
     <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/skeleton/skeleton_v_1_2.css">
-    <link rel="stylesheet" href="{{page.root}}stylesheets/fenixedu_dev.css">
-    <!--<link rel="stylesheet" type="text/css" media="print" href="print.css">-->
+    <link rel="stylesheet" href="/stylesheets/fenixedu_dev.css">
 
     <script src="http://static.tecnico.ulisboa.pt/js/modernizr/modernizr-2.6.2.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
     
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,15 +48,15 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header class="container">
-        <div class="three columns alpha" id="logo">
-            <a href="/">FenixEdu</a>
-        </div>
-        <span>Developer Pages</span>
+    <header class="container" role="banner">
+        <h1 class="three columns alpha">
+            <a href="/" id="logo"></a>
+        </h1>
+        <span>developer pages</span>
     </header>
 
     <div class="container">
-        <main class="twelve columns alpha">
+        <main class="twelve columns alpha" role="main">
             {% include breadcrumbs.html %}
             {{content}}
          </main>

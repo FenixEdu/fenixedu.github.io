@@ -26,7 +26,6 @@ The first thing to do before developing your application is to think about which
 
 These are three simple routes that will allow the list, detailed view and creation of new Bananas. The next thing to do is define the controllers that will handle such routes.
 
-
 ### Step 2 - Define your Controllers
 
 To define a new controller, you should create a new class, for example ```BananaController```, annotate it with ```@Controller``` and inherit from the ```AbstractController```:

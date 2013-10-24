@@ -4,7 +4,7 @@ breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Use FenixE
 root: "../../../"
 ---
 
-## Use FenixEdu API in your application - Java
+## Use FenixEdu API in your application - Java SDK
 
 In this tutorial, you will learn how to use the Java SDK to easily invoke the FenixEdu REST API. Make sure you started by following the tutorial that teaches you [how to use FenixEdu in your application][use-fenix-edu-in-your-application-tutorial].
 
@@ -14,25 +14,32 @@ In order to ease the use of the FenixEdu API, we developed a Java SDK that you c
 
 If you are using Maven to build your Java project, you just need to add the following dependency to your ```pom.xml```file:
 
-	<dependency>
-		<groupId>pt.ist</groupId>
-		<artifactId>fenixedu-api</artifactId>
-		<version>1.4</version>
-	</dependency>
+{% highlight xml %}
+<dependency>
+  <groupId>pt.ist</groupId>
+  <artifactId>fenixedu-api</artifactId>
+  <version>1.0.0</version>
+</dependency>
+{% endhighlight %}
 
 In order for Maven to know where to get this dependency from, you will also need to include our Maven repository in the repositories element of your ```pom.xml``` file:
 
-	<repository>
-		<id>fenix-ashes-maven-repository</id>
-		<url>https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository</url>
-	</repository>
+{% highlight xml %}
+<repository>
+  <id>fenix-ashes-maven-repository</id>
+  <url>https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository</url>
+</repository>
+{% endhighlight %}	
 
 #### Step 2 - Define your Credentials
 
 The next step is to create a file named ```fenixedu.credentials``` and specify both your Application Access and Secret Keys:
 
-	fenixedu.access.key=123524412
-	fenixedu.secret.key=HhU3BB3hJ9h3n2Bhsz 
+{% highlight properties %}
+fenixedu.access.key=123524412
+fenixedu.secret.key=HhU3BB3hJ9h3n2Bhsz 
+{% endhighlight %}
+
 
 The library that you included in the previous step will attempt to read this file and auto-config your credentials that will be used in every API call in order to authorize your requests.
 
@@ -40,17 +47,12 @@ The library that you included in the previous step will attempt to read this fil
 
 After you configured your credentials, you can make asynchronous invocations like in the following example:
 
-	FenixEduClient client = new FenixEduClient();
-	FERequest req = new FEGetUserRequest("ist155371", new FEGetUserCallback() {
-		public void handleResponse(FEGetUserResponse response) {
-			String name = response.getUser().getName();
-			System.out.println("The user's name is " + name);
-		}
-		public void handleException(FEException exception) {
-			System.err.println("Ups...could not retrieve the user");
-		}
-	});
-	client.sendRequest(req);
+{% highlight java %}
+FenixEduClient client = new FenixEduClient.getSingleton();
+JsonObject personObject = client.getPerson();
+client.sendRequest(req);
+{% endhighlight %}
+
 
 The above example instantiates a new client and invokes a request to retrieve information about a particular user. Two methods must be defined within the callback interface: one that handles a successful response, and another that handles either a local or remote exception.
 

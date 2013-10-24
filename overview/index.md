@@ -8,14 +8,14 @@ root: "../"
 ## Overview
 
 [Getting started](#quickstart) with the FenixEdu™ project is easy. You can learn more about our [methodology][Methodology],
-learn how to contribute with our [tutorials][Tutorias], and explore our sub-projects.
+learn how to contribute with our [tutorials][Tutorials], and explore our [sub-projects][SubProjects].
 
 Hoping that FenixEdu™ solutions may be useful to others, we share our software
 with the community whenever possible. FenixEdu™ comprehends a range of solutions,
 from academic and administrative processes to general purpose software libraries.
 
 We also share our methodology and our knowledge through tutorials. This documentation page intends
-to get you started or help you resolve any issue that you might encounter while con
+to get you started and help you resolve any issue that you might encounter while contributing to our codebase.
 
 
 ### Quickstart
@@ -84,6 +84,7 @@ community.
 [DSI]: http://dsi.ist.utl.pt/
 [Methodology]: /methodology
 [Tutorials]: /tutorials
+[SubProjects]: /sub-projects
 [Setup your development environment]: /tutorials/setup-your-development-environment/
 [Create your own application]: /tutorials/create-your-own-application/
 [Vagrant]: http://vagrantup.com/

@@ -5,7 +5,7 @@ root: "../../"
 ---
 ## Setup your development environment
 
-This tutorial walks you through the system requirements necessary to develop applications within the FenixEdu™ software ecosystem. It is intended for developers that want to either contribute to the existing code base, or use the infrastrcture to develop new applications.
+This tutorial walks you through the system requirements necessary to develop applications within the FenixEdu™ software ecosystem. It is intended for developers that want to either contribute to the existing code base, or use the infrastructure to develop new applications.
 
 > <span>Attention</span>
 > The suggestions highlighted in this tutorial are for development environments only. Be aware that they may not be adequate for other purposes, in particular for production environments. Also, since we love pinguins, most tweaks are mainly intended for GNU/Linux Operating Systems.
@@ -102,6 +102,15 @@ Hence, you should install the latest [MySQL Server Community Edition][MySQL] in 
 
 After you have Oracle's JDK 7, Maven and Git, up and running, we recommend you to use the [Eclipse IDE for Java Developers][Eclipse] as we have a codestyle configuration file and a set of automatic save actions to enforce seamless code formatting among our team.
 
+##### Configure Eclipse IDE
+
+1. [Download][EclipseFenixCodeStyleFile] and copy EclipseFenixCodeStyle.xml to your Eclipse installation folder.
+2. While in Eclipse, go to ```Window > Preferences > Java > Code Style > Formatter```, press ```Import...``` and choose the file you copied in the previous step.
+3. While still in the Preferences menu, in ```Java > Editor > Save Actions```, please check the following options:
+
+
+
+
 We recommend you to use the Eclipse IDE for Java Developers because Maven is already bundled in that version, and most of our projects are built using Maven.
 
 ### Troubleshooting
@@ -109,6 +118,7 @@ We recommend you to use the Eclipse IDE for Java Developers because Maven is alr
 Troubleshooting goes here.
 
 
+[EclipseFenixCodeStyleFile]: https://raw.github.com/FenixEdu/fenix/master/EclipseFenixCodeSyle.xml
 [FenixFramework]: http://fenix-framework.github.io/
 [Eclipse]: http://www.eclipse.org/downloads/
 [Methodology]: /methodology

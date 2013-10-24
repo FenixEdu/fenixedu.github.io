@@ -1,51 +1,25 @@
-<aside id="sidebar" class="four columns omega">
-	<nav>
-	<span>documentation</span>
-	    <ul id="main-menu">
-	    </ul>
+ <aside class="four columns omega">
+    <nav role="navigation">
 	    <ul>
-	        <li>Sub-Projects</li>
-	        <li>
-	            <ul id="subprojects-menu">    
-	                
-	            </ul>
-	        </li>
-	    </ul>
-	<span><a href="{{ page.root }}resources">resources</a></span>
-	<span><a href="{{ page.root }}discussions">discussions</a></span>
-	<span>follow fenixedu</span>
-	    <ul>
-	        <li><a href="http://github.com/fenixedu">github.com/fenixedu</a></li>
-	        <li><a href="http://facebook.com/fenixedu">facebook.com/fenixedu</a></li>
-	        <li><a href="http://twitter.com/fenixeduproject">@fenixeduproject</a></li>
-	    </ul>
-	<span><a href="{{ page.root}}terms">terms &amp; conditions</a></span>
-	<img title="LGPL Version 3 Logo" alt="LGPL Version 3" src="images/license.png">
+	        <li>documentation</li>
+            <ul>
+       	    	<li><a href="/overview"><span aria-hidden="true" data-icon="&#59146;"></span>overview</a></li>
+				<li><a href="/methodology"><span aria-hidden="true" data-icon="&#9881;"></span>methodology</a></li>
+                <li><a href="/tutorials"><span aria-hidden="true" data-icon="&#127891;"></span>tutorials</a></li>
+                <li class="subtitle"><a href="/sub-projects"><span aria-hidden="true" data-icon="&#128360;"></span>sub-projects</a></li>
+        	</ul>
+			<li><a href="/resources">resources</a></li>
+            <li><a href="http://github.com/ist-dsi/ist-dsi.github.com/issues/new">report documentation issue</a></li>
+            <li>follow fenixedu</li>
+            <ul>
+                <li><a href="http://github.com/fenixedu"><span aria-hidden="true" data-icon="&#62208;"></span>github.com/fenixedu</a></li>
+                <li><a href="http://facebook.com/fenixedu"><span aria-hidden="true" data-icon="&#62220;"></span>facebook.com/fenixedu</a></li>
+                <li><a href="http://twitter.com/fenixeduproject"><span aria-hidden="true" data-icon="&#62217;"></span>@fenixeduproject</a></li>
+                <li><a href=""><span aria-hidden="true" data-icon="&#62235;"></span>#fenixedu @ irc.freenode.net</a></li>
+            </ul>
+            <li><a href="/terms">terms &amp; conditions</a>
+                <img src="/images/license.svg" alt="LGPL Version 3">
+            </li>
+		</ul>
 	</nav>
 </aside>
-<script type="text/javascript">
-	window.populateMenu = function(element, entries) {
-		$.each(entries, function(i, entry) {
-			element.append("<li><a href=\"{{page.root}}"+entry.relativeUrl+"\"></a>"+entry.text+"</li>");
-		});
-	}
-	$.get("{{page.root}}right-nav.json", function(data) {
-		$.each(data.mainMenu, function(i, entry) {
-			var text = entry.text;
-			var relativeUrl = entry.relativeUrl;
-			$("#main-menu").append("<li><a href=\"{{page.root}}"+relativeUrl+"\">"+text+"</a></li>");
-		});
-		$.each(data.subProjectsMenu, function(i, entry) {
-			var text = entry.text;
-			var relativeUrl = entry.relativeUrl;
-			var subMenu = $("<ul></ul>");
-			var subMenus = entry.subMenus;
-			if(entry.subMenus) {
-				populateMenu(subMenu, entry.subMenus);
-				$("#subprojects-menu").append("<li><a href=\"{{page.root}}"+relativeUrl+"\">"+text+"</a><ul>"+subMenu.html()+"</ul></li>");
-			} else {
-				$("#subprojects-menu").append("<li><a href=\"{{page.root}}"+relativeUrl+"\">"+text+"</a></li>");
-			}
-		});
-	});
-</script>
