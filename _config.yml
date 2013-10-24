@@ -1,6 +1,9 @@
 # Dependencies
-#markdown: rdiscount
+markdown: redcarpet
 pygments: true
+
+redcarpet:
+  extensions: ["with_toc_data"]
 
 # Permalinks
 permalink: "/blog/:year/:month/:day/:title"

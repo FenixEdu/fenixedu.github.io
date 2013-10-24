@@ -112,7 +112,6 @@ public class BookAdapter implements JsonAdapter<Book> {
 }
 {% endhighlight %}
 
-
 The annotation ```@DefaultJsonAdapter(Book.class)``` registers this Adapter class in the the JSON library, so it knowns what adapter to use when handling a object of the Book class.
 
 #### Step 4 - Implement the identified endpoints
