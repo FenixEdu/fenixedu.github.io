@@ -9,13 +9,13 @@ root: "../../"
 In this tutorial, you will learn how to register your third-party application to use the FenixEdu™ API, and how to use one of the SDKs that we developed to ease the API invocation. Note that you can still use any HTTP client to invoke the endpoints on your own, or perhaps, contribute with a SDK of your favorite language.
 
 ### Table of Contents
-* [Step 1 - Register your Application](#step_1__register_your_application)
-* [Step 2 - Invoke the REST API Endpoints](#step_2__invoke_the_rest_api_endpoints)
-	* [Step 2.1 - Use one of the official SDKs](#step_21__use_one_of_the_official_sdks)
-	* [Step 2.2 - Request the User Permission](#step_22__request_the_user_permission)
-	* [Step 2.3 - Request the Access Token](#step_23__request_the_access_token)
-	* [Step 2.4 - Refresh the Access Token](#step_24__refresh_the_access_token)
-* [Troubleshooting](#troubleshooting)
+* [Step 1 - Register your Application](#toc_2)
+* [Step 2 - Invoke the REST API Endpoints](#toc_3)
+	* [Step 2.1 - Use one of the official SDKs](#toc_4)
+	* [Step 2.2 - Request the User Permission](#toc_5)
+	* [Step 2.3 - Request the Access Token](#toc_6)
+	* [Step 2.4 - Refresh the Access Token](#toc_7)
+* [Troubleshooting](#toc_8)
 
 ### Step 1 - Register your Application
 
@@ -23,7 +23,7 @@ The first thing you need to start using the FenixEdu™ API is to register your 
 
 To register your third-party application, you'll need to provide some information about your application. To do this, you need to fill up the form shown in Figure 1.
 
-![Create Application Form]({{site.url}}/assets/create-application-form.png)
+![Figure 1 - Application Registration Form]({{site.url}}/assets/create-application-form.png)
 
 * __Logo__ - A 64x64 pixel-wide image that identifies your application.
 * __Application Name__ - The name of your application.
@@ -55,7 +55,9 @@ If you still wish to understand the overall flow, or in case you decided not to 
 
 The first thing your application must do is to obtain authorization from a FenixEdu user. To do this, you application must redirect the user to the authorization form, like the one identified in Figure 2.
 
-	https://fenix.ist.utl.pt/oauth/userdialog?client_id=<client_id>&redirect_uri=<redirect_uri>
+{% highlight bash %}
+https://fenix.ist.utl.pt/oauth/userdialog?client_id=<client_id>&redirect_uri=<redirect_uri>
+{% endhighlight %}
 
 This page will prompt the user to authorize your application, so that FenixEdu™ can provide the information you requested when you created your application. If the user is not logged in, FenixEdu™ will ask him to login first before he can authorize your application.
 
@@ -64,7 +66,9 @@ This page will prompt the user to authorize your application, so that FenixEdu�
 
 It might be the case that the user refuses to authorize your application. When the user denies authorization to your application, he will be redirected to the following endpoint:
 
-	<redirect_uri>?error=access_denied&error_description=User didn't allow the application
+{% highlight bash %}
+<redirect_uri>?error=access_denied&error_description=User didn't allow the application
+{% endhighlight %}
 
 Unsurprisingly, you can't continue the authorization workflow if the user refuses to authorize your application.
 
@@ -77,15 +81,25 @@ Unsurprisingly, you can't continue the authorization workflow if the user refuse
 
 After the user authorizes your application, FenixEdu will invoke a ```GET``` HTTP request in the redirect URL that you specified when you registered your application. In such request, FenixEdu™ API will provide a ```code``` through a query param as exemplified:
 
-	<redirect_uri>?code=XXXXXXXXXXX
+{% highlight bash %}
+<redirect_uri>?code=XXXXXXXXXXX
+{% endhighlight %}
 
 The obtained code must be used to obtain an ```access_token``` for that user. For that, you must invoke a ```POST``` HTTP request in the exemplified endpoint:
 
-	https://fenix.ist.utl.pt/oauth/access_token?client_id=<client_id>&client_secret=<client_secret>&redirect_uri=<redirect_uri>&code=<code>&grant_type=authorization_code
+{% highlight bash %}
+https://fenix.ist.utl.pt/oauth/access_token?client_id=<client_id>&client_secret=<client_secret>&redirect_uri=<redirect_uri>&code=<code>&grant_type=authorization_code
+{% endhighlight %}
 
 If everything is working as intended, an ```HTTP 200 Ok``` response with ```Content-Type: application/json``` should be returned with the following body:
 
-	{ "access_token": "IGNhbiBjb252ZXJ0IHRleHRzW5nIHNldmVyYWwgY29kZSBwYWdlcpbmcgQ2hhclNl", "refresh_token": "dCBwcm9wZXJ0eSkgZnJvbSBVbmlIHN0cmluZyB0byBieXRlIGFycmZCB0aGVuIGNv", "expires": "3600" }
+{% highlight json %}
+{
+  "access_token": "IGNhbiBjb252ZXJ0IHRleHRzW5nIHNldmVyYWwgY29kZSBwYWdlcpbmcgQ2hhclNl",
+  "refresh_token": "dCBwcm9wZXJ0eSkgZnJvbSBVbmlIHN0cmluZyB0byBieXRlIGFycmZCB0aGVuIGNv",
+  "expires": "3600"
+}
+{% endhighlight %}
 
 ####  Step 2.4 - Refresh the Access Token
 
