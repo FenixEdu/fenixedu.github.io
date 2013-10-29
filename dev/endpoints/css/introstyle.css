@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+
+#intro {
+
+    border-bottom: 6px solid #eee;
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 10pt;
+    font-weight: 100;
+    border-radius: 2px;
+}
+
+#intro:empty {
+
+    border: none;
+    padding: inherit;
+    margin-bottom: inherit;
+}
+
+#intro p {
+    font-size: 10pt;
+}
+
+#intro h1 {
+    margin-top: 0;
+    padding-top: 10px;
+    font-family: "Droid Sans", serif;
+    color: #00bbb4;
+    font-size: 20pt;
+    font-weight: 600;
+    text-shadow: 0 1px 0px #fff;
+}
+
+#intro h2 {
+    margin-top: 0;
+    padding-top: 10px;
+    font-family: "Droid Sans", serif;
+    color: #008b86;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+#intro h3 {
+    margin-top: 0;
+    padding-top: 10px;
+    font-family: "Droid Sans", serif;
+    color: #008b86;
+    font-size: 18px;
+    font-weight: 400;
+}

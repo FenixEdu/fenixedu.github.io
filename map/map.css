@@ -1,0 +1,34 @@
+
+/* Map InfoBubble Styles */
+
+  .schoolLogo {
+    width: 175px;
+  }
+
+  .bubbleContent hr {
+    border-top: 1px solid #eee;
+    height: 0;
+    background: none;
+    width: 90%;
+    position: absolute;
+    bottom: 35px;
+    margin: 0 auto;
+  }
+
+  .gm-style span {
+    font: 14px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .bubbleContent .schoolLogo {
+    min-height: 60px;
+  }
+
+  .bubbleContent img {
+    max-width: 175px;
+    height: auto;
+    padding: 10px 0;
+  }
