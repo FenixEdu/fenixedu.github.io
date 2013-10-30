@@ -6,7 +6,7 @@
       imagePin: "map/map_pin.png",
       logo: "logo_school_ist.png",
       location: [ 38.73763 , -9.13910 ],
-      z: 6,
+      z: 20,
       numUsers: 65148
     },
     { name: "ISEG",
@@ -14,7 +14,7 @@
       imagePin: "map/map_pin.png",
       logo: "logo_school_iseg.png",
       location: [ 38.71244 , -9.15496 ],
-      z: 5,
+      z: 19,
       numUsers: 3333 },
 
     { name: "ISA",
@@ -22,7 +22,7 @@
       imagePin: "map/map_pin.png",
       logo: "logo_school_isa.png",
       location: [ 38.7107,  -9.1814 ], 
-      z: 4,
+      z: 18,
       numUsers: 9296 },
 
     { name: "FA",
@@ -30,7 +30,7 @@
       imagePin: "map/map_pin.png",
       logo: "logo_school_fa.png",
       location: [ 38.7144,  -9.1917 ], 
-      z: 3,
+      z: 17,
       numUsers: 666 },
 
     { name: "ESESJC",
@@ -38,7 +38,7 @@
       imagePin: "map/map_pin.png",
       logo: "logo_school_esesjc.png",
       location: [ 32.66678 , -16.90475],
-      z: 2,
+      z: 16,
       numUsers: 1447 },
 
     { name: "ISCTE",
@@ -46,7 +46,7 @@
       imagePin: "map/map_pin.png",
       logo: "logo_school_iscte.png",
       location: [ 38.74803 , -9.15338 ],
-      z: 1,
+      z: 15,
       numUsers: 52488 }];
 
   var featureOpts = [
@@ -68,6 +68,10 @@
 
   var FENIXEDU_MAPTYPE_ID = 'fenixedu_style';
 
+  var map;
+
+  var bounds = new google.maps.LatLngBounds(new google.maps.LatLng(38.7107, -9.15338), new google.maps.LatLng(38.74803, -9.15338));
+
   var mapOptions = {
     zoom: 5,
     scrollwheel: false,
@@ -84,8 +88,8 @@
   };
 
   var subMapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(32.66678 , -16.90475),
+    zoom: 3,
+    center: new google.maps.LatLng(39.76678 , -15.90475),
     scrollwheel: false,
     panControl: false,
     streetViewControl: false,
@@ -118,8 +122,6 @@
 
   var imagePin = 'map/map_pin.png';
 
-  var map;
-
   var markers = window.markers = [];
   var bubbles = [];
 
@@ -136,7 +138,7 @@
       var location = school["location"];
       var imagePin = school["imagePin"];
       var latLon = new google.maps.LatLng(location[0], location[1]);
-      var contentString = '<a href='+school["url"]+'><div class="schoolLogo"><img src="map/logos/'+school["logo"]+'" alt="'+school["name"]+'"></div><hr/><span>'+school["numUsers"]+'</span></a>';
+      var contentString = '<a href='+school["url"]+'><div class="schoolLogo" data-bubble-id="'+i+'"><img src="map/logos/'+school["logo"]+'" alt="'+school["name"]+'"></div><hr/><span>'+school["numUsers"]+'</span></a>';
 
       var marker = new google.maps.Marker({
         position: latLon,
@@ -156,7 +158,8 @@
       var bubble = new InfoBubble(
         mergeObjects({
           position: latLon,
-          content: contentString
+          content: contentString,
+          zIndex: school["z"]
         }, bubbleOptions));
 
       bubble.open(map, marker);
@@ -171,7 +174,14 @@
 
       google.maps.event.addListener(subMarker, 'click', function() {
         map.setCenter(this.getPosition());
-        map.setZoom(11);
+        map.setZoom(12);
+      });
+
+      $(bubble.bubble_).click(function() {
+        var i = $(".schoolLogo", this).data("bubble-id");
+        if(bubbles[i]) {
+          bubbles[i].close();          
+        }
       });
 
     }
@@ -200,7 +210,6 @@
     map.mapTypes.set(FENIXEDU_MAPTYPE_ID, fenixEduMapStyle);
     map.setMapTypeId(FENIXEDU_MAPTYPE_ID);
 
-    var bounds = new google.maps.LatLngBounds(new google.maps.LatLng(38.7107, -9.15338), new google.maps.LatLng(38.74803, -9.15338));
     map.setCenter(bounds.getCenter());
     map.fitBounds(bounds);
 
@@ -209,10 +218,23 @@
     subMap.setMapTypeId(FENIXEDU_MAPTYPE_ID);
 
     populateSchoolMarkers(map, subMap, schools);
+    google.maps.event.addListenerOnce(subMap, 'idle', function() {
+      $(".gmnoprint", "#submap").hide();
+      $($(".gm-style", "#submap").children()[1]).hide();
+    });
+
+    google.maps.event.addDomListener(map, 'click', function() {
+      for(var i = 0; i < bubbles.length; i++) {
+        bubbles[i].close();
+      }
+    });
+
 
   };
 
   google.maps.event.addDomListener(window, 'load', initialize);
+
+
 
 })(this);
 
