@@ -60,11 +60,11 @@
 		<a href="/" id="logo" class="four columns"></a>
 		<nav class="twelve columns" role="navigation">
 			<ul>
-				<li><a href="#" id="about">about</a></li>
-				<li><a href="#">ignition</a></li>
-				<li><a href="#">users</a></li>
-				<li><a href="#">partners</a></li>
-				<li><a href="#" class="button">getting started</a></li>
+				<li><a href="#about">about</a></li>
+				<li><a href="#ignition">ignition</a></li>
+				<li><a href="#users">users</a></li>
+				<li><a href="#community">community</a></li>
+				<li><a href="#gettingStarted" class="button">getting started</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -73,11 +73,11 @@
 		<div class="container">
 			<h1 class="twelve columns"><span aria-hidden="true" data-icon="&#128197;"></span><span>see all those endpoints?</span></h1>
 			<br class="clear" />
-			<p class="nine columns lead">FenixEdu™ API is now open,<br />So you’re invited to play with them.</p>
+			<p class="nine columns lead">FenixEdu API is now open,<br />So you’re invited to play with them.</p>
 			<br class="clear" />
 			<div>
-				<a href="" class="button anchor three columns">event details</a>
-				<a href="" class="button three columns"><!--getting started-->explore api</a>
+				<a href="#ignition" class="button anchor three columns">event details</a>
+				<a href="/dev/api" class="button three columns"><!--getting started-->explore api</a>
 				<br class="clear" />
 			</div>
 		</div>
@@ -86,10 +86,10 @@
 	<div class="container">
 
 	<section role="main">
-		<h2 class="sixteen columns"><span aria-hidden="true" data-icon="&#127891;"></span>what is fenixedu</h2>
+		<h2 class="sixteen columns" id="about"><span aria-hidden="true" data-icon="&#127891;"></span>what is fenixedu ?</h2>
 		<br class="clear" />
 		<p class="eight columns">
-			FenixEdu™ is a modular software platform for academic and 
+			FenixEdu is a modular software platform for academic and 
 			administrative management of higher education institutions. It 
 			provides an integrated solution that spans all levels of the 
 			academic management process: from high level management tasks 
@@ -102,7 +102,7 @@
 
 		</p>
 		<p class="eight columns">
-			FenixEdu provides a REST API, with strong authentication based 
+			The FenixEdu platform provides a REST API, with strong authentication based 
 			on OAuth 2.0, which enables easy interoperability with existing 
 			systems, such as ERP and CMS, and is a convenient foundation 
 			for the development of a rich diversity of external 
@@ -125,14 +125,32 @@
 	<div class="container">
 
 	<section>
-		<h2 class="sixteen columns"><span aria-hidden="true" data-icon="&#128197;"></span>fenixedu ignition 2013</h2>
+		<h2 class="sixteen columns" id="ignition"><span aria-hidden="true" data-icon="&#128197;"></span>fenixedu ignition</h2>
 		<br class="clear" />
-		<time datetime="2013-18-10 10:00" class="one columns"><span>18</span><br /><span>oct</span></time>
-		<p class="seven columns">We've just released the FenixEdu™ REST API. Feel free to explore the Técnico Lisboa's community data. Apply now, develop your ideas and submit your experiences. FenixEdu™ also counts on you to enrich its value!</p>
+		<time datetime="2013-11-23 10:00" class="one columns"><span>23</span><br /><span>NOV</span><br /><span>2013</span></time>
+		<p class="seven columns">
+			We will be presenting the FenixEdu REST API durring a 
+			<a href="http://hackerschool.tecnico.ulisboa.pt/">Hacker School</a> 
+			event specifically oriented for the development of mobile 
+			applications.
+		</p>
 		<div class="eight columns">
-			<a href="" class="button icon five columns">apply with fenixedu</a>
 			<br class="clear" />
-			<div class="seven columns">You will be noticed about future FenixEdu™ events.</div>
+		</div>
+		<br class="clear" />
+		<br/>
+		<br/>
+		<time datetime="2014-02-28 16:00" class="one columns"><span>28</span><br /><span>FEB</span><br /><span>2014</span></time>
+		<p class="seven columns">
+			We've just released the FenixEdu REST API. Feel free to explore the
+			Técnico Lisboa's community data. Apply now, develop your ideas and 
+			submit your experiences. FenixEdu also counts on you to enrich its 
+			value!
+		</p>
+		<div class="eight columns">
+			<a href="http://fenixedu.org/ignition/" class="button icon five columns">apply with fenixedu</a>
+			<br class="clear" />
+			<div class="seven columns">You will be noticed about future FenixEdu events.</div>
 		</div>
 		<br class="clear" />
 	</section>
@@ -142,7 +160,7 @@
 	<div class="container">
 
 	<section>
-		<h2 class="sixteen columns"><span aria-hidden="true" data-icon="&#59168;"></span>our users</h2>
+		<h2 class="sixteen columns" id="users"><span aria-hidden="true" data-icon="&#59168;"></span>our users</h2>
 		<div class="user_box eight columns">
 			<h5>students</h5>
 			<p>
@@ -153,11 +171,13 @@
 				providing them with an integrated view of their academic 
 				activities and processes.
 			</p>
+<!--
 			<blockquote>
 				Fenix has helped my academic institute to develop better management strategies and to assure that everything.
 				<p><span>João Capela,</span>
 				University of Lisbon</p>
 			</blockquote>
+-->
 		</div>
 		<div class="user_box eight columns">
 			<h5>faculty</h5>
@@ -169,11 +189,13 @@
 				e-learning support and evaluation, student management and 
 				communication.
 			</p>
+<!-- 
 			<blockquote>
 				Fenix has helped my academic institute to develop better management strategies and to assure that everything.
 				<p><span>Francisco Guerreiro,</span>
 				University of Coimbra</p>
 			</blockquote>
+ -->
 		</div>
 		<br class="clear" />
 		<div class="user_box eight columns">
@@ -183,11 +205,13 @@
 				and department chairs, FenixEdu provides decision makers with 
 				dedicated management views, customized to meet their specific needs. 
 			</p>
+<!-- 
 			<blockquote>
 				Fenix has helped my academic institute to develop better management strategies and to assure that everything.
 				<p><span>Francisco Guerreiro,</span>
 				University of Coimbra</p>
 			</blockquote>
+ -->
 		</div>
 		<div class="user_box eight columns">
 			<h5>staff</h5>
@@ -202,16 +226,18 @@
 				European Credit Transfer and Accumulation System (ECTS); 
 				diploma and certificate processing.
 			</p>
+<!-- 
 			<blockquote>
 				Fenix has helped my academic institute to develop better management strategies and to assure that everything.
 				<p><span>Francisco Guerreiro,</span>
 				University of Coimbra</p>
 			</blockquote>
+ -->
 		</div>
 	</section>
 
 	<section id="map_box">
-		<h2 class="sixteen columns"><span aria-hidden="true" data-icon="&#59172;"></span>a world of fenixedu</h2>
+		<h2 class="sixteen columns" id="community"><span aria-hidden="true" data-icon="&#59172;"></span>a world of fenixedu</h2>
 	</section>
 
 	</div>
@@ -225,21 +251,32 @@
 
 	<div class="container">
 	<section>
-		<h2 class="sixteen columns"><span aria-hidden="true" data-icon="&#59214;"></span>getting started</h2>
-		<p class="eight columns">Getting started with the FenixEdu™ project is easy. Hoping that FenixEdu™ solutions may be useful to others, we share our software with the community whenever possible. FenixEdu™ comprehends a range of solutions, from academic and administrative processes to general purpose software libraries.</p>
-		<p class="eight columns">To quickly get a FenixEdu™ installation up and running on your machine, you should use Vagrant to run a virtual machine that we pre-configured with the necessary environment. Once you have installed the Vagrant tool in your machine, you just have to run the following commands:</p>
-		<br class="clear" />
-		<pre>
-vagrant box add fenixedu http://fenix-ashes.ist.utl.pt/fenixedu.box
-vagrant init
-vagrant up
-		</pre>
+		<h2 class="sixteen columns" id="gettingStarted"><span aria-hidden="true" data-icon="&#59214;"></span>getting started</h2>
+		<div class="user_box eight columns">
+			<h5>Examples and Demos</h5>
+			<p>
+				We are still working on an online demo that will allow 
+				people to experiment and discover what the project provides.
+				Until we get it up and running we recommend taking a gander at
+				<a href="https://ciist.ist.utl.pt/projectos/Fenix.pdf">this</a> 
+				document which contains an overview of the provided features.
+			</p>
+		</div>
+		<div class="user_box eight columns">
+			<h5>Developers</h5>
+			<p>
+				Developers are invited to rummage through our
+				<a href="/dev">project documentation</a> and try out our 
+				modules. Each module can be used as a library, extended, 
+				rewritten or used remotly via endpoints.
+			</p>
+		</div>
 	</section>
 	</div>
 
 	<section id="calltoaction">
 		<div class="container">
-			<h3 class="sixteen columns"><a href="/">these schools’ systems are powered by fenixedu.<span>be the next</span></a></h3>
+			<h3 class="sixteen columns"><a href="/dev">these schools’ systems are powered by fenixedu.<span>be the next</span></a></h3>
 		</div>
 	</section>
 
@@ -247,7 +284,7 @@ vagrant up
 		<div class="container">
 		
 		<div class="four columns">
-			<p>The FenixEdu™ is an open-source academic information platform.</p>
+			<p>FenixEdu is an open-source academic information platform.</p>
 		</div>
 		<div class="eight columns">
 			<h6>drop us a line</h6>

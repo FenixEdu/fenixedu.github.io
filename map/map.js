@@ -1,8 +1,8 @@
 (function(window) {
 
   var schools = [
-    { name: "Instituto Superior Técnico",
-      url: "http://ist.utl.pt",
+    { name: "Técnico Lisboa",
+      url: "http://tecnico.ulisboa.pt",
       imagePin: "map/map_pin.png",
       logo: "logo_school_ist.png",
       location: [ 38.73763 , -9.13910 ],
@@ -15,7 +15,7 @@
       logo: "logo_school_iseg.png",
       location: [ 38.71244 , -9.15496 ],
       z: 19,
-      numUsers: 3333 },
+      numUsers: 3694 },
 
     { name: "ISA",
       url: "http://www.isa.utl.pt",
