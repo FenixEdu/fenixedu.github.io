@@ -75,36 +75,18 @@
 	    font-style: normal;
 	}
 
-	@keyframes arrow_rotate {
-		from {
-			-webkit-transform: rotate(0deg);
-			-moz-transform: rotate(0deg);
-			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
-		}
-		to {
-			-webkit-transform: rotate(90deg);
-			-moz-transform: rotate(90deg);
-			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-		}
-	}
-
-	@-webkit-keyframes arrow_rotate {
-		from {
-			-webkit-transform: rotate(0deg);
-			-moz-transform: rotate(0deg);
-			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
-		}
-		to {
-			-webkit-transform: rotate(90deg);
-			-moz-transform: rotate(90deg);
-			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-		}
-	}
-
 
 /* Links */
 
-	a, a:visited { color: #333; text-decoration: none; outline: 0; }
+	a, a:visited { 
+		color: #333; 
+		text-decoration: none; 
+		outline: 0;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+	}
 	a:hover, a:focus { color: #19accd; }
 	p a, p a:visited { line-height: inherit; }
 
@@ -133,6 +115,7 @@
 		position: relative;
 		height: 215px;
 		padding: 65px 0;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
 
@@ -162,13 +145,15 @@
 	main {
 		display: block;
 		padding-right: 15px;
+		margin-bottom: 50px;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
 
 	footer span {
 		border-top: 1px solid #ccc;
 		padding-top: 5px;
-		margin: 75px 0 50px;
+		margin: 0 0 50px;
 	}
 
 	footer span a {color: #19accd!important;}
@@ -210,7 +195,6 @@
 		color: #555;
 	}
 
-
 /* Main Navigation */
 
 	aside {
@@ -223,6 +207,7 @@
 
 	aside a {
 		display: block;
+		
 	}
 
 	aside a:hover, aside a:active {
@@ -264,6 +249,25 @@
 		padding-right: 15px;
 	}
 
+	aside nav.fixed {
+    	position: fixed;
+    	width: inherit;
+    	top: 25px;
+    	-webkit-transition: top 0.25s ease;
+		-moz-transition: top 0.25s ease;
+		-o-transition: top 0.25s ease;
+		transition: top 0.25s ease;
+    }
+
+	aside nav.absolute {
+    	position: absolute;
+    	bottom: 0;
+    }	
+
+	aside nav.scroll {
+		position: relative;
+	}
+
 	li.subtitle [data-icon]:before {
 		color: #555;
 		margin: -13px 0 0 -27px;
@@ -275,39 +279,44 @@
 		font: 40px/1 "Entypo-Social";
 	}
 
-	.expands > a:before {
+	.expands span {
 		background: url('../images/arrow_menu.png') no-repeat 0 4px;
-		content: '';
 		position: absolute;
-		margin: 0 0 0 -20px;
-		width: 10px;
-		height: 20px;
-		padding-right: 10px;
+		margin: 4px 0 0 -20px;
+		width: 5px;
+		height: 10px;
+		padding: 5px 15px 5px 0;
 		/*content: '\25B8';
 		font: 40px/1 "Entypo";
 		color: #19accd;
 		position: absolute;
 		margin: -11px 0 0 -25px;
 		padding-right: 15px;*/
-		border: 1px solid orange;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: -webkit-transform 0.3s ease-out;
+		-moz-transition: -moz-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
 	}
 
-	.expands {border: 1px solid orange;}
-
-	.expands > a:hover:before {
-		animation: arrow_rotate 2s ease 0 1 1 alternate;
-		/* Safari and Chrome: */
-		-webkit-animation: arrow_rotate 2s ease 0 1 1 alternate;
-	}
+	.expands span.rotated {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		transform: rotate(90deg);
+		-webkit-transform-origin: 25% 50%;
+		transform-origin: 25% 50%;
+   		-webkit-transition: -webkit-transform 0.3s ease-out;
+		-moz-transition: -moz-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;		
+	}	
 
 	.expands ul {
 		display: none;
-		border: 1px solid green;
 	}
 
 	.expands ul li a {
 		color: #999!important;
-		border: 1px solid red;
 	}
 
 	aside nav > ul > ul:last-of-type {
@@ -344,7 +353,7 @@
 
 	strong {font-family: "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 
-	main > p a, main > ul li a, main > ol li a {
+	main > p a, main > pre code a, main > blockquote a, main > ul li a, main > ol li a {
 		text-decoration: none;
 		border-bottom: thin dotted;
 	}
@@ -356,6 +365,7 @@
 	main > p {
 		margin-bottom: 26px;
 	}
+
 
 /* Lists */
 
@@ -390,6 +400,7 @@
 		padding: 10px 75px 10px 20px;
 		margin: 36px 0;
 		position: relative;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
 
@@ -435,21 +446,18 @@
 		border-radius: 3px;
 	}
 
-	/*
+
+/* Tables */
+
+	
 	table {
 		width: 100%;
-		border: 1px solid #ebebeb;
+		margin: 20px 0;
 	}
 
-	th {
-		font-weight: 500;
-	}
-
-	td {
-		border: 1px solid #ebebeb;
-		text-align: center; 
-		font-weight: 300;
-	}*/
+	th, tr {border-bottom: 1px solid #ddd;}
+	th {font: 14.5px/1.4 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	th, td {text-align: left; padding: 5px 0;}
 
 
 /* Blockquotes */
@@ -459,6 +467,7 @@
 		border: none;
 		padding: 20px 65px 20px 20px;
 		margin: 36px 0;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
 
@@ -550,6 +559,7 @@ body {margin: 60px 120px;}
 header.container {
 	height: 50px;
 	padding: 50px 0 0;
+	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
@@ -618,3 +628,11 @@ main nav, aside nav, pre span:first-child {display: none;}
 footer span {border-top: 1px solid #000;}
 
 }
+
+/*main {
+	background-color: #ccc;
+}
+
+footer {
+	background-color: #aaa;
+}*/

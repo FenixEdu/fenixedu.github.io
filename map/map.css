@@ -1,34 +1,28 @@
 
 /* Map InfoBubble Styles */
 
-  .schoolLogo {
-    width: 175px;
+  .bubbleContent > a {
+    position: relative;
+    display: block;
   }
 
-  .bubbleContent hr {
-    border-top: 1px solid #eee;
-    height: 0;
-    background: none;
-    width: 90%;
+   .bubbleContent > a span {
+    font: normal normal 14px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fefefe;
+    width: 98%;
+    border-top: 1px solid #fefefe;
+    padding-top: 8px;
     position: absolute;
-    bottom: 35px;
-    margin: 0 auto;
+    top: 78px;
   }
 
-  .gm-style span {
-    font: 14px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #fff;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+  .bubbleContent > a div {
+    height: 50px;
+    padding: 12.5px 0;
   }
 
-  .bubbleContent .schoolLogo {
-    min-height: 60px;
-  }
 
   .bubbleContent img {
-    max-width: 175px;
+    max-width: 165px;
     height: auto;
-    padding: 10px 0;
   }

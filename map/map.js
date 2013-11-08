@@ -9,7 +9,7 @@
       z: 20,
       numUsers: 65148
     },
-    { name: "ISEG",
+    { name: "Lisboa School of Economics & Management",
       url: "http://aquila.iseg.utl.pt",
       imagePin: "map/map_pin.png",
       logo: "logo_school_iseg.png",
@@ -17,7 +17,7 @@
       z: 19,
       numUsers: 3694 },
 
-    { name: "ISA",
+    { name: "Instituto Superior de Agronomia",
       url: "http://www.isa.utl.pt",
       imagePin: "map/map_pin.png",
       logo: "logo_school_isa.png",
@@ -25,7 +25,7 @@
       z: 18,
       numUsers: 9296 },
 
-    { name: "FA",
+    { name: "Faculdade de Arquitetura de Lisboa",
       url: "http://www.fa.utl.pt",
       imagePin: "map/map_pin.png",
       logo: "logo_school_fa.png",
@@ -33,7 +33,7 @@
       z: 17,
       numUsers: 666 },
 
-    { name: "ESESJC",
+    { name: "São José de Cluny Nursing School",
       url: "http://www.esesjcluny.pt",
       imagePin: "map/map_pin.png",
       logo: "logo_school_esesjc.png",
@@ -41,7 +41,7 @@
       z: 16,
       numUsers: 1447 },
 
-    { name: "ISCTE",
+    { name: "ISCTE - University Institute of Lisbon",
       url: "http://www.iscte-iul.pt",
       imagePin: "map/map_pin.png",
       logo: "logo_school_iscte.png",
@@ -138,7 +138,7 @@
       var location = school["location"];
       var imagePin = school["imagePin"];
       var latLon = new google.maps.LatLng(location[0], location[1]);
-      var contentString = '<a href='+school["url"]+'><div class="schoolLogo" data-bubble-id="'+i+'"><img src="map/logos/'+school["logo"]+'" alt="'+school["name"]+'"></div><hr/><span>'+school["numUsers"]+'</span></a>';
+      var contentString = '<a href='+school["url"]+'><div class="schoolLogo" data-bubble-id="'+i+'"><img src="map/logos/'+school["logo"]+'" alt="'+school["name"]+'"></div><span>'+school["numUsers"]+'</span></a>';
 
       var marker = new google.maps.Marker({
         position: latLon,

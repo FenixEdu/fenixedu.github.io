@@ -11,76 +11,76 @@
 
 	@font-face {
 	    font-family: 'Entypo'; /* "Entypo pictograms by Daniel Bruce — www.entypo.com" */
-	    src: url('http://static.ist.utl.pt/fonts/entypo/entypo.eot');
-	    src: url('http://static.ist.utl.pt/fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/entypo/entypo.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/entypo/entypo.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/entypo/entypo.svg#entypo') format('svg');
+	    src: url('../fonts/entypo/entypo.eot');
+	    src: url('../fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/entypo/entypo.woff') format('woff'),
+	         url('../fonts/entypo/entypo.ttf') format('truetype'),
+	         url('../fonts/entypo/entypo.svg#entypo') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'Entypo-Social';
-	    src: url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.eot');
-	    src: url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.svg#entypo') format('svg');
+	    src: url('../fonts/entypo-social/entypo-social.eot');
+	    src: url('../fonts/entypo-social/entypo-social.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/entypo-social/entypo-social.woff') format('woff'),
+	         url('../fonts/entypo-social/entypo-social.ttf') format('truetype'),
+	         url('../fonts/entypo-social/entypo-social.svg#entypo') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'KlavikaMediumPlain';
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.eot');
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.svg#klavika') format('svg');
+	    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot');
+	    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/klavika/klavikamedium-plain-webfont.woff') format('woff'),
+	         url('../fonts/klavika/klavikamedium-plain-webfont.ttf') format('truetype'),
+	         url('../fonts/klavika/klavikamedium-plain-webfont.svg#klavika') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'KlavikaRegularPlain';
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.eot');
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.svg#klavika') format('svg');
+	    src: url('../fonts/klavika/klavikaregular-plain-webfont.eot');
+	    src: url('../fonts/klavika/klavikaregular-plain-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/klavika/klavikaregular-plain-webfont.woff') format('woff'),
+	         url('../fonts/klavika/klavikaregular-plain-webfont.ttf') format('truetype'),
+	         url('../fonts/klavika/klavikaregular-plain-webfont.svg#klavika') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'KlavikaLightPlain';
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.eot');
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.svg#klavika') format('svg');
+	    src: url('../fonts/klavika/klavikalight-plain-webfont.eot');
+	    src: url('../fonts/klavika/klavikalight-plain-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/klavika/klavikalight-plain-webfont.woff') format('woff'),
+	         url('../fonts/klavika/klavikalight-plain-webfont.ttf') format('truetype'),
+	         url('../fonts/klavika/klavikalight-plain-webfont.svg#klavika') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'KlavikaRegularItalic';
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.eot');
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.svg#klavika') format('svg');
+	    src: url('../fonts/klavika/klavikaregular-italic-webfont.eot');
+	    src: url('../fonts/klavika/klavikaregular-italic-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/klavika/klavikaregular-italic-webfont.woff') format('woff'),
+	         url('../fonts/klavika/klavikaregular-italic-webfont.ttf') format('truetype'),
+	         url('../fonts/klavika/klavikaregular-italic-webfont.svg#klavika') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 		font-family: 'NRSFont';
-		src: url('../fonts/NRSFont.eot');
-		src: url('../fonts/NRSFont.woff') format('woff'), 
-			url('../fonts/NRSFont.ttf') format('truetype'), 
-			url('../fonts/NRSFont.svg') format('svg');
+		src: url('../fonts/NRSFont/NRSFont.eot');
+		src: url('../fonts/NRSFont/NRSFont.woff') format('woff'), 
+			url('../fonts/NRSFont/NRSFont.ttf') format('truetype'), 
+			url('../fonts/NRSFont/NRSFont.svg') format('svg');
 		font-weight: normal;
 		font-style: normal;
 	}
@@ -92,10 +92,10 @@
 		color: #333; 
 		text-decoration: none; 
 		outline: 0;
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
 	}
 	a:hover:not(.button), a:focus:not(.button) { color: #19accd; position: relative;}
 	p a, p a:visited { line-height: inherit; }
@@ -122,8 +122,8 @@
 	}
 
 	header.container {
-		height: 180px;
-		padding: 45px 0;
+		height: 165px;
+		padding: 40px 0;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
@@ -157,7 +157,7 @@
 
 	section#highlight {
 		background: url('../images/highlight_bg_ignition.png') repeat 0 0;
-		height: 600px;
+		height: 595px;
 		padding: 120px 0;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -194,7 +194,7 @@
 		margin: 80px auto 0;
 	}
 
-	.user_box > p {min-height: 130px;}
+	.user_box > p {min-height: 135px;}
 
 	.user_box:nth-last-child(n+3) {
 		margin-bottom: 50px;
@@ -249,10 +249,10 @@
 		color: #666;
 		display: block;
 		text-transform: uppercase;
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
 	}
 
 	.social a span:first-child {font: normal normal 25px/1.2 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
@@ -269,10 +269,10 @@
 		float: left;
 		margin-right: 7.5px;
 		text-align: center;
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
 	}
 
 	.social a:last-child:before {
@@ -333,7 +333,7 @@
 	}
 
 	p img { margin: 0; }
-	p.lead { font-size: 19px; line-height: 1.45; margin-bottom: 92px;}
+	p.lead { font: normal normal 19px/1.45 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; margin-bottom: 92px;}
 	.eight.columns > p, p.eight.columns {
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -350,7 +350,7 @@
 
 /* Blockquotes */
 
-	blockquote, pre {
+	blockquote {
 		font: normal normal 15px/1.3 "KlavikaRegularItalic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		padding: 40px 180px 40px 0;
 		margin-top: 75px;
@@ -410,10 +410,10 @@
 		text-decoration: none;
 		text-align: center;
 		cursor: pointer;
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
 	}
 
 	.button:not(.icon),
@@ -426,10 +426,7 @@
 	.button:hover,
 	button:hover,
 	input[type="submit"]:hover,
-	input[type="button"]:hover {
-		background: #19aca5;
-	}
-
+	input[type="button"]:hover,
 	.button:active,
 	button:active,
 	input[type="submit"]:active,
@@ -458,6 +455,7 @@
 	}
 
 	.no-svg .button.icon:first-child:before {background: transparent url('../images/logo_white.png') no-repeat center center;}
+	.button.icon:first-child:hover:before {border-right: 1px solid #ccc;}
 
 	.button.icon:last-child {
 		background: #666;
@@ -520,24 +518,24 @@
 		border: none;
 		outline: none;
 		border-bottom: 1px solid #666;
-		font: normal normal 16px/1 "KlavikaLightPlain", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font: normal normal 16px/1.2 "KlavikaLightPlain", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #ccc;
-		padding: 6px 4px 10px 0;
+		padding: 6px 4px 8px 0;
 		margin: 0;
 		width: 80%;
 		display: block;
-		margin-bottom: 15px;
+		margin-bottom: 13px;
 		-moz-border-radius: 0px;
 		-webkit-border-radius: 0px;
 		border-radius: 0px;
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
 	}
 	form textarea {
 		font: normal normal 14px/1.3 "KlavikaLightPlain", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		min-height: 65px; 
+		min-height: 65px;
 		resize: vertical;
 		margin-bottom: 10px;
 	}
@@ -582,42 +580,77 @@
 	}
 
 
+/* Media Queries */
+
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 
 	.button.icon:first-child {width: 280px;}
 	#map {height: 450px;}
+	.user_box > p {min-height: 160px;}
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	
+@media only screen and (min-width: 768px) and (max-width: 959px) {	
 	#highlight .button {width: 200px;}
-	.button.icon:last-child {padding: 5px 18px;}
+	.button.icon:last-child {width: 93%;}
 	h3 {font-size: 22px;}
+	hr {margin: 60px auto 0;}
 	form input[type="text"], form input[type="password"], form input[type="email"], form textarea {width: 90%;}
 	footer > div > div:first-child {padding: 100px 20px 0 0;}
 	time + p {padding-right: 0px; padding-left: 10px;}
-
 }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-
-	h2 {padding-top: 40px;}
-}
-
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+	section#highlight {
+		background-size: auto 370px;
+		height: 370px;
+		padding: 54px 0;
+	}
 	nav ul {display: none;}
-	#highlight h1 {margin-top: 25px;}
-	h1 span {font-size: 30px;}
-	p.lead {padding-top: 58px;}
-	#highlight div div {margin-top: 70px;}
+	p.lead {font: normal normal 16px/1.35 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding-top: 25px;}
+	#highlight div div {margin-top: 35px;}
 	#highlight .button {width: 178px; float: left;}
-}
+	.button, button, input[type="submit"], input[type="button"]  {font: normal normal 15px/1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	.button:not(.icon), button:not(.icon), input[type="submit"]:not(.icon), input[type="button"]:not(.icon) {padding: 10px 15px;}
+	.button.icon:first-child {width: 100%; margin-top: 20px;}
+	.button.icon:last-child {width: 98%;}
+	[data-icon]:before {font: normal normal 50px/1.2 "Entypo";}
+
+	section#highlight h1 {margin-top: 25px;}
+	h1 span {font-size: 30px;}
+	h2 {font: normal normal 30px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 30px 0 15px;}
+	h3 {font: normal normal 20px/0.8 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif}
+	h3 a {padding: 35px 0 30px;}
+	h5, h6 {margin-bottom: 20px;}
+
+	time {width: 10%!important; float: left;}
+	time + p {
+		float: left;
+		width: 89.5%!important;
+		padding-left: 12px;
+		padding-right: 0;
+	}
+
+	hr {width: 90%; margin: 60px auto 0;}
+	.user_box, .user_box:nth-last-child(n+3) {margin-bottom: 40px!important;}
+	.user_box > p {min-height: 1px;}
+
+	blockquote {margin-top: 30px; padding: 30px 180px 30px 0;}
+	section#calltoaction {margin-top: 40px;}
+	footer > div > div, footer > div > p {padding: 30px 0 0;}
+	footer > div > div:first-child {padding: 85px 20px 10px 0;}
+	form input[type="text"], form input[type="password"], form input[type="email"], form textarea {width: 97.5%;}
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-
+	section#highlight h1 {margin-top: 32px;}
+	h1 span {font-size: 21px;}
+	h2 {font: normal normal 24px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 20px 0 15px;}
+	h3 {font: normal normal 16px/0.8 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	[data-icon]:before {font: normal normal 45px/1.2 "Entypo";}
+	#highlight .button {width: 118px;}
+	time+p {padding-left: 22px;}
+	hr {margin: 45px auto 0;}
 }
