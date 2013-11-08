@@ -77,10 +77,10 @@
 
 	@font-face {
 		font-family: 'NRSFont';
-		src: url('../fonts/NRSFont.eot');
-		src: url('../fonts/NRSFont.woff') format('woff'), 
-			url('../fonts/NRSFont.ttf') format('truetype'), 
-			url('../fonts/NRSFont.svg') format('svg');
+		src: url('../fonts/NRSFont/NRSFont.eot');
+		src: url('../fonts/NRSFont/NRSFont.woff') format('woff'), 
+			url('../fonts/NRSFont/NRSFont.ttf') format('truetype'), 
+			url('../fonts/NRSFont/NRSFont.svg') format('svg');
 		font-weight: normal;
 		font-style: normal;
 	}
@@ -98,7 +98,7 @@
 		transition: all 0.25s ease-in-out;
 	}
 	a:hover:not(.button), a:focus:not(.button) { color: #19accd; position: relative;}
-	p a, p a:visited { line-height: inherit; }
+	p a, p a:visited { line-height: inherit; border-bottom: thin dotted;}
 
 
 /* Sections */
@@ -155,6 +155,8 @@
 		padding-right: 15px;
 	}
 
+	header nav ul li:last-child {margin-left: 20px;}
+
 	section#highlight {
 		background: url('../images/highlight_bg_ignition.png') repeat 0 0;
 		height: 595px;
@@ -170,11 +172,13 @@
 	}
 
 	time span:first-child {
-		font: normal normal 78px/0.95 "NRSFont", "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font: normal normal 70px/0.95 "NRSFont", "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/*font: normal normal 78px/0.95 "NRSFont", "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 	}
 
-	time span:last-child {
-		font: normal normal 24px/0.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	time span {
+		font: normal normal 16px/1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/*font: normal normal 24px/0.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 		float: left;
 	}
 
@@ -203,6 +207,21 @@
 	#map {
 		width: 100%;
 		height: 600px; 
+	}
+
+	#map + div {
+		display: block; 
+		z-index: 999; 
+		position: relative; 
+		top: -570px; 
+		right: 20px; 
+		float: right;
+	}
+
+	#submap {
+		width: 200px; 
+		height: 130px; 
+		border: 1px solid #ccc;
 	}
 
 	section#calltoaction {
