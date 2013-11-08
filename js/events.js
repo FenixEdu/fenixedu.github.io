@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+	anchorClick = function (i) {
+		return function () {
+			$.scrollTo($("section.anchor_section:eq(" + i + ") > :first-child"), 'slow', {offset: {top:-10}});
+		}
+	}
+
+	$(".anchor_link").each(function (n) {
+		$(this).click(anchorClick(n));
+	})
+
+	$("#highlight .anchor").click(function () {
+		$.scrollTo("time", {duration: 'slow', offset: {top:-125}});	
+	})
+
+	
+
 	var menuTimeOutTimer = 0;
 	var lastMenuOpened;
 
