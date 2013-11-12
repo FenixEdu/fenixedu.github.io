@@ -7,8 +7,8 @@
       logo: "logo_school_ist.png",
       location: [ 38.73763 , -9.13910 ],
       z: 20,
-      numUsers: 65148
-    },
+      numUsers: 65148 },
+      
     { name: "Lisboa School of Economics & Management",
       url: "http://aquila.iseg.utl.pt",
       imagePin: "map/map_pin.png",
@@ -138,7 +138,7 @@
       var location = school["location"];
       var imagePin = school["imagePin"];
       var latLon = new google.maps.LatLng(location[0], location[1]);
-      var contentString = '<a href='+school["url"]+'><div class="schoolLogo" data-bubble-id="'+i+'"><img src="map/logos/'+school["logo"]+'" alt="'+school["name"]+'"></div><span>'+school["numUsers"]+'</span></a>';
+      var contentString = '<a href='+school["url"]+'><div class="schoolLogo" data-bubble-id="'+i+'"><img src="map/logos/'+school["logo"]+'" alt="'+school["name"]+'"></div><span>'+school["numUsers"]+' Users</span></a>';
 
       var marker = new google.maps.Marker({
         position: latLon,

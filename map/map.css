@@ -11,14 +11,14 @@
     color: #fefefe;
     width: 98%;
     border-top: 1px solid #fefefe;
-    padding-top: 8px;
+    padding-top: 10px;
     position: absolute;
-    top: 78px;
+    top: 72px;
   }
 
   .bubbleContent > a div {
     height: 50px;
-    padding: 12.5px 0;
+    padding: 8.5px 0;
   }
 
 

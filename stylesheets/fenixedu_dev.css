@@ -75,6 +75,16 @@
 	    font-style: normal;
 	}
 
+	@font-face {
+		font-family: 'NRSFont';
+		src: url('../fonts/NRSFont/NRSFont.eot');
+		src: url('../fonts/NRSFont/NRSFont.woff') format('woff'), 
+			url('../fonts/NRSFont/NRSFont.ttf') format('truetype'), 
+			url('../fonts/NRSFont/NRSFont.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
 
 /* Links */
 
@@ -158,6 +168,68 @@
 
 	footer span a {color: #19accd!important;}
 
+	article > a{
+		display: block;
+		clear: left;
+		padding: 0 0 5px;
+	}
+
+	article > a:hover {
+		color: inherit;
+	}
+
+	time + strong, time + strong + p {margin-bottom: 10px; display: block; margin-left: 50px;}
+
+	time {
+		text-align: center;
+		text-transform: uppercase;
+		color: #575759;
+	}
+
+	time span:first-child {
+		font: normal normal 55px/1 "NRSFont", "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	time span {
+		font: normal normal 22px/0.5 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		float: left;
+	}
+
+	#intro + p {
+		text-align: center;
+		text-transform: uppercase;
+		font: normal normal 15px/1.2 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		position: relative;
+	}
+
+	#intro + p a {
+		background: #f5f5f5;
+		width: 32.5%;
+		display: inline-block;
+		padding: 0 0 30px;
+		box-sizing: border-box;
+		border-bottom: none;
+	}
+
+	#intro + p a:before {
+		content: '\268F';
+		font: 100px/1 "Entypo";
+		display: block;
+		color: #575759;
+	}
+
+	#intro + p a:first-child:before {content: '\E714';}
+	#intro + p a:last-child:before {content: '\2692';}
+
+	#intro + p a:hover:before {
+		color: #19accd;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+
+
 /* Breadcrumbs */
 
 	main nav {
@@ -194,6 +266,7 @@
 	main nav ul li:not(:first-child) a:hover:before {
 		color: #555;
 	}
+
 
 /* Main Navigation */
 
@@ -269,7 +342,7 @@
 	}
 
 	li.subtitle [data-icon]:before {
-		color: #555;
+		/*color: #555; When it isn't a page */
 		margin: -13px 0 0 -27px;
 	}
 
@@ -323,8 +396,10 @@
 		text-transform: lowercase;
 	}
 
-	aside nav > ul > ul:last-of-type li + li a span:before {padding-left: 3px;}
-	aside nav > ul > ul:last-of-type li:last-child a span:before {padding-left: 0;}
+	aside nav > ul > ul:last-of-type li:nth-child(2) a span:before {padding-left: 3px;}
+	aside nav > ul > ul:last-of-type li a span:before {padding-left: 0;}
+	aside nav > ul > ul:last-of-type span[data-icon="#"]:before {font: normal normal 26px/1.4 "KlavikaRegularItalic", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	
 
 	aside nav ul > ul {
 		padding-left: 28px; 
@@ -351,7 +426,7 @@
 	h3, h4 {font: 15px/1.3 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 	h5 {font: 14px/1.3 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 
-	strong {font-family: "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	strong {font-family: "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal;}
 
 	main > p a, main > pre code a, main > blockquote a, main > ul li a, main > ol li a {
 		text-decoration: none;
@@ -475,7 +550,7 @@
 		font: 14px/1.3 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 
-	blockquote > span {
+	blockquote > p > span {
 		font: 13px/1.4 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #666;
 		text-transform: uppercase;
@@ -484,7 +559,7 @@
 		display: block;
 	}
 
-	blockquote > span:before {
+	blockquote > p > span:before {
 		content: '\270E';
 		font: 38px/1 "Entypo";
 		color: #666;
@@ -523,7 +598,7 @@
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 	body {color: #111;}
-	header h1, main, footer, footer span {padding-left: 15px;}
+	header h1, main, footer {padding-left: 15px;}
 	header > span {left: 140px;}
 	main img {
 		max-width: 100%;
@@ -547,7 +622,9 @@
 		padding: 45px 0;
 	}
 	header > span {top: 112px;}
-	aside nav {display: none;}
+	aside nav, aside nav.fixed, aside nav.absolute {display: block; position: static; margin-bottom: 20px;}
+	#intro + p a {padding: 0 5px 30px;}
+	time {width: 10%!important; float: left;}
 }
 
 /* Print */
@@ -628,11 +705,3 @@ main nav, aside nav, pre span:first-child {display: none;}
 footer span {border-top: 1px solid #000;}
 
 }
-
-/*main {
-	background-color: #ccc;
-}
-
-footer {
-	background-color: #aaa;
-}*/

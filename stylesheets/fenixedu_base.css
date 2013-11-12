@@ -222,6 +222,9 @@
 		width: 200px; 
 		height: 130px; 
 		border: 1px solid #ccc;
+		position: absolute;
+		float: right;
+		right: 0px;
 	}
 
 	section#calltoaction {
@@ -606,6 +609,7 @@
 
 	.button.icon:first-child {width: 280px;}
 	#map {height: 450px;}
+	#map + div {top: -430px;}
 	.user_box > p {min-height: 160px;}
 }
 
@@ -667,7 +671,8 @@
 	section#highlight h1 {margin-top: 32px;}
 	h1 span {font-size: 21px;}
 	h2 {font: normal normal 24px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 20px 0 15px;}
-	h3 {font: normal normal 16px/0.8 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	h3 {font: normal normal 16px/1.2 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	h3 a span:after {font-size: 25px;}
 	[data-icon]:before {font: normal normal 45px/1.2 "Entypo";}
 	#highlight .button {width: 118px;}
 	time+p {padding-left: 22px;}

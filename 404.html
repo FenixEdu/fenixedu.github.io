@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en" dir="ltr">
     <head>
+
+        <!-- Basic Page Needs -->
         <meta charset="utf-8">
         <title>Page Not Found</title>
 
@@ -20,35 +22,67 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/reset/reset.css">
-        <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/normalize/normalize_v_2_1_3.css">
+        <link rel="stylesheet" href="/stylesheets/reset.css">
+        <link rel="stylesheet" href="/stylesheets/normalize_v_2_1_3.css">
         <link rel="stylesheet" href="/stylesheets/main.css">
-        <link rel="stylesheet" href="http://static.tecnico.ulisboa.pt/css/skeleton/skeleton_v_1_2.css">
+        <link rel="stylesheet" href="/stylesheets/skeleton_v_1_2.css">
+        <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
         <link rel="stylesheet" href="/stylesheets/fenixedu_dev.css">
 
         <!-- JS -->
-        <script src="http://static.tecnico.ulisboa.pt/js/modernizr/modernizr-2.6.2.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="js/events.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+        <script type="text/javascript" src="/js/events.js"></script>
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
         <!-- Favicons -->
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    </head>
-    <body>
+        
+        <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152-precomposed.png">
+        <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
+        <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120-precomposed.png">
+        <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
+        <!-- For the iPad mini and the first- and second-generation iPad on iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon-76x76-precomposed.png">
+        <!-- For the iPad mini and the first- and second-generation iPad on iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
+        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
 
-    <header class="container">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-45631967-1', 'fenixedu.org');
+          ga('send', 'pageview');
+        </script>
+
+</head>
+<body>
+
+
+    <header class="container" role="banner">
         <h1 class="three columns alpha">
             <a href="/" id="logo"></a>
         </h1>
-        <span>for developers</span>
+        <span>developer pages</span>
     </header>
 
     <div class="container">
-        <main class="twelve columns alpha">
+        <main class="twelve columns alpha" role="main">
 
             <nav>
                 <ul>
-                    <li><a href="/"></a></li>
+                    <li><a href="/dev"></a></li>
                     <li><a href="#">not found</a></li>
                 </ul>
             </nav>
@@ -65,53 +99,42 @@
             <p>Is there something you would like to know that still isn't documented?<br /><a href="">Open up a discussion on GitHub</a> or <a href="">email us your answer</a> and we will gladly help you out.</p>
         </main>
 
-        <aside id="sidebar" class="four columns omega">
-            <nav>
-            <ul>
-                <li>documentation</li>
-                    <ul>
-                        <li><a href="http://ist-dsi.github.io/"><span aria-hidden="true" data-icon="&#59146;"></span>overview</a></li>
-                        <li><a href="http://ist-dsi.github.io/methodology"><span aria-hidden="true" data-icon="&#9881;"></span>methodology</a></li>
-                        <li><a href="http://ist-dsi.github.io/tutorials"><span aria-hidden="true" data-icon="&#127891;"></span>tutorials</a></li>
-                    </ul>
-
-                    <ul>
-                        <li><span aria-hidden="true" data-icon="&#128360;"></span>Sub-Projects</li>
-                        <li>
-                            <ul>    
-                                <li><a href="http://ist-dsi.github.io/organization">organization</a></li>
-                                <li class="expands workflow"><a href="http://ist-dsi.github.io/workflow">workflow</a>
-                                    <ul>
-                                        <li><a href="">domain model</a></li>
-                                        <li><a href="">api</a></li>
-                                        <li><a href="">roadmap</a></li>
-                                        <li><a href="">javadoc</a></li>
-                                        <li><a href="">team</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                <li><a href="http://ist-dsi.github.io/logos">resources</a></li>
-                <li><a href="">discussions</a></li>
-                <li>follow fenixedu</li>
+        <aside class="four columns omega">
+            <nav role="navigation">
                 <ul>
-                    <li><a href="http://github.com/fenixedu"><span aria-hidden="true" data-icon="&#62208;"></span>github.com/fenixedu</a></li>
-                    <li><a href="http://facebook.com/fenixedu"><span aria-hidden="true" data-icon="&#62220;"></span>facebook.com/fenixedu</a></li>
-                    <li><a href="http://twitter.com/fenixeduproject"><span aria-hidden="true" data-icon="&#62217;"></span>@fenixeduproject</a></li>
+                    <li>documentation</li>
+                    <ul>
+                        <li><a href="/dev/overview"><span aria-hidden="true" data-icon="&#59146;"></span>overview</a></li>
+                        <li><a href="/dev/methodology"><span aria-hidden="true" data-icon="&#9881;"></span>methodology</a></li>
+                        <li><a href="/dev/tutorials"><span aria-hidden="true" data-icon="&#127891;"></span>tutorials</a></li>
+                        <li><a href="/dev/api"><span aria-hidden="true" data-icon="&#59156;"></span>api</a></li>
+                        <li class="subtitle"><a href="/dev/sub-projects"><span aria-hidden="true" data-icon="&#128360;"></span>sub-projects</a></li>
+                    </ul>
+                    <li><a href="/dev/resources">resources</a></li>
+                    <li><a href="http://github.com/ist-dsi/ist-dsi.github.com/issues/new">report documentation issue</a></li>
+                    <li>follow fenixedu</li>
+                    <ul>
+                        <li><a href="http://github.com/fenixedu"><span aria-hidden="true" data-icon="&#62208;"></span>github.com/fenixedu</a></li>
+                        <li><a href="http://facebook.com/fenixedu"><span aria-hidden="true" data-icon="&#62220;"></span>facebook.com/fenixedu</a></li>
+                        <li><a href="http://twitter.com/fenixeduproject"><span aria-hidden="true" data-icon="&#62217;"></span>@fenixeduproject</a></li>
+                        <li><a href=""><span aria-hidden="true" data-icon="#"></span>fenixedu @ irc.freenode.net</a></li>
+                    </ul>
+                    <li><a href="/dev/terms">terms &amp; conditions</a>
+                        <img src="/images/license.svg" alt="LGPL Version 3">
+                    </li>
                 </ul>
-                <li><a href="http://ist-dsi.github.io/terms">terms &amp; conditions</a></li>
-            </ul>
-            <img title="LGPL Version 3 Logo" alt="LGPL Version 3" src="/images/license.png">
             </nav>
         </aside>
 
     </div>
-    <footer class="container">
-        <span class="twelve columns alpha">
-            <a href="http://fenixedu.org">FenixEdu™</a>. This is Free Software, published under the <a href="http://www.gnu.org/licenses/lgpl.html">LGPL software licence</a>. See our <a href="http://ist-dsi.github.io/terms">terms and conditions</a>.
-        </span>
-        <br class="clear">
+
+    <footer class="container" role="footer">
+    <span class="twelve columns alpha">
+        <a href="http://fenixedu.org">FenixEdu™</a>. This is Free Software, published under the LGPL software licence. See our <a href="/dev/terms">terms and conditions</a>.
+        <br />© 2002–13 <a href="http://tecnico.ulisboa.pt/">Técnico Lisboa</a>. All rights reserved.
+    </span>
+    <br class="clear">
     </footer>
-    </body>
+
+</body>
 </html>

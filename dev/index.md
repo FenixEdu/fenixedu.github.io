@@ -4,19 +4,23 @@ title: FenixEdu™ for Developers
 base_url: "./"
 ---
 
-### Recent Posts in FenixEdu Developer Blog
+## getting started
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+<div id="intro"></div>
 
+[Explore the Endpoints][Endpoints]
+[Explore the Modules][Endpoints]
+[Create new Endpoints][Endpoints]
 
-
+## Latest Announcements
 {% for post in site.posts %}
-<div style="width: 100%; float: left; display: block; margin-bottom: 10px">
-	<div style="float: left; margin-right: 10px; display: inline; text-align: center; color: #AAA; padding: 2px 5px; border-radius: 4px; background-color: #EEE; font-size: 13px">{{post.date | date: "%b"}}<br/><span style="color: black">{{post.date | date: "%d"}}</span></div>
-	<a href="{{ post.url }}">{{ post.title }}</a>
-</div>
+<article>
+	<a href="{{ post.url }}">
+	<time pubdate datetime="{{ post.date }}" class="one columns alpha"><span>{{post.date | date: "%d"}}</span><span>{{post.date | date: "%b"}}</span></time>
+	<strong>{{ post.title }}</strong>
+	<p>We have the pleasure to announce that we are hosting the first edition of FenixEdu™ Ignition, an hackaton event where we will launch a new service to both user and developer communities. [...]</p>
+</a>
+</article>
 {% endfor %}
+
+[Endpoints]: http://git-scm.com/documentation
