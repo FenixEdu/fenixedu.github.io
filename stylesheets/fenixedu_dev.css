@@ -11,66 +11,66 @@
 
 	@font-face {
 	    font-family: 'Entypo'; /* "Entypo pictograms by Daniel Bruce — www.entypo.com" */
-	    src: url('http://static.ist.utl.pt/fonts/entypo/entypo.eot');
-	    src: url('http://static.ist.utl.pt/fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/entypo/entypo.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/entypo/entypo.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/entypo/entypo.svg#entypo') format('svg');
+	    src: url('../fonts/entypo/entypo.eot');
+	    src: url('../fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/entypo/entypo.woff') format('woff'),
+	         url('../fonts/entypo/entypo.ttf') format('truetype'),
+	         url('../fonts/entypo/entypo.svg#entypo') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'Entypo-Social';
-	    src: url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.eot');
-	    src: url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/entypo-social/entypo-social.svg#entypo') format('svg');
+	    src: url('../fonts/entypo-social/entypo-social.eot');
+	    src: url('../fonts/entypo-social/entypo-social.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/entypo-social/entypo-social.woff') format('woff'),
+	         url('../fonts/entypo-social/entypo-social.ttf') format('truetype'),
+	         url('../fonts/entypo-social/entypo-social.svg#entypo') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'KlavikaMediumPlain';
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.eot');
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikamedium-plain-webfont.svg#klavika') format('svg');
+	    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot');
+	    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/klavika/klavikamedium-plain-webfont.woff') format('woff'),
+	         url('../fonts/klavika/klavikamedium-plain-webfont.ttf') format('truetype'),
+	         url('../fonts/klavika/klavikamedium-plain-webfont.svg#klavika') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'KlavikaRegularPlain';
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.eot');
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-plain-webfont.svg#klavika') format('svg');
+	    src: url('../fonts/klavika/klavikaregular-plain-webfont.eot');
+	    src: url('../fonts/klavika/klavikaregular-plain-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/klavika/klavikaregular-plain-webfont.woff') format('woff'),
+	         url('../fonts/klavika/klavikaregular-plain-webfont.ttf') format('truetype'),
+	         url('../fonts/klavika/klavikaregular-plain-webfont.svg#klavika') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'KlavikaLightPlain';
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.eot');
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikalight-plain-webfont.svg#klavika') format('svg');
+	    src: url('../fonts/klavika/klavikalight-plain-webfont.eot');
+	    src: url('../fonts/klavika/klavikalight-plain-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/klavika/klavikalight-plain-webfont.woff') format('woff'),
+	         url('../fonts/klavika/klavikalight-plain-webfont.ttf') format('truetype'),
+	         url('../fonts/klavika/klavikalight-plain-webfont.svg#klavika') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'KlavikaRegularItalic';
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.eot');
-	    src: url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.woff') format('woff'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.ttf') format('truetype'),
-	         url('http://static.ist.utl.pt/fonts/klavika/klavikaregular-italic-webfont.svg#klavika') format('svg');
+	    src: url('../fonts/klavika/klavikaregular-italic-webfont.eot');
+	    src: url('../fonts/klavika/klavikaregular-italic-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/klavika/klavikaregular-italic-webfont.woff') format('woff'),
+	         url('../fonts/klavika/klavikaregular-italic-webfont.ttf') format('truetype'),
+	         url('../fonts/klavika/klavikaregular-italic-webfont.svg#klavika') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
