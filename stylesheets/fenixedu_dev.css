@@ -244,7 +244,7 @@
 	}
 
 	main nav ul li:first-child {
-		width: 20px;
+		width: 18px;
 	}
 
 	main nav ul li:first-child a:before {
@@ -258,8 +258,8 @@
 	main nav ul li:not(:first-child) a:before {
 		content: '/';
 		font: 16px/1 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		padding-right: 8px;
-		padding-left: 4px;
+		padding-right: 6px;
+		padding-left: 3px;
 		color: #555;
 	}
 	
@@ -296,10 +296,10 @@
 	aside nav > ul > li > a, aside nav > ul > li:first-child {
 		color: #19accd!important;
 		border-bottom: 1px solid #19accd;
-		padding-bottom: 7px;
+		padding-bottom: 7px!important;
 	}
 
-	aside nav > ul > li + li + li {
+	aside nav > ul > li + li {
 		border-bottom: 1px solid #666;
 		padding-bottom: 7px;
 	}
@@ -623,8 +623,13 @@
 	}
 	header > span {top: 112px;}
 	aside nav, aside nav.fixed, aside nav.absolute {display: block; position: static; margin-bottom: 20px;}
+	main nav ul li {font: 13px/1.3 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	main nav ul li:not(:first-child) a:before {font: 14px/1 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	main nav ul li:first-child {width: 16px;}
+	main nav ul li:first-child a:before {font: 30px/1 "Entypo"; top: -5px;}
 	#intro + p a {padding: 0 5px 30px;}
 	time {width: 10%!important; float: left;}
+
 }
 
 /* Print */

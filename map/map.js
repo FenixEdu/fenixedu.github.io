@@ -106,7 +106,7 @@
     shadowStyle: 0,
     padding: 12,
     maxWidth: 180,
-    maxHeight: 100,
+    minHeight: 100,
     backgroundColor: '#19accd',
     borderRadius: 0,
     borderWidth: 0,
