@@ -335,6 +335,12 @@
 				var subject = $("#subject").val();
 				var msg = $("#textarea").val();
 				if(name != "" && email != "" && subject != "" && msg != "") {
+					var data = {
+						name: name,
+						email: email,
+						subject: subject,
+						msg: msg
+					};
 					$.ajax({
 						type: "POST",
 						url: "http://fenixedu.org/ignition/contact-form-message",
