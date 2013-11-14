@@ -290,7 +290,7 @@
 					<div class="four columns omega">
 						<label for="textarea">message</label>
 						<textarea id="textarea" placeholder="Message"></textarea>
-						<a href="" class="button icon">submit</a>
+						<a href="" id="submit-message" class="button icon">submit</a>
 					</div>
 				</fieldset>
 			</form>
@@ -298,11 +298,11 @@
 		<div class="four columns social">
 			<h6>connect with us</h6>
 			<a href="http://www.facebook.com/fenixedu" title="Facebook">
-				<span>55</span><span>followers</span>
+				<span id="facebook-count">238</span><span>followers</span>
 			</a>
 			<br class="clear" />
 			<a href="http://twitter.com/FenixEduProject" title="Twitter">
-				<span>6</span><span>followers</span>
+				<span id="twitter-count">9</span><span>followers</span>
 			</a>
 		</div>
 		<br class="clear" />
@@ -319,6 +319,41 @@
 	  ga('create', 'UA-45631967-1', 'fenixedu.org');
 	  ga('send', 'pageview');
 	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$.getJSON("https://graph.facebook.com/fenixedu", function(data) {
+				$("#facebook-count").html(data.likes);
+			});
+
+			$.getJSON("http://fenixedu.org/ignition/twittercount", function(data) {
+				$("#twitter-count").html(data);
+			});
+			$("#submit-message").click(function(e) {
+				e.preventDefault();
+				var name = $("#fullname").val();
+				var email = $("#emailaddress").val();
+				var subject = $("#subject").val();
+				var msg = $("#textarea").val();
+				if(name != "" && email != "" && subject != "" && msg != "") {
+					$.ajax({
+						type: "POST",
+						url: "http://fenixedu.org/ignition/contact-form-message",
+						method: "POST",
+						data: data,
+					    contentType: "application/json; charset=utf-8",
+						contentType: "application/json",
+						success: function(data) {
+							$("#fullname").val("");
+							$("#emailaddress").val("");
+							$("#subject").val("");
+							$("#textarea").val("");
+						}
+					});
+				}
+			});
+		});
+	</script>
+});
 	
 </body>
 </html>
