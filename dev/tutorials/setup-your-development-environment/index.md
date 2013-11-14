@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Setup your development environment", "url": "/tutorials/setup-your-development-environment/" }]
+breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}, { "text": "Setup your development environment", "url": "/dev/tutorials/setup-your-development-environment/" }]
 root: "../../"
 ---
 ## Setup your development environment

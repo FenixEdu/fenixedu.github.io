@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Make a Release", "url": "/tutorials/make-a-release" }]
+breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}, { "text": "Make a Release", "url": "/dev/tutorials/make-a-release" }]
 root: "../../"
 ---
 

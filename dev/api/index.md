@@ -1,7 +1,6 @@
 ---
 layout: default
-slug: api
-breadcrumbs: [{ "text": "API", "url": "/api"}]
+breadcrumbs: [{ "text": "API", "url": "/dev/api"}]
 root: "../"
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: default
-slug: methodology
-breadcrumbs: [{ "text": "Methodology", "url": "/methodology"}]
+breadcrumbs: [{ "text": "Methodology", "url": "/dev/methodology"}]
 root: "../"
 ---
 
@@ -51,9 +50,6 @@ project. To contribute or request a change to a particular project, the develope
 3. The developer commits the discussed and agreed changes to his fork
 4. The developer submits a pull-request to merge the respective modifications
 
-[RT]: http://rt.ist.utl.pt/
-[Técnico Lisboa]: http://www.ist.utl.pt/
-[DSI]: http://dsi.ist.utl.pt/
 [GitFlow]: http://nvie.com/posts/a-successful-git-branching-model/
 [Maven]: http://maven.apache.org/
 [Semantic Versioning]: http://semver.org/

@@ -3,6 +3,7 @@ layout: default
 title: Documentation Rocks!
 breadcrumbs: [{ "text": "Blog", "url": "/blog" }, { "text": "Documentation Rocks!", "url": "/blog/2013/10/22/documentation-rocks"}]
 root: "../../../../../"
+excerpt: "The FenixEdu™ project now has an *always-in-progress* documentation that can stand up to the level of the project's renewed image ..."
 ---
 
 ## Documentation Rocks!

@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Create your own application", "url": "/tutorials/create-your-own-application" }, { "text": "Spring MVC", "url": "/tutorials/create-your-own-application/spring-mvc" }]
+breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}, { "text": "Create your own application", "url": "/dev/tutorials/create-your-own-application" }, { "text": "Spring MVC", "url": "/dev/tutorials/create-your-own-application/spring-mvc" }]
 root: "../../../"
 ---
 
@@ -64,5 +64,5 @@ An excerpt of the ```bananas/list.jsp``` could be:
 ...
 {% endhighlight %}
 
-[Create your own application]: /tutorials/create-your-own-application/
+[Create your own application]: /dev/tutorials/create-your-own-application/
 

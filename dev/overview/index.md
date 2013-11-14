@@ -1,13 +1,12 @@
 ---
 layout: default
-slug: overview
-breadcrumbs: [{ "text": "Overview", "url": "/overview"}]
+breadcrumbs: [{ "text": "Overview", "url": "/dev/overview"}]
 root: "../"
 ---
 
 ## Overview
 
-[Getting started](#quickstart) with the FenixEdu™ project is easy. You can learn more about our [methodology][Methodology],
+[Getting started](#toc_1) with the FenixEdu™ project is easy. You can learn more about our [methodology][Methodology],
 learn how to contribute with our [tutorials][Tutorials], and explore our [sub-projects][SubProjects].
 
 Hoping that FenixEdu™ solutions may be useful to others, we share our software
@@ -82,10 +81,10 @@ community.
 
 [Técnico Lisboa]: http://www.ist.utl.pt/
 [DSI]: http://dsi.ist.utl.pt/
-[Methodology]: /methodology
-[Tutorials]: /tutorials
-[SubProjects]: /sub-projects
-[Setup your development environment]: /tutorials/setup-your-development-environment/
-[Create your own application]: /tutorials/create-your-own-application/
+[Methodology]: /dev/methodology
+[Tutorials]: /dev/tutorials
+[SubProjects]: /dev/sub-projects
+[Setup your development environment]: /dev/tutorials/setup-your-development-environment/
+[Create your own application]: /dev/tutorials/create-your-own-application/
 [Vagrant]: http://vagrantup.com/
 [dsi@ist.utl.pt]: mailto:dsi@ist.utl.pt

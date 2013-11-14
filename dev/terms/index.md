@@ -1,7 +1,6 @@
 ---
 layout: default
-slug: terms
-name: "Terms and Conditions"
+breadcrumbs: [{ "text": "Terms and Conditions", "url": "/dev/terms"}]
 root: "../../"
 ---
 

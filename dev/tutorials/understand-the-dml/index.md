@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Understand the Domain Modeling Language (DML)", "url": "/tutorials/understand-the-dml/" }]
+breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}, { "text": "Understand the Domain Modeling Language (DML)", "url": "/dev/tutorials/understand-the-dml/" }]
 root: "../../"
 ---
 

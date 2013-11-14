@@ -1,7 +1,6 @@
 ---
 layout: default
-slug: tutorials
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}]
+breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}]
 root: "../"
 ---
 

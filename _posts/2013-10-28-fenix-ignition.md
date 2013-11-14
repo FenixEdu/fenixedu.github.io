@@ -3,6 +3,7 @@ layout: default
 title: FenixEdu™ Ignition First Edition
 breadcrumbs: [{ "text": "Blog", "url": "/blog" }, { "text": "Fenix Ignition", "url": "/blog/2013/10/28/fenix-ignition"}]
 root: "../../../../../"
+excerpt: "We have the pleasure to announce that we are hosting the first edition of FenixEdu™ Ignition, an hackaton event where we will launch a new service to both user and developer communities ..."
 ---
 
 ## FenixEdu™ Ignition First Edition

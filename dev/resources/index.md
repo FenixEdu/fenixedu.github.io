@@ -2,7 +2,8 @@
 layout: default
 slug: resources
 name: "Resources"
-root: "../"
+breadcrumbs: [{ "text": "Resources", "url": "/dev/resources"}]
+root: "../../"
 ---
 
 ### Resources
