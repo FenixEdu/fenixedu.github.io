@@ -14,6 +14,8 @@ $(document).ready(function() {
 		$.scrollTo("time", {duration: 'slow', offset: {top:-125}});	
 	})
 
+	$('input, textarea').placeholder();
+
 	
 
 	var menuTimeOutTimer = 0;

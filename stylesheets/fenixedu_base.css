@@ -297,6 +297,8 @@
 		transition: all 0.25s ease-in-out;
 	}
 
+	.ie .social a:before {font: normal normal 50px/0.5 "Entypo-Social";}
+
 	.social a:last-child:before {
 		content: '\F309';
 	}
@@ -334,12 +336,13 @@
 		padding: 9px 20px;
 	}
 
-	h3 a {
+	h3 a, h3 a:visited {
 		color: #ccc!important;
 		padding: 25px 0 30px;
 		display: block;
 		text-decoration: none; 
 		outline: 0;
+		letter-spacing: 0.02em;
 	}
 
 	h3 a span {
@@ -495,6 +498,8 @@
 		padding: 0 12px;
 	}
 
+	.ie .button.icon:last-child:before {font: font: normal normal 50px/0.2 "Entypo"; border-right: none;}
+
 	.button.icon:last-child:hover {
 		background: #ccc;
 	}
@@ -515,19 +520,19 @@
 		border: none;
 	}
 
-	::-webkit-input-placeholder {
+	::-webkit-input-placeholder, .placeholder {
 		color: #666;
 		font: normal normal 16px/1.3 "KlavikaLightPlain", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
-	:-moz-placeholder { /* Firefox 18- */
+	:-moz-placeholder, .placeholder { /* Firefox 18- */
 		color: #666; 
 		font: normal normal 16px/1.3 "KlavikaLightPlain", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	}
-	::-moz-placeholder {  /* Firefox 19+ */
+	::-moz-placeholder, .placeholder {  /* Firefox 19+ */
 		color: #666;  
 		font: normal normal 16px/1.3 "KlavikaLightPlain", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
-	:-ms-input-placeholder {  
+	:-ms-input-placeholder, .placeholder {  
 		color: #666;  
 		font: normal normal 16px/1.3 "KlavikaLightPlain", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
@@ -672,6 +677,7 @@
 	h1 span {font-size: 21px;}
 	h2 {font: normal normal 24px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 20px 0 15px;}
 	h3 {font: normal normal 16px/1.2 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	h3 a, h3 a:visited  {letter-spacing: 0;}
 	h3 a span:after {font-size: 25px;}
 	[data-icon]:before {font: normal normal 45px/1.2 "Entypo";}
 	#highlight .button {width: 118px;}
