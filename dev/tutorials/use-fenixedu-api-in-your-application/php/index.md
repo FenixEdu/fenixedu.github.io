@@ -94,6 +94,6 @@ The code snippet above exemplifies how you can obtain the ```access_token``` and
 > The ```access_token``` has a lifetime of 1 hour, and when it expires, you may issue another one using the respective ```refresh_token```.
 
 
-[use-fenix-edu-in-your-application-tutorial]: /tutorials/use-fenixedu-api-in-your-application
-[RequestUserPermissionPage]: /tutorials/use-fenixedu-api-in-your-application/#step_22__request_the_user_permission
+[use-fenix-edu-in-your-application-tutorial]: /dev/tutorials/use-fenixedu-api-in-your-application
+[RequestUserPermissionPage]: /dev/tutorials/use-fenixedu-api-in-your-application/#step_22__request_the_user_permission
 [FenixEduPHPSDK]: http://github.com/ist-dsi/fenixedu-php-sdk

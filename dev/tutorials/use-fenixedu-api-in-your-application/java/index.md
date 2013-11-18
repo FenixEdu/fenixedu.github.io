@@ -56,7 +56,7 @@ client.sendRequest(req);
 
 The above example instantiates a new client and invokes a request to retrieve information about a particular user. Two methods must be defined within the callback interface: one that handles a successful response, and another that handles either a local or remote exception.
 
-[use-fenix-edu-in-your-application-tutorial]: /tutorials/use-fenixedu-api-in-your-application
+[use-fenix-edu-in-your-application-tutorial]: /dev/tutorials/use-fenixedu-api-in-your-application
 [Eclipse]: http://www.eclipse.org/downloads/
 [Maven]: http://maven.apache.org/
 [Java Oracle]: http://www.oracle.com/technetwork/java/javase/downloads/index.html

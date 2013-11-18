@@ -137,6 +137,6 @@ Depending of your action, you can have different error codes that might help you
 	* ```refreshTokenInvalidFormat``` - Refresh Token not recognized.
 
 
-[Java-SDK]: /tutorials/use-fenixedu-api-in-your-application/java
-[Python-SDK]: /tutorials/use-fenixedu-api-in-your-application/python
-[PHP-SDK]: /tutorials/use-fenixedu-api-in-your-application/php
+[Java-SDK]: /dev/tutorials/use-fenixedu-api-in-your-application/java
+[Python-SDK]: /dev/tutorials/use-fenixedu-api-in-your-application/python
+[PHP-SDK]: /dev/tutorials/use-fenixedu-api-in-your-application/php
