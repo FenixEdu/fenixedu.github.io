@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Use FenixEdu™ API in your application", "url": "/tutorials/use-fenixedu-api-in-your-application" }]
+breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}, { "text": "Use FenixEdu™ API in your application", "url": "/dev/tutorials/use-fenixedu-api-in-your-application" }]
 root: "../../"
 ---
 

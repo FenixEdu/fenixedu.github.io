@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Use FenixEdu API in your application", "url": "/tutorials/use-fenixedu-api-in-your-application" }, { "text": "Java SDK", "url": "/tutorials/use-fenixedu-api-in-your-application/java-sdk" }]
+breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}, { "text": "Use FenixEdu API in your application", "url": "/dev/tutorials/use-fenixedu-api-in-your-application" }, { "text": "Java SDK", "url": "/dev/tutorials/use-fenixedu-api-in-your-application/java-sdk" }]
 root: "../../../"
 ---
 

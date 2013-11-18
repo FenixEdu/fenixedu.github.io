@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumbs: [{ "text": "Tutorials", "url": "/tutorials"}, { "text": "Use FenixEdu API in your application", "url": "/tutorials/use-fenixedu-api-in-your-application" }, { "text": "PHP SDK", "url": "/tutorials/use-fenixedu-api-in-your-application/php-sdk" }]
+breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}, { "text": "Use FenixEdu API in your application", "url": "/dev/tutorials/use-fenixedu-api-in-your-application" }, { "text": "PHP SDK", "url": "/dev/tutorials/use-fenixedu-api-in-your-application/php-sdk" }]
 root: "../../../"
 ---
 
