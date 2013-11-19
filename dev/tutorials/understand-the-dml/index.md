@@ -12,9 +12,10 @@ In this tutorial you will learn how to define the classes and relations of your 
 
 ### Table of Contents
 
-* [Step 1 - Draw your domain model](#step_1__draw_your_domain_model)
-* [Step 2 - Describe your domain model using the DML](#step_2__describe_your_domain_model_using_the_dml)
-* [Step 3 - Generate the Source Code](#step_3__generate_the_source_code)
+* [Step 1 - Draw your domain model](#toc_2)
+* [Step 2 - Describe your domain model using the DML](#toc_3)
+* [Step 3 - Generate the Source Code](#toc_4)
+* [Step 4 - Define Transactions](#toc_5)
 
 ### Step 1 - Draw your domain model
 
@@ -63,10 +64,8 @@ Non-base classes are classes that FenixFramework will only generate if they do n
 > <span>Note</span>
 > Properties must be declared in the DML file, and not directly in the non-base class. Declaring properties in the non-base class will not persist them and may result in error-prone actions that may lead to inconsistent states.
 
-### Step 3 - Define Transactions
+### Step 4 - Define Transactions
 
 Although the relation and persistence behavior is transparent to the programmer, you still need to define where a given transaction begins and ends.
 In our infrastructure, there is a Servlet filter that contextualizes all requests within a read-only transaction. If your service needs to make some write to the database, then you can redefine the strategy of the transaction by annotating the service method with ```@Atomic```.
 
-
-[Semantic Versioning]: http://semver.org/
