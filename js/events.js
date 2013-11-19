@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+
+	// ScrollTo
+
 	anchorClick = function (i) {
 		return function () {
 			$.scrollTo($("section.anchor_section:eq(" + i + ") > :first-child"), 'slow', {offset: {top:-10}});
@@ -14,9 +17,20 @@ $(document).ready(function() {
 		$.scrollTo("time", {duration: 'slow', offset: {top:-125}});	
 	})
 
+
+	//Cross-browser Placeholder Rendering
+
 	$('input, textarea').placeholder();
 
+
+	// Documentation — Image caption insertion
+
+	$("main img").each(function () {
+		$(this).before($('<hr />'));
+		$(this).after($('<span>').text($(this).attr('alt')))
+	})
 	
+	// Documentation — Menu
 
 	var menuTimeOutTimer = 0;
 	var lastMenuOpened;
@@ -24,13 +38,8 @@ $(document).ready(function() {
 	// Create arrow bullet
 	$(".expands.workflow > a").before($('<span>'));
 
-	// Img caption insertion
-	$("main img").each(function () {
-		$(this).before($('<hr />'));
-		$(this).after($('<span>').text($(this).attr('alt')))
-	})
-
 	// Menu expand
+
 	$("li.expands.workflow").each(function (index) {
 
 		$(this).hover(function (event) {
@@ -60,6 +69,7 @@ $(document).ready(function() {
 	})
 
 	// Menu scroll
+
     if($('aside').length > 0) {
 
         $(window).scroll(function () {
@@ -92,4 +102,26 @@ $(document).ready(function() {
     simulateScroll = function () {
     	$(window).scroll();
     }
+
+
+    // Documentation — Mobile Menu
+
+    var events = 'click.fndtn';
+
+	// Watch for clicks to show the sidebar
+	var $selector2 = $('#sidebarButton');
+	
+	if ($selector2.length > 0) {
+    $('#sidebarButton').on(events, function (e) {
+      e.preventDefault();
+      $('body').toggleClass('active');
+    });
+  	}
+
+	  // // Adjust sidebars and sizes when resized
+	  // $(window).resize(function() {
+	  //   // if (!navigator.userAgent.match(/Android/i)) $('body').removeClass('active');
+	  //   var $selector4 = $('#topMenu');
+	  //   if ($selector4.length > 0) $selector4.css("margin-top", $selector4.height() * -1);
+	  // });
 });

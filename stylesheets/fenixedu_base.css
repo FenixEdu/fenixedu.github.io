@@ -109,6 +109,7 @@
 		color: #333;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
+		text-rendering: optimizelegibility;
 	}
 
 	::-moz-selection {

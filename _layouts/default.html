@@ -22,7 +22,7 @@
     <!-- OpenGraph Specific Metas -->
     <meta property="og:title" content="FenixEdu™ Developer Pages" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="../images/logo_og.png" />
+    <meta property="og:image" content="http://fenixedu.org/images/logo_og.png" />
     <meta property="og:url" content="http://www.fenixedu.org" />
     <meta property="og:site_name" content="FenixEdu" />
     <meta property="og:description" content="FenixEdu™ is an open-source academic information platform." />
@@ -67,6 +67,16 @@
     <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
 
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45631967-1', 'fenixedu.org');
+      ga('send', 'pageview');
+    </script>
+
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -78,6 +88,7 @@
             <a href="/dev" id="logo"></a>
         </h1>
         <span>developer pages</span>
+        <a id="sidebarButton" href="#sidebar"></a>
     </header>
 
     <div class="container">
@@ -89,16 +100,6 @@
     </div>
     {% include footer.html %}
 
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-45631967-1', 'fenixedu.org');
-      ga('send', 'pageview');
-    </script>
     
 </body>
 </html>
