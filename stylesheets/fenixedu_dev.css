@@ -110,7 +110,6 @@
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
 		text-rendering: optimizelegibility;
-
 	}
 
 	::-moz-selection {
@@ -672,8 +671,10 @@
 		-webkit-transition: 0.25s all ease-in; 
 		-moz-transition: 0.25s all ease-in; 
 		-o-transition: 0.25s all ease-in; 
-		transition: 0.25s all ease-in; 
+		transition: 0.25s all ease-in;
+		overflow: hidden;
 	}
+
 	aside.columns.omega { position: absolute; top: -85px; left: 106%; display: block; width: 80%!important; z-index: 2; background: #19accd;
 		-webkit-box-shadow: inset 1px 0 15px 3px #138099;
         box-shadow: inset 1px 0 15px 3px #138099}
@@ -683,7 +684,7 @@
 	aside img {opacity: 0.5;}
 
 	.active aside.columns.omega { left: 105%; }
-	.active > .container { left: -70% !important; }
+	.active > .container { left: -70%!important; overflow: visible;}
 	.container .columns {width: 100%!important;}
 	time.one.columns {width: 10%!important; float: left;}
 }

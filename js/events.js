@@ -115,6 +115,7 @@ $(document).ready(function() {
     $('#sidebarButton').on(events, function (e) {
       e.preventDefault();
       $('body').toggleClass('active');
+      $(window).resize();
     });
   	}
 
@@ -124,4 +125,11 @@ $(document).ready(function() {
 	  //   var $selector4 = $('#topMenu');
 	  //   if ($selector4.length > 0) $selector4.css("margin-top", $selector4.height() * -1);
 	  // });
+
+	$(window).resize(
+		function () {
+			$('.active aside').css({height: $(document).height() + 'px'});
+		}
+	)
+
 });
