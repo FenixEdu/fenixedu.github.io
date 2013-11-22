@@ -112,11 +112,11 @@ $(document).ready(function() {
 	var $selector2 = $('#sidebarButton');
 	
 	if ($selector2.length > 0) {
-    $('#sidebarButton').on(events, function (e) {
-      e.preventDefault();
-      $('body').toggleClass('active');
-      $(window).resize();
-    });
+    	$('#sidebarButton').on(events, function (e) {
+      		e.preventDefault();
+      		$('body').toggleClass('active');
+      		$(window).resize();
+    	});
   	}
 
 	  // // Adjust sidebars and sizes when resized
@@ -131,5 +131,23 @@ $(document).ready(function() {
 			$('.active aside').css({height: $(document).height() + 'px'});
 		}
 	)
+
+
+	// Documentation — Mobile Menu Gestures
+	
+	var element = document.body;
+	var hammerOpenMenu = Hammer(element).on("swipeleft", function(event) {
+		if (!$(this).hasClass('active')) {
+			$('#sidebarButton').click();
+			$(window).scrollTo($('aside'), 'normal', {offset: {top:0}});
+			event.preventDefault();
+		}
+	})
+	var hammerCloseMenu = Hammer(element).on("swiperight", function(event) {
+		if ($(this).hasClass('active')) {
+			$('#sidebarButton').click();
+			event.preventDefault();
+		}
+	})	
 
 });
