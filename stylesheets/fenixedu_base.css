@@ -307,6 +307,16 @@
 	.social a:hover span {color: #ccc;} 
 	.social a:hover:before {background: #ccc;}
 
+	footer > div > a {
+		background: url('../images/logo_ist.svg') no-repeat 0 0;
+		display: block;
+		height: 40px;
+		opacity: 0.3;
+		margin: 48px 0 0!important;
+	}
+
+	.no-svg footer > div > a {background: url('../images/logo_ist.png') no-repeat 0 0; background-size: contain;}
+
 	footer > div > p {
 		font: normal normal 14px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		margin: 55px 0 25px;
@@ -628,6 +638,8 @@
 	form input[type="text"], form input[type="password"], form input[type="email"], form textarea {width: 90%;}
 	footer > div > div:first-child {padding: 100px 20px 0 0;}
 	time + p {padding-right: 0px; padding-left: 10px;}
+	footer > div > a {background-size: 85%;}
+	.no-svg footer > div > a {background-size: 85%;}
 }
 
 /* All Mobile Sizes (devices and browser) */

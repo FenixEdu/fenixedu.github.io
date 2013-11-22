@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
-
-	// ScrollTo
+	/*
+	 * Main Menu Acnhors with ScrollTo
+	 */
 
 	anchorClick = function (i) {
 		return function () {
@@ -18,24 +19,32 @@ $(document).ready(function() {
 	})
 
 
-	//Cross-browser Placeholder Rendering
+	/* 
+	 * Cross-browser Placeholder Rendering
+	 */
 
 	$('input, textarea').placeholder();
 
 
-	// Documentation — Image caption insertion
+	/*
+	 * Documentation — Image Caption Insertion
+	 */
 
 	$("main img").each(function () {
 		$(this).before($('<hr />'));
 		$(this).after($('<span>').text($(this).attr('alt')))
 	})
+
 	
-	// Documentation — Menu
+	/*
+	 * Documentation — Menu
+	 */
 
 	var menuTimeOutTimer = 0;
 	var lastMenuOpened;
 
 	// Create arrow bullet
+
 	$(".expands.workflow > a").before($('<span>'));
 
 	// Menu expand
@@ -104,11 +113,14 @@ $(document).ready(function() {
     }
 
 
-    // Documentation — Mobile Menu
+    /*
+     * Documentation — Mobile Menu
+     */
 
     var events = 'click.fndtn';
 
 	// Watch for clicks to show the sidebar
+
 	var $selector2 = $('#sidebarButton');
 	
 	if ($selector2.length > 0) {
@@ -119,12 +131,7 @@ $(document).ready(function() {
     	});
   	}
 
-	  // // Adjust sidebars and sizes when resized
-	  // $(window).resize(function() {
-	  //   // if (!navigator.userAgent.match(/Android/i)) $('body').removeClass('active');
-	  //   var $selector4 = $('#topMenu');
-	  //   if ($selector4.length > 0) $selector4.css("margin-top", $selector4.height() * -1);
-	  // });
+	// Adjust sidebars and sizes when resized
 
 	$(window).resize(
 		function () {
@@ -133,7 +140,7 @@ $(document).ready(function() {
 	)
 
 
-	// Documentation — Mobile Menu Gestures
+	/* Documentation — Mobile Menu Gestures by http://eightmedia.github.io/hammer.js/
 	
 	var element = document.body;
 	var hammerOpenMenu = Hammer(element).on("swipeleft", function(event) {
@@ -149,5 +156,6 @@ $(document).ready(function() {
 			event.preventDefault();
 		}
 	})	
+	*/
 
 });
