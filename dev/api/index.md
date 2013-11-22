@@ -6,9 +6,24 @@ root: "../"
 
 ## API Endpoints
 
-This page essentially lists all the existing endpoints, as well as examples when making invocations.
+This page essentially lists all the existing endpoints, as well as examples
+when making invocations. While it is not the purpose of this page to describe 
+the business entities exposed by this API, we will try to explain the meaning 
+of each values whenever it is not self-evident. The current API exposes four
+central concepts of the FenixEdu platform: people, spaces, degrees and courses.
 
-### Enpoints
+Here, a space represents a resource such as a campus, a building, a building
+level (floor) or a room. A degree represents a set of knowledge offered by a 
+school or university, such that when a student completes the associated studies
+he/she is eligible for a diploma and is often conferred a corresponding title.
+A course is a concrete unit of teaching that typically lasts one academic term.
+
+This documentation is applicable to all FenixEdu installations as of version 
+1.2.0. Check your local installation to find out if the API is available. Be 
+aware that some institutions may choose to restrict access to the API.
+
+
+### Endpoints
 * [GET /about](#toc_2)
 * [GET /courses/{id}](#toc_3)
 * [GET /courses/{id}/evaluations](#toc_4)
@@ -31,30 +46,48 @@ This page essentially lists all the existing endpoints, as well as examples when
 
 ### GET /about
 
-This endpoint returns the RSS links to retrieve information about the university where the FenixEdu system is deployed.
+This endpoint returns some basic information about the institution where the 
+application is deployed. It also returns a list of RSS feeds.
 
 {% highlight json %}
 {
-	"newsRss": "http://www.ist.utl.pt/pt/noticias/rss",
-	"eventsRss": "http://www.ist.utl.pt/pt/eventos/rss"
+	"institutionName": "Técnico Lisboa",
+	"institutionUrl": "http://tecnico.ulisboa.pt",
+	"rssFeeds": [
+		{
+			"description": "News",
+			"uri": "http://tecnico.ulisboa.pt/pt/noticias/rss"
+		},
+		{
+			"description": "Events",
+			"uri": "http://tecnico.ulisboa.pt/pt/eventos/rss"
+		}
+	]
 }
 {% endhighlight %}
 
 
 ### GET /courses/{id}
 
-This endpoint shows detailed information about the course.
+A course is a concrete unit of teaching that typically lasts one academic term.
+This endpoint shows some information regarding a particular course. The same
+course may be lectured simultaneously in multiple degrees during the same
+academic term.
+
+The "moreInfo" field holds curricular information for each set of degrees in
+which the course is lectured. Usually this information is the same for all
+the associated degrees.
+
 
 {% highlight json %}
 {
 	"acronym": "FInd3",
 	"name": "Frio Industrial",
-	"evaluation": "1 trabalho de grupo, com avaliação individual por etapas (intermédia e final) ",
-	"year": "2013/2014",
-	"semester": 1,
-	"numberOfStudents": 123,
-	"announcementLink": "https://fenix.ist.utl.pt/external/announcementsRSS.do?announcementBoardId=399433518324",
-	"summaryLink": "https://fenix.ist.utl.pt/publico/summariesRSS.do?id=1610612925565",
+	"academicTerm": "Semester 1 2013/2014",
+	"evaluationMethod": "1 trabalho de grupo, com avaliação ...",
+	"numberOfAttendingStudents": 123,
+	"announcementLink": "https://fenix.ist.utl.pt/rss.do?boardId=123",
+	"summaryLink": "https://fenix.ist.utl.pt/publico/rss.do?summaryId=123",
 	"moreInfo": [
 		{
 			"program": "",
@@ -62,7 +95,7 @@ This endpoint shows detailed information about the course.
 				{
 					"author": "Roriz L. et al",
 					"reference": "Ed. Orion ",
-					"title": "Climatização: concepção, instalação e condução de sistemas",
+					"title": "Climatização: concepção, e instalação",
 					"year": "2006",
 					"type": "MAIN",
 					"url": null
@@ -71,8 +104,8 @@ This endpoint shows detailed information about the course.
 			"degrees": [
 				{
 					"id": "2761663977513",
-					"name": "Mestrado Bolonha em Engenharia e Gestão da Energia",
-					"acronym": "FInd"
+					"name": "Mestrado em Engenharia e Gestão da Energia",
+					"acronym": "MEGE"
 				}
 			]
 		}
@@ -81,12 +114,8 @@ This endpoint shows detailed information about the course.
 		{
 			"name": "John Doe",
 			"istId": "ist112345",
-			"mails": [
-				"john.doe@ist.utl.pt"
-			],
-			"urls": [
-				"http://web.ist.utl.pt/ist112345/"
-			]
+			"mails": [ "john.doe@ist.utl.pt" ],
+			"urls": [ "http://web.ist.utl.pt/ist112345/" ]
 		}
 	]
 }
@@ -94,21 +123,25 @@ This endpoint shows detailed information about the course.
 
 ### GET /courses/{id}/evaluations
 
-This endpoint returns the information about the written evaluation.
+An evaluation is a component of a course in which the teacher determines
+the extent of the students understanding of the program. Current known
+implementations of evaluations are: tests, exams, projects, online tests
+and ad-hoc evaluations.
+
 
 {% highlight json %}
 [
 	{
 		"type": "TEST",
 		"name": "Teste 1º Teste",
-		"day": "26/10/2013",
+		"day": "2013-10-26",
 		"beginningTime": "09:00",
 		"endTime": "11:00",
-		"isEnrolmentPeriod": false,
-		"enrollmentBeginDay": null,
-		"enrollmentBeginTime": null,
-		"enrollmentEndDay": null,
-		"enrollmentEndTime": null,
+		"isInEnrolmentPeriod": false,
+		"enrollmentPeriod": {
+			"start": "2013-10-01 14:25:32",
+			"end"  : "2013-10-24 17:52:44"
+		},
 		"rooms": [
 			{
 				"id": "2448131362251",
@@ -123,45 +156,96 @@ This endpoint returns the information about the written evaluation.
 		]
 	}
 ]
-
 {% endhighlight %}
 
 
 ### GET /courses/{id}/groups
 
-This endpoint returns course groups' information. 
+Groups are used in courses for a wide range of purposes. The most typical are
+for creating teams of students for laboratories or projects. Some groups are 
+shared among different courses. The enrolment of student groups may be atomic
+or individual, and may be restricted to an enrolment period.
 
 {% highlight json %}
+[
+	{
+		"name": "Projeto de Avaliação de Projetos",
+    	"description": "Cada grupo de trabalho tem como objetivo...",
+    	"enrolmentPeriod": {
+			"start": "2013-10-01 14:25:32",
+			"end"  : "2013-10-24 17:52:44"
+		},
+		"enrolmentPolicy": "ATOMIC",
+		"minimumCapacity": 1, "maximumCapacity": 3, "idealCapacity": 2,
+		"associatedCourses": [
+			{
+				"name": "Matemática Computacional",
+				"degrees": "MEIC, LERC, MEC",
+				"id": "1132132564548"
+			},
+			{
+				"name": "Mecânica Quantica",
+				"degrees": "MA, DEIC",
+				"id": "1132132564555"
+			}
+		]
+	}
+]
 {% endhighlight %}
 
 
 ### GET /courses/{id}/schedule
 
-This endpoint returns a course schedule's information.
+Each course is lectured during a specific set of intervals. These intervals
+make up the lesson period for that course. Each course also has a curricular
+load that specifies the time each student will expend with the course. Each 
+shift is the possible schedule in which a student should enrol.
 
 {% highlight json %}
 {
-	"name": "Fundamentos da Programação",
-	"year": "2013/2014",
-	"semester": 1,
-	"periods": [
-		{
-			"start": "16/09/2013",
-			"end": "20/12/2013"
-		}
+	"lessonPeriods": [
+		{ "start": "2014-02-21 00:00:00", "end": "2014-04-12 00:00:00" },
+		{ "start": "2014-04-18 00:00:00", "end": "2014-05-29 00:00:00" }
 	],
-	"lessons": [
+	"courseLoads": [
+		{ "type": "TEORICA", "totalQuantity": 42, "unitQuantity": 1.5 },
+		{ "type": "LABORATORIAL", "totalQuantity": 30, "unitQuantity": 3 }
+	],
+	"shifts": [
 		{
-			"weekDay": "MONDAY",
-			"lessonType": "PB",
-			"start": "12:30",
-			"end": "14:00",
-			"room": {
-				"id": "2448131363640",
-				"name": "F8 - Sala aula",
-				"description": "F8 - Pavilhão de Informática III (Alameda) [54,27]"
-			}
-		}
+			"name": "AED2T01",
+			"types": [ "TEORICA" ],
+			"lessons": [
+				{
+					"start": "2014-02-21 10:00:00", "end": "2014-02-21 12:00:00",
+					"room": { "name": "Ga1", "id": "132115446846" }
+				},
+				{
+					"start": "2014-03-21 10:00:00", "end": "2014-03-21 12:00:00",
+					"room": { "name": "Ga1", "id": "132115446846" }
+				},
+				{
+					"start": "2014-05-21 10:00:00", "end": "2014-05-21 12:00:00",
+					"room": { "name": "Ga3", "id": "132115446847" }
+				}
+		] },
+		{
+			"name": "AED2L03",
+			"types": [ "LABORATORIAL" ],
+			"lessons": [
+				{
+					"start": "2014-02-23 10:00:00", "end": "2014-02-23 13:00:00",
+					"room": { "name": "F1", "id": "132115446844" }
+				},
+				{
+					"start": "2014-03-23 10:00:00", "end": "2014-03-23 13:00:00",
+					"room": { "name": "F2", "id": "132115446843" }
+				},
+				{
+					"start": "2014-05-23 10:00:00", "end": "2014-05-23 13:00:00",
+					"room": { "name": "F1", "id": "132115446844" }
+				}
+		] }
 	]
 }
 {% endhighlight %}
@@ -169,22 +253,20 @@ This endpoint returns a course schedule's information.
 
 ### GET /courses/{id}/students
 
-This endpoint returns the course student's information.
+This endpoint lists all the students attending the specified course. For each
+student it indicates the corresponding degree. The endpoint also returns the
+number of students officially enroled in the course.
 
 {% highlight json %}
 {
-	"enrolmentNumber": 123,
-	"name": "Fundamentos da Programação",
-	"semester": 1,
-	"year": "1ºSemestre",
+	"enrolmentCount": 32,
+	"attendingCount": 41,
 	"students": [
-		{
-			"number": 12345,
-			"name": "John Doe",
-			"degree": "LEIC-A 2006",
-			"degreeId": "2761663971474",
-			"evaluations": [ ]
-		}
+		{ "username": "ist1234", "degree": "MEIC", "degreeId": "1312323155" },
+		{ "username": "ist1235", "degree": "MEIC", "degreeId": "1312323155" },
+		{ "username": "ist1236", "degree": "MA", "degreeId": "1312323153" },
+		{ "username": "ist1237", "degree": "MEQ", "degreeId": "1312323152" },
+		{ "username": "ist1238", "degree": "MEIC", "degreeId": "1312323155" }
 	]
 }
 {% endhighlight %}
