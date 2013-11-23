@@ -49,6 +49,10 @@ aware that some institutions may choose to restrict access to the API.
 This endpoint returns some basic information about the institution where the 
 application is deployed. It also returns a list of RSS feeds.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/about
+
+#### Example Response
 {% highlight json %}
 {
 	"institutionName": "Técnico Lisboa",
@@ -78,7 +82,10 @@ The "moreInfo" field holds curricular information for each set of degrees in
 which the course is lectured. Usually this information is the same for all
 the associated degrees.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989
 
+#### Example Response
 {% highlight json %}
 {
 	"acronym": "FInd3",
@@ -128,7 +135,10 @@ the extent of the students understanding of the program. Current known
 implementations of evaluations are: tests, exams, projects, online tests
 and ad-hoc evaluations.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989/evaluations
 
+#### Example Response
 {% highlight json %}
 [
 	{
@@ -166,6 +176,10 @@ for creating teams of students for laboratories or projects. Some groups are
 shared among different courses. The enrolment of student groups may be atomic
 or individual, and may be restricted to an enrolment period.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989/groups
+
+#### Example Response
 {% highlight json %}
 [
 	{
@@ -201,6 +215,10 @@ make up the lesson period for that course. Each course also has a curricular
 load that specifies the time each student will expend with the course. Each 
 shift is the possible schedule in which a student should enrol.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989/schedule
+
+#### Example Response
 {% highlight json %}
 {
 	"lessonPeriods": [
@@ -257,6 +275,10 @@ This endpoint lists all the students attending the specified course. For each
 student it indicates the corresponding degree. The endpoint also returns the
 number of students officially enroled in the course.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989/students
+
+#### Example Response
 {% highlight json %}
 {
 	"enrolmentCount": 32,
@@ -276,6 +298,13 @@ number of students officially enroled in the course.
 
 This endpoint returns the information for all degrees.
 
+#### Query Parameters
+**year** - "yyyy/yyyy"    
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees?year=2013/2014
+
+#### Example Response
 {% highlight json %}
 [
 	{
@@ -320,6 +349,13 @@ This endpoint returns the information for all degrees.
 
 This endpoint returns the information for the {id} degree.
 
+#### Query Parameters
+**year** - "yyyy/yyyy"    
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees/2761663977513?year=2013/2014
+
+#### Example Response
 {% highlight json %}
 {
 	"year": "2013/2014",
@@ -363,6 +399,13 @@ This endpoint returns the information for the {id} degree.
 
 This endpoint returns the informations for a degree's courses.
 
+#### Query Parameters
+**year** - "yyyy/yyyy"    
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees/2761663977513/courses?year=2013/2014
+
+#### Example Response
 {% highlight json %}
 [
 	{
@@ -387,6 +430,10 @@ This endpoint returns the informations for a degree's courses.
 
 This endpoint allows to access the current person information.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person
+
+#### Example Response
 {% highlight json %}
 {
 	"campus": "Alameda",
@@ -425,8 +472,16 @@ This endpoint allows to access the current person information.
 
 ### GET /person/calendar/classes
 
-This endpoint returns the user's class information. To retrieve this information in iCalendar format, the URL must contain "?format=calendar". Eg: "http://fenix.ist.utl.pt/api/fenix/v1/person/calendar/classes?format=calendar"
+This endpoint returns the user's class information. This information can be retrieved both in iCalendar and JSON formats.
 
+#### Query Parameters
+
+**format** - "calendar" or "json"
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/calendar/classes?format=json
+
+#### Example Response
 {% highlight json %}
 {
 	"year": "2013/2014",
@@ -459,8 +514,16 @@ This endpoint returns the user's class information. To retrieve this information
 
 ### GET /person/calendar/evaluations
 
-This endpoint returns the students's evaluations information. To retrieve this information in iCalendar format, the URL must contain "?format=calendar". Eg: "http://fenix.ist.utl.pt/api/fenix/v1/person/calendar/evaluations?format=calendar"
+This endpoint returns the students's evaluations information. This information can be retrieved both in iCalendar and JSON formats.
 
+#### Query Parameters
+
+**format** - "calendar" or "json"
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/calendar/evaluations?format=json
+
+#### Example Response
 {% highlight json %}
 {
 	"year": "2013/2014",
@@ -495,6 +558,15 @@ This endpoint returns the students's evaluations information. To retrieve this i
 
 This endpoint returns the user's course information.
 
+#### Query Parameters
+**sem** - "1" or "2"
+
+**year** - "yyyy/yyyy"
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/courses?sem=1&year=2013/2014
+
+#### Example Response
 {% highlight json %}
 {
 	"year": "2013/2014",
@@ -527,6 +599,10 @@ This endpoint returns the user's course information.
 
 This endpoint returns the student's written evaluation information.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/evaluations
+
+#### Example Response
 {% highlight json %}
 [
 	{
@@ -562,7 +638,16 @@ This endpoint returns the student's written evaluation information.
 
 ### PUT /person/evaluations/{id}
 
-This endpoint allows the student to enroll or disenroll from a written evaluation. Eg: "http://fenix.ist.utl.pt/api/fenix/v1/person/evaluations/2512556533022?enrol=yes", enrolls the student and returns the written evaluations.
+This endpoint allows the student to enroll or disenroll from a written evaluation.
+
+#### Query Parameters
+
+**enrol** - "yes" or "no"
+
+#### Example Request
+```PUT``` http://fenix.ist.utl.pt/api/fenix/v1/person/evaluations/2512556533022?enrol=yes
+
+#### Example Response
 {% highlight json %}
 [
 	{
@@ -600,6 +685,10 @@ This endpoint allows the student to enroll or disenroll from a written evaluatio
 
 This endpoint returns user's payments information.
 
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/payments
+
+#### Example Response
 {% highlight json %}
 {
 	"payed": [
@@ -627,6 +716,10 @@ This endpoint returns user's payments information.
 
 This endpoint returns the information about the campi.
  
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/spaces
+
+#### Example Response
 {% highlight json %}
 [
 	{
@@ -647,6 +740,14 @@ This endpoint returns the information about the campi.
 
 This endpoint returns information about the space for a given {id}, its contained and parent spaces. The {id} can be for any of these types: "CAMPUS", "BUILDING", "FLOOR" or "ROOM".
 
+#### Query Parameters
+
+**day** - "dd/mm/yyyy"
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/spaces/2972117371186?day=22/05/2013
+
+#### Example Response
 {% highlight json %}
 {
 	"id": "2972117371186",
