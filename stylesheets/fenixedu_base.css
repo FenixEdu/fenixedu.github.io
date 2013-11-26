@@ -11,26 +11,15 @@
 
 	@font-face {
 	    font-family: 'Entypo'; /* "Entypo pictograms by Daniel Bruce — www.entypo.com" */
-	    src: url('../fonts/entypo/entypo.eot');
-	    src: url('../fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
-	         url('../fonts/entypo/entypo.woff') format('woff'),
-	         url('../fonts/entypo/entypo.ttf') format('truetype'),
-	         url('../fonts/entypo/entypo.svg#entypo') format('svg');
+	    src: url('../fonts/entypo/fontello.eot');
+	    src: url('../fonts/entypo/fontello.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/entypo/fontello.woff') format('woff'),
+	         url('../fonts/entypo/fontello.ttf') format('truetype'),
+	         url('../fonts/entypo/fontello.svg#fontello') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
-
-	@font-face {
-	    font-family: 'Entypo-Social';
-	    src: url('../fonts/entypo-social/entypo-social.eot');
-	    src: url('../fonts/entypo-social/entypo-social.eot?#iefix') format('embedded-opentype'),
-	         url('../fonts/entypo-social/entypo-social.woff') format('woff'),
-	         url('../fonts/entypo-social/entypo-social.ttf') format('truetype'),
-	         url('../fonts/entypo-social/entypo-social.svg#entypo') format('svg');
-	    font-weight: normal;
-	    font-style: normal;
-	}
-
+	
 	@font-face {
 	    font-family: 'KlavikaMediumPlain';
 	    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot');
@@ -282,8 +271,8 @@
 	.social a span:last-child {font: normal normal 15px/1.1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 
 	.social a:before {
-		content: '\F30C';
-		font: normal normal 50px/1 "Entypo-Social";
+		content: '\E8f3';
+		font: normal normal 25px/2.1 "Entypo"; 
 		background: #666;
 		color: #333;
 		width: 50px;
@@ -292,16 +281,15 @@
 		float: left;
 		margin-right: 7.5px;
 		text-align: center;
+		speak: none;
 		-webkit-transition: all 0.25s ease-in-out;
 		-moz-transition: all 0.25s ease-in-out;
 		-o-transition: all 0.25s ease-in-out;
 		transition: all 0.25s ease-in-out;
 	}
 
-	.ie .social a:before {font: normal normal 50px/0.5 "Entypo-Social";}
-
 	.social a:last-child:before {
-		content: '\F309';
+		content: '\E8f1';
 	}
 
 	.social a:hover span {color: #ccc;} 
@@ -312,7 +300,7 @@
 		display: block;
 		height: 40px;
 		opacity: 0.3;
-		margin: 48px 0 0!important;
+		margin-top: 48px;
 	}
 
 	.no-svg footer > div > a {background: url('../images/logo_ist.png') no-repeat 0 0; background-size: contain;}
@@ -376,11 +364,22 @@
 		padding-right: 20px;
 	}
 
-	[data-icon]:before {
-		font: normal normal 60px/1.2 "Entypo";
-		content: attr(data-icon);
+	p.browsehappy,  {
+		background: #19accd;
+		color: #fefefe;
+		padding: 15px;
+		text-align: center;
+	}
+
+	.browsehappy strong, .browsehappy a, .browsehappy a:hover, .browsehappy a:focus, .browsehappy a:visited {color: #fefefe; text-decoration: none;}
+
+	[class^="icon-"]:before, [class*=" icon-"]:before {
+		font: normal normal 30px/1 "Entypo";
+		font-variant: normal;
+  		text-transform: none;
 		color: #19accd;
 		margin-right: 15px;
+		speak: none;
 	}
 
 
@@ -502,14 +501,15 @@
 	}
 
 	.button.icon:last-child:before {
-		content: '\1F53F';
-		font: normal normal 50px/0.7 "Entypo";
+		content: '\E8b7';
+		font: normal normal 25px/1.4 "Entypo";
+		font-variant: normal;
+  		text-transform: none;
 		float: left;
 		border-right: 1px solid #333;
-		padding: 0 12px;
+		padding: 0 14px;
+		speak: none;
 	}
-
-	.ie .button.icon:last-child:before {font: font: normal normal 50px/0.2 "Entypo"; border-right: none;}
 
 	.button.icon:last-child:hover {
 		background: #ccc;
@@ -595,15 +595,14 @@
 /* Clear after event */
 
 	h1, p.lead {
-		margin-top: 30px;
+		margin-top: 35px;
 		font-family: "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #fefefe;
 	}
 
 	p.lead {margin-bottom: 70px;}
-	h1 {margin-top: 25px;}
 	h1 span {background: none; padding: 0;}
-	h1 [data-icon]:before {color: #fefefe;}
+	h1 [class^="icon-"]:before {color: #fefefe;}
 
 	#highlight .button:not(.anchor) {
 		background: none;
@@ -649,7 +648,7 @@
 		height: 370px;
 		padding: 54px 0;
 	}
-	nav ul {display: none;}
+	nav ul, footer > div > a {display: none!important;}
 	p.lead {font: normal normal 16px/1.35 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding-top: 25px;}
 	#highlight div div {margin-top: 35px;}
 	#highlight .button {width: 178px; float: left;}
@@ -657,11 +656,11 @@
 	.button:not(.icon), button:not(.icon), input[type="submit"]:not(.icon), input[type="button"]:not(.icon) {padding: 10px 15px;}
 	.button.icon:first-child {width: 100%; margin-top: 20px;}
 	.button.icon:last-child {width: 98%;}
-	[data-icon]:before {font: normal normal 50px/1.2 "Entypo";}
+	[class^="icon-"]:before, [class*=" icon-"]:before {font: normal normal 25px/1 "Entypo";}
 
 	section#highlight h1 {margin-top: 25px;}
 	h1 span {font-size: 30px;}
-	h2 {font: normal normal 30px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 30px 0 15px;}
+	h2 {font: normal normal 30px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 30px 0 27.5px;}
 	h3 {font: normal normal 20px/0.8 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif}
 	h3 a {padding: 35px 0 30px;}
 	h5, h6 {margin-bottom: 20px;}
@@ -688,11 +687,10 @@
 @media only screen and (max-width: 479px) {
 	section#highlight h1 {margin-top: 32px;}
 	h1 span {font-size: 21px;}
-	h2 {font: normal normal 24px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 20px 0 15px;}
+	h2 {font: normal normal 24px/1.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 	h3 {font: normal normal 16px/1.2 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 	h3 a, h3 a:visited  {letter-spacing: 0;}
 	h3 a span:after {font-size: 25px;}
-	[data-icon]:before {font: normal normal 45px/1.2 "Entypo";}
 	#highlight .button {width: 118px;}
 	time+p {padding-left: 22px;}
 	hr {margin: 45px auto 0;}

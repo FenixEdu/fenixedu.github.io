@@ -11,22 +11,11 @@
 
 	@font-face {
 	    font-family: 'Entypo'; /* "Entypo pictograms by Daniel Bruce — www.entypo.com" */
-	    src: url('../fonts/entypo/entypo.eot');
-	    src: url('../fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
-	         url('../fonts/entypo/entypo.woff') format('woff'),
-	         url('../fonts/entypo/entypo.ttf') format('truetype'),
-	         url('../fonts/entypo/entypo.svg#entypo') format('svg');
-	    font-weight: normal;
-	    font-style: normal;
-	}
-
-	@font-face {
-	    font-family: 'Entypo-Social';
-	    src: url('../fonts/entypo-social/entypo-social.eot');
-	    src: url('../fonts/entypo-social/entypo-social.eot?#iefix') format('embedded-opentype'),
-	         url('../fonts/entypo-social/entypo-social.woff') format('woff'),
-	         url('../fonts/entypo-social/entypo-social.ttf') format('truetype'),
-	         url('../fonts/entypo-social/entypo-social.svg#entypo') format('svg');
+	    src: url('../fonts/entypo/fontello.eot');
+	    src: url('../fonts/entypo/fontello.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/entypo/fontello.woff') format('woff'),
+	         url('../fonts/entypo/fontello.ttf') format('truetype'),
+	         url('../fonts/entypo/fontello.svg#fontello') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
@@ -213,16 +202,14 @@
 	}
 
 	#intro + p a:before {
-		content: '\268F';
-		font: 100px/1 "Entypo";
+		content: '\E810';
+		font: 50px/2 "Entypo";
 		display: block;
 		color: #575759;
 	}
 
-	.ie #intro + p a:before {margin-bottom: 30px;}
-
-	#intro + p a:first-child:before {content: '\E714';}
-	#intro + p a:last-child:before {content: '\2692';}
+	#intro + p a:first-child:before {content: '\E834';}
+	#intro + p a:last-child:before {content: '\E856';}
 
 	#intro + p a:hover:before {
 		color: #19accd;
@@ -247,18 +234,16 @@
 	}
 
 	main nav ul li:first-child {
-		width: 18px;
+		width: 16px;
 	}
 
 	main nav ul li:first-child a:before {
-		content: '\2302';
-		font: 34px/1 "Entypo";
+		content: '\E821';
+		font: 17px/1.2 "Entypo";
 		color: #ccc;
 		position: absolute;
-		top: -8px;
+		top: 0;
 	}
-
-	.ie main nav ul li:first-child a:before {font: 34px/0.5 "Entypo";}
 
 	main nav ul li:not(:first-child) a:before {
 		content: '/';
@@ -318,16 +303,28 @@
 		padding-top: 15px;
 	}
 
-	aside nav [data-icon]:before {
-		font: 40px/1 "Entypo";
-		content: attr(data-icon);
+	aside nav [class^="icon-"]:before, [class*=" icon-"]:before, aside nav [data-icon]:before  {
+		font: 20px/1 "Entypo";
 		color: #19accd;
-		position: absolute;
-		margin: -10px 0 0 -30px;
-		padding-right: 15px;
+		margin: -10px 0px 0 -28px;
+		padding-right: 14px;
+		text-align: center;
+		display: inline-block;
+		width: 15px;
 	}
 
-	.ie aside nav [data-icon]:before {font: 40px/0.5 "Entypo";}
+	aside nav [data-icon]:before {
+		content: attr(data-icon);
+		font: normal normal 24px/1 "KlavikaRegularItalic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	li.subtitle [class^="icon-"]:before, li.subtitle [class*=" icon-"]:before {
+		/*color: #555; When it isn't a page */
+		margin: -10px 0 0 -24px;
+		padding-right: 10px;
+	}
+
+	li.subtitle > ul > li:first-child {padding-top: 4px;}
 
 	aside nav.fixed {
     	position: fixed;
@@ -347,19 +344,6 @@
 	aside nav.scroll {
 		position: relative;
 	}
-
-	li.subtitle [data-icon]:before {
-		/*color: #555; When it isn't a page */
-		margin: -13px 0 0 -27px;
-	}
-
-	li.subtitle > ul > li:first-child {padding-top: 4px;}
-
-	aside nav > ul > ul:last-of-type [data-icon]:before {
-		font: 40px/1 "Entypo-Social";
-	}
-
-	.ie aside nav > ul > ul:last-of-type [data-icon]:before {font: 40px/0.5 "Entypo-Social";}
 
 	.expands span {
 		background: url('../images/arrow_menu.png') no-repeat 0 4px;
@@ -404,11 +388,6 @@
 	aside nav > ul > ul:last-of-type {
 		text-transform: lowercase;
 	}
-
-	aside nav > ul > ul:last-of-type li:nth-child(2) a span:before {padding-left: 3px;}
-	aside nav > ul > ul:last-of-type li a span:before {padding-left: 0;}
-	aside nav > ul > ul:last-of-type span[data-icon="#"]:before, .ie aside nav > ul > ul:last-of-type span[data-icon="#"]:before {font: normal normal 26px/1.4 "KlavikaRegularItalic", "Helvetica Neue", Helvetica, Arial, sans-serif;}
-	
 
 	aside nav ul > ul {
 		padding-left: 28px; 
@@ -567,24 +546,22 @@
 		font: 13px/1.4 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #666;
 		text-transform: uppercase;
-		padding-left: 22px;
 		margin-bottom: 15px;
 		display: block;
 	}
 
 	blockquote > p > span:before {
-		content: '\270E';
-		font: 38px/1 "Entypo";
+		content: '\E836';
+		font: 18px/1 "Entypo";
 		color: #666;
-		position: absolute;
-		margin: -10px 0 0 -22px;
+		display: inline-block;
+		float: left;
+		margin-right: 5px;
 		-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 	    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
 	    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
 	    transform: matrix(-1, 0, 0, 1, 0, 0);
 	}
-
-	.ie blockquote > p > span:before {font: 38px/0.5 "Entypo";}
 
 	blockquote cite { display: block; font-size: 12px; color: #555; }
 	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
@@ -638,25 +615,24 @@
 	header > span {top: 33px; left: 130px; text-transform: capitalize;}
 	main nav ul li {font: 13px/1.3 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 	main nav ul li:not(:first-child) a:before {font: 14px/1 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
-	main nav ul li:first-child {width: 16px;}
-	main nav ul li:first-child a:before {font: 30px/1 "Entypo"; top: -5px;}
+	main nav ul li:first-child a:before {font: 15px/1.4 "Entypo";}
 	#intro + p a {padding: 0 5px 30px;}
 
 	#sidebarButton {display: block;}
 	#sidebarButton:before {
-		content: '\2630';
-		font: 60px/1 "Entypo";
+		content: '\E811';
+		font: 30px/1 "Entypo";
 		background: #fefefe;
 		color: #19accd;
 		position: absolute;
-		top: 6px;
-		right: 0px;
+		top: 22.5px;
+		right: 5px;
 		padding: 10px;
 		display: block;
 	}
 
 	.active #sidebarButton:before {
-		content: '\274C';
+		content: '\E813';
 		-webkit-transform: rotate(90deg);
 		-moz-transform: rotate(90deg);
 		transform: rotate(90deg);
@@ -679,7 +655,7 @@
 		-webkit-box-shadow: inset 1px 0 15px 3px #138099;
         box-shadow: inset 1px 0 15px 3px #138099}
 	aside nav.fixed, aside nav.absolute, aside nav.scroll {display: block; position: static; padding: 7.5%; width: 82.5%;}
-	aside nav [data-icon]:before {color: #0F6478;}
+	aside nav [class^="icon-"]:before, [class*=" icon-"]:before, aside nav [data-icon]:before {color: #0F6478;}
 	aside nav > ul > li > a, aside nav > ul > li:first-child {color: #0D5566!important; border-bottom: 1px solid #0D5566;}
 	aside img {opacity: 0.5;}
 
@@ -738,7 +714,7 @@ main {width: 90%!important;}
 main > ol li:before, footer span a {color: #000!important;}
 
 main > ul li:before {
-	content: '\25B8';
+	content: '\E885';
 	color: #000;
 	padding-right: 10px;
 }
