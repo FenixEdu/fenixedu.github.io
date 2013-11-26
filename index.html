@@ -363,9 +363,8 @@
 					$.ajax({
 						type: "POST",
 						url: "http://fenixedu.org/ignition/contact-form-message",
-						method: "POST",
+						contentType: "application/json; charset=UTF-8",
 						data: data,
-					    contentType: "application/json; charset=utf-8",
 						success: function(data) {
 							$("#fullname").val("");
 							$("#emailaddress").val("");
