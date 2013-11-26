@@ -355,10 +355,10 @@
 				var msg = $("#textarea").val();
 				if(name != "" && email != "" && subject != "" && msg != "") {
 					var data = {
-						name: name,
-						email: email,
-						subject: subject,
-						msg: msg
+						"name": name,
+						"email": email,
+						"subject": subject,
+						"msg": msg
 					};
 					$.ajax({
 						type: "POST",
