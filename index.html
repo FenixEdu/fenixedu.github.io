@@ -364,12 +364,13 @@
 						type: "POST",
 						url: "http://fenixedu.org/ignition/contact-form-message",
 						contentType: "application/json; charset=UTF-8",
-						data: data,
+						data: JSON.stringify(data),
 						success: function(data) {
 							$("#fullname").val("");
 							$("#emailaddress").val("");
 							$("#subject").val("");
 							$("#textarea").val("");
+							alert("Thank you for your message!");
 						}
 					});
 				}
