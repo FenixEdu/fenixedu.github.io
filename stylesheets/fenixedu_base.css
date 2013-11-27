@@ -19,7 +19,7 @@
 	    font-weight: normal;
 	    font-style: normal;
 	}
-	
+
 	@font-face {
 	    font-family: 'KlavikaMediumPlain';
 	    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot');
@@ -328,7 +328,7 @@
 	h1, h2, h3, h4, h5, h6 {text-transform: uppercase;}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	em { font-family: "KlavikaRegularItalic", "Helvetica Neue", Helvetica, Arial, sans-serif;}
-	strong { font-family: "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; }
+	strong { font-family: "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; font-weight: normal;}
 
 	h1 span{
 		background: #19accd;

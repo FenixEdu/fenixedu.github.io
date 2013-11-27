@@ -475,22 +475,22 @@
 		right: 20px;
 	}
 
-	/* Copy to Clipboard
+	/* Copy to Clipboard 
 
 	pre > span {
 		font: 13px/1.4 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		text-transform: uppercase;
 		position: absolute;
-		top: 30px;
+		top: 18px;
 		right: 20px;
 	}
 
 	pre > span:before {
-		content: '\1F4CB';
-		font: 32px/1 "Entypo";
+		content: '\E8d1';
+		font: 15px/1 "Entypo";
 		color: #ccc;
-		position: absolute;
-		margin: -9px 0 0 -20px;
+		display: inline-block;
+		margin-right: 5px;
 	}
 
 	pre > span > a {
@@ -701,12 +701,11 @@ header a[href]:after {content: "FenixEdu™";}
 
 header > span:after {
     content: "(http://dev.fenixedu.org)";
-    margin-left: 2px;
     font: 17.5px/1.3 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-bottom: 1px dotted #000;
     position: absolute;
 	top: 40px;
-	left: -123px;
+	left: -135px;
 	text-transform: lowercase;
 }
 
