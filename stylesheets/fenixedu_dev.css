@@ -502,7 +502,7 @@
 	}*/
 
 	pre code, code {
-		font: 12px/1.2 Courier, "Lucida Console", Terminal, monospace;
+		font: normal normal 12px/1.2 'Anonymous Pro', Courier, "Lucida Console", Terminal, monospace;
 	}
 
 	main p code, main li code {
@@ -714,6 +714,7 @@ main > ol li:before, footer span a {color: #000!important;}
 
 main > ul li:before {
 	content: '\E885';
+	font: 18px/1.2 "Entypo";
 	color: #000;
 	padding-right: 10px;
 }
@@ -723,7 +724,7 @@ main > ul li {padding-left: 0;}
 h2 {font: 22px/1.3 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif!important;}
 h3 {font: 18px/1.3 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif!important;}
 h4, h5 {font-size: 16px; line-height: 1.3!important;}
-pre code, code {font: 14px/1.4 Courier, "Lucida Console", Terminal, monospace!important;}
+pre code, code {font: normal normal 14px/1.4 'Anonymous Pro', Courier, "Lucida Console", Terminal, monospace!important;}
 main > p, ul li, ol li, main a, blockquote p {font: 16px/1.4 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif!important;}
 
 pre {
