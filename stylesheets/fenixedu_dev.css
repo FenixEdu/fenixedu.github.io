@@ -303,7 +303,7 @@
 		padding-top: 15px;
 	}
 
-	aside nav [class^="icon-"]:before, [class*=" icon-"]:before, aside nav [data-icon]:before  {
+	aside nav [class^="icon-"]:before, aside nav [class*=" icon-"]:before, aside nav [data-icon]:before  {
 		font: 20px/1 "Entypo";
 		color: #19accd;
 		margin: -10px 0px 0 -28px;
@@ -583,6 +583,41 @@
 		color: #555;
 		display: block;
 	}
+
+
+/* Tags */
+
+	main [class^="icon-"]:before, main [class*=" icon-"]:before {
+		font: 12px/1 "Entypo";
+		color: #666;
+		padding: 2px 5px;
+		display: inline-block;
+		background-color: #f5f5f5;
+		border-left: 1px solid #ddd;
+		border-right: none;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		border-radius: 3px 0 0 3px;
+	}
+
+	main [class^="icon-"]:after, main [class*=" icon-"]:after {
+		content: '';
+		font: 12px/1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #666;
+		padding: 3px 5px 1px 0;
+		display: inline-block;
+		background-color: #f5f5f5;
+		border-left: none;
+		border-right: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		border-radius: 0 3px 3px 0;
+	}
+
+	main li a + i {margin-left: 5px;}
+
+	main .icon-lock-open:after {content: 'Public';}
+	main .icon-lock:after  {content: 'Private';}
 
 
 /* Mobile Specific Styles */
