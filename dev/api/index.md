@@ -645,7 +645,32 @@ Complete curriculum (only for students)
 #### Example Response
 
 {% highlight json %}
-
+[
+	{
+	"id": "2761663971470",
+	"name": "MEIC-A 2006",
+	"degreeType": "BOLONHA_MASTER_DEGREE",
+	"campus": "Alameda",
+	"presentationName": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda - MEIC-A 2006",
+	"start": "19/07/2012",
+	"end": null,
+	"ects": 7.5,
+	"average": 10.00,
+	"calculatedAverage": 10,
+	"isFinished": false,
+	"approvedCourses": "1",
+	"courseInfo": [
+			{
+				"name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
+				"grade": "10",
+				"ects": 7.5,
+				"id": "1610612905780",
+				"semester": 1,
+				"year": "2012/2013"
+			}
+		]
+	}
+]
 {% endhighlight %}
 
 
