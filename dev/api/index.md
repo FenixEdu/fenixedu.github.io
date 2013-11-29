@@ -23,28 +23,36 @@ This documentation is applicable to all FenixEdu installations as of version
 aware that some institutions may choose to restrict access to the API.
 
 
-### Endpoints
-* [GET /about](#toc_2)
-* [GET /courses/{id}](#toc_3)
-* [GET /courses/{id}/evaluations](#toc_4)
-* [GET /courses/{id}/groups](#toc_5)
-* [GET /courses/{id}/schedule](#toc_6)
-* [GET /courses/{id}/students](#toc_7)
-* [GET /degrees](#toc_8)
-* [GET /degrees/{id}](#toc_9)
-* [GET /degrees/{id}/courses](#toc_10)
-* [GET /person](#toc_11)
-* [GET /person/calendar/classes](#toc_12)
-* [GET /person/calendar/evaluations](#toc_13)
-* [GET /person/courses](#toc_14)
-* [GET /person/evaluations](#toc_15)
-* [PUT /person/evaluations/{id}](#toc_16)
-* [GET /person/payments](#toc_17)
-* [GET /spaces](#toc_18)
-* [GET /spaces/{id}](#toc_19)
+### Public Endpoints
+* [GET /about](#toc_2) <i class="icon-lock-open"></i>
+* [GET /courses/{id}](#toc_3) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/evaluations](#toc_4) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/groups](#toc_5) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/schedule](#toc_6) <i class="icon-a"></i>
+* [GET /courses/{id}/students](#toc_7) <i class="icon-lock-open"></i>
+* [GET /degrees](#toc_8) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}](#toc_9) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}/courses](#toc_10) <i class="icon-lock-open"></i>
+* [GET /person](#toc_11)  <i class="icon-lock"></i>
+* [GET /person/calendar/classes](#toc_12) <i class="icon-lock"></i>
+* [GET /person/calendar/evaluations](#toc_13) <i class="icon-lock"></i>
+* [GET /person/courses](#toc_14) <i class="icon-lock"></i>
+* [GET /person/evaluations](#toc_15) <i class="icon-lock"></i>
+* [PUT /person/evaluations/{id}](#toc_16) <i class="icon-lock"></i>
+* [GET /person/payments](#toc_17) <i class="icon-lock"></i>
+* [GET /spaces](#toc_18)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}](#toc_19)  <i class="icon-lock-open"></i>
+
+
+> <span>NOTE</span>
+> <i class="icon-lock-open"></i> - Public Endpoint    
+> <i class="icon-lock"></i> - Private Endpoint that requires user context    
+> PERSONAL_SCOPE - Private Endpoint that requires user context    
 
 
 ### GET /about
+
+<i class="icon-lock-open"></i>
 
 This endpoint returns some basic information about the institution where the 
 application is deployed. It also returns a list of RSS feeds.
@@ -427,6 +435,8 @@ This endpoint returns the informations for a degree's courses.
 ]
 {% endhighlight %}
 ### GET /person
+
+<i class="icon-lock"></i> <i class="icon-vcard"></i> <i class="icon-user"></i>
 
 This endpoint allows to access the current person information.
 
