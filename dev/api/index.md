@@ -25,29 +25,35 @@ aware that some institutions may choose to restrict access to the API.
 
 ### Public Endpoints
 * [GET /about](#toc_2) <i class="icon-lock-open"></i>
-* [GET /courses/{id}](#toc_3) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/evaluations](#toc_4) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/groups](#toc_5) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/schedule](#toc_6) <i class="icon-a"></i>
-* [GET /courses/{id}/students](#toc_7) <i class="icon-lock-open"></i>
-* [GET /degrees](#toc_8) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}](#toc_9) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}/courses](#toc_10) <i class="icon-lock-open"></i>
-* [GET /person](#toc_11)  <i class="icon-lock"></i>
-* [GET /person/calendar/classes](#toc_12) <i class="icon-lock"></i>
-* [GET /person/calendar/evaluations](#toc_13) <i class="icon-lock"></i>
-* [GET /person/courses](#toc_14) <i class="icon-lock"></i>
-* [GET /person/evaluations](#toc_15) <i class="icon-lock"></i>
-* [PUT /person/evaluations/{id}](#toc_16) <i class="icon-lock"></i>
-* [GET /person/payments](#toc_17) <i class="icon-lock"></i>
-* [GET /spaces](#toc_18)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}](#toc_19)  <i class="icon-lock-open"></i>
+* [GET /courses/{id}](#toc_5) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/evaluations](#toc_8) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/groups](#toc_11) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/schedule](#toc_14) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/students](#toc_17) <i class="icon-lock-open"></i>
+* [GET /degrees](#toc_20) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}](#toc_24) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}/courses](#toc_28) <i class="icon-lock-open"></i>
+* [GET /person](#toc_32)  <i class="icon-lock"></i><i class="icon-user"></i>
+* [GET /person/calendar/classes](#toc_35) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/calendar/evaluations](#toc_39) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/courses](#toc_43) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/curriculum](#toc_47) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/evaluations](#toc_50) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [PUT /person/evaluations/{id}](#toc_53) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [GET /person/payments](#toc_57) <i class="icon-lock"></i><i class="icon-basket"></i>
+* [GET /spaces](#toc_60)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}](#toc_63)  <i class="icon-lock-open"></i>
 
 
 > <span>NOTE</span>
-> <i class="icon-lock-open"></i> - Public Endpoint    
-> <i class="icon-lock"></i> - Private Endpoint that requires user context    
-> PERSONAL_SCOPE - Private Endpoint that requires user context    
+> <i class="icon-lock-open"></i> - Public Endpoint.      
+> <i class="icon-lock"></i> - Private Endpoint that requires user authorization.      
+> <i class="icon-user"></i> - Public personal information: name, emails, ist-id, photo and webpage.      
+> <i class="icon-calendar"></i> - Information about the users's academic schedule and calendar.      
+> <i class="icon-graduation-cap"></i> - Curricular information about both enrolling and teaching courses.      
+> <i class="icon-chart-area"></i> - Curricular information about both enrolling and teaching courses.      
+> <i class="icon-basket"></i> - Information about payments and debt.      
+
 
 
 ### GET /about
@@ -80,6 +86,8 @@ application is deployed. It also returns a list of RSS feeds.
 
 
 ### GET /courses/{id}
+
+<i class="icon-lock-open"></i>
 
 A course is a concrete unit of teaching that typically lasts one academic term.
 This endpoint shows some information regarding a particular course. The same
@@ -138,6 +146,8 @@ the associated degrees.
 
 ### GET /courses/{id}/evaluations
 
+<i class="icon-lock-open"></i>
+
 An evaluation is a component of a course in which the teacher determines
 the extent of the students understanding of the program. Current known
 implementations of evaluations are: tests, exams, projects, online tests
@@ -179,6 +189,8 @@ and ad-hoc evaluations.
 
 ### GET /courses/{id}/groups
 
+<i class="icon-lock-open"></i>
+
 Groups are used in courses for a wide range of purposes. The most typical are
 for creating teams of students for laboratories or projects. Some groups are 
 shared among different courses. The enrolment of student groups may be atomic
@@ -217,6 +229,8 @@ or individual, and may be restricted to an enrolment period.
 
 
 ### GET /courses/{id}/schedule
+
+<i class="icon-lock-open"></i>
 
 Each course is lectured during a specific set of intervals. These intervals
 make up the lesson period for that course. Each course also has a curricular
@@ -279,6 +293,8 @@ shift is the possible schedule in which a student should enrol.
 
 ### GET /courses/{id}/students
 
+<i class="icon-lock-open"></i>
+
 This endpoint lists all the students attending the specified course. For each
 student it indicates the corresponding degree. The endpoint also returns the
 number of students officially enroled in the course.
@@ -303,6 +319,8 @@ number of students officially enroled in the course.
 
 
 ### GET /degrees
+
+<i class="icon-lock-open"></i>
 
 This endpoint returns the information for all degrees.
 
@@ -355,6 +373,8 @@ This endpoint returns the information for all degrees.
 
 ### GET /degrees/{id}
 
+<i class="icon-lock-open"></i>
+
 This endpoint returns the information for the {id} degree.
 
 #### Query Parameters
@@ -405,6 +425,8 @@ This endpoint returns the information for the {id} degree.
 
 ### GET /degrees/{id}/courses
 
+<i class="icon-lock-open"></i>
+
 This endpoint returns the informations for a degree's courses.
 
 #### Query Parameters
@@ -436,7 +458,7 @@ This endpoint returns the informations for a degree's courses.
 {% endhighlight %}
 ### GET /person
 
-<i class="icon-lock"></i> <i class="icon-vcard"></i> <i class="icon-user"></i>
+<i class="icon-lock"></i><i class="icon-user"></i>
 
 This endpoint allows to access the current person information.
 
@@ -482,6 +504,8 @@ This endpoint allows to access the current person information.
 
 ### GET /person/calendar/classes
 
+<i class="icon-lock"></i><i class="icon-schedule"></i>
+
 This endpoint returns the user's class information. This information can be retrieved both in iCalendar and JSON formats.
 
 #### Query Parameters
@@ -523,6 +547,8 @@ This endpoint returns the user's class information. This information can be retr
 {% endhighlight %}
 
 ### GET /person/calendar/evaluations
+
+<i class="icon-lock"></i><i class="icon-graduation-cap"></i>
 
 This endpoint returns the students's evaluations information. This information can be retrieved both in iCalendar and JSON formats.
 
@@ -566,6 +592,8 @@ This endpoint returns the students's evaluations information. This information c
 
 ### GET /person/courses
 
+<i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+
 This endpoint returns the user's course information.
 
 #### Query Parameters
@@ -605,7 +633,25 @@ This endpoint returns the user's course information.
 }
 {% endhighlight %}
 
+### GET /person/curriculum
+
+<i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+
+Complete curriculum (only for students)
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/curriculum
+
+#### Example Response
+
+{% highlight json %}
+
+{% endhighlight %}
+
+
 ### GET /person/evaluations
+
+<i class="icon-lock"></i><i class="icon-graduation-cap"></i>
 
 This endpoint returns the student's written evaluation information.
 
@@ -647,6 +693,8 @@ This endpoint returns the student's written evaluation information.
 {% endhighlight %}
 
 ### PUT /person/evaluations/{id}
+
+<i class="icon-lock"></i><i class="icon-graduation-cap"></i>
 
 This endpoint allows the student to enroll or disenroll from a written evaluation.
 
@@ -693,6 +741,8 @@ This endpoint allows the student to enroll or disenroll from a written evaluatio
 
 ### GET /person/payments
 
+<i class="icon-lock"></i><i class="icon-basket"></i>
+
 This endpoint returns user's payments information.
 
 #### Example Request
@@ -724,6 +774,8 @@ This endpoint returns user's payments information.
 
 ### GET /spaces
 
+<i class="icon-lock"></i><i class="icon-basket"></i>
+
 This endpoint returns the information about the campi.
  
 #### Example Request
@@ -747,6 +799,8 @@ This endpoint returns the information about the campi.
 
 
 ### GET /spaces/{id}
+
+<i class="icon-lock"></i><i class="icon-basket"></i>
 
 This endpoint returns information about the space for a given {id}, its contained and parent spaces. The {id} can be for any of these types: "CAMPUS", "BUILDING", "FLOOR" or "ROOM".
 

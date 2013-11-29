@@ -618,6 +618,11 @@
 
 	main .icon-lock-open:after {content: 'Public';}
 	main .icon-lock:after  {content: 'Private';}
+	main .icon-user:after  {content: 'Personal Scope';}
+	main .icon-basket:after  {content: 'Payment Scope';}
+	main .icon-calendar:after  {content: 'Schedule Scope';}
+	main .icon-graduation-cap:after  {content: 'Curricular Scope';}
+	main .icon-chart-area:after  {content: 'Evaluation Scope';}
 
 
 /* Mobile Specific Styles */
