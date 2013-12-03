@@ -84,7 +84,7 @@ alias mcpj='mvn clean package jetty:start';
 To version control our code base, we use Git. You can learn more about our branching model and contributions in the [methodology page][Methodology].
 
 {% highlight bash %}
-git apt-get install git
+sudo apt-get install git
 {% endhighlight %}
 
 
