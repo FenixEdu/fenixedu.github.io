@@ -799,7 +799,7 @@ This endpoint returns user's payments information.
 
 ### GET /spaces
 
-<i class="icon-lock"></i><i class="icon-basket"></i>
+<i class="icon-lock-open"></i>
 
 This endpoint returns the information about the campi.
  
@@ -825,7 +825,7 @@ This endpoint returns the information about the campi.
 
 ### GET /spaces/{id}
 
-<i class="icon-lock"></i><i class="icon-basket"></i>
+<i class="icon-lock-open"></i>
 
 This endpoint returns information about the space for a given {id}, its contained and parent spaces. The {id} can be for any of these types: "CAMPUS", "BUILDING", "FLOOR" or "ROOM".
 
