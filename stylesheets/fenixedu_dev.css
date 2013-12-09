@@ -601,7 +601,6 @@
 	}
 
 	main [class^="icon-"]:after, main [class*=" icon-"]:after {
-		content: '';
 		font: 12px/1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #666;
 		padding: 3px 5px 1px 0;
@@ -612,6 +611,7 @@
 		border-top: 1px solid #ddd;
 		border-bottom: 1px solid #ddd;
 		border-radius: 0 3px 3px 0;
+		margin-right: 2px;
 	}
 
 	main li a + i {margin-left: 5px;}
