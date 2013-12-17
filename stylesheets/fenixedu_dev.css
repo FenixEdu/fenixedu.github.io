@@ -431,6 +431,16 @@
 		margin-bottom: 26px;
 	}
 
+	p.browsehappy,  {
+		background: #19accd;
+		color: #fefefe;
+		padding: 15px;
+		text-align: center;
+		margin: 0;
+	}
+
+	.browsehappy strong, .browsehappy a, .browsehappy a:hover, .browsehappy a:focus, .browsehappy a:visited {color: #fefefe; text-decoration: none;}
+
 
 /* Lists */
 
@@ -516,7 +526,6 @@
 
 /* Tables */
 
-	
 	table {
 		width: 100%;
 		margin: 20px 0;

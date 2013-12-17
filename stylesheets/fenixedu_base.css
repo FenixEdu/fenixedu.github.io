@@ -368,6 +368,7 @@
 		color: #fefefe;
 		padding: 15px;
 		text-align: center;
+		margin: 0;
 	}
 
 	.browsehappy strong, .browsehappy a, .browsehappy a:hover, .browsehappy a:focus, .browsehappy a:visited {color: #fefefe; text-decoration: none;}
