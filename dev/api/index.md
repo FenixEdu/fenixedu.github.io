@@ -4,7 +4,7 @@ breadcrumbs: [{ "text": "API", "url": "/dev/api"}]
 root: "../"
 ---
 
-## API Endpoints
+## V2 API Endpoints
 
 This page essentially lists all the existing endpoints, as well as examples
 when making invocations. While it is not the purpose of this page to describe 
@@ -43,6 +43,7 @@ aware that some institutions may choose to restrict access to the API.
 * [GET /person/payments](#toc_57) <i class="icon-lock"></i><i class="icon-basket"></i>
 * [GET /spaces](#toc_60)  <i class="icon-lock-open"></i>
 * [GET /spaces/{id}](#toc_63)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}/blueprint](#toc_67)  <i class="icon-lock-open"></i>
 
 
 > <span>NOTE</span>
@@ -111,6 +112,7 @@ the associated degrees.
 	"numberOfAttendingStudents": 123,
 	"announcementLink": "https://fenix.ist.utl.pt/rss.do?boardId=123",
 	"summaryLink": "https://fenix.ist.utl.pt/publico/rss.do?summaryId=123",
+	"url": "https://fenix.ist.utl.pt/disciplinas/FInd3"
 	"moreInfo": [
 		{
 			"program": "",
@@ -162,14 +164,15 @@ and ad-hoc evaluations.
 	{
 		"type": "TEST",
 		"name": "Teste 1º Teste",
-		"day": "2013-10-26",
-		"beginningTime": "09:00",
-		"endTime": "11:00",
-		"isInEnrolmentPeriod": false,
+		"evaluationPeriod": {
+			"start": "2013-10-26 09:00",
+			"end"  : "2013-10-26 11:00"
+		},
 		"enrollmentPeriod": {
 			"start": "2013-10-01 14:25:32",
 			"end"  : "2013-10-24 17:52:44"
 		},
+		"isInEnrolmentPeriod": false,
 		"rooms": [
 			{
 				"id": "2448131362251",
@@ -214,13 +217,35 @@ or individual, and may be restricted to an enrolment period.
 		"associatedCourses": [
 			{
 				"name": "Matemática Computacional",
-				"degrees": "MEIC, LERC, MEC",
-				"id": "1132132564548"
+				"id": "1132132564548",
+				"degrees": [ 
+								{	"name": "Licenciatura Bolonha em Engenharia de Telecomunicações e Informática", 
+									"acronym":"LERC", 
+									"id": 2761663971586
+								},
+								{	"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda", 
+									"acronym":"MEIC-A", 
+									"id": 2761663977513
+								},
+								{	"name": "Mestrado Integrado em Engenharia Civil", 
+									"acronym":"MEC", 
+									"id": 2761663971466
+								}
+						    ]
 			},
 			{
 				"name": "Mecânica Quantica",
-				"degrees": "MA, DEIC",
-				"id": "1132132564555"
+				"id": "1132132564555",
+				"degrees": [ 
+								{	"name": "Mestrado Integrado em Arquitectura", 
+									"acronym":"MA", 
+									"id": 2761663971465
+								},
+								{	"name": "Diploma de Estudos Avançados em Engenharia Informática e de Computadores", 
+									"acronym":"DEIC", 
+									"id": 2761663971783
+								}
+						    ]
 			}
 		]
 	}
@@ -308,11 +333,20 @@ number of students officially enroled in the course.
 	"enrolmentCount": 32,
 	"attendingCount": 41,
 	"students": [
-		{ "username": "ist1234", "degree": "MEIC", "degreeId": "1312323155" },
-		{ "username": "ist1235", "degree": "MEIC", "degreeId": "1312323155" },
-		{ "username": "ist1236", "degree": "MA", "degreeId": "1312323153" },
-		{ "username": "ist1237", "degree": "MEQ", "degreeId": "1312323152" },
-		{ "username": "ist1238", "degree": "MEIC", "degreeId": "1312323155" }
+		{ "username": "ist1234", 
+		  "degree": { 
+		  	"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+		  	"acronym": "MEIC-A",
+		  	"id": "2761663971475"
+		  }
+		},
+		{ "username": "ist1236", 
+		  "degree": { 
+		  	"name": "Mestrado Integrado em Arquitectura",
+		  	"acronym": "MA",
+		  	"id": "2761663971465"
+		  }
+		}
 	]
 }
 {% endhighlight %}
@@ -340,8 +374,9 @@ This endpoint returns the information for all degrees.
 		"type": "BOLONHA_MASTER_DEGREE",
 		"acronym": "MEGE",
 		"typeName": "Mestrado",
+		"url": "https://fenix.ist.utl.pt/cursos/mege",
 		"campus": [
-			"Alameda"
+			{"name":"Alameda", "id":"2465311230081"}
 		],
 		"info": {
 			"description": "",
@@ -443,16 +478,14 @@ This endpoint returns the informations for a degree's courses.
 		"credits": "4.5",
 		"name": "Frio Industrial",
 		"id": "1610612925565",
-		"ecYear": "2013/2014",
-		"sem": "1ºSemestre"
+		"academicTerm": "Semester 1 2013/2014"
 	},
 	{
 		"acronym": "MFC3",
 		"credits": "6.0",
 		"name": "Mecânica de Fluídos Computacional",
 		"id": "1610612925545",
-		"ecYear": "2013/2014",
-		"sem": "1ºSemestre"
+		"academicTerm": "Semester 1 2013/2014"
 	}
 ]
 {% endhighlight %}
@@ -468,20 +501,43 @@ This endpoint allows to access the current person information.
 #### Example Response
 {% highlight json %}
 {
-	"campus": "Alameda",
 	"roles": [
 		{
 			"type": "TEACHER",
-			"department": "Departamento de Engenharia Informática (DEI)"
+			"department": { "name" : "Departamento de Engenharia Informática",
+							"acronym" : "DEI"
+						  }
 		},
 		{
 			"type": "STUDENT",
-			"degrees": [
-				"Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda"
-			]
+			"registrations": [
+							{ 
+			  					"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+			  					"acronym": "MEIC-A",
+			  					"id": "2761663971475",
+			  					"academicTerms":[
+			  										"Semester 1 2013/2014", 
+			  										"Semester 2 2013/2014"
+			  									]
+		  					}
+						]
 		},
 		{
-			"type": "ALUMNI"
+			"type": "ALUMNI",
+			"concludedRegistrations": [
+								{
+									"name": "Licenciatura Bolonha em Engenharia Informática e de Computadores - Alameda",
+		  							"acronym": "LEIC-A",
+		  							"id": "2761663971474",
+		  							"academicTerms":[
+		  											"Semester 1 2010/2011", 
+		  											 "Semester 2 2010/2011",
+		  											 "Semester 1 2011/2012",
+		  											 "Semester 1 2011/2012",
+		  											 "Semester 2 2012/2013",
+		  											 "Semester 2 2012/2013"]
+								}
+							]
 		}
 	],
 	"photo": null,
@@ -521,26 +577,34 @@ This endpoint returns the user's class information. This information can be retr
 	"year": "2013/2014",
 	"events": [
 		{
-			"startDay": "18/09/2013",
-			"endDay": "18/09/2013",
-			"startTime": "17:30",
-			"endTime": "19:00",
-			"location": "F4",
+			"classPeriod": {
+					"start": "18/09/2013 17:30",
+					"end"  : "18/09/2013 19:00"
+			},
+			"location": [{name : "F4", "id": "2448131363674"}],
 			"title": "Gestão : Problemas",
-			"url": "https://fenix.ist.utl.pt/disciplinas/ges5/2013-2014/1-semestre",
-			"note": null,
-			"isAllDay": false
+			"course": {
+				"acronym" : "Ges5",
+  				"name" : "Gestão",
+  				"academicTerm" : "Semester 1 2013/2014"
+  				"url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
+  				"id": "1610612925989"
+			}
 		},
 		{
-			"startDay": "28/10/2013",
-			"endDay": "28/10/2013",
-			"startTime": "14:30",
-			"endTime": "15:30",
-			"location": "QA02.4",
+			"classPeriod": {
+					"start": "28/10/2013 14:30",
+					"end"  : "28/10/2013 15:30"
+			}
+			"location": [{name : "QA02.4", "id": "2448131362616"}]
 			"title": "Análise Complexa e Equações Diferenciais : Teórica",
-			"url": "https://fenix.ist.utl.pt/disciplinas/aced42/2013-2014/1-semestre",
-			"note": null,
-			"isAllDay": false
+			"course": {
+				"acronym" : "aced42",
+  				"name" : "Análise Complexa e Equações Diferenciais",
+  				"academicTerm" : "Semester 1 2013/2014"
+  				"url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
+  				"id" : "1610612925691"
+			}
 		}
 	]
 }
@@ -562,29 +626,47 @@ This endpoint returns the students's evaluations information. This information c
 #### Example Response
 {% highlight json %}
 {
-	"year": "2013/2014",
 	"events": [
 		{
-			"startDay": "04/10/2013",
-			"endDay": "04/10/2013",
-			"startTime": "00:57",
-			"endTime": "01:57",
-			"location": "Sistema Fénix",
+			"evaluationPeriod": {
+					"start": "04/10/2013 00:57",
+					"end":   "04/10/2013 01:57"
+			}
+			"location": [name : "Sistema Fénix", "id": null],
 			"title": "Inicio das inscrições para 2º Teste : Análise Complexa e Equações Diferenciais",
-			"url": "https://fenix.ist.utl.pt/privado",
-			"note": null,
-			"isAllDay": false
+			"course": {
+				"acronym" : "aced42",
+  				"name" : "Análise Complexa e Equações Diferenciais",
+  				"academicTerm" : "Semester 1 2013/2014"
+  				"url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
+  				"id" : "1610612925691"
+			}
 		},
 		{
-			"startDay": "06/11/2013",
-			"endDay": "06/11/2013",
-			"startTime": "19:00",
-			"endTime": "21:00",
-			"location": "C01; C9; GA1; GA3; C13; C12; C11; C10; GA4; GA5",
+			"evaluationPeriod": {
+					"start": "06/11/2013 19:00",
+					"end":   "04/10/2013 21:00"
+			}
+			"location": [
+						  	{	"name": "C01", 
+						  	  	"id":"2448131362251"
+						  	},
+						  	{	"name": "C9", 
+						  	  	"id":"2448131362317"
+						  	},
+						  	{	"name": "GA3", 
+						  	  	"id":"2448131362372"
+						  	},
+						 ]
+			,
 			"title": "1º Teste : Gestão",
-			"url": "https://fenix.ist.utl.pt/disciplinas/ges5/2013-2014/1-semestre",
-			"note": null,
-			"isAllDay": false
+			"course": {
+				"acronym" : "Ges5",
+  				"name" : "Gestão",
+  				"academicTerm" : "Semester 1 2013/2014"
+  				"url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
+  				"id": "1610612925989"
+			}
 		}
 	]
 }
@@ -597,18 +679,15 @@ This endpoint returns the students's evaluations information. This information c
 This endpoint returns the user's course information.
 
 #### Query Parameters
-**sem** - "1" or "2"
-
-**year** - "yyyy/yyyy"
+**academicTerm** - string in the following format "Semester X yyyy/yyyy"
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/courses?sem=1&year=2013/2014
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/courses?academicTerm=Semester X YYYY/ZZZZ
 
 #### Example Response
 {% highlight json %}
 {
-	"year": "2013/2014",
-	"semester": 1,
+	"academicTerm": "Semester 1 2013/2014",
 	"enrolments": [
 		{
 			"id": "1610612926309",
@@ -658,15 +737,14 @@ Complete curriculum (only for students)
 	"average": 10.00,
 	"calculatedAverage": 10,
 	"isFinished": false,
-	"approvedCourses": "1",
+	"approvedCourses": 1,
 	"courseInfo": [
 			{
 				"name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
 				"grade": "10",
 				"ects": 7.5,
 				"id": "1610612905780",
-				"semester": 1,
-				"year": "2012/2013"
+				"academicTerm": "Semester 1 2013/2014"
 			}
 		]
 	}
@@ -776,19 +854,21 @@ This endpoint returns user's payments information.
 #### Example Response
 {% highlight json %}
 {
-	"payed": [
+	"completed": [
 		{
 			"amount": "12.34",
-			"name": "CASH",
+			"type": "CASH",
 			"description": "Taxa de Secretaria e Seguro - 2012/2013",
 			"date": "30/12/2002"
 		}
 	],
-	"notPayed": [
+	"pending": [
 		{
 			"description": "Propina",
-			"startDate": "13/09/2013",
-			"endDate": "31/12/2013",
+			paymentPeriod: { 
+							"start" : "13/09/2013 00:00:00", 
+							"end": "31/12/2013 00:00:00"
+						   }
 			"entity": "12345",
 			"reference": "111 222 333",
 			"amount": "1234.56"
@@ -812,7 +892,7 @@ This endpoint returns the information about the campi.
 	{
 		"id": "2465311230082",
 		"name": "Taguspark",
-		"type": "CAMPUS"
+		"type": "CAMPUS",
 	},
 	{
 		"id": "2465311230081",
@@ -861,3 +941,20 @@ This endpoint returns information about the space for a given {id}, its containe
 	}
 }
 {% endhighlight %}
+
+### GET /spaces/{id}/blueprint
+
+<i class="icon-lock-open"></i>
+
+This endpoint returns the space's blueprint in the required format
+
+#### Query Parameters
+
+**format** - "jpeg" or "dwg"
+
+#### Example Request
+```GET``` https://fenix.ist.utl.pt/api/fenix/v1/spaces/2465311230082/blueprint
+
+#### Example Response
+response content-type : "application/dwg" or "image/jpeg"
+response content: raw image data
