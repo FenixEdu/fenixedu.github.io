@@ -34,6 +34,8 @@ To register your third-party application, you'll need to provide some informatio
 
 This information is used by us to identify your application and allow users to authorize their private data through the oAuth authorization protocol. When using your application for the first time, users will be prompt to authorized the requested scopes. The authorization form, exemplified in Figure 2, will display the information that you provided when your registered your application.
 
+![Figure 2 - Authorization Form]({{site.url}}/assets/authorization-form.png)
+
 ### Step 2 - Invoke the REST API Endpoints
 
 After you registered your application, two important tokens will be given to you:
