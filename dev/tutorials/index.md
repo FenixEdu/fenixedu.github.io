@@ -7,7 +7,6 @@ root: "../"
 ## [Use FenixEdu™ API in your Application][Use FenixEdu™ API in your Application]
 In this tutorial, we explain how you can integrate our webservices within your application. After you follow this tutorial, you will known how to use our REST API and how you can improve your application using our data.
 
-
 ## [Setup your development environment][Setup your development environment]
 This tutorial gets you started with a development environment that allows you to create applications
 using our infrastructural code. After you follow the steps contained in this tutorial, you may go
@@ -32,6 +31,9 @@ the necessary steps to share a production-ready version of your code with the ot
 In this tutorial, we explain how you can expose your module functionalities using a REST API. After you follow this tutorial, you will have basic understanding on how REST works and you will known how to use the Bennu infrastructure provided to ease exposing your module functionalities with REST-based web-services.
 
 
+## [Install FenixEdu][Install FenixEdu]
+This tutorial walks you through the necessary steps to install FenixEdu™ in a local machine. After you follow this tutorial, you will have your own installation of FenixEdu in your local machine up and running.
+
 [Undestand the DML]: /dev/tutorials/understand-the-dml/
 [Setup your development environment]: /dev/tutorials/setup-your-development-environment/
 [Create your own application]: /dev/tutorials/create-your-own-application/
@@ -41,3 +43,4 @@ In this tutorial, we explain how you can expose your module functionalities usin
 [Create a Bankai application]: /dev/tutorials/create-a-bankai-application/
 [Use FenixEdu™ API in your Application]: /dev/tutorials/use-fenixedu-api-in-your-application/
 [Design a new Theme]: /dev/tutorials/design-a-new-theme/
+[Install FenixEdu]: /dev/tutorials/install-fenix-edu/
