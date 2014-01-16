@@ -14,9 +14,10 @@ This tutorial walks you through the necessary steps to install FenixEdu™ in a 
 ### Table of Contents
 * [Step 1 - Install the necessary software](#toc_2)
 * [Step 2 - Configure Java and Maven](#toc_3)
-* [Step 3 - Generate the FenixEdu software installation through the archetype](#toc_4)
-* [Step 4 - Bootstrap FenixEdu](#toc_5)
-* [Step 5 - Run your FenixEdu Application](#toc_6)
+* [Step 3 - Create an empty database](#toc_4)
+* [Step 4 - Generate the FenixEdu software installation through the archetype](#toc_5)
+* [Step 5 - Bootstrap FenixEdu](#toc_6)
+* [Step 6 - Run your FenixEdu Application](#toc_7)
 
 ### Step 1 - Install the necessary software
 Before you can install FenixEdu locally, you must install some software packages in the hosting machine. The following commands, intended for debian-based operating systems, add a new repository that allows you to install Oracle's JDK via apt-get, and installs all the required software: 
@@ -39,7 +40,21 @@ export MAVEN_OPTS="$JAVA_OPTS"
 
 After this, you should ```source``` your ```.bashrc``` file or simply restart your shell.
 
-### Step 3 - Generate the FenixEdu software installation through the archetype
+
+### Step 3 - Create an empty database
+
+Assuming that your mysql user is ```root```, and that the database name where you will install FenixEdu is called ```fenixedu```, you must create such database. For that, you can execute the following one-liner:
+
+{% highlight bash %}
+mysql -uroot -e "create database fenixedu" -p
+{% endhighlight %}
+
+The command above will create an empty databased named ```fenixedu```.
+
+> <span>Attention</span>
+> The mysql user you will specify during the installation must have the necessary grants to write and create new tables.
+
+### Step 4 - Generate the FenixEdu software installation through the archetype
 
 {% highlight bash %}
 mvn archetype:generate -DarchetypeGroupId=org.fenixedu -DarchetypeArtifactId=fenix-webapp-archetype -DarchetypeVersion=1.0.0 -DarchetypeRepository=https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository
@@ -86,7 +101,7 @@ fenixVersion: 2.0.0
 
 By now, Maven should have created a folder in your current working directory with the name of the artifactId that you provided. In the example above, the folder name is ```fenix-webapp```.
 
-### Step 4 - Bootstrap FenixEdu
+### Step 5 - Bootstrap FenixEdu
 
 After Maven generates the installation code, you must bootstrap it. By bootstraping, we mean running a Maven plugin that will prompt you a set of parameters that will populate necessary information in the configured database. To run such Maven task, you must enter the generated directory, and run the ```install``` profile through the following commands:
 
@@ -144,7 +159,7 @@ Starting install process...
 Installation Complete.
 {% endhighlight %}
 
-### Step 5 - Run your FenixEdu Application
+### Step 6 - Run your FenixEdu Application
 
 After bootstraping your FenixEdu installation, you are ready to run it. To do so, you must execute the following Maven command that will run a Tomcat Servlet Container with your FenixEdu installation:
 
