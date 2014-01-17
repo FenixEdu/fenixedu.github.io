@@ -113,7 +113,7 @@ In the interest of security, every issued access token is only valid for 1 hour.
 
 To get a new ```access_token```, you must invoke a ```POST``` request to the following endpoint:
 
-	https://fenix.ist.utl.pt/oauth/refresh_token?client_id=<client_id>&client_secret=<client_secret>&refresh_token=<refresh_token>
+	https://fenix.ist.utl.pt/oauth/refresh_token?client_id=<client_id>&client_secret=<client_secret>&refresh_token=<refresh_token>&grant_type=refresh_token
 
 If everything goes smoothly, you should receive an ```HTTP 200 Ok``` response with ```Content-Type: application/json``` as exemplified:
 	
