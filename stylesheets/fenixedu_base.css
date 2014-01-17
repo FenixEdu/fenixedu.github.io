@@ -605,14 +605,14 @@
 	h1 [class^="icon-"]:before {color: #fefefe;}
 
 	#highlight .button:not(.anchor) {
-		background: none;
-		color: #fefefe;
+		background: #fefefe;
+		color: #1e8677;
 		border: 1px solid #fefefe;
 	}
 
 	.button.anchor {
-		background: #fefefe;
-		color: #1e8677;
+		background: none;
+		color: #fefefe;
 		border: 1px solid #fefefe;
 	}
 
