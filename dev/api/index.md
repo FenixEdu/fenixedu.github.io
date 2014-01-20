@@ -22,29 +22,28 @@ This documentation is applicable to all FenixEdu installations as of version
 1.2.0. Check your local installation to find out if the API is available. Be 
 aware that some institutions may choose to restrict access to the API.
 
-
 ### Public Endpoints
 * [GET /about](#toc_2) <i class="icon-lock-open"></i>
-* [GET /academicterms] <i class="icon-lock-open"></i>
-* [GET /courses/{id}](#toc_5) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/evaluations](#toc_8) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/groups](#toc_11) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/schedule](#toc_14) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/students](#toc_17) <i class="icon-lock-open"></i>
-* [GET /degrees](#toc_20) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}](#toc_24) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}/courses](#toc_28) <i class="icon-lock-open"></i>
-* [GET /person](#toc_32)  <i class="icon-lock"></i><i class="icon-user"></i>
-* [GET /person/calendar/classes](#toc_35) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/calendar/evaluations](#toc_39) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/courses](#toc_43) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/curriculum](#toc_47) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/evaluations](#toc_50) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [PUT /person/evaluations/{id}](#toc_53) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [GET /person/payments](#toc_57) <i class="icon-lock"></i><i class="icon-basket"></i>
-* [GET /spaces](#toc_60)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}](#toc_63)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}/blueprint](#toc_67)  <i class="icon-lock-open"></i>
+* [GET /academicterms](#toc_5) <i class="icon-lock-open"></i>
+* [GET /courses/{id}](#toc_8) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/evaluations](#toc_11) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/groups](#toc_14) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/schedule](#toc_17) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/students](#toc_20) <i class="icon-lock-open"></i>
+* [GET /degrees](#toc_23) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}](#toc_27) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}/courses](#toc_31) <i class="icon-lock-open"></i>
+* [GET /person](#toc_35)  <i class="icon-lock"></i><i class="icon-user"></i>
+* [GET /person/calendar/classes](#toc_38) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/calendar/evaluations](#toc_42) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/courses](#toc_46) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/curriculum](#toc_50) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/evaluations](#toc_53) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [PUT /person/evaluations/{id}](#toc_56) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [GET /person/payments](#toc_60) <i class="icon-lock"></i><i class="icon-basket"></i>
+* [GET /spaces](#toc_63)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}](#toc_66)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}/blueprint](#toc_70)  <i class="icon-lock-open"></i>
 
 
 > <span>NOTE</span>
@@ -150,7 +149,7 @@ the associated degrees.
 	"numberOfAttendingStudents": 123,
 	"announcementLink": "https://fenix.ist.utl.pt/rss.do?boardId=123",
 	"summaryLink": "https://fenix.ist.utl.pt/publico/rss.do?summaryId=123",
-	"url": "https://fenix.ist.utl.pt/disciplinas/FInd3"
+	"url": "https://fenix.ist.utl.pt/disciplinas/FInd3",
 	"competences": [
 		{
 			"id" : "1313123123232",			
@@ -632,39 +631,51 @@ This endpoint returns the user's class information. This information can be retr
 #### Example Response
 {% highlight json %}
 {
-	"academicTerm": "2013/2014",
-	"events": [
-		{
-			"classPeriod": {
-					"start": "18/09/2013 17:30",
-					"end"  : "18/09/2013 19:00"
-			},
-			"location": [{"type": "ROOM", "name" : "F4", "id": "2448131363674"}],
-			"title": "Gestão : Problemas",
-			"course": {
-				"acronym" : "Ges5",
-  				"name" : "Gestão",
-  				"academicTerm" : "Semester 1 2013/2014"
-  				"url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
-  				"id": "1610612925989"
-			}
-		},
-		{
-			"classPeriod": {
-					"start": "28/10/2013 14:30",
-					"end"  : "28/10/2013 15:30"
-			}
-			"location": [{"type": "ROOM", "name" : "QA02.4", "id": "2448131363664"}]
-			"title": "Análise Complexa e Equações Diferenciais : Teórica",
-			"course": {
-				"acronym" : "aced42",
-  				"name" : "Análise Complexa e Equações Diferenciais",
-  				"academicTerm" : "Semester 1 2013/2014"
-  				"url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
-  				"id" : "1610612925691"
-			}
-		}
-	]
+    "academicTerm": "2013/2014",
+    "events": [
+        {
+            "classPeriod": {
+                "start": "18/09/2013 17:30",
+                "end": "18/09/2013 19:00"
+            },
+            "location": [
+                {
+                    "type": "ROOM",
+                    "name": "F4",
+                    "id": "2448131363674"
+                }
+            ],
+            "title": "Gestão : Problemas",
+            "course": {
+                "acronym": "Ges5",
+                "name": "Gestão",
+                "academicTerm": "Semester 1 2013/2014",
+                "url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
+                "id": "1610612925989"
+            }
+        },
+        {
+            "classPeriod": {
+                "start": "28/10/2013 14:30",
+                "end": "28/10/2013 15:30"
+            },
+            "location": [
+                {
+                    "type": "ROOM",
+                    "name": "QA02.4",
+                    "id": "2448131363664"
+                }
+            ],
+            "title": "Análise Complexa e Equações Diferenciais : Teórica",
+            "course": {
+                "acronym": "aced42",
+                "name": "Análise Complexa e Equações Diferenciais",
+                "academicTerm": "Semester 1 2013/2014",
+                "url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
+                "id": "1610612925691"
+            }
+        }
+    ]
 }
 {% endhighlight %}
 
@@ -684,39 +695,47 @@ This endpoint returns the students's evaluations information. This information c
 #### Example Response
 {% highlight json %}
 {
-	"academicTerm" : "2013/2014",	
-	"events": [
-		{
-			"evaluationPeriod": {
-					"start": "04/10/2013 00:57",
-					"end":   "04/10/2013 01:57"
-			}
-			"location": [],
-			"title": "Inicio das inscrições para 2º Teste : Análise Complexa e Equações Diferenciais",
-			"course": {
-				"acronym" : "aced42",
-  				"name" : "Análise Complexa e Equações Diferenciais",
-  				"academicTerm" : "Semester 1 2013/2014"
-  				"url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
-  				"id" : "1610612925691"
-			}
-		},
-		{
-			"evaluationPeriod": {
-					"start": "06/11/2013 19:00",
-					"end":   "04/10/2013 21:00"
-			}
-			"location": [{	"type": "ROOM", "name": "F2", "id":"2448131363664"],
-			"title": "1º Teste : Gestão",
-			"courses": [{
-				"acronym" : "Ges5",
-  				"name" : "Gestão",
-  				"academicTerm" : "Semester 1 2013/2014"
-  				"url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
-  				"id": "1610612925989"
-			}]
-		}
-	]
+    "academicTerm": "2013/2014",
+    "events": [
+        {
+            "evaluationPeriod": {
+                "start": "04/10/2013 00:57",
+                "end": "04/10/2013 01:57"
+            },
+            "location": [],
+            "title": "Inicio das inscrições para 2º Teste : Análise Complexa e Equações Diferenciais",
+            "course": {
+                "acronym": "aced42",
+                "name": "Análise Complexa e Equações Diferenciais",
+                "academicTerm": "Semester 1 2013/2014",
+                "url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
+                "id": "1610612925691"
+            }
+        },
+        {
+            "evaluationPeriod": {
+                "start": "06/11/2013 19:00",
+                "end": "04/10/2013 21:00"
+            },
+            "location": [
+                {
+                    "type": "ROOM",
+                    "name": "F2",
+                    "id": "2448131363664"
+                }
+            ],
+            "title": "1º Teste : Gestão",
+            "courses": [
+                {
+                    "acronym": "Ges5",
+                    "name": "Gestão",
+                    "academicTerm": "Semester 1 2013/2014",
+                    "url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
+                    "id": "1610612925989"
+                }
+            ]
+        }
+    ]
 }
 {% endhighlight %}
 
@@ -792,7 +811,7 @@ Complete curriculum (only for students)
 				"id": "1610612905780",
 				"academicTerm": "Semester 1 2013/2014"},
 				"grade": "10",
-				"credits": 7.5,
+				"credits": 7.5
 			}
 		]
 	}
@@ -811,65 +830,73 @@ This endpoint returns the student's written evaluation information.
 
 #### Example Response
 {% highlight json %}
-[ {
-  "type" : "TEST",
-  "name" : "Teste 1º Teste",
-  "evaluationPeriod" : {
-    "start" : "15/11/2013 18:00",
-    "end" : "15/11/2013 21:00"
-  },
-  "isInEnrolmentPeriod" : false,
-  "enrollmentPeriod" : {
-    "start" : "2013-11-07 15:00:25",
-    "end" : "2013-11-12 13:00:25"
-  },
-  "isEnrolled" : true,
-  "courses" : [ {
-    "id" : "1610612926408",
-    "acronym" : "GPI4",
-    "name" : "Gestão de Projectos Informáticos",
-    "academicTerm" : "1ºSemestre 2013/2014",
-    "url" : "http://localhost:8080/fenix/disciplinas/gpi4/2013-2014/1-semestre"
-  } ],
-  "rooms" : [ {
-    "type": "ROOM",
-    "id" : "2448131363664",
-    "name" : "F2 - Sala de Aula",
+[
+    {
+        "type": "TEST",
+        "name": "Teste 1º Teste",
+        "evaluationPeriod": {
+            "start": "15/11/2013 18:00",
+            "end": "15/11/2013 21:00"
+        },
+        "isInEnrolmentPeriod": false,
+        "enrollmentPeriod": {
+            "start": "2013-11-07 15:00:25",
+            "end": "2013-11-12 13:00:25"
+        },
+        "isEnrolled": true,
+        "courses": [
+            {
+                "id": "1610612926408",
+                "acronym": "GPI4",
+                "name": "Gestão de Projectos Informáticos",
+                "academicTerm": "1ºSemestre 2013/2014",
+                "url": "http://localhost:8080/fenix/disciplinas/gpi4/2013-2014/1-semestre"
+            }
+        ],
+        "rooms": [
+            {
+                "type": "ROOM",
+                "id": "2448131363664",
+                "name": "F2 - Sala de Aula"
+            },
+            {
+                "type": "ROOM",
+                "id": "2448131363667",
+                "name": "FA1 - Anfiteatro"
+            }
+        ],
+        "assignedRoom": {
+            "type": "ROOM",
+            "id": "2448131363674",
+            "name": "F4 - Sala de Aula"
+        }
+    },
+    {
+        "type": "EXAM",
+        "name": "Exame 1º Época",
+        "evaluationPeriod": {
+            "start": "10/01/2014 08:00",
+            "end": "10/01/2014 11:00"
+        },
+        "isInEnrolmentPeriod": false,
+        "enrollmentPeriod": {
+            "start": "2013-12-20 17:00:22",
+            "end": "2014-01-07 12:00:22"
+        },
+        "isEnrolled": false,
+        "courses": [
+            {
+                "id": "1610612926115",
+                "acronym": "ASof22",
+                "name": "Arquitecturas de Software",
+                "academicTerm": "1ºSemestre 2013/2014",
+                "url": "http://localhost:8080/fenix/disciplinas/asof22/2013-2014/1-semestre"
+            }
+        ],
+        "rooms": [],
+        "assignedRoom": null
     }
-  }, {
-  	"type": "ROOM",
-    "id" : "2448131363667",
-    "name" : "FA1 - Anfiteatro",
-  }
-  ],
-  "assignedRoom" : {
-  	"type": "ROOM",
-    "id" : "2448131363674",
-    "name" : "F4 - Sala de Aula",
-  }
-},{
-  "type" : "EXAM",
-  "name" : "Exame 1º Época",
-  "evaluationPeriod" : {
-    "start" : "10/01/2014 08:00",
-    "end" : "10/01/2014 11:00"
-  },
-  "isInEnrolmentPeriod" : false,
-  "enrollmentPeriod" : {
-    "start" : "2013-12-20 17:00:22",
-    "end" : "2014-01-07 12:00:22"
-  },
-  "isEnrolled" : false,
-  "courses" : [ {
-    "id" : "1610612926115",
-    "acronym" : "ASof22",
-    "name" : "Arquitecturas de Software",
-    "academicTerm" : "1ºSemestre 2013/2014",
-    "url" : "http://localhost:8080/fenix/disciplinas/asof22/2013-2014/1-semestre"
-  } ],
-  "rooms" : [ ],
-  "assignedRoom" : null
-} ]
+]
 {% endhighlight %}
 
 ### PUT /person/evaluations/{id}
@@ -901,26 +928,26 @@ This endpoint returns user's payments information.
 #### Example Response
 {% highlight json %}
 {
-	"completed": [
-		{
-			"amount": "12.34",
-			"type": "CASH",
-			"description": "Taxa de Secretaria e Seguro - 2012/2013",
-			"date": "30/12/2002"
-		}
-	],
-	"pending": [
-		{
-			"description": "Propina",
-			paymentPeriod: { 
-							"start" : "13/09/2013 00:00", 
-							"end": "31/12/2013 23:59"
-						   }
-			"entity": "12345",
-			"reference": "111 222 333",
-			"amount": "1234.56"
-		}
-	]
+    "completed": [
+        {
+            "amount": "12.34",
+            "type": "CASH",
+            "description": "Taxa de Secretaria e Seguro - 2012/2013",
+            "date": "30/12/2002"
+        }
+    ],
+    "pending": [
+        {
+            "description": "Propina",
+            "paymentPeriod": {
+                "start": "13/09/2013 00:00",
+                "end": "31/12/2013 23:59"
+            },
+            "entity": "12345",
+            "reference": "111 222 333",
+            "amount": "1234.56"
+        }
+    ]
 }
 {% endhighlight %}
 
@@ -936,16 +963,16 @@ This endpoint returns the information about the campi.
 #### Example Response
 {% highlight json %}
 [
-	{
-		"id": "2465311230082",
-		"name": "Taguspark",
-		"type": "CAMPUS",
-	},
-	{
-		"id": "2465311230081",
-		"name": "Alameda",
-		"type": "CAMPUS"
-	}
+    {
+        "id": "2465311230082",
+        "name": "Taguspark",
+        "type": "CAMPUS"
+    },
+    {
+        "id": "2465311230081",
+        "name": "Alameda",
+        "type": "CAMPUS"
+    }
 ]
 {% endhighlight %}
 
@@ -966,26 +993,26 @@ This endpoint returns information about the space for a given {id}, its containe
 #### Example Response
 {% highlight json %}
 {
-	"id": "2972117371186",
-	"name": "Torre Sul",
-	"type": "BUILDING",
-	"containedSpaces": [
-		{
-			"id": "2723009268034",
-			"name": "12",
-			"type": "FLOOR"
-		},
-		{
-			"id": "2723009268033",
-			"name": "11",
-			"type": "FLOOR"
-		}
-	],
-	"parentSpace": {
-		"id": "2465311230081",
-		"name": "Alameda",
-		"type": "CAMPUS"
-	}
+    "id": "2972117371186",
+    "name": "Torre Sul",
+    "type": "BUILDING",
+    "containedSpaces": [
+        {
+            "id": "2723009268034",
+            "name": "12",
+            "type": "FLOOR"
+        },
+        {
+            "id": "2723009268033",
+            "name": "11",
+            "type": "FLOOR"
+        }
+    ],
+    "parentSpace": {
+        "id": "2465311230081",
+        "name": "Alameda",
+        "type": "CAMPUS"
+    }
 }
 {% endhighlight %}
 
