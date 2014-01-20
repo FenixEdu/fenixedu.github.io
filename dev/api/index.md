@@ -4,12 +4,12 @@ breadcrumbs: [{ "text": "API", "url": "/dev/api"}]
 root: "../"
 ---
 
-## V2 API Endpoints
+## API Endpoints
 
 This page essentially lists all the existing endpoints, as well as examples
 when making invocations. While it is not the purpose of this page to describe 
 the business entities exposed by this API, we will try to explain the meaning 
-of each values whenever it is not self-evident. The current API exposes four
+of each values whengrever it is not self-evident. The current API exposes four
 central concepts of the FenixEdu platform: people, spaces, degrees and courses.
 
 Here, a space represents a resource such as a campus, a building, a building
@@ -25,6 +25,7 @@ aware that some institutions may choose to restrict access to the API.
 
 ### Public Endpoints
 * [GET /about](#toc_2) <i class="icon-lock-open"></i>
+* [GET /academicterms] <i class="icon-lock-open"></i>
 * [GET /courses/{id}](#toc_5) <i class="icon-lock-open"></i>
 * [GET /courses/{id}/evaluations](#toc_8) <i class="icon-lock-open"></i>
 * [GET /courses/{id}/groups](#toc_11) <i class="icon-lock-open"></i>
@@ -81,7 +82,44 @@ application is deployed. It also returns a list of RSS feeds.
 			"description": "Events",
 			"uri": "http://tecnico.ulisboa.pt/pt/eventos/rss"
 		}
-	]
+	],
+	"currentAcademicTerm": "1ºSemestre 2013/2014"
+}
+{% endhighlight %}
+
+### GET /academicterms
+
+<i class="icon-lock-open"></i>
+
+This endpoint returns all the academic terms available to be used in other endpoints as academicTerm query parameter.
+The returned object keys are not ordered in any particular way.
+
+#### Example Request
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/academicterms
+
+#### Example Response
+{% highlight json %}
+{
+  "2013/2014": [
+    "2º Semestre 2013/2014",
+    "1ºSemestre 2013/2014"
+  ],
+  "2012/2013": [
+    "2 Semestre 2012/2013",
+    "1 Semestre 2012/2013"
+  ],
+  "2011/2012": [
+    "2 Semestre 2011/2012",
+    "1 Semestre 2011/2012"
+  ],
+  "2010/2011": [
+    "2 Semestre 2010/2011",
+    "1 Semestre 2010/2011"
+  ],
+  "2009/2010": [
+    "2 Semestre 2009/2010",
+    "1 Semestre 2009/2010"
+  ]
 }
 {% endhighlight %}
 
@@ -95,7 +133,7 @@ This endpoint shows some information regarding a particular course. The same
 course may be lectured simultaneously in multiple degrees during the same
 academic term.
 
-The "moreInfo" field holds curricular information for each set of degrees in
+The "competences" field holds curricular information for each set of degrees in
 which the course is lectured. Usually this information is the same for all
 the associated degrees.
 
@@ -113,8 +151,9 @@ the associated degrees.
 	"announcementLink": "https://fenix.ist.utl.pt/rss.do?boardId=123",
 	"summaryLink": "https://fenix.ist.utl.pt/publico/rss.do?summaryId=123",
 	"url": "https://fenix.ist.utl.pt/disciplinas/FInd3"
-	"moreInfo": [
+	"competences": [
 		{
+			"id" : "1313123123232",			
 			"program": "",
 			"bibliographicReferences": [
 				{
@@ -156,7 +195,7 @@ implementations of evaluations are: tests, exams, projects, online tests
 and ad-hoc evaluations.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989/evaluations
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612926005/evaluations
 
 #### Example Response
 {% highlight json %}
@@ -175,14 +214,18 @@ and ad-hoc evaluations.
 		"isInEnrolmentPeriod": false,
 		"rooms": [
 			{
+				"type": "ROOM",
 				"id": "2448131362251",
 				"name": "C01 - sala de aula",
-				"description": "C01 - Pavilhão Central (Alameda) [80,84]"
+				"description": "C01 - Pavilhão Central (Alameda)",
+				"capacity" : { "examCapacity" : 56, "normalCapacity" : 24}
 			},
 			{
+				"type": "ROOM",
 				"id": "2448131362449",
 				"name": "C11 - Sala aula",
-				"description": "C11 - Pavilhão Central (Alameda) [58,29]"
+				"description": "C11 - Pavilhão Central (Alameda)",
+				"capacity" : { "examCapacity" : 87, "normalCapacity" : 12}
 			}
 		]
 	}
@@ -200,7 +243,7 @@ shared among different courses. The enrolment of student groups may be atomic
 or individual, and may be restricted to an enrolment period.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989/groups
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612926005/groups
 
 #### Example Response
 {% highlight json %}
@@ -280,6 +323,10 @@ shift is the possible schedule in which a student should enrol.
 		{
 			"name": "AED2T01",
 			"types": [ "TEORICA" ],
+			"occupation" : {
+				  "current" : 120,
+				  "max" : 120
+			},
 			"lessons": [
 				{
 					"start": "2014-02-21 10:00:00", "end": "2014-02-21 12:00:00",
@@ -297,6 +344,10 @@ shift is the possible schedule in which a student should enrol.
 		{
 			"name": "AED2L03",
 			"types": [ "LABORATORIAL" ],
+			"occupation" : {
+				  "current" : 79,
+				  "max" : 95
+			},
 			"lessons": [
 				{
 					"start": "2014-02-23 10:00:00", "end": "2014-02-23 13:00:00",
@@ -357,12 +408,13 @@ number of students officially enroled in the course.
 <i class="icon-lock-open"></i>
 
 This endpoint returns the information for all degrees.
+If no academicTerm is defined it returns the current degree information.
 
 #### Query Parameters
-**year** - "yyyy/yyyy"    
+**academicTerm** - XXXXXX
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees?year=2013/2014
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees?academicTerm=2013/2014
 
 #### Example Response
 {% highlight json %}
@@ -411,12 +463,13 @@ This endpoint returns the information for all degrees.
 <i class="icon-lock-open"></i>
 
 This endpoint returns the information for the {id} degree.
+If no academicTerm is defined it returns the current degree information.
 
 #### Query Parameters
-**year** - "yyyy/yyyy"    
+**academicTerm** - XXXXXX
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees/2761663977513?year=2013/2014
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees/2761663977513?academicTerm=2013/2014
 
 #### Example Response
 {% highlight json %}
@@ -426,9 +479,13 @@ This endpoint returns the information for the {id} degree.
 	"name": "Mestrado Bolonha em Engenharia e Gestão da Energia",
 	"type": "BOLONHA_MASTER_DEGREE",
 	"acronym": "MEGE",
-	"typeName": "Mestrado",
+    "url" : "http://localhost:8080/fenix/cursos/mege",
+    "typeName": "Mestrado",
 	"campus": [
-		"Alameda"
+		{
+          "id" : "2465311230081",
+	      "name" : "Alameda"
+  	    }
 	],
 	"info": {
 		"description": "",
@@ -463,12 +520,13 @@ This endpoint returns the information for the {id} degree.
 <i class="icon-lock-open"></i>
 
 This endpoint returns the informations for a degree's courses.
+If no academicTerm is defined it returns the current degree information.
 
 #### Query Parameters
-**year** - "yyyy/yyyy"    
+**academicTerm** - XXXXXX   
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees/2761663977513/courses?year=2013/2014
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees/2761663977513/courses?academicTerm=2013/2014
 
 #### Example Response
 {% highlight json %}
@@ -542,7 +600,7 @@ This endpoint allows to access the current person information.
 	],
 	"photo": null,
 	"name": "John Doe",
-	"istId": "ist112345",
+	"username": "ist112345",
 	"email": "john.doe@ist.utl.pt",
 	"personalEmails": [
 		"john.doe@ist.utl.pt"
@@ -566,7 +624,7 @@ This endpoint returns the user's class information. This information can be retr
 
 #### Query Parameters
 
-**format** - "calendar" or "json"
+**format** - "calendar" (iCal format) or "json"
 
 #### Example Request
 ```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/calendar/classes?format=json
@@ -574,14 +632,14 @@ This endpoint returns the user's class information. This information can be retr
 #### Example Response
 {% highlight json %}
 {
-	"year": "2013/2014",
+	"academicTerm": "2013/2014",
 	"events": [
 		{
 			"classPeriod": {
 					"start": "18/09/2013 17:30",
 					"end"  : "18/09/2013 19:00"
 			},
-			"location": [{name : "F4", "id": "2448131363674"}],
+			"location": [{"type": "ROOM", "name" : "F4", "id": "2448131363674"}],
 			"title": "Gestão : Problemas",
 			"course": {
 				"acronym" : "Ges5",
@@ -596,7 +654,7 @@ This endpoint returns the user's class information. This information can be retr
 					"start": "28/10/2013 14:30",
 					"end"  : "28/10/2013 15:30"
 			}
-			"location": [{name : "QA02.4", "id": "2448131362616"}]
+			"location": [{"type": "ROOM", "name" : "QA02.4", "id": "2448131363664"}]
 			"title": "Análise Complexa e Equações Diferenciais : Teórica",
 			"course": {
 				"acronym" : "aced42",
@@ -618,7 +676,7 @@ This endpoint returns the students's evaluations information. This information c
 
 #### Query Parameters
 
-**format** - "calendar" or "json"
+**format** - "calendar" (iCal format) or "json"
 
 #### Example Request
 ```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/calendar/evaluations?format=json
@@ -626,13 +684,14 @@ This endpoint returns the students's evaluations information. This information c
 #### Example Response
 {% highlight json %}
 {
+	"academicTerm" : "2013/2014",	
 	"events": [
 		{
 			"evaluationPeriod": {
 					"start": "04/10/2013 00:57",
 					"end":   "04/10/2013 01:57"
 			}
-			"location": [name : "Sistema Fénix", "id": null],
+			"location": [],
 			"title": "Inicio das inscrições para 2º Teste : Análise Complexa e Equações Diferenciais",
 			"course": {
 				"acronym" : "aced42",
@@ -647,26 +706,15 @@ This endpoint returns the students's evaluations information. This information c
 					"start": "06/11/2013 19:00",
 					"end":   "04/10/2013 21:00"
 			}
-			"location": [
-						  	{	"name": "C01", 
-						  	  	"id":"2448131362251"
-						  	},
-						  	{	"name": "C9", 
-						  	  	"id":"2448131362317"
-						  	},
-						  	{	"name": "GA3", 
-						  	  	"id":"2448131362372"
-						  	},
-						 ]
-			,
+			"location": [{	"type": "ROOM", "name": "F2", "id":"2448131363664"],
 			"title": "1º Teste : Gestão",
-			"course": {
+			"courses": [{
 				"acronym" : "Ges5",
   				"name" : "Gestão",
   				"academicTerm" : "Semester 1 2013/2014"
   				"url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
   				"id": "1610612925989"
-			}
+			}]
 		}
 	]
 }
@@ -679,10 +727,11 @@ This endpoint returns the students's evaluations information. This information c
 This endpoint returns the user's course information.
 
 #### Query Parameters
-**academicTerm** - string in the following format "Semester X yyyy/yyyy"
+**academicTerm** - XXXXXXX
+If no academicTerm is defined it returns the current information.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/courses?academicTerm=Semester X YYYY/ZZZZ
+```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/courses?academicTerm=2013/2014
 
 #### Example Response
 {% highlight json %}
@@ -726,25 +775,24 @@ Complete curriculum (only for students)
 {% highlight json %}
 [
 	{
-	"id": "2761663971470",
-	"name": "MEIC-A 2006",
-	"degreeType": "BOLONHA_MASTER_DEGREE",
-	"campus": "Alameda",
-	"presentationName": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda - MEIC-A 2006",
+	"degree" : { "name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+		  	"acronym": "MEIC-A",
+		  	"id": "2761663971475"
+		  },
 	"start": "19/07/2012",
 	"end": null,
-	"ects": 7.5,
+	"credits": 7.5,
 	"average": 10.00,
 	"calculatedAverage": 10,
 	"isFinished": false,
-	"approvedCourses": 1,
-	"courseInfo": [
+	"numberOfApprovedCourses": 1,
+	"approvedCourses": [
 			{
-				"name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
-				"grade": "10",
-				"ects": 7.5,
+				"course" : { "name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
 				"id": "1610612905780",
-				"academicTerm": "Semester 1 2013/2014"
+				"academicTerm": "Semester 1 2013/2014"},
+				"grade": "10",
+				"credits": 7.5,
 			}
 		]
 	}
@@ -763,36 +811,65 @@ This endpoint returns the student's written evaluation information.
 
 #### Example Response
 {% highlight json %}
-[
-	{
-		"name": "Teste 2º Teste",
-		"type": "Teste",
-		"id": "2512556533022",
-		"isEnrollmentPeriod": true,
-		"day": "21/12/2013",
-		"startHour": "11:00",
-		"endHour": "12:30",
-		"rooms": "Q01 C01 C9 C13 C12 C11 QA02.1 QA02.2 QA02.3 QA02.4 QA ",
-		"enrollmentBeginDay": "04/10/2013",
-		"enrollmentEndDay": "21/12/2013",
-		"isEnrolled": false,
-		"course": "Análise Complexa e Equações Diferenciais"
-	},
-	{
-		"name": "Teste 1º Teste",
-		"type": "Teste",
-		"id": "2512556532840",
-		"isEnrollmentPeriod": false,
-		"day": "02/11/2013",
-		"startHour": "11:00",
-		"endHour": "12:30",
-		"rooms": "Q01 C01 C9 C13 C12 C11 QA02.1 QA02.2 QA02.3 QA02.4 QA ",
-		"enrollmentBeginDay": "19/09/2013",
-		"enrollmentEndDay": "01/11/2013",
-		"isEnrolled": false,
-		"course": "Análise Complexa e Equações Diferenciais"
-	}
-]
+[ {
+  "type" : "TEST",
+  "name" : "Teste 1º Teste",
+  "evaluationPeriod" : {
+    "start" : "15/11/2013 18:00",
+    "end" : "15/11/2013 21:00"
+  },
+  "isInEnrolmentPeriod" : false,
+  "enrollmentPeriod" : {
+    "start" : "2013-11-07 15:00:25",
+    "end" : "2013-11-12 13:00:25"
+  },
+  "isEnrolled" : true,
+  "courses" : [ {
+    "id" : "1610612926408",
+    "acronym" : "GPI4",
+    "name" : "Gestão de Projectos Informáticos",
+    "academicTerm" : "1ºSemestre 2013/2014",
+    "url" : "http://localhost:8080/fenix/disciplinas/gpi4/2013-2014/1-semestre"
+  } ],
+  "rooms" : [ {
+    "type": "ROOM",
+    "id" : "2448131363664",
+    "name" : "F2 - Sala de Aula",
+    }
+  }, {
+  	"type": "ROOM",
+    "id" : "2448131363667",
+    "name" : "FA1 - Anfiteatro",
+  }
+  ],
+  "assignedRoom" : {
+  	"type": "ROOM",
+    "id" : "2448131363674",
+    "name" : "F4 - Sala de Aula",
+  }
+},{
+  "type" : "EXAM",
+  "name" : "Exame 1º Época",
+  "evaluationPeriod" : {
+    "start" : "10/01/2014 08:00",
+    "end" : "10/01/2014 11:00"
+  },
+  "isInEnrolmentPeriod" : false,
+  "enrollmentPeriod" : {
+    "start" : "2013-12-20 17:00:22",
+    "end" : "2014-01-07 12:00:22"
+  },
+  "isEnrolled" : false,
+  "courses" : [ {
+    "id" : "1610612926115",
+    "acronym" : "ASof22",
+    "name" : "Arquitecturas de Software",
+    "academicTerm" : "1ºSemestre 2013/2014",
+    "url" : "http://localhost:8080/fenix/disciplinas/asof22/2013-2014/1-semestre"
+  } ],
+  "rooms" : [ ],
+  "assignedRoom" : null
+} ]
 {% endhighlight %}
 
 ### PUT /person/evaluations/{id}
@@ -809,38 +886,8 @@ This endpoint allows the student to enroll or disenroll from a written evaluatio
 ```PUT``` http://fenix.ist.utl.pt/api/fenix/v1/person/evaluations/2512556533022?enrol=yes
 
 #### Example Response
-{% highlight json %}
-[
-	{
-		"name": "Teste 2º Teste",
-		"type": "Teste",
-		"id": "2512556533022",
-		"isEnrollmentPeriod": true,
-		"day": "21/12/2013",
-		"startHour": "11:00",
-		"endHour": "12:30",
-		"rooms": "Q01 C01 C9 C13 C12 C11 QA02.1 QA02.2 QA02.3 QA02.4 QA ",
-		"enrollmentBeginDay": "04/10/2013",
-		"enrollmentEndDay": "21/12/2013",
-		"isEnrolled": true,
-		"course": "Análise Complexa e Equações Diferenciais"
-	},
-	{
-		"name": "Teste 1º Teste",
-		"type": "Teste",
-		"id": "2512556532840",
-		"isEnrollmentPeriod": false,
-		"day": "02/11/2013",
-		"startHour": "11:00",
-		"endHour": "12:30",
-		"rooms": "Q01 C01 C9 C13 C12 C11 QA02.1 QA02.2 QA02.3 QA02.4 QA ",
-		"enrollmentBeginDay": "19/09/2013",
-		"enrollmentEndDay": "01/11/2013",
-		"isEnrolled": false,
-		"course": "Análise Complexa e Equações Diferenciais"
-	}
-]
-{% endhighlight %}
+
+returns the same as the endpoint above.
 
 ### GET /person/payments
 
@@ -866,8 +913,8 @@ This endpoint returns user's payments information.
 		{
 			"description": "Propina",
 			paymentPeriod: { 
-							"start" : "13/09/2013 00:00:00", 
-							"end": "31/12/2013 00:00:00"
+							"start" : "13/09/2013 00:00", 
+							"end": "31/12/2013 23:59"
 						   }
 			"entity": "12345",
 			"reference": "111 222 333",
@@ -956,5 +1003,5 @@ This endpoint returns the space's blueprint in the required format
 ```GET``` https://fenix.ist.utl.pt/api/fenix/v1/spaces/2465311230082/blueprint
 
 #### Example Response
-response content-type : "application/dwg" or "image/jpeg"
+response content-type : "application/dwg" or "image/jpg"
 response content: raw image data
