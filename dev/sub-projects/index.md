@@ -35,7 +35,7 @@ Persons and organizational units can also have contacts. This module essentially
 
 The workflow module essentially provides the concept of process and activity to automate the business processes of the organization, allowing its stakeholders to collaborate and execute a business process within a web application.
 
-### Expenditure Tracking Module
+### [Expenditure Tracking Module][Expenditure Tracking Module]
 
 The Expenditure Tracking Module is a workflow implementation of Portugal's public contract legislation. This system decentralizes aquisition processes within an institution and provides a complete accountability of all actions taken during each process.
 
@@ -54,3 +54,6 @@ The Mobility Module is a workflow implementation for the in-house transferring o
 ### Employee Evaluation Module
 
 The Employee Evaluation Module is a workflow implementation of Portugal's employee evaluation legislation.
+
+
+[Expenditure Tracking Module]: /dev/sub-projects/expenditureTrackingModule/
