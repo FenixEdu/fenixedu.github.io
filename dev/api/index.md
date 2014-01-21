@@ -419,15 +419,23 @@ If no academicTerm is defined it returns the current degree information.
 {% highlight json %}
 [
 	{
-		"year": "2013/2014",
 		"id": "2761663977513",
-		"name": "Mestrado Bolonha em Engenharia e Gestão da Energia",
-		"type": "BOLONHA_MASTER_DEGREE",
+		"name": "Engenharia e Gestão da Energia",
 		"acronym": "MEGE",
-		"typeName": "Mestrado",
+		"academicTerms": [
+			"2013/2014",
+			"2012/2013"
+		],
+		"currentAcademicTerm": "2013/2014",
+		"type": "BOLONHA_MASTER_DEGREE",
+		"typeName": "Master Degree (MSc)",
 		"url": "https://fenix.ist.utl.pt/cursos/mege",
 		"campus": [
-			{"name":"Alameda", "id":"2465311230081"}
+			{
+				"type": "CAMPUS",
+				"id":"2465311230081",
+				"name":"Alameda"
+			}
 		],
 		"info": {
 			"description": "",
@@ -473,18 +481,23 @@ If no academicTerm is defined it returns the current degree information.
 #### Example Response
 {% highlight json %}
 {
-	"year": "2013/2014",
 	"id": "2761663977513",
-	"name": "Mestrado Bolonha em Engenharia e Gestão da Energia",
-	"type": "BOLONHA_MASTER_DEGREE",
+	"name": "Engenharia e Gestão da Energia",
 	"acronym": "MEGE",
-    "url" : "http://localhost:8080/fenix/cursos/mege",
-    "typeName": "Mestrado",
+	"academicTerms": [
+		"2013/2014",
+		"2012/2013"
+	],
+	"currentAcademicTerm": "2013/2014",
+	"type": "BOLONHA_MASTER_DEGREE",
+	"typeName": "Master Degree (MSc)",
+	"url": "https://fenix.ist.utl.pt/cursos/mege",
 	"campus": [
 		{
-          "id" : "2465311230081",
-	      "name" : "Alameda"
-  	    }
+			"type": "CAMPUS",
+			"id":"2465311230081",
+			"name":"Alameda"
+		}
 	],
 	"info": {
 		"description": "",
