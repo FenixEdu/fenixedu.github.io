@@ -22,6 +22,19 @@ This documentation is applicable to all FenixEdu installations as of version
 1.2.0. Check your local installation to find out if the API is available. Be 
 aware that some institutions may choose to restrict access to the API.
 
+### Language Support
+
+The API supports localized invocations.
+In each endpoint if a `lang` parameter is present and its' value is an available language, the returned information is localized in the specified language. Otherwise the default language is used.
+
+The list of available languages is returned by [/about](#toc_2).
+
+#### Example request with specified language
+
+http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989?lang=en-US
+
+
+
 ### Public Endpoints
 * [GET /about](#toc_2) <i class="icon-lock-open"></i>
 * [GET /academicterms](#toc_5) <i class="icon-lock-open"></i>
@@ -55,14 +68,12 @@ aware that some institutions may choose to restrict access to the API.
 > <i class="icon-chart-area"></i> - Curricular information about both enrolling and teaching courses.      
 > <i class="icon-basket"></i> - Information about payments and debt.      
 
-
-
 ### GET /about
 
 <i class="icon-lock-open"></i>
 
 This endpoint returns some basic information about the institution where the 
-application is deployed. It also returns a list of RSS feeds.
+application is deployed. It also returns a list of RSS feeds, the current academic term, available languages and default language.
 
 #### Example Request
 ```GET``` http://fenix.ist.utl.pt/api/fenix/v1/about
@@ -70,19 +81,18 @@ application is deployed. It also returns a list of RSS feeds.
 #### Example Response
 {% highlight json %}
 {
-	"institutionName": "Técnico Lisboa",
-	"institutionUrl": "http://tecnico.ulisboa.pt",
-	"rssFeeds": [
-		{
-			"description": "News",
-			"uri": "http://tecnico.ulisboa.pt/pt/noticias/rss"
-		},
-		{
-			"description": "Events",
-			"uri": "http://tecnico.ulisboa.pt/pt/eventos/rss"
-		}
-	],
-	"currentAcademicTerm": "1ºSemestre 2013/2014"
+  "institutionName" : "Instituto Superior Técnico",
+  "institutionUrl" : "",
+  "rssFeeds" : [ {
+    "description" : "News",
+    "uri" : ""
+  }, {
+    "description" : "Events",
+    "uri" : ""
+  } ],
+  "currentAcademicTerm" : "1ºSemestre 2013/2014",
+  "languages" : [ "en-US", "pt-PT" ],
+  "language" : "pt-PT"
 }
 {% endhighlight %}
 
