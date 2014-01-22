@@ -9,7 +9,7 @@ root: "../"
 This page essentially lists all the existing endpoints, as well as examples
 when making invocations. While it is not the purpose of this page to describe 
 the business entities exposed by this API, we will try to explain the meaning 
-of each values whengrever it is not self-evident. The current API exposes four
+of each values whenever it is not self-evident. The current API exposes four
 central concepts of the FenixEdu platform: people, spaces, degrees and courses.
 
 Here, a space represents a resource such as a campus, a building, a building
@@ -353,9 +353,9 @@ shift is the possible schedule in which a student should enrol.
 			"rooms": [
 				{
 					"type": "ROOM",
-					"id": "2448131362317",
-					"name": "C9 - S. aula",
-					"description": "C9 - Pavilhão Central (Alameda)",
+					"id": "132115446847",
+					"name": "Ga3 - S. aula",
+					"description": "Ga3 - Pavilhão Central (Alameda)",
 					"capacity": {
 						"normal": 80,
 						"exam": 40
@@ -388,8 +388,8 @@ shift is the possible schedule in which a student should enrol.
 				{
 					"type": "ROOM",
 					"id": "2448131361685",
-					"name": "V1.32 - Sala de aula",
-					"description": "V1.32 - Pavilhão de Civil (Alameda)",
+					"name": "F1 - Sala de aula",
+					"description": "F1 - Pavilhão de Informática I (Alameda)",
 					"capacity": {
 						"normal": 60,
 						"exam": 30
@@ -443,10 +443,10 @@ number of students officially enroled in the course.
 <i class="icon-lock-open"></i>
 
 This endpoint returns the information for all degrees.
-If no academicTerm is defined it returns the current degree information.
+If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 
 #### Query Parameters
-**academicTerm** - XXXXXX
+**academicTerm** - one of the academicTerms available at [/academicterms](#toc_7)
 
 #### Example Request
 ```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees?academicTerm=2013/2014
@@ -462,7 +462,7 @@ If no academicTerm is defined it returns the current degree information.
 			"2013/2014",
 			"2012/2013"
 		],
-		"currentAcademicTerm": "2013/2014",
+		"academicTerm": "2013/2014",
 		"type": "BOLONHA_MASTER_DEGREE",
 		"typeName": "Master Degree (MSc)",
 		"url": "https://fenix.tecnico.ulisboa.pt/cursos/mege",
@@ -506,10 +506,10 @@ If no academicTerm is defined it returns the current degree information.
 <i class="icon-lock-open"></i>
 
 This endpoint returns the information for the {id} degree.
-If no academicTerm is defined it returns the current degree information.
+If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 
 #### Query Parameters
-**academicTerm** - XXXXXX
+**academicTerm** - one of the academicTerms available at [/academicterms](#toc_7)
 
 #### Example Request
 ```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513?academicTerm=2013/2014
@@ -568,10 +568,9 @@ If no academicTerm is defined it returns the current degree information.
 <i class="icon-lock-open"></i>
 
 This endpoint returns the informations for a degree's courses.
-If no academicTerm is defined it returns the current degree information.
-
+If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 #### Query Parameters
-**academicTerm** - XXXXXX   
+**academicTerm** - one of the academicTerms available at [/academicterms](#toc_7)   
 
 #### Example Request
 ```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513/courses?academicTerm=2013/2014
@@ -797,9 +796,8 @@ This endpoint returns the students's evaluations information. This information c
 This endpoint returns the user's course information.
 
 #### Query Parameters
-**academicTerm** - XXXXXXX
-If no academicTerm is defined it returns the current information.
-
+**academicTerm** - one of the academicTerms available at [/academicterms](#toc_7)X
+If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 #### Example Request
 ```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/courses?academicTerm=2013/2014
 
