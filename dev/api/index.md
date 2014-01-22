@@ -27,7 +27,7 @@ aware that some institutions may choose to restrict access to the API.
 The API supports localized invocations.
 In each endpoint if a `lang` parameter is present and its' value is an available language, the returned information is localized in the specified language. Otherwise the default language is used.
 
-The list of available languages is returned by [/about](#toc_2).
+The list of available languages is returned by [/about](#toc_4).
 
 #### Example request with specified language
 
@@ -36,27 +36,27 @@ https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612925989?lang=en-US
 
 
 ### Public Endpoints
-* [GET /about](#toc_2) <i class="icon-lock-open"></i>
-* [GET /academicterms](#toc_5) <i class="icon-lock-open"></i>
-* [GET /courses/{id}](#toc_8) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/evaluations](#toc_11) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/groups](#toc_14) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/schedule](#toc_17) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/students](#toc_20) <i class="icon-lock-open"></i>
-* [GET /degrees](#toc_23) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}](#toc_27) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}/courses](#toc_31) <i class="icon-lock-open"></i>
-* [GET /person](#toc_35)  <i class="icon-lock"></i><i class="icon-user"></i>
-* [GET /person/calendar/classes](#toc_38) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/calendar/evaluations](#toc_42) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/courses](#toc_46) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/curriculum](#toc_50) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/evaluations](#toc_53) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [PUT /person/evaluations/{id}](#toc_56) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [GET /person/payments](#toc_60) <i class="icon-lock"></i><i class="icon-basket"></i>
-* [GET /spaces](#toc_63)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}](#toc_66)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}/blueprint](#toc_70)  <i class="icon-lock-open"></i>
+* [GET /about](#toc_4) <i class="icon-lock-open"></i>
+* [GET /academicterms](#toc_7) <i class="icon-lock-open"></i>
+* [GET /courses/{id}](#toc_10) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/evaluations](#toc_13) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/groups](#toc_16) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/schedule](#toc_19) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/students](#toc_22) <i class="icon-lock-open"></i>
+* [GET /degrees](#toc_25) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}](#toc_29) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}/courses](#toc_33) <i class="icon-lock-open"></i>
+* [GET /person](#toc_37)  <i class="icon-lock"></i><i class="icon-user"></i>
+* [GET /person/calendar/classes](#toc_40) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/calendar/evaluations](#toc_44) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/courses](#toc_48) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/curriculum](#toc_52) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/evaluations](#toc_55) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [PUT /person/evaluations/{id}](#toc_58) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [GET /person/payments](#toc_62) <i class="icon-lock"></i><i class="icon-basket"></i>
+* [GET /spaces](#toc_65)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}](#toc_68)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}/blueprint](#toc_72)  <i class="icon-lock-open"></i>
 
 
 > <span>NOTE</span>
@@ -1094,4 +1094,5 @@ This endpoint returns the space's blueprint in the required format
 
 #### Example Response
 response content-type : "application/dwg" or "image/jpg"
+
 response content: raw image data
