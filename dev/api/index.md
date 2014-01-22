@@ -263,15 +263,15 @@ or individual, and may be restricted to an enrolment period.
 				"degrees": [ 
 								{	"name": "Licenciatura Bolonha em Engenharia de Telecomunicações e Informática", 
 									"acronym":"LERC", 
-									"id": 2761663971586
+									"id": "2761663971586"
 								},
 								{	"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda", 
 									"acronym":"MEIC-A", 
-									"id": 2761663977513
+									"id": "2761663977513"
 								},
 								{	"name": "Mestrado Integrado em Engenharia Civil", 
 									"acronym":"MEC", 
-									"id": 2761663971466
+									"id": "2761663971466"
 								}
 						    ]
 			},
@@ -281,11 +281,11 @@ or individual, and may be restricted to an enrolment period.
 				"degrees": [ 
 								{	"name": "Mestrado Integrado em Arquitectura", 
 									"acronym":"MA", 
-									"id": 2761663971465
+									"id": "2761663971465"
 								},
 								{	"name": "Diploma de Estudos Avançados em Engenharia Informática e de Computadores", 
 									"acronym":"DEIC", 
-									"id": 2761663971783
+									"id": "2761663971783"
 								}
 						    ]
 			}
@@ -329,17 +329,30 @@ shift is the possible schedule in which a student should enrol.
 			"lessons": [
 				{
 					"start": "2014-02-21 10:00:00", "end": "2014-02-21 12:00:00",
-					"room": { "name": "Ga1", "id": "132115446846" }
+					"room": { "type": "ROOM", "name": "Ga1", "id": "132115446846" }
 				},
 				{
 					"start": "2014-03-21 10:00:00", "end": "2014-03-21 12:00:00",
-					"room": { "name": "Ga1", "id": "132115446846" }
+					"room": { "type": "ROOM", "name": "Ga1", "id": "132115446846" }
 				},
 				{
 					"start": "2014-05-21 10:00:00", "end": "2014-05-21 12:00:00",
-					"room": { "name": "Ga3", "id": "132115446847" }
+					"room": { "type": "ROOM", "name": "Ga3", "id": "132115446847" }
 				}
-		] },
+			],
+			"rooms": [
+				{
+					"type": "ROOM",
+					"id": "2448131362317",
+					"name": "C9 - S. aula",
+					"description": "C9 - Pavilhão Central (Alameda)",
+					"capacity": {
+						"normal": 80,
+						"exam": 40
+					}
+				}
+			] 
+		},
 		{
 			"name": "AED2L03",
 			"types": [ "LABORATORIAL" ],
@@ -350,17 +363,30 @@ shift is the possible schedule in which a student should enrol.
 			"lessons": [
 				{
 					"start": "2014-02-23 10:00:00", "end": "2014-02-23 13:00:00",
-					"room": { "name": "F1", "id": "132115446844" }
+					"room": { "type": "ROOM", "name": "F1", "id": "132115446844" }
 				},
 				{
 					"start": "2014-03-23 10:00:00", "end": "2014-03-23 13:00:00",
-					"room": { "name": "F2", "id": "132115446843" }
+					"room": { "type": "ROOM", "name": "F2", "id": "132115446843" }
 				},
 				{
 					"start": "2014-05-23 10:00:00", "end": "2014-05-23 13:00:00",
-					"room": { "name": "F1", "id": "132115446844" }
+					"room": { "type": "ROOM", "name": "F1", "id": "132115446844" }
 				}
-		] }
+			],
+			"rooms": [
+				{
+					"type": "ROOM",
+					"id": "2448131361685",
+					"name": "V1.32 - Sala de aula",
+					"description": "V1.32 - Pavilhão de Civil (Alameda)",
+					"capacity": {
+						"normal": 60,
+						"exam": 30
+					}
+				}
+			]
+		 }
 	]
 }
 {% endhighlight %}
@@ -574,40 +600,43 @@ This endpoint allows to access the current person information.
 	"roles": [
 		{
 			"type": "TEACHER",
-			"department": { "name" : "Departamento de Engenharia Informática",
-							"acronym" : "DEI"
-						  }
+			"department": 
+				{ 
+					"name" : "Departamento de Engenharia Informática",
+					"acronym" : "DEI"
+				  }
 		},
 		{
 			"type": "STUDENT",
 			"registrations": [
-							{ 
-			  					"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
-			  					"acronym": "MEIC-A",
-			  					"id": "2761663971475",
-			  					"academicTerms":[
-			  										"Semester 1 2013/2014", 
-			  										"Semester 2 2013/2014"
-			  									]
-		  					}
-						]
+				{ 
+					"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+  					"acronym": "MEIC-A",
+  					"id": "2761663971475",
+  					"academicTerms":[
+						"Semester 1 2013/2014", 
+						"Semester 2 2013/2014"
+					]
+				}
+			]
 		},
 		{
 			"type": "ALUMNI",
 			"concludedRegistrations": [
-								{
-									"name": "Licenciatura Bolonha em Engenharia Informática e de Computadores - Alameda",
-		  							"acronym": "LEIC-A",
-		  							"id": "2761663971474",
-		  							"academicTerms":[
-		  											"Semester 1 2010/2011", 
-		  											 "Semester 2 2010/2011",
-		  											 "Semester 1 2011/2012",
-		  											 "Semester 1 2011/2012",
-		  											 "Semester 2 2012/2013",
-		  											 "Semester 2 2012/2013"]
-								}
-							]
+				{
+					"name": "Licenciatura Bolonha em Engenharia Informática e de Computadores - Alameda",
+					"acronym": "LEIC-A",
+					"id": "2761663971474",
+					"academicTerms":[
+						"Semester 1 2010/2011", 
+						"Semester 2 2010/2011",
+						"Semester 1 2011/2012",
+						"Semester 1 2011/2012",
+						"Semester 2 2012/2013",
+						"Semester 2 2012/2013"
+					]
+				}
+			]
 		}
 	],
 	"photo": null,
@@ -768,18 +797,21 @@ If no academicTerm is defined it returns the current information.
 #### Example Response
 {% highlight json %}
 {
-	"academicTerm": "Semester 1 2013/2014",
 	"enrolments": [
 		{
 			"id": "1610612926309",
 			"acronym": "IAC4",
 			"name": "Introdução à Arquitetura de Computadores",
+			"academicTerm": "Semester 1 2013/2014",
+			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/iac4/2013-2014/1-semestre",
 			"grade": null
 		},
 		{
 			"id": "1610612925989",
 			"acronym": "Ges5",
 			"name": "Gestão",
+			"academicTerm": "Semester 1 2013/2014",
+			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/2013-2014/1-semestre",
 			"grade": null
 		}
 	],
@@ -787,7 +819,9 @@ If no academicTerm is defined it returns the current information.
 		{
 			"id": "1610612926363",
 			"acronym": "SE2",
-			"name": "Sistemas Entre-Pares e Redes Sobrepostas"
+			"name": "Sistemas Entre-Pares e Redes Sobrepostas",
+			"academicTerm": "Semester 1 2013/2014",
+			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/SE2/2013-2014/1-semestre"
 		}
 	]
 }
@@ -807,22 +841,27 @@ Complete curriculum (only for students)
 {% highlight json %}
 [
 	{
-	"degree" : { "name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+		"degree" : { 
+			"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
 		  	"acronym": "MEIC-A",
 		  	"id": "2761663971475"
-		  },
-	"start": "19/07/2012",
-	"end": null,
-	"credits": 7.5,
-	"average": 10.00,
-	"calculatedAverage": 10,
-	"isFinished": false,
-	"numberOfApprovedCourses": 1,
-	"approvedCourses": [
+		},
+		"start": "19/07/2012",
+		"end": null,
+		"credits": 7.5,
+		"average": 10.00,
+		"calculatedAverage": 10,
+		"isFinished": false,
+		"numberOfApprovedCourses": 1,
+		"approvedCourses": [
 			{
-				"course" : { "name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
-				"id": "1610612905780",
-				"academicTerm": "Semester 1 2013/2014"},
+				"course" : { 
+					"name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
+					"id": "1610612905780",
+					"acronym": "LN-2",
+					"academicTerm": "Semester 1 2013/2014",
+					"url": "https://fenix.ist.utl.pt/disciplinas/ln-2/2012-2013/1-semestre" 
+				},
 				"grade": "10",
 				"credits": 7.5
 			}
@@ -845,70 +884,72 @@ This endpoint returns the student's written evaluation information.
 {% highlight json %}
 [
     {
-        "type": "TEST",
-        "name": "Teste 1º Teste",
-        "evaluationPeriod": {
-            "start": "15/11/2013 18:00",
-            "end": "15/11/2013 21:00"
-        },
-        "isInEnrolmentPeriod": false,
-        "enrollmentPeriod": {
-            "start": "2013-11-07 15:00:25",
-            "end": "2013-11-12 13:00:25"
-        },
-        "isEnrolled": true,
-        "courses": [
-            {
-                "id": "1610612926408",
-                "acronym": "GPI4",
-                "name": "Gestão de Projectos Informáticos",
-                "academicTerm": "1ºSemestre 2013/2014",
-                "url": "http://localhost:8080/fenix/disciplinas/gpi4/2013-2014/1-semestre"
-            }
-        ],
-        "rooms": [
-            {
-                "type": "ROOM",
-                "id": "2448131363664",
-                "name": "F2 - Sala de Aula"
-            },
-            {
-                "type": "ROOM",
-                "id": "2448131363667",
-                "name": "FA1 - Anfiteatro"
-            }
-        ],
-        "assignedRoom": {
-            "type": "ROOM",
-            "id": "2448131363674",
-            "name": "F4 - Sala de Aula"
-        }
-    },
-    {
-        "type": "EXAM",
-        "name": "Exame 1º Época",
-        "evaluationPeriod": {
-            "start": "10/01/2014 08:00",
-            "end": "10/01/2014 11:00"
-        },
-        "isInEnrolmentPeriod": false,
-        "enrollmentPeriod": {
-            "start": "2013-12-20 17:00:22",
-            "end": "2014-01-07 12:00:22"
-        },
-        "isEnrolled": false,
-        "courses": [
-            {
-                "id": "1610612926115",
-                "acronym": "ASof22",
-                "name": "Arquitecturas de Software",
-                "academicTerm": "1ºSemestre 2013/2014",
-                "url": "http://localhost:8080/fenix/disciplinas/asof22/2013-2014/1-semestre"
-            }
-        ],
-        "rooms": [],
-        "assignedRoom": null
-    }
+	"id": "2512556536123",
+	"type": "TEST",
+	"name": "Teste 1º Teste",
+	"evaluationPeriod": {
+	    "start": "15/11/2013 18:00",
+	    "end": "15/11/2013 21:00"
+	},
+	"isInEnrolmentPeriod": false,
+	"enrollmentPeriod": {
+	    "start": "2013-11-07 15:00:25",
+	    "end": "2013-11-12 13:00:25"
+	},
+	"isEnrolled": true,
+	"courses": [
+	    {
+		"id": "1610612926408",
+		"acronym": "GPI4",
+		"name": "Gestão de Projectos Informáticos",
+		"academicTerm": "1ºSemestre 2013/2014",
+		"url": "https://fenix.ist.utl.pt/disciplinas/gpi4/2013-2014/1-semestre"
+	    }
+	],
+	"rooms": [
+	    {
+		"type": "ROOM",
+		"id": "2448131363664",
+		"name": "F2 - Sala de Aula"
+	    },
+	    {
+		"type": "ROOM",
+		"id": "2448131363667",
+		"name": "FA1 - Anfiteatro"
+	    }
+	],
+	"assignedRoom": {
+	    "type": "ROOM",
+	    "id": "2448131363674",
+	    "name": "F4 - Sala de Aula"
+	}
+	},
+	{
+	"id": "2512556536124",
+	"type": "EXAM",
+	"name": "Exame 1º Época",
+	"evaluationPeriod": {
+	    "start": "10/01/2014 08:00",
+	    "end": "10/01/2014 11:00"
+	},
+	"isInEnrolmentPeriod": false,
+	"enrollmentPeriod": {
+	    "start": "2013-12-20 17:00:22",
+	    "end": "2014-01-07 12:00:22"
+	},
+	"isEnrolled": false,
+	"courses": [
+	    {
+		"id": "1610612926115",
+		"acronym": "ASof22",
+		"name": "Arquitecturas de Software",
+		"academicTerm": "1ºSemestre 2013/2014",
+		"url": "https://fenix.ist.utl.pt/disciplinas\/asof22/2013-2014/1-semestre"
+	    }
+	],
+	"rooms": [],
+	"assignedRoom": null
+	}
 ]
 {% endhighlight %}
 
