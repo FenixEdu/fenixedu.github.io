@@ -85,10 +85,10 @@ application is deployed. It also returns a list of RSS feeds, the current academ
   "institutionUrl" : "",
   "rssFeeds" : [ {
     "description" : "News",
-    "uri" : ""
+    "url" : ""
   }, {
     "description" : "Events",
-    "uri" : ""
+    "url" : ""
   } ],
   "currentAcademicTerm" : "1ºSemestre 2013/2014",
   "languages" : [ "en-US", "pt-PT" ],
@@ -154,7 +154,7 @@ the associated degrees.
 {
 	"acronym": "FInd3",
 	"name": "Frio Industrial",
-	"academicTerm": "Semester 1 2013/2014",
+	"academicTerm": "1ºSemestre 2013/2014",
 	"evaluationMethod": "1 trabalho de grupo, com avaliação ...",
 	"numberOfAttendingStudents": 123,
 	"announcementLink": "https://fenix.ist.utl.pt/rss.do?boardId=123",
@@ -584,14 +584,14 @@ If no academicTerm is defined it returns the current degree information.
 		"credits": "4.5",
 		"name": "Frio Industrial",
 		"id": "1610612925565",
-		"academicTerm": "Semester 1 2013/2014"
+		"academicTerm": "1ºSemestre 2013/2014"
 	},
 	{
 		"acronym": "MFC3",
 		"credits": "6.0",
 		"name": "Mecânica de Fluídos Computacional",
 		"id": "1610612925545",
-		"academicTerm": "Semester 1 2013/2014"
+		"academicTerm": "1ºSemestre 2013/2014"
 	}
 ]
 {% endhighlight %}
@@ -624,8 +624,8 @@ This endpoint allows to access the current person information.
   					"acronym": "MEIC-A",
   					"id": "2761663971475",
   					"academicTerms":[
-						"Semester 1 2013/2014", 
-						"Semester 2 2013/2014"
+						"1ºSemestre 2013/2014", 
+						"2º Semestre 2013/2014"
 					]
 				}
 			]
@@ -638,12 +638,11 @@ This endpoint allows to access the current person information.
 					"acronym": "LEIC-A",
 					"id": "2761663971474",
 					"academicTerms":[
-						"Semester 1 2010/2011", 
-						"Semester 2 2010/2011",
-						"Semester 1 2011/2012",
-						"Semester 1 2011/2012",
-						"Semester 2 2012/2013",
-						"Semester 2 2012/2013"
+						"1 Semestre 2010/2011", 
+						"2 Semestre 2010/2011",
+						"1 Semestre 2011/2012",
+						"1 Semestre 2012/2013",
+						"2 Semestre 2012/2013"
 					]
 				}
 			]
@@ -701,7 +700,7 @@ This endpoint returns the user's class information. This information can be retr
             "course": {
                 "acronym": "Ges5",
                 "name": "Gestão",
-                "academicTerm": "Semester 1 2013/2014",
+                "academicTerm": "1ºSemestre 2013/2014",
                 "url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
                 "id": "1610612925989"
             }
@@ -722,7 +721,7 @@ This endpoint returns the user's class information. This information can be retr
             "course": {
                 "acronym": "aced42",
                 "name": "Análise Complexa e Equações Diferenciais",
-                "academicTerm": "Semester 1 2013/2014",
+                "academicTerm": "1º Semester 2013/2014",
                 "url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
                 "id": "1610612925691"
             }
@@ -759,7 +758,7 @@ This endpoint returns the students's evaluations information. This information c
             "course": {
                 "acronym": "aced42",
                 "name": "Análise Complexa e Equações Diferenciais",
-                "academicTerm": "Semester 1 2013/2014",
+                "academicTerm": "1ºSemestre 2013/2014",
                 "url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
                 "id": "1610612925691"
             }
@@ -781,7 +780,7 @@ This endpoint returns the students's evaluations information. This information c
                 {
                     "acronym": "Ges5",
                     "name": "Gestão",
-                    "academicTerm": "Semester 1 2013/2014",
+                    "academicTerm": "1ºSemestre 2013/2014",
                     "url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
                     "id": "1610612925989"
                 }
@@ -812,7 +811,7 @@ If no academicTerm is defined it returns the current information.
 			"id": "1610612926309",
 			"acronym": "IAC4",
 			"name": "Introdução à Arquitetura de Computadores",
-			"academicTerm": "Semester 1 2013/2014",
+			"academicTerm": "1ºSemestre 2013/2014",
 			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/iac4/2013-2014/1-semestre",
 			"grade": null
 		},
@@ -820,7 +819,7 @@ If no academicTerm is defined it returns the current information.
 			"id": "1610612925989",
 			"acronym": "Ges5",
 			"name": "Gestão",
-			"academicTerm": "Semester 1 2013/2014",
+			"academicTerm": "1ºSemestre 2013/2014",
 			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/2013-2014/1-semestre",
 			"grade": null
 		}
@@ -830,7 +829,7 @@ If no academicTerm is defined it returns the current information.
 			"id": "1610612926363",
 			"acronym": "SE2",
 			"name": "Sistemas Entre-Pares e Redes Sobrepostas",
-			"academicTerm": "Semester 1 2013/2014",
+			"academicTerm": "1ºSemestre 2013/2014",
 			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/SE2/2013-2014/1-semestre"
 		}
 	]
@@ -869,7 +868,7 @@ Complete curriculum (only for students)
 					"name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
 					"id": "1610612905780",
 					"acronym": "LN-2",
-					"academicTerm": "Semester 1 2013/2014",
+					"academicTerm": "1ºSemestre 2013/2014",
 					"url": "https://fenix.ist.utl.pt/disciplinas/ln-2/2012-2013/1-semestre" 
 				},
 				"grade": "10",
