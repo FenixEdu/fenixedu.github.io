@@ -16,8 +16,8 @@ If you are using Maven to build your Java project, you just need to add the foll
 
 {% highlight xml %}
 <dependency>
-  <groupId>pt.ist</groupId>
-  <artifactId>fenixedu-api</artifactId>
+  <groupId>org.fenixedu</groupId>
+  <artifactId>fenixedu-sdk</artifactId>
   <version>1.0.0</version>
 </dependency>
 {% endhighlight %}
