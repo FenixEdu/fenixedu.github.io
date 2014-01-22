@@ -31,7 +31,7 @@ The list of available languages is returned by [/about](#toc_2).
 
 #### Example request with specified language
 
-http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989?lang=en-US
+https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612925989?lang=en-US
 
 
 
@@ -76,7 +76,7 @@ This endpoint returns some basic information about the institution where the
 application is deployed. It also returns a list of RSS feeds, the current academic term, available languages and default language.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/about
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/about
 
 #### Example Response
 {% highlight json %}
@@ -104,7 +104,7 @@ This endpoint returns all the academic terms available to be used in other endpo
 The returned object keys are not ordered in any particular way.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/academicterms
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/academicterms
 
 #### Example Response
 {% highlight json %}
@@ -147,7 +147,7 @@ which the course is lectured. Usually this information is the same for all
 the associated degrees.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612925989
 
 #### Example Response
 {% highlight json %}
@@ -157,9 +157,9 @@ the associated degrees.
 	"academicTerm": "1ºSemestre 2013/2014",
 	"evaluationMethod": "1 trabalho de grupo, com avaliação ...",
 	"numberOfAttendingStudents": 123,
-	"announcementLink": "https://fenix.ist.utl.pt/rss.do?boardId=123",
-	"summaryLink": "https://fenix.ist.utl.pt/publico/rss.do?summaryId=123",
-	"url": "https://fenix.ist.utl.pt/disciplinas/FInd3",
+	"announcementLink": "https://fenix.tecnico.ulisboa.pt/rss.do?boardId=123",
+	"summaryLink": "https://fenix.tecnico.ulisboa.pt/publico/rss.do?summaryId=123",
+	"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/FInd3",
 	"competences": [
 		{
 			"id" : "1313123123232",			
@@ -204,7 +204,7 @@ implementations of evaluations are: tests, exams, projects, online tests
 and ad-hoc evaluations.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612926005/evaluations
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612926005/evaluations
 
 #### Example Response
 {% highlight json %}
@@ -252,7 +252,7 @@ shared among different courses. The enrolment of student groups may be atomic
 or individual, and may be restricted to an enrolment period.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612926005/groups
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612926005/groups
 
 #### Example Response
 {% highlight json %}
@@ -315,7 +315,7 @@ load that specifies the time each student will expend with the course. Each
 shift is the possible schedule in which a student should enrol.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989/schedule
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612925989/schedule
 
 #### Example Response
 {% highlight json %}
@@ -411,7 +411,7 @@ student it indicates the corresponding degree. The endpoint also returns the
 number of students officially enroled in the course.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/courses/1610612925989/students
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612925989/students
 
 #### Example Response
 {% highlight json %}
@@ -449,7 +449,7 @@ If no academicTerm is defined it returns the current degree information.
 **academicTerm** - XXXXXX
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees?academicTerm=2013/2014
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees?academicTerm=2013/2014
 
 #### Example Response
 {% highlight json %}
@@ -465,7 +465,7 @@ If no academicTerm is defined it returns the current degree information.
 		"currentAcademicTerm": "2013/2014",
 		"type": "BOLONHA_MASTER_DEGREE",
 		"typeName": "Master Degree (MSc)",
-		"url": "https://fenix.ist.utl.pt/cursos/mege",
+		"url": "https://fenix.tecnico.ulisboa.pt/cursos/mege",
 		"campus": [
 			{
 				"type": "CAMPUS",
@@ -512,7 +512,7 @@ If no academicTerm is defined it returns the current degree information.
 **academicTerm** - XXXXXX
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees/2761663977513?academicTerm=2013/2014
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513?academicTerm=2013/2014
 
 #### Example Response
 {% highlight json %}
@@ -527,7 +527,7 @@ If no academicTerm is defined it returns the current degree information.
 	"currentAcademicTerm": "2013/2014",
 	"type": "BOLONHA_MASTER_DEGREE",
 	"typeName": "Master Degree (MSc)",
-	"url": "https://fenix.ist.utl.pt/cursos/mege",
+	"url": "https://fenix.tecnico.ulisboa.pt/cursos/mege",
 	"campus": [
 		{
 			"type": "CAMPUS",
@@ -574,7 +574,7 @@ If no academicTerm is defined it returns the current degree information.
 **academicTerm** - XXXXXX   
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/degrees/2761663977513/courses?academicTerm=2013/2014
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513/courses?academicTerm=2013/2014
 
 #### Example Response
 {% highlight json %}
@@ -602,7 +602,7 @@ If no academicTerm is defined it returns the current degree information.
 This endpoint allows to access the current person information.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person
 
 #### Example Response
 {% highlight json %}
@@ -677,7 +677,7 @@ This endpoint returns the user's class information. This information can be retr
 **format** - "calendar" (iCal format) or "json"
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/calendar/classes?format=json
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/calendar/classes?format=json
 
 #### Example Response
 {% highlight json %}
@@ -701,7 +701,7 @@ This endpoint returns the user's class information. This information can be retr
                 "acronym": "Ges5",
                 "name": "Gestão",
                 "academicTerm": "1ºSemestre 2013/2014",
-                "url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
+                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/",
                 "id": "1610612925989"
             }
         },
@@ -722,7 +722,7 @@ This endpoint returns the user's class information. This information can be retr
                 "acronym": "aced42",
                 "name": "Análise Complexa e Equações Diferenciais",
                 "academicTerm": "1º Semester 2013/2014",
-                "url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
+                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/aced42/",
                 "id": "1610612925691"
             }
         }
@@ -741,7 +741,7 @@ This endpoint returns the students's evaluations information. This information c
 **format** - "calendar" (iCal format) or "json"
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/calendar/evaluations?format=json
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/calendar/evaluations?format=json
 
 #### Example Response
 {% highlight json %}
@@ -759,7 +759,7 @@ This endpoint returns the students's evaluations information. This information c
                 "acronym": "aced42",
                 "name": "Análise Complexa e Equações Diferenciais",
                 "academicTerm": "1ºSemestre 2013/2014",
-                "url": "https://fenix.ist.utl.pt/disciplinas/aced42/",
+                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/aced42/",
                 "id": "1610612925691"
             }
         },
@@ -781,7 +781,7 @@ This endpoint returns the students's evaluations information. This information c
                     "acronym": "Ges5",
                     "name": "Gestão",
                     "academicTerm": "1ºSemestre 2013/2014",
-                    "url": "https://fenix.ist.utl.pt/disciplinas/ges5/",
+                    "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/",
                     "id": "1610612925989"
                 }
             ]
@@ -801,7 +801,7 @@ This endpoint returns the user's course information.
 If no academicTerm is defined it returns the current information.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/courses?academicTerm=2013/2014
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/courses?academicTerm=2013/2014
 
 #### Example Response
 {% highlight json %}
@@ -843,7 +843,7 @@ If no academicTerm is defined it returns the current information.
 Complete curriculum (only for students)
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/curriculum
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/curriculum
 
 #### Example Response
 
@@ -869,7 +869,7 @@ Complete curriculum (only for students)
 					"id": "1610612905780",
 					"acronym": "LN-2",
 					"academicTerm": "1ºSemestre 2013/2014",
-					"url": "https://fenix.ist.utl.pt/disciplinas/ln-2/2012-2013/1-semestre" 
+					"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ln-2/2012-2013/1-semestre" 
 				},
 				"grade": "10",
 				"credits": 7.5
@@ -887,7 +887,7 @@ Complete curriculum (only for students)
 This endpoint returns the student's written evaluation information.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/evaluations
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/evaluations
 
 #### Example Response
 {% highlight json %}
@@ -912,7 +912,7 @@ This endpoint returns the student's written evaluation information.
 		"acronym": "GPI4",
 		"name": "Gestão de Projectos Informáticos",
 		"academicTerm": "1ºSemestre 2013/2014",
-		"url": "https://fenix.ist.utl.pt/disciplinas/gpi4/2013-2014/1-semestre"
+		"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/gpi4/2013-2014/1-semestre"
 	    }
 	],
 	"rooms": [
@@ -953,7 +953,7 @@ This endpoint returns the student's written evaluation information.
 		"acronym": "ASof22",
 		"name": "Arquitecturas de Software",
 		"academicTerm": "1ºSemestre 2013/2014",
-		"url": "https://fenix.ist.utl.pt/disciplinas\/asof22/2013-2014/1-semestre"
+		"url": "https://fenix.tecnico.ulisboa.pt/disciplinas\/asof22/2013-2014/1-semestre"
 	    }
 	],
 	"rooms": [],
@@ -973,7 +973,7 @@ This endpoint allows the student to enroll or disenroll from a written evaluatio
 **enrol** - "yes" or "no"
 
 #### Example Request
-```PUT``` http://fenix.ist.utl.pt/api/fenix/v1/person/evaluations/2512556533022?enrol=yes
+```PUT``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/evaluations/2512556533022?enrol=yes
 
 #### Example Response
 
@@ -986,7 +986,7 @@ returns the same as the endpoint above.
 This endpoint returns user's payments information.
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/person/payments
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/payments
 
 #### Example Response
 {% highlight json %}
@@ -1021,7 +1021,7 @@ This endpoint returns user's payments information.
 This endpoint returns the information about the campi.
  
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/spaces
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/spaces
 
 #### Example Response
 {% highlight json %}
@@ -1051,7 +1051,7 @@ This endpoint returns information about the space for a given {id}, its containe
 **day** - "dd/mm/yyyy"
 
 #### Example Request
-```GET``` http://fenix.ist.utl.pt/api/fenix/v1/spaces/2972117371186?day=22/05/2013
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/spaces/2972117371186?day=22/05/2013
 
 #### Example Response
 {% highlight json %}
@@ -1090,7 +1090,7 @@ This endpoint returns the space's blueprint in the required format
 **format** - "jpeg" or "dwg"
 
 #### Example Request
-```GET``` https://fenix.ist.utl.pt/api/fenix/v1/spaces/2465311230082/blueprint
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/spaces/2465311230082/blueprint
 
 #### Example Response
 response content-type : "application/dwg" or "image/jpg"
