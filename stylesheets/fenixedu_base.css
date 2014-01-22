@@ -162,18 +162,17 @@
 	}
 
 	time span:first-child {
-		font: normal normal 70px/0.95 "NRSFont", "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		/*font: normal normal 78px/0.95 "NRSFont", "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+		font: normal normal 72px/0.95 "NRSFont", "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 
 	time span {
-		font: normal normal 16px/1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		/*font: normal normal 24px/0.2 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+		/*font: normal normal 16px/1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+		font: normal normal 28px/0.5 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		float: left;
 	}
 
 	time + p {
-		padding-right: 35px;
+		padding-right: 40px;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
@@ -369,6 +368,7 @@
 		color: #fefefe;
 		padding: 15px;
 		text-align: center;
+		margin: 0;
 	}
 
 	.browsehappy strong, .browsehappy a, .browsehappy a:hover, .browsehappy a:focus, .browsehappy a:visited {color: #fefefe; text-decoration: none;}

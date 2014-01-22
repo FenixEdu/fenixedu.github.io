@@ -431,6 +431,16 @@
 		margin-bottom: 26px;
 	}
 
+	p.browsehappy,  {
+		background: #19accd;
+		color: #fefefe;
+		padding: 15px;
+		text-align: center;
+		margin: 0;
+	}
+
+	.browsehappy strong, .browsehappy a, .browsehappy a:hover, .browsehappy a:focus, .browsehappy a:visited {color: #fefefe; text-decoration: none;}
+
 
 /* Lists */
 
@@ -516,7 +526,6 @@
 
 /* Tables */
 
-	
 	table {
 		width: 100%;
 		margin: 20px 0;
@@ -601,7 +610,6 @@
 	}
 
 	main [class^="icon-"]:after, main [class*=" icon-"]:after {
-		content: '';
 		font: 12px/1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #666;
 		padding: 3px 5px 1px 0;
@@ -612,12 +620,18 @@
 		border-top: 1px solid #ddd;
 		border-bottom: 1px solid #ddd;
 		border-radius: 0 3px 3px 0;
+		margin-right: 2px;
 	}
 
 	main li a + i {margin-left: 5px;}
 
 	main .icon-lock-open:after {content: 'Public';}
 	main .icon-lock:after  {content: 'Private';}
+	main .icon-user:after  {content: 'Personal Scope';}
+	main .icon-basket:after  {content: 'Payment Scope';}
+	main .icon-calendar:after  {content: 'Schedule Scope';}
+	main .icon-graduation-cap:after  {content: 'Curricular Scope';}
+	main .icon-chart-area:after  {content: 'Evaluation Scope';}
 
 
 /* Mobile Specific Styles */

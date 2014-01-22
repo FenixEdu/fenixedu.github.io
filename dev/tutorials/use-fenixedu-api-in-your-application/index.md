@@ -138,5 +138,6 @@ Depending of your action, you can have different error codes that might help you
 
 
 [Java-SDK]: /dev/tutorials/use-fenixedu-api-in-your-application/java
-[Python-SDK]: /dev/tutorials/use-fenixedu-api-in-your-application/python
+[Python-SDK]: https://github.com/FenixEdu/fenixedu-python-sdk
+[pythonsdk]: /dev/tutorials/use-fenixedu-api-in-your-application/python
 [PHP-SDK]: /dev/tutorials/use-fenixedu-api-in-your-application/php

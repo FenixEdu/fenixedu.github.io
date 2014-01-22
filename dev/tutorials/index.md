@@ -4,6 +4,10 @@ breadcrumbs: [{ "text": "Tutorials", "url": "/dev/tutorials"}]
 root: "../"
 ---
 
+## [Use FenixEdu™ API in your Application][Use FenixEdu™ API in your Application]
+In this tutorial, we explain how you can integrate our webservices within your application. After you follow this tutorial, you will known how to use our REST API and how you can improve your application using our data.
+
+
 ## [Setup your development environment][Setup your development environment]
 This tutorial gets you started with a development environment that allows you to create applications
 using our infrastructural code. After you follow the steps contained in this tutorial, you may go
@@ -26,10 +30,6 @@ the necessary steps to share a production-ready version of your code with the ot
 
 ## [Expose your web-services with a REST API][Expose your web-services with a REST API]
 In this tutorial, we explain how you can expose your module functionalities using a REST API. After you follow this tutorial, you will have basic understanding on how REST works and you will known how to use the Bennu infrastructure provided to ease exposing your module functionalities with REST-based web-services.
-
-## [Use FenixEdu™ API in your Application][Use FenixEdu™ API in your Application]
-In this tutorial, we explain how you can integrate our webservices within your application. After you follow this tutorial, you will known how to use our REST API and how you can improve your application using our data.
-
 
 
 [Undestand the DML]: /dev/tutorials/understand-the-dml/
