@@ -6,6 +6,18 @@ root: "../"
 
 ## API Endpoints
 
+> <span>Announcement</span>
+> We improved the API just for you! The main changes are:    
+>   - Add language support    
+>   - Use academicTerm instead of year    
+>	- Key concepts with the same json structure (degree, course, space, period)    
+>	- Spaces blueprints    
+>	- Assigned room in evaluations    
+>	- Add room exam and normal capacity    
+>	- Add shift occupation in course schedule    
+>
+> You can see what changed in detail <a href="https://github.com/FenixEdu/fenixedu.github.io/commit/8502b4485d617d24f5f5faa484dd7e581b943e18">here</a>. 
+
 This page essentially lists all the existing endpoints, as well as examples
 when making invocations. While it is not the purpose of this page to describe 
 the business entities exposed by this API, we will try to explain the meaning 
