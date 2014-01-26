@@ -72,7 +72,7 @@ Define value for property 'databaseHost': : localhost
 Define value for property 'databaseName': : fenixedu
 Define value for property 'databasePassword': : pass
 Define value for property 'databaseUsername': : root
-Define value for property 'fenixVersion': : 2.0.0
+Define value for property 'fenixVersion': : 2.0.5
 [WARNING] Archetype is not fully configured
 [INFO] Using property: groupId = com.example
 [INFO] Using property: artifactId = fenix-webapp
@@ -82,7 +82,7 @@ Define value for property 'fenixVersion': : 2.0.0
 [INFO] Using property: databaseName = fenixedu
 Define value for property 'databasePassword': : pass
 [INFO] Using property: databaseUsername = root
-[INFO] Using property: fenixVersion = 2.0.0
+[INFO] Using property: fenixVersion = 2.0.5
 Confirm properties configuration:
 groupId: com.example
 artifactId: fenix-webapp
@@ -92,7 +92,7 @@ databaseHost: localhost
 databaseName: fenixedu
 databasePassword: pass
 databaseUsername: root
-fenixVersion: 2.0.0
+fenixVersion: 2.0.5
  Y: : y
 {% endhighlight %}
 
