@@ -18,26 +18,8 @@ to get you started and help you resolve any issue that you might encounter while
 
 
 ### Quickstart
-To quickly get a FenixEdu™ installation up and running on your machine, you should use
-Vagrant to run a virtual machine that we pre-configured with the necessary environment.
-Once you have installed the [Vagrant][Vagrant] tool in your machine, you just have to run the
-following commands:
-
-{% highlight bash %}
-vagrant box add fenixedu http://fenix-ashes.ist.utl.pt/fenixedu.box
-vagrant init
-vagrant up
-{% endhighlight %}
-
-
-Now all you have to do is access ```http://localhost:9090``` and you have a FenixEdu™ installation
-running in the virtualbox that you just setup using Vagrant.
-
-Yes, it is that simple!
-
-> <span>note</span>
-> If you intend to develop, we recommend you to [setup a development environment][Setup your development environment] in your
-> system instead of using this pre-configured virtual machine.
+Currently, we are working on a solution that uses Virtual Machines to provide a really quickstart and have a FenixEdu™ installation up and running.
+For now, you can follow a tutorial to [install FenixEdu™ in your development machine][install FenixEdu™ in your development machine].
 
 ### Create Your Own Application
 
@@ -86,5 +68,6 @@ community.
 [SubProjects]: /dev/sub-projects
 [Setup your development environment]: /dev/tutorials/setup-your-development-environment/
 [Create your own application]: /dev/tutorials/create-your-own-application/
+[install FenixEdu™ in your development machine]: /dev/tutorials/install-fenix-edu/
 [Vagrant]: http://vagrantup.com/
 [dsi@ist.utl.pt]: mailto:dsi@ist.utl.pt
