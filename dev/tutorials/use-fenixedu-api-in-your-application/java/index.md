@@ -14,7 +14,7 @@ In this tutorial, you will learn how to use the Java SDK to easily invoke the Fe
 * [Step 2 - Define your Credentials](#toc_3)
 * [Step 3 - Use the Client](#toc_4)
   * [Step 3.1 - Use the Synchronous Client](#toc_5)
-  * [Step 3.2 - Use the Synchronous Client](#toc_6)
+  * [Step 3.2 - Use the Asynchronous Client](#toc_6)
 
 ### Step 1 - Include the Java SDK in your project libs
 
