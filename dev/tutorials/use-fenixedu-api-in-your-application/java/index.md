@@ -10,9 +10,11 @@ In this tutorial, you will learn how to use the Java SDK to easily invoke the Fe
 
 
 ### Table of Contents
-* [Step 1 - Include the Java SDK in your project libs](#step_1__include_the_php_sdk_in_your_project)
-* [Step 2 - Define your Credentials](#step_2__define_your_credentials)
-* [Step 3 - Use the Client](#step_3__use_the_client)
+* [Step 1 - Include the Java SDK in your project libs](#toc_2)
+* [Step 2 - Define your Credentials](#toc_3)
+* [Step 3 - Use the Client](#toc_4)
+  * [Step 3.1 - Use the Synchronous Client](#toc_5)
+  * [Step 3.2 - Use the Synchronous Client](#toc_6)
 
 ### Step 1 - Include the Java SDK in your project libs
 
@@ -52,7 +54,9 @@ fenixedu.base.url=<fenixedu-installation-base-url> //e.g. https://fenix.tecnico.
 The library that you included in the previous step will attempt to read this file and auto-config your credentials that will be used in every API call in order to authorize your requests.
 
 
-### Step 3 - Use the Cient
+### Step 3 - Use the Client
+
+When using the client to invoke FenixEdu API endpoints, you should decide either you want to make synchronous invocations, where the invocation is blocked while waiting for the response from the server, or asynchronous, where the invocation returns void instantly and you receive the response through the means of a callback mechanism.
 
 #### Step 3.1 - Use the Synchronous Client
 
