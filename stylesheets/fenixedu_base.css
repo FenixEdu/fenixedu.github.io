@@ -163,6 +163,7 @@
 
 	time span:first-child {
 		font: normal normal 72px/0.95 "NRSFont", "KlavikaMediumPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		letter-spacing: 0.05em;
 	}
 
 	time span {
