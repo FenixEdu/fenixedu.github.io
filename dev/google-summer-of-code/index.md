@@ -21,7 +21,7 @@ The applications build by the FenixEdu project (such as academic management syst
 
 
 
-## Automated Software Test Generation
+### Automated Software Test Generation
 
 The purpose of this task is the implementation of an automated test generation infrastructure for the FenixEdu project. Exhaustive testing is an highly desirable feature in any software development methodology, since it may enable early detection of complex bugs. However, manual test generation is a complex and slow task. Therefore, most often the number of implemented test cases is rather small and test coverage is well above what it should be. In the past, several automated software test generation methodologies have been researched and several interesting tools have been developed. The code of the FenixEdu project follows a particular set of coding rules and patterns and provides a significant amount of meta-information. Therefore, we envision that the application of automated test generation techniques should be fairly easy. Even if only simple technique are used, this will represent a tremendous advantage over the present situation where all tests are coded manually.
 
