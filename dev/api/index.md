@@ -874,7 +874,7 @@ Complete curriculum (only for students)
 		"calculatedAverage": 10,
 		"isFinished": false,
 		"numberOfApprovedCourses": 1,
-		"currentYear": 1
+		"currentYear": 1,
 		"approvedCourses": [
 			{
 				"course" : { 
