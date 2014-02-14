@@ -16,14 +16,18 @@ The purpose of this task is the development of an highly configurable and modula
 
 ### Optimize Memory Management Algorithms for the [FenixFramework][FenixFramework]
 
-The applications build by the FenixEdu project (such as academic management systems, LMS's, ...) are all constructed atop the [FenixFramework][FenixFramework]. This framework provides developers with a transparent transactional programming model based on Software Transactional Memory. Within this context, we propose the determine the optimum configuration for managing memory in applications based on the FenixFramework, via code analysis and collected statistic information during application execution. We also propose to explore the possibility of implementing an alternative cache that would be aware of how the application uses its domain objects. Additionally the transactional system should also communicate with the Garbage Collection algorithms, firing events, resizing the memory space or changing the execution thresholds of the algorithm.
-
-
+The applications build by the FenixEdu project (such as academic management systems, LMS's, ...) are all constructed atop the [FenixFramework][FenixFramework]. This framework provides developers with a transparent transactional programming model based on Software Transactional Memory. Within this context, we propose to determine the optimum configuration for managing memory in applications based on the FenixFramework, via code analysis and collected statistic information during application execution. We also propose to explore the possibility of implementing an alternative cache that would be aware of how the application uses its domain objects. Additionally the transactional system should also communicate with the Garbage Collection algorithms, firing events, resizing the memory space or changing the execution thresholds of the algorithm.
 
 
 ### Automated Software Test Generation
 
 The purpose of this task is the implementation of an automated test generation infrastructure for the FenixEdu project. Exhaustive testing is an highly desirable feature in any software development methodology, since it may enable early detection of complex bugs. However, manual test generation is a complex and slow task. Therefore, most often the number of implemented test cases is rather small and test coverage is well above what it should be. In the past, several automated software test generation methodologies have been researched and several interesting tools have been developed. The code of the FenixEdu project follows a particular set of coding rules and patterns and provides a significant amount of meta-information. Therefore, we envision that the application of automated test generation techniques should be fairly easy. Even if only simple technique are used, this will represent a tremendous advantage over the present situation where all tests are coded manually.
+
+
+
+### Service Discovery Over FenixEdu Instances
+
+The purpose of this task is the implementation of a service discovery layer on the FenixEdu project. This layer should enable several FenixEdu instances, in different schools, to communicate with each other and enabling information sharing, according to predefined policies. This layer should implement some sort of Kademlia-based distributed hash table, on top of which instance discovery, instance authentication and information querying can be performed. This could be particularly interesting if we consider the installation of FenixEdu in developing countries and the possibility of the students in these countries to benefit from course materials made automatically available by other, more resourceful, universities.
 
 
 [FenixFramework]: http://fenix-framework.github.io/
