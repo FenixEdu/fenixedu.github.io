@@ -661,6 +661,8 @@ This endpoint allows to access the current person information.
 	],
 	"photo": null,
 	"name": "John Doe",
+	"gender": "MALE",
+	"birthday": "21/11/1990",
 	"username": "ist112345",
 	"email": "john.doe@ist.utl.pt",
 	"personalEmails": [
@@ -872,6 +874,7 @@ Complete curriculum (only for students)
 		"calculatedAverage": 10,
 		"isFinished": false,
 		"numberOfApprovedCourses": 1,
+		"currentYear": 1
 		"approvedCourses": [
 			{
 				"course" : { 
