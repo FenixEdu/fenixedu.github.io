@@ -58,6 +58,7 @@ https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612925989?lang=en-US
 * [GET /degrees](#toc_25) <i class="icon-lock-open"></i>
 * [GET /degrees/{id}](#toc_29) <i class="icon-lock-open"></i>
 * [GET /degrees/{id}/courses](#toc_33) <i class="icon-lock-open"></i>
+* [GET /domainModel](#toc_76) <i class="icon-lock-open"></i>
 * [GET /person](#toc_37)  <i class="icon-lock"></i><i class="icon-user"></i>
 * [GET /person/calendar/classes](#toc_40) <i class="icon-lock"></i><i class="icon-calendar"></i>
 * [GET /person/calendar/evaluations](#toc_44) <i class="icon-lock"></i><i class="icon-calendar"></i>
@@ -1109,3 +1110,69 @@ This endpoint returns the space's blueprint in the required format
 response content-type : "application/dwg" or "image/jpg"
 
 response content: raw image data
+
+### GET /domainModel
+
+<i class="icon-lock-open"></i>
+
+This endpoint returns a representation of the domain model for the application.
+While this information is returned in a JSON format, the concepts underlying 
+the domain model can be found on the Fenix Framework site:
+http://fenix-framework.github.io/DML.html
+
+#### Example Request
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/domainModel
+
+#### Example Response
+{% highlight json %}
+{
+  "classes": [
+    {
+      "className": "net.sourceforge.fenixedu.domain.Shift",
+      "interfaces": [],
+      "modifiers": [],
+      "slots": [
+        {
+          "type": "java.lang.Integer",
+          "name": "lotacao",
+          "modifiers": [],
+          "options": []
+        },
+        {
+          "type": "java.lang.String",
+          "name": "nome",
+          "modifiers": [],
+          "options": []
+        },
+        {
+          "type": "java.lang.String",
+          "name": "comment",
+          "modifiers": [],
+          "options": []
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "name": "RootDomainObjectNonRegularTeachingService",
+      "roles": [
+        {
+          "type": "net.sourceforge.fenixedu.domain.NonRegularTeachingService",
+          "name": "nonRegularTeachingServices",
+          "modifiers": [],
+          "multiplicityLower": "0",
+          "multiplicityUpper": "*"
+        },
+        {
+          "type": "org.fenixedu.bennu.core.domain.Bennu",
+          "name": "rootDomainObject",
+          "modifiers": [],
+          "multiplicityLower": "0",
+          "multiplicityUpper": "1"
+        }
+      ]
+    }
+  ]
+}
+{% endhighlight %}
