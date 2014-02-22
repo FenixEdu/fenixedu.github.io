@@ -94,18 +94,24 @@ application is deployed. It also returns a list of RSS feeds, the current academ
 #### Example Response
 {% highlight json %}
 {
-  "institutionName" : "Instituto Superior Técnico",
-  "institutionUrl" : "",
-  "rssFeeds" : [ {
-    "description" : "News",
-    "url" : ""
-  }, {
-    "description" : "Events",
-    "url" : ""
-  } ],
-  "currentAcademicTerm" : "1ºSemestre 2013/2014",
-  "languages" : [ "en-US", "pt-PT" ],
-  "language" : "pt-PT"
+  "institutionName": "Instituto Superior Técnico",
+  "institutionUrl": "",
+  "rssFeeds": [
+    {
+      "description": "News",
+      "url": ""
+    },
+    {
+      "description": "Events",
+      "url": ""
+    }
+  ],
+  "currentAcademicTerm": "1ºSemestre 2013/2014",
+  "languages": [
+    "en-US",
+    "pt-PT"
+  ],
+  "language": "pt-PT"
 }
 {% endhighlight %}
 
@@ -165,45 +171,49 @@ the associated degrees.
 #### Example Response
 {% highlight json %}
 {
-	"acronym": "FInd3",
-	"name": "Frio Industrial",
-	"academicTerm": "1ºSemestre 2013/2014",
-	"evaluationMethod": "1 trabalho de grupo, com avaliação ...",
-	"numberOfAttendingStudents": 123,
-	"announcementLink": "https://fenix.tecnico.ulisboa.pt/rss.do?boardId=123",
-	"summaryLink": "https://fenix.tecnico.ulisboa.pt/publico/rss.do?summaryId=123",
-	"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/FInd3",
-	"competences": [
-		{
-			"id" : "1313123123232",			
-			"program": "",
-			"bibliographicReferences": [
-				{
-					"author": "Roriz L. et al",
-					"reference": "Ed. Orion ",
-					"title": "Climatização: concepção, e instalação",
-					"year": "2006",
-					"type": "MAIN",
-					"url": null
-				}
-			],
-			"degrees": [
-				{
-					"id": "2761663977513",
-					"name": "Mestrado em Engenharia e Gestão da Energia",
-					"acronym": "MEGE"
-				}
-			]
-		}
-	],
-	"teachers": [ 
-		{
-			"name": "John Doe",
-			"istId": "ist112345",
-			"mails": [ "john.doe@ist.utl.pt" ],
-			"urls": [ "http://web.ist.utl.pt/ist112345/" ]
-		}
-	]
+  "acronym": "FInd3",
+  "name": "Frio Industrial",
+  "academicTerm": "1ºSemestre 2013/2014",
+  "evaluationMethod": "1 trabalho de grupo, com avaliação ...",
+  "numberOfAttendingStudents": 123,
+  "announcementLink": "https://fenix.tecnico.ulisboa.pt/rss.do?boardId=123",
+  "summaryLink": "https://fenix.tecnico.ulisboa.pt/publico/rss.do?summaryId=123",
+  "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/FInd3",
+  "competences": [
+    {
+      "id": "1313123123232",
+      "program": "",
+      "bibliographicReferences": [
+        {
+          "author": "Roriz L. et al",
+          "reference": "Ed. Orion ",
+          "title": "Climatização: concepção, e instalação",
+          "year": "2006",
+          "type": "MAIN",
+          "url": null
+        }
+      ],
+      "degrees": [
+        {
+          "id": "2761663977513",
+          "name": "Mestrado em Engenharia e Gestão da Energia",
+          "acronym": "MEGE"
+        }
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "John Doe",
+      "istId": "ist112345",
+      "mails": [
+        "john.doe@ist.utl.pt"
+      ],
+      "urls": [
+        "http://web.ist.utl.pt/ist112345/"
+      ]
+    }
+  ]
 }
 {% endhighlight %}
 
@@ -222,35 +232,41 @@ and ad-hoc evaluations.
 #### Example Response
 {% highlight json %}
 [
-	{
-		"type": "TEST",
-		"name": "Teste 1º Teste",
-		"evaluationPeriod": {
-			"start": "2013-10-26 09:00",
-			"end"  : "2013-10-26 11:00"
-		},
-		"enrollmentPeriod": {
-			"start": "2013-10-01 14:25:32",
-			"end"  : "2013-10-24 17:52:44"
-		},
-		"isInEnrolmentPeriod": false,
-		"rooms": [
-			{
-				"type": "ROOM",
-				"id": "2448131362251",
-				"name": "C01 - sala de aula",
-				"description": "C01 - Pavilhão Central (Alameda)",
-				"capacity" : { "examCapacity" : 56, "normalCapacity" : 24}
-			},
-			{
-				"type": "ROOM",
-				"id": "2448131362449",
-				"name": "C11 - Sala aula",
-				"description": "C11 - Pavilhão Central (Alameda)",
-				"capacity" : { "examCapacity" : 87, "normalCapacity" : 12}
-			}
-		]
-	}
+  {
+    "type": "TEST",
+    "name": "Teste 1º Teste",
+    "evaluationPeriod": {
+      "start": "2013-10-26 09:00",
+      "end": "2013-10-26 11:00"
+    },
+    "enrollmentPeriod": {
+      "start": "2013-10-01 14:25:32",
+      "end": "2013-10-24 17:52:44"
+    },
+    "isInEnrolmentPeriod": false,
+    "rooms": [
+      {
+        "type": "ROOM",
+        "id": "2448131362251",
+        "name": "C01 - sala de aula",
+        "description": "C01 - Pavilhão Central (Alameda)",
+        "capacity": {
+          "examCapacity": 56,
+          "normalCapacity": 24
+        }
+      },
+      {
+        "type": "ROOM",
+        "id": "2448131362449",
+        "name": "C11 - Sala aula",
+        "description": "C11 - Pavilhão Central (Alameda)",
+        "capacity": {
+          "examCapacity": 87,
+          "normalCapacity": 12
+        }
+      }
+    ]
+  }
 ]
 {% endhighlight %}
 
@@ -270,50 +286,57 @@ or individual, and may be restricted to an enrolment period.
 #### Example Response
 {% highlight json %}
 [
-	{
-		"name": "Projeto de Avaliação de Projetos",
-    	"description": "Cada grupo de trabalho tem como objetivo...",
-    	"enrolmentPeriod": {
-			"start": "2013-10-01 14:25:32",
-			"end"  : "2013-10-24 17:52:44"
-		},
-		"enrolmentPolicy": "ATOMIC",
-		"minimumCapacity": 1, "maximumCapacity": 3, "idealCapacity": 2,
-		"associatedCourses": [
-			{
-				"name": "Matemática Computacional",
-				"id": "1132132564548",
-				"degrees": [ 
-								{	"name": "Licenciatura Bolonha em Engenharia de Telecomunicações e Informática", 
-									"acronym":"LERC", 
-									"id": "2761663971586"
-								},
-								{	"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda", 
-									"acronym":"MEIC-A", 
-									"id": "2761663977513"
-								},
-								{	"name": "Mestrado Integrado em Engenharia Civil", 
-									"acronym":"MEC", 
-									"id": "2761663971466"
-								}
-						    ]
-			},
-			{
-				"name": "Mecânica Quantica",
-				"id": "1132132564555",
-				"degrees": [ 
-								{	"name": "Mestrado Integrado em Arquitectura", 
-									"acronym":"MA", 
-									"id": "2761663971465"
-								},
-								{	"name": "Diploma de Estudos Avançados em Engenharia Informática e de Computadores", 
-									"acronym":"DEIC", 
-									"id": "2761663971783"
-								}
-						    ]
-			}
-		]
-	}
+  {
+    "name": "Projeto de Avaliação de Projetos",
+    "description": "Cada grupo de trabalho tem como objetivo...",
+    "enrolmentPeriod": {
+      "start": "2013-10-01 14:25:32",
+      "end": "2013-10-24 17:52:44"
+    },
+    "enrolmentPolicy": "ATOMIC",
+    "minimumCapacity": 1,
+    "maximumCapacity": 3,
+    "idealCapacity": 2,
+    "associatedCourses": [
+      {
+        "name": "Matemática Computacional",
+        "id": "1132132564548",
+        "degrees": [
+          {
+            "name": "Licenciatura Bolonha em Engenharia de Telecomunicações e Informática",
+            "acronym": "LERC",
+            "id": "2761663971586"
+          },
+          {
+            "name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+            "acronym": "MEIC-A",
+            "id": "2761663977513"
+          },
+          {
+            "name": "Mestrado Integrado em Engenharia Civil",
+            "acronym": "MEC",
+            "id": "2761663971466"
+          }
+        ]
+      },
+      {
+        "name": "Mecânica Quantica",
+        "id": "1132132564555",
+        "degrees": [
+          {
+            "name": "Mestrado Integrado em Arquitectura",
+            "acronym": "MA",
+            "id": "2761663971465"
+          },
+          {
+            "name": "Diploma de Estudos Avançados em Engenharia Informática e de Computadores",
+            "acronym": "DEIC",
+            "id": "2761663971783"
+          }
+        ]
+      }
+    ]
+  }
 ]
 {% endhighlight %}
 
@@ -333,84 +356,132 @@ shift is the possible schedule in which a student should enrol.
 #### Example Response
 {% highlight json %}
 {
-	"lessonPeriods": [
-		{ "start": "2014-02-21 00:00:00", "end": "2014-04-12 00:00:00" },
-		{ "start": "2014-04-18 00:00:00", "end": "2014-05-29 00:00:00" }
-	],
-	"courseLoads": [
-		{ "type": "TEORICA", "totalQuantity": 42, "unitQuantity": 1.5 },
-		{ "type": "LABORATORIAL", "totalQuantity": 30, "unitQuantity": 3 }
-	],
-	"shifts": [
-		{
-			"name": "AED2T01",
-			"types": [ "TEORICA" ],
-			"occupation" : {
-				  "current" : 120,
-				  "max" : 120
-			},
-			"lessons": [
-				{
-					"start": "2014-02-21 10:00:00", "end": "2014-02-21 12:00:00",
-					"room": { "type": "ROOM", "name": "Ga1", "id": "132115446846" }
-				},
-				{
-					"start": "2014-03-21 10:00:00", "end": "2014-03-21 12:00:00",
-					"room": { "type": "ROOM", "name": "Ga1", "id": "132115446846" }
-				},
-				{
-					"start": "2014-05-21 10:00:00", "end": "2014-05-21 12:00:00",
-					"room": { "type": "ROOM", "name": "Ga3", "id": "132115446847" }
-				}
-			],
-			"rooms": [
-				{
-					"type": "ROOM",
-					"id": "132115446847",
-					"name": "Ga3 - S. aula",
-					"description": "Ga3 - Pavilhão Central (Alameda)",
-					"capacity": {
-						"normal": 80,
-						"exam": 40
-					}
-				}
-			] 
-		},
-		{
-			"name": "AED2L03",
-			"types": [ "LABORATORIAL" ],
-			"occupation" : {
-				  "current" : 79,
-				  "max" : 95
-			},
-			"lessons": [
-				{
-					"start": "2014-02-23 10:00:00", "end": "2014-02-23 13:00:00",
-					"room": { "type": "ROOM", "name": "F1", "id": "132115446844" }
-				},
-				{
-					"start": "2014-03-23 10:00:00", "end": "2014-03-23 13:00:00",
-					"room": { "type": "ROOM", "name": "F2", "id": "132115446843" }
-				},
-				{
-					"start": "2014-05-23 10:00:00", "end": "2014-05-23 13:00:00",
-					"room": { "type": "ROOM", "name": "F1", "id": "132115446844" }
-				}
-			],
-			"rooms": [
-				{
-					"type": "ROOM",
-					"id": "2448131361685",
-					"name": "F1 - Sala de aula",
-					"description": "F1 - Pavilhão de Informática I (Alameda)",
-					"capacity": {
-						"normal": 60,
-						"exam": 30
-					}
-				}
-			]
-		 }
-	]
+  "lessonPeriods": [
+    {
+      "start": "2014-02-21 00:00:00",
+      "end": "2014-04-12 00:00:00"
+    },
+    {
+      "start": "2014-04-18 00:00:00",
+      "end": "2014-05-29 00:00:00"
+    }
+  ],
+  "courseLoads": [
+    {
+      "type": "TEORICA",
+      "totalQuantity": 42,
+      "unitQuantity": 1.5
+    },
+    {
+      "type": "LABORATORIAL",
+      "totalQuantity": 30,
+      "unitQuantity": 3
+    }
+  ],
+  "shifts": [
+    {
+      "name": "AED2T01",
+      "types": [
+        "TEORICA"
+      ],
+      "occupation": {
+        "current": 120,
+        "max": 120
+      },
+      "lessons": [
+        {
+          "start": "2014-02-21 10:00:00",
+          "end": "2014-02-21 12:00:00",
+          "room": {
+            "type": "ROOM",
+            "name": "Ga1",
+            "id": "132115446846"
+          }
+        },
+        {
+          "start": "2014-03-21 10:00:00",
+          "end": "2014-03-21 12:00:00",
+          "room": {
+            "type": "ROOM",
+            "name": "Ga1",
+            "id": "132115446846"
+          }
+        },
+        {
+          "start": "2014-05-21 10:00:00",
+          "end": "2014-05-21 12:00:00",
+          "room": {
+            "type": "ROOM",
+            "name": "Ga3",
+            "id": "132115446847"
+          }
+        }
+      ],
+      "rooms": [
+        {
+          "type": "ROOM",
+          "id": "132115446847",
+          "name": "Ga3 - S. aula",
+          "description": "Ga3 - Pavilhão Central (Alameda)",
+          "capacity": {
+            "normal": 80,
+            "exam": 40
+          }
+        }
+      ]
+    },
+    {
+      "name": "AED2L03",
+      "types": [
+        "LABORATORIAL"
+      ],
+      "occupation": {
+        "current": 79,
+        "max": 95
+      },
+      "lessons": [
+        {
+          "start": "2014-02-23 10:00:00",
+          "end": "2014-02-23 13:00:00",
+          "room": {
+            "type": "ROOM",
+            "name": "F1",
+            "id": "132115446844"
+          }
+        },
+        {
+          "start": "2014-03-23 10:00:00",
+          "end": "2014-03-23 13:00:00",
+          "room": {
+            "type": "ROOM",
+            "name": "F2",
+            "id": "132115446843"
+          }
+        },
+        {
+          "start": "2014-05-23 10:00:00",
+          "end": "2014-05-23 13:00:00",
+          "room": {
+            "type": "ROOM",
+            "name": "F1",
+            "id": "132115446844"
+          }
+        }
+      ],
+      "rooms": [
+        {
+          "type": "ROOM",
+          "id": "2448131361685",
+          "name": "F1 - Sala de aula",
+          "description": "F1 - Pavilhão de Informática I (Alameda)",
+          "capacity": {
+            "normal": 60,
+            "exam": 30
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endhighlight %}
 
@@ -429,24 +500,26 @@ number of students officially enroled in the course.
 #### Example Response
 {% highlight json %}
 {
-	"enrolmentCount": 32,
-	"attendingCount": 41,
-	"students": [
-		{ "username": "ist1234", 
-		  "degree": { 
-		  	"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
-		  	"acronym": "MEIC-A",
-		  	"id": "2761663971475"
-		  }
-		},
-		{ "username": "ist1236", 
-		  "degree": { 
-		  	"name": "Mestrado Integrado em Arquitectura",
-		  	"acronym": "MA",
-		  	"id": "2761663971465"
-		  }
-		}
-	]
+  "enrolmentCount": 32,
+  "attendingCount": 41,
+  "students": [
+    {
+      "username": "ist1234",
+      "degree": {
+        "name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+        "acronym": "MEIC-A",
+        "id": "2761663971475"
+      }
+    },
+    {
+      "username": "ist1236",
+      "degree": {
+        "name": "Mestrado Integrado em Arquitectura",
+        "acronym": "MA",
+        "id": "2761663971465"
+      }
+    }
+  ]
 }
 {% endhighlight %}
 
@@ -467,50 +540,48 @@ If no academicTerm is defined it returns the degree information for the `current
 #### Example Response
 {% highlight json %}
 [
-	{
-		"id": "2761663977513",
-		"name": "Engenharia e Gestão da Energia",
-		"acronym": "MEGE",
-		"academicTerms": [
-			"2013/2014",
-			"2012/2013"
-		],
-		"academicTerm": "2013/2014",
-		"type": "BOLONHA_MASTER_DEGREE",
-		"typeName": "Master Degree (MSc)",
-		"url": "https://fenix.tecnico.ulisboa.pt/cursos/mege",
-		"campus": [
-			{
-				"type": "CAMPUS",
-				"id":"2465311230081",
-				"name":"Alameda"
-			}
-		],
-		"info": {
-			"description": "",
-			"objectives": "",
-			"designFor": "",
-			"requisites": "",
-			"profissionalExits": "",
-			"history": "",
-			"operationRegime": "",
-			"gratuity": "",
-			"links": ""
-		},
-		"teachers": [
-			{
-				"name": "John Doe",
-				"istId": "ist11234",
-				"mails": [
-					"foo@ist.utl.pt",
-					"bar@ist.utl.pt"
-				],
-				"urls": [
-	 
-				]
-			}
-		]	
-	}
+  {
+    "id": "2761663977513",
+    "name": "Engenharia e Gestão da Energia",
+    "acronym": "MEGE",
+    "academicTerms": [
+      "2013/2014",
+      "2012/2013"
+    ],
+    "academicTerm": "2013/2014",
+    "type": "BOLONHA_MASTER_DEGREE",
+    "typeName": "Master Degree (MSc)",
+    "url": "https://fenix.tecnico.ulisboa.pt/cursos/mege",
+    "campus": [
+      {
+        "type": "CAMPUS",
+        "id": "2465311230081",
+        "name": "Alameda"
+      }
+    ],
+    "info": {
+      "description": "",
+      "objectives": "",
+      "designFor": "",
+      "requisites": "",
+      "profissionalExits": "",
+      "history": "",
+      "operationRegime": "",
+      "gratuity": "",
+      "links": ""
+    },
+    "teachers": [
+      {
+        "name": "John Doe",
+        "istId": "ist11234",
+        "mails": [
+          "foo@ist.utl.pt",
+          "bar@ist.utl.pt"
+        ],
+        "urls": []
+      }
+    ]
+  }
 ]
 {% endhighlight %}
 
@@ -530,50 +601,47 @@ If no academicTerm is defined it returns the degree information for the `current
 #### Example Response
 {% highlight json %}
 {
-	"id": "2761663977513",
-	"name": "Engenharia e Gestão da Energia",
-	"acronym": "MEGE",
-	"academicTerms": [
-		"2013/2014",
-		"2012/2013"
-	],
-	"currentAcademicTerm": "2013/2014",
-	"type": "BOLONHA_MASTER_DEGREE",
-	"typeName": "Master Degree (MSc)",
-	"url": "https://fenix.tecnico.ulisboa.pt/cursos/mege",
-	"campus": [
-		{
-			"type": "CAMPUS",
-			"id":"2465311230081",
-			"name":"Alameda"
-		}
-	],
-	"info": {
-		"description": "",
-		"objectives": "",
-		"designFor": "",
-		"requisites": "",
-		"profissionalExits": "",
-		"history": "",
-		"operationRegime": "",
-		"gratuity": "",
-		"links": ""
-	},
-	"teachers": [
-		{
-			"name": "John Doe",
-			"istId": "ist11234",
-			"mails": [
-				"foo@ist.utl.pt",
-				"bar@ist.utl.pt"
-			],
-			"urls": [
-
-			]
-		}
-	]	
+  "id": "2761663977513",
+  "name": "Engenharia e Gestão da Energia",
+  "acronym": "MEGE",
+  "academicTerms": [
+    "2013/2014",
+    "2012/2013"
+  ],
+  "currentAcademicTerm": "2013/2014",
+  "type": "BOLONHA_MASTER_DEGREE",
+  "typeName": "Master Degree (MSc)",
+  "url": "https://fenix.tecnico.ulisboa.pt/cursos/mege",
+  "campus": [
+    {
+      "type": "CAMPUS",
+      "id": "2465311230081",
+      "name": "Alameda"
+    }
+  ],
+  "info": {
+    "description": "",
+    "objectives": "",
+    "designFor": "",
+    "requisites": "",
+    "profissionalExits": "",
+    "history": "",
+    "operationRegime": "",
+    "gratuity": "",
+    "links": ""
+  },
+  "teachers": [
+    {
+      "name": "John Doe",
+      "istId": "ist11234",
+      "mails": [
+        "foo@ist.utl.pt",
+        "bar@ist.utl.pt"
+      ],
+      "urls": []
+    }
+  ]
 }
-
 {% endhighlight %}
 
 ### GET /degrees/{id}/courses
@@ -591,20 +659,20 @@ If no academicTerm is defined it returns the degree information for the `current
 #### Example Response
 {% highlight json %}
 [
-	{
-		"acronym": "FInd3",
-		"credits": "4.5",
-		"name": "Frio Industrial",
-		"id": "1610612925565",
-		"academicTerm": "1ºSemestre 2013/2014"
-	},
-	{
-		"acronym": "MFC3",
-		"credits": "6.0",
-		"name": "Mecânica de Fluídos Computacional",
-		"id": "1610612925545",
-		"academicTerm": "1ºSemestre 2013/2014"
-	}
+  {
+    "acronym": "FInd3",
+    "credits": "4.5",
+    "name": "Frio Industrial",
+    "id": "1610612925565",
+    "academicTerm": "1ºSemestre 2013/2014"
+  },
+  {
+    "acronym": "MFC3",
+    "credits": "6.0",
+    "name": "Mecânica de Fluídos Computacional",
+    "id": "1610612925545",
+    "academicTerm": "1ºSemestre 2013/2014"
+  }
 ]
 {% endhighlight %}
 ### GET /person
@@ -619,63 +687,62 @@ This endpoint allows to access the current person information.
 #### Example Response
 {% highlight json %}
 {
-	"roles": [
-		{
-			"type": "TEACHER",
-			"department": 
-				{ 
-					"name" : "Departamento de Engenharia Informática",
-					"acronym" : "DEI"
-				  }
-		},
-		{
-			"type": "STUDENT",
-			"registrations": [
-				{ 
-					"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
-  					"acronym": "MEIC-A",
-  					"id": "2761663971475",
-  					"academicTerms":[
-						"1ºSemestre 2013/2014", 
-						"2º Semestre 2013/2014"
-					]
-				}
-			]
-		},
-		{
-			"type": "ALUMNI",
-			"concludedRegistrations": [
-				{
-					"name": "Licenciatura Bolonha em Engenharia Informática e de Computadores - Alameda",
-					"acronym": "LEIC-A",
-					"id": "2761663971474",
-					"academicTerms":[
-						"1 Semestre 2010/2011", 
-						"2 Semestre 2010/2011",
-						"1 Semestre 2011/2012",
-						"1 Semestre 2012/2013",
-						"2 Semestre 2012/2013"
-					]
-				}
-			]
-		}
-	],
-	"photo": null,
-	"name": "John Doe",
-	"gender": "MALE",
-	"birthday": "21/11/1990",
-	"username": "ist112345",
-	"email": "john.doe@ist.utl.pt",
-	"personalEmails": [
-		"john.doe@ist.utl.pt"
-	],
-	"workEmails": [ ],
-	"webAddresses": [ 
-		"http://web.ist.utl.pt/ist112345/"		
-	],
-	"workWebAddresses": [
-		"http://web.ist.utl.pt/ist112345/"	
-	]
+  "roles": [
+    {
+      "type": "TEACHER",
+      "department": {
+        "name": "Departamento de Engenharia Informática",
+        "acronym": "DEI"
+      }
+    },
+    {
+      "type": "STUDENT",
+      "registrations": [
+        {
+          "name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+          "acronym": "MEIC-A",
+          "id": "2761663971475",
+          "academicTerms": [
+            "1ºSemestre 2013/2014",
+            "2º Semestre 2013/2014"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ALUMNI",
+      "concludedRegistrations": [
+        {
+          "name": "Licenciatura Bolonha em Engenharia Informática e de Computadores - Alameda",
+          "acronym": "LEIC-A",
+          "id": "2761663971474",
+          "academicTerms": [
+            "1 Semestre 2010/2011",
+            "2 Semestre 2010/2011",
+            "1 Semestre 2011/2012",
+            "1 Semestre 2012/2013",
+            "2 Semestre 2012/2013"
+          ]
+        }
+      ]
+    }
+  ],
+  "photo": null,
+  "name": "John Doe",
+  "gender": "MALE",
+  "birthday": "21/11/1990",
+  "username": "ist112345",
+  "email": "john.doe@ist.utl.pt",
+  "personalEmails": [
+    "john.doe@ist.utl.pt"
+  ],
+  "workEmails": [],
+  "webAddresses": [
+    "http://web.ist.utl.pt/ist112345/"
+  ],
+  "workWebAddresses": [
+    "http://web.ist.utl.pt/ist112345/"
+  ]
 }
 {% endhighlight %}
 
@@ -696,51 +763,51 @@ This endpoint returns the user's class information. This information can be retr
 #### Example Response
 {% highlight json %}
 {
-    "academicTerm": "2013/2014",
-    "events": [
+  "academicTerm": "2013/2014",
+  "events": [
+    {
+      "classPeriod": {
+        "start": "18/09/2013 17:30",
+        "end": "18/09/2013 19:00"
+      },
+      "location": [
         {
-            "classPeriod": {
-                "start": "18/09/2013 17:30",
-                "end": "18/09/2013 19:00"
-            },
-            "location": [
-                {
-                    "type": "ROOM",
-                    "name": "F4",
-                    "id": "2448131363674"
-                }
-            ],
-            "title": "Gestão : Problemas",
-            "course": {
-                "acronym": "Ges5",
-                "name": "Gestão",
-                "academicTerm": "1ºSemestre 2013/2014",
-                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/",
-                "id": "1610612925989"
-            }
-        },
-        {
-            "classPeriod": {
-                "start": "28/10/2013 14:30",
-                "end": "28/10/2013 15:30"
-            },
-            "location": [
-                {
-                    "type": "ROOM",
-                    "name": "QA02.4",
-                    "id": "2448131363664"
-                }
-            ],
-            "title": "Análise Complexa e Equações Diferenciais : Teórica",
-            "course": {
-                "acronym": "aced42",
-                "name": "Análise Complexa e Equações Diferenciais",
-                "academicTerm": "1º Semester 2013/2014",
-                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/aced42/",
-                "id": "1610612925691"
-            }
+          "type": "ROOM",
+          "name": "F4",
+          "id": "2448131363674"
         }
-    ]
+      ],
+      "title": "Gestão : Problemas",
+      "course": {
+        "acronym": "Ges5",
+        "name": "Gestão",
+        "academicTerm": "1ºSemestre 2013/2014",
+        "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/",
+        "id": "1610612925989"
+      }
+    },
+    {
+      "classPeriod": {
+        "start": "28/10/2013 14:30",
+        "end": "28/10/2013 15:30"
+      },
+      "location": [
+        {
+          "type": "ROOM",
+          "name": "QA02.4",
+          "id": "2448131363664"
+        }
+      ],
+      "title": "Análise Complexa e Equações Diferenciais : Teórica",
+      "course": {
+        "acronym": "aced42",
+        "name": "Análise Complexa e Equações Diferenciais",
+        "academicTerm": "1º Semester 2013/2014",
+        "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/aced42/",
+        "id": "1610612925691"
+      }
+    }
+  ]
 }
 {% endhighlight %}
 
@@ -760,47 +827,47 @@ This endpoint returns the students's evaluations information. This information c
 #### Example Response
 {% highlight json %}
 {
-    "academicTerm": "2013/2014",
-    "events": [
+  "academicTerm": "2013/2014",
+  "events": [
+    {
+      "evaluationPeriod": {
+        "start": "04/10/2013 00:57",
+        "end": "04/10/2013 01:57"
+      },
+      "location": [],
+      "title": "Inicio das inscrições para 2º Teste : Análise Complexa e Equações Diferenciais",
+      "course": {
+        "acronym": "aced42",
+        "name": "Análise Complexa e Equações Diferenciais",
+        "academicTerm": "1ºSemestre 2013/2014",
+        "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/aced42/",
+        "id": "1610612925691"
+      }
+    },
+    {
+      "evaluationPeriod": {
+        "start": "06/11/2013 19:00",
+        "end": "04/10/2013 21:00"
+      },
+      "location": [
         {
-            "evaluationPeriod": {
-                "start": "04/10/2013 00:57",
-                "end": "04/10/2013 01:57"
-            },
-            "location": [],
-            "title": "Inicio das inscrições para 2º Teste : Análise Complexa e Equações Diferenciais",
-            "course": {
-                "acronym": "aced42",
-                "name": "Análise Complexa e Equações Diferenciais",
-                "academicTerm": "1ºSemestre 2013/2014",
-                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/aced42/",
-                "id": "1610612925691"
-            }
-        },
-        {
-            "evaluationPeriod": {
-                "start": "06/11/2013 19:00",
-                "end": "04/10/2013 21:00"
-            },
-            "location": [
-                {
-                    "type": "ROOM",
-                    "name": "F2",
-                    "id": "2448131363664"
-                }
-            ],
-            "title": "1º Teste : Gestão",
-            "courses": [
-                {
-                    "acronym": "Ges5",
-                    "name": "Gestão",
-                    "academicTerm": "1ºSemestre 2013/2014",
-                    "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/",
-                    "id": "1610612925989"
-                }
-            ]
+          "type": "ROOM",
+          "name": "F2",
+          "id": "2448131363664"
         }
-    ]
+      ],
+      "title": "1º Teste : Gestão",
+      "courses": [
+        {
+          "acronym": "Ges5",
+          "name": "Gestão",
+          "academicTerm": "1ºSemestre 2013/2014",
+          "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/",
+          "id": "1610612925989"
+        }
+      ]
+    }
+  ]
 }
 {% endhighlight %}
 
@@ -819,33 +886,33 @@ If no academicTerm is defined it returns the degree information for the `current
 #### Example Response
 {% highlight json %}
 {
-	"enrolments": [
-		{
-			"id": "1610612926309",
-			"acronym": "IAC4",
-			"name": "Introdução à Arquitetura de Computadores",
-			"academicTerm": "1ºSemestre 2013/2014",
-			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/iac4/2013-2014/1-semestre",
-			"grade": null
-		},
-		{
-			"id": "1610612925989",
-			"acronym": "Ges5",
-			"name": "Gestão",
-			"academicTerm": "1ºSemestre 2013/2014",
-			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/2013-2014/1-semestre",
-			"grade": null
-		}
-	],
-	"teaching": [
-		{
-			"id": "1610612926363",
-			"acronym": "SE2",
-			"name": "Sistemas Entre-Pares e Redes Sobrepostas",
-			"academicTerm": "1ºSemestre 2013/2014",
-			"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/SE2/2013-2014/1-semestre"
-		}
-	]
+  "enrolments": [
+    {
+      "id": "1610612926309",
+      "acronym": "IAC4",
+      "name": "Introdução à Arquitetura de Computadores",
+      "academicTerm": "1ºSemestre 2013/2014",
+      "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/iac4/2013-2014/1-semestre",
+      "grade": null
+    },
+    {
+      "id": "1610612925989",
+      "acronym": "Ges5",
+      "name": "Gestão",
+      "academicTerm": "1ºSemestre 2013/2014",
+      "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ges5/2013-2014/1-semestre",
+      "grade": null
+    }
+  ],
+  "teaching": [
+    {
+      "id": "1610612926363",
+      "acronym": "SE2",
+      "name": "Sistemas Entre-Pares e Redes Sobrepostas",
+      "academicTerm": "1ºSemestre 2013/2014",
+      "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/SE2/2013-2014/1-semestre"
+    }
+  ]
 }
 {% endhighlight %}
 
@@ -862,34 +929,34 @@ Complete curriculum (only for students)
 
 {% highlight json %}
 [
-	{
-		"degree" : { 
-			"name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
-		  	"acronym": "MEIC-A",
-		  	"id": "2761663971475"
-		},
-		"start": "19/07/2012",
-		"end": null,
-		"credits": 7.5,
-		"average": 10.00,
-		"calculatedAverage": 10,
-		"isFinished": false,
-		"numberOfApprovedCourses": 1,
-		"currentYear": 1,
-		"approvedCourses": [
-			{
-				"course" : { 
-					"name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
-					"id": "1610612905780",
-					"acronym": "LN-2",
-					"academicTerm": "1ºSemestre 2013/2014",
-					"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ln-2/2012-2013/1-semestre" 
-				},
-				"grade": "10",
-				"credits": 7.5
-			}
-		]
-	}
+  {
+    "degree": {
+      "name": "Mestrado Bolonha em Engenharia Informática e de Computadores - Alameda",
+      "acronym": "MEIC-A",
+      "id": "2761663971475"
+    },
+    "start": "19/07/2012",
+    "end": null,
+    "credits": 7.5,
+    "average": 10,
+    "calculatedAverage": 10,
+    "isFinished": false,
+    "numberOfApprovedCourses": 1,
+    "currentYear": 1,
+    "approvedCourses": [
+      {
+        "course": {
+          "name": "Unidade Curricular Aplicacional 1 (Língua Natural)",
+          "id": "1610612905780",
+          "acronym": "LN-2",
+          "academicTerm": "1ºSemestre 2013/2014",
+          "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ln-2/2012-2013/1-semestre"
+        },
+        "grade": "10",
+        "credits": 7.5
+      }
+    ]
+  }
 ]
 {% endhighlight %}
 
@@ -906,73 +973,73 @@ This endpoint returns the student's written evaluation information.
 #### Example Response
 {% highlight json %}
 [
-    {
-	"id": "2512556536123",
-	"type": "TEST",
-	"name": "Teste 1º Teste",
-	"evaluationPeriod": {
-	    "start": "15/11/2013 18:00",
-	    "end": "15/11/2013 21:00"
-	},
-	"isInEnrolmentPeriod": false,
-	"enrollmentPeriod": {
-	    "start": "2013-11-07 15:00:25",
-	    "end": "2013-11-12 13:00:25"
-	},
-	"isEnrolled": true,
-	"courses": [
-	    {
-		"id": "1610612926408",
-		"acronym": "GPI4",
-		"name": "Gestão de Projectos Informáticos",
-		"academicTerm": "1ºSemestre 2013/2014",
-		"url": "https://fenix.tecnico.ulisboa.pt/disciplinas/gpi4/2013-2014/1-semestre"
-	    }
-	],
-	"rooms": [
-	    {
-		"type": "ROOM",
-		"id": "2448131363664",
-		"name": "F2 - Sala de Aula"
-	    },
-	    {
-		"type": "ROOM",
-		"id": "2448131363667",
-		"name": "FA1 - Anfiteatro"
-	    }
-	],
-	"assignedRoom": {
-	    "type": "ROOM",
-	    "id": "2448131363674",
-	    "name": "F4 - Sala de Aula"
-	}
-	},
-	{
-	"id": "2512556536124",
-	"type": "EXAM",
-	"name": "Exame 1º Época",
-	"evaluationPeriod": {
-	    "start": "10/01/2014 08:00",
-	    "end": "10/01/2014 11:00"
-	},
-	"isInEnrolmentPeriod": false,
-	"enrollmentPeriod": {
-	    "start": "2013-12-20 17:00:22",
-	    "end": "2014-01-07 12:00:22"
-	},
-	"isEnrolled": false,
-	"courses": [
-	    {
-		"id": "1610612926115",
-		"acronym": "ASof22",
-		"name": "Arquitecturas de Software",
-		"academicTerm": "1ºSemestre 2013/2014",
-		"url": "https://fenix.tecnico.ulisboa.pt/disciplinas\/asof22/2013-2014/1-semestre"
-	    }
-	],
-	"rooms": [],
-	"assignedRoom": null
-	}
+  {
+    "id": "2512556536123",
+    "type": "TEST",
+    "name": "Teste 1º Teste",
+    "evaluationPeriod": {
+      "start": "15/11/2013 18:00",
+      "end": "15/11/2013 21:00"
+    },
+    "isInEnrolmentPeriod": false,
+    "enrollmentPeriod": {
+      "start": "2013-11-07 15:00:25",
+      "end": "2013-11-12 13:00:25"
+    },
+    "isEnrolled": true,
+    "courses": [
+      {
+        "id": "1610612926408",
+        "acronym": "GPI4",
+        "name": "Gestão de Projectos Informáticos",
+        "academicTerm": "1ºSemestre 2013/2014",
+        "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/gpi4/2013-2014/1-semestre"
+      }
+    ],
+    "rooms": [
+      {
+        "type": "ROOM",
+        "id": "2448131363664",
+        "name": "F2 - Sala de Aula"
+      },
+      {
+        "type": "ROOM",
+        "id": "2448131363667",
+        "name": "FA1 - Anfiteatro"
+      }
+    ],
+    "assignedRoom": {
+      "type": "ROOM",
+      "id": "2448131363674",
+      "name": "F4 - Sala de Aula"
+    }
+  },
+  {
+    "id": "2512556536124",
+    "type": "EXAM",
+    "name": "Exame 1º Época",
+    "evaluationPeriod": {
+      "start": "10/01/2014 08:00",
+      "end": "10/01/2014 11:00"
+    },
+    "isInEnrolmentPeriod": false,
+    "enrollmentPeriod": {
+      "start": "2013-12-20 17:00:22",
+      "end": "2014-01-07 12:00:22"
+    },
+    "isEnrolled": false,
+    "courses": [
+      {
+        "id": "1610612926115",
+        "acronym": "ASof22",
+        "name": "Arquitecturas de Software",
+        "academicTerm": "1ºSemestre 2013/2014",
+        "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/asof22/2013-2014/1-semestre"
+      }
+    ],
+    "rooms": [],
+    "assignedRoom": null
+  }
 ]
 {% endhighlight %}
 
@@ -1005,26 +1072,26 @@ This endpoint returns user's payments information.
 #### Example Response
 {% highlight json %}
 {
-    "completed": [
-        {
-            "amount": "12.34",
-            "type": "CASH",
-            "description": "Taxa de Secretaria e Seguro - 2012/2013",
-            "date": "30/12/2002"
-        }
-    ],
-    "pending": [
-        {
-            "description": "Propina",
-            "paymentPeriod": {
-                "start": "13/09/2013 00:00",
-                "end": "31/12/2013 23:59"
-            },
-            "entity": "12345",
-            "reference": "111 222 333",
-            "amount": "1234.56"
-        }
-    ]
+  "completed": [
+    {
+      "amount": "12.34",
+      "type": "CASH",
+      "description": "Taxa de Secretaria e Seguro - 2012/2013",
+      "date": "30/12/2002"
+    }
+  ],
+  "pending": [
+    {
+      "description": "Propina",
+      "paymentPeriod": {
+        "start": "13/09/2013 00:00",
+        "end": "31/12/2013 23:59"
+      },
+      "entity": "12345",
+      "reference": "111 222 333",
+      "amount": "1234.56"
+    }
+  ]
 }
 {% endhighlight %}
 
@@ -1040,16 +1107,16 @@ This endpoint returns the information about the campi.
 #### Example Response
 {% highlight json %}
 [
-    {
-        "id": "2465311230082",
-        "name": "Taguspark",
-        "type": "CAMPUS"
-    },
-    {
-        "id": "2465311230081",
-        "name": "Alameda",
-        "type": "CAMPUS"
-    }
+  {
+    "id": "2465311230082",
+    "name": "Taguspark",
+    "type": "CAMPUS"
+  },
+  {
+    "id": "2465311230081",
+    "name": "Alameda",
+    "type": "CAMPUS"
+  }
 ]
 {% endhighlight %}
 
@@ -1070,41 +1137,41 @@ This endpoint returns information about the space for a given {id}, its containe
 #### Example Response
 {% highlight json %}
 {
-    "type": "ROOM",
-    "id": "2448131363667",
-    "name": "FA1 - Anfiteatro",
-    "containedSpaces": [],
-    "parentSpace": {
-    	"type": "FLOOR",
-    	"id": "2723009268079",
-    	"name": "0"
-    },
-    "description": "FA1 - Pavilhão de Informática I (Alameda)",
-    "capacity": {
-	"normal": 93,
-	"exam": 30
-    },
-    "events": [
-        {
-	    "type": "LESSON",
-      	    "start": "10:30",
-      	    "end": "12:00",
-      	    "weekday": "Sex",
-      	    "day": "21/02/2014",
-      	    "period": {
-        	"start": "21/02/2014 10:30",
-        	"end": "21/02/2014 12:00"
-      	    },
-            "info": "T",
-       	    "course": {
-                "id": "1610612946588",
-                "acronym": "IAED7645",
-                "name": "Introdução aos Algoritmos e Estruturas de Dados",
-                "academicTerm": "2 Semestre 2013/2014",
-                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/iaed7645/2013-2014/2-semestre"
-      	    }
-        }
-    ]
+  "type": "ROOM",
+  "id": "2448131363667",
+  "name": "FA1 - Anfiteatro",
+  "containedSpaces": [],
+  "parentSpace": {
+    "type": "FLOOR",
+    "id": "2723009268079",
+    "name": "0"
+  },
+  "description": "FA1 - Pavilhão de Informática I (Alameda)",
+  "capacity": {
+    "normal": 93,
+    "exam": 30
+  },
+  "events": [
+    {
+      "type": "LESSON",
+      "start": "10:30",
+      "end": "12:00",
+      "weekday": "Sex",
+      "day": "21/02/2014",
+      "period": {
+        "start": "21/02/2014 10:30",
+        "end": "21/02/2014 12:00"
+      },
+      "info": "T",
+      "course": {
+        "id": "1610612946588",
+        "acronym": "IAED7645",
+        "name": "Introdução aos Algoritmos e Estruturas de Dados",
+        "academicTerm": "2 Semestre 2013/2014",
+        "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/iaed7645/2013-2014/2-semestre"
+      }
+    }
+  ]
 }
 {% endhighlight %}
 
