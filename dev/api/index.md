@@ -1065,31 +1065,46 @@ This endpoint returns information about the space for a given {id}, its containe
 **day** - "dd/mm/yyyy"
 
 #### Example Request
-```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/spaces/2972117371186?day=22/05/2013
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/spaces/2448131363667?day=21/02/2014
 
 #### Example Response
 {% highlight json %}
 {
-    "id": "2972117371186",
-    "name": "Torre Sul",
-    "type": "BUILDING",
-    "containedSpaces": [
-        {
-            "id": "2723009268034",
-            "name": "12",
-            "type": "FLOOR"
-        },
-        {
-            "id": "2723009268033",
-            "name": "11",
-            "type": "FLOOR"
-        }
-    ],
+    "type": "ROOM",
+    "id": "2448131363667",
+    "name": "FA1 - Anfiteatro",
+    "containedSpaces": [],
     "parentSpace": {
-        "id": "2465311230081",
-        "name": "Alameda",
-        "type": "CAMPUS"
-    }
+    	"type": "FLOOR",
+    	"id": "2723009268079",
+    	"name": "0"
+    },
+    "description": "FA1 - Pavilhão de Informática I (Alameda)",
+    "capacity": {
+	"normal": 93,
+	"exam": 30
+    },
+    "events": [
+        {
+	    "type": "LESSON",
+      	    "start": "10:30",
+      	    "end": "12:00",
+      	    "weekday": "Sex",
+      	    "day": "21/02/2014",
+      	    "period": {
+        	"start": "21/02/2014 10:30",
+        	"end": "21/02/2014 12:00"
+      	    },
+            "info": "T",
+       	    "course": {
+                "id": "1610612946588",
+                "acronym": "IAED7645",
+                "name": "Introdução aos Algoritmos e Estruturas de Dados",
+                "academicTerm": "2 Semestre 2013/2014",
+                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/iaed7645/2013-2014/2-semestre"
+      	    }
+        }
+    ]
 }
 {% endhighlight %}
 
