@@ -50,26 +50,27 @@ https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612925989?lang=en-US
 ### Public Endpoints
 * [GET /about](#toc_4) <i class="icon-lock-open"></i>
 * [GET /academicterms](#toc_7) <i class="icon-lock-open"></i>
-* [GET /courses/{id}](#toc_10) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/evaluations](#toc_13) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/groups](#toc_16) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/schedule](#toc_19) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/students](#toc_22) <i class="icon-lock-open"></i>
-* [GET /degrees](#toc_25) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}](#toc_29) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}/courses](#toc_33) <i class="icon-lock-open"></i>
-* [GET /domainModel](#toc_76) <i class="icon-lock-open"></i>
-* [GET /person](#toc_37)  <i class="icon-lock"></i><i class="icon-user"></i>
-* [GET /person/calendar/classes](#toc_40) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/calendar/evaluations](#toc_44) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/courses](#toc_48) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/curriculum](#toc_52) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/evaluations](#toc_55) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [PUT /person/evaluations/{id}](#toc_58) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [GET /person/payments](#toc_62) <i class="icon-lock"></i><i class="icon-basket"></i>
-* [GET /spaces](#toc_65)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}](#toc_68)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}/blueprint](#toc_72)  <i class="icon-lock-open"></i>
+* [GET /canteen](#toc_10) <i class="icon-lock-open"></i>
+* [GET /courses/{id}](#toc_13) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/evaluations](#toc_16) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/groups](#toc_19) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/schedule](#toc_22) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/students](#toc_25) <i class="icon-lock-open"></i>
+* [GET /degrees](#toc_28) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}](#toc_32) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}/courses](#toc_36) <i class="icon-lock-open"></i>
+* [GET /domainModel](#toc_40) <i class="icon-lock-open"></i>
+* [GET /person](#toc_43)  <i class="icon-lock"></i><i class="icon-user"></i>
+* [GET /person/calendar/classes](#toc_46) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/calendar/evaluations](#toc_50) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/courses](#toc_54) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/curriculum](#toc_58) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/evaluations](#toc_61) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [PUT /person/evaluations/{id}](#toc_64) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [GET /person/payments](#toc_68) <i class="icon-lock"></i><i class="icon-basket"></i>
+* [GET /spaces](#toc_71)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}](#toc_74)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}/blueprint](#toc_78)  <i class="icon-lock-open"></i>
 
 
 > <span>NOTE</span>
@@ -147,6 +148,145 @@ The returned object keys are not ordered in any particular way.
   "2009/2010": [
     "2 Semestre 2009/2010",
     "1 Semestre 2009/2010"
+  ]
+}
+{% endhighlight %}
+
+### GET /canteen
+
+<i class="icon-lock-open"></i>
+
+This endpoint returns the menu information of Alameda's canteen.
+
+#### Example Request
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/canteen
+
+#### Example Response
+{% highlight json %}
+{
+  "en-GB": [
+    {
+      "day": "24/2/2014",
+      "meal": [
+        {
+          "info": [
+            {
+              "menu": "Diet Menu",
+              "name": "Grilled flounder with vegetables",
+              "type": "Diet"
+            },
+            {
+              "menu": "Macrobiotic Menu",
+              "name": "Tofu salad",
+              "type": "Macrobiotic"
+            },
+            {
+              "menu": "Traditional Menu",
+              "name": "Pork steak with spaghetti",
+              "type": "Meat"
+            },
+            {
+              "menu": "Traditional Menu",
+              "name": "Fried flounder",
+              "type": "Fish"
+            },
+            {
+              "menu": "Traditional Menu",
+              "name": "Soup of green beans and carrots",
+              "type": "Soup"
+            }
+          ],
+          "type": "Lunch"
+        },
+        {
+          "info": [
+            {
+              "menu": "Macrobiotic Menu",
+              "name": "Fried vegetables with rice",
+              "type": "Macrobiotic"
+            },
+            {
+              "menu": "Traditional Menu",
+              "name": "Pork with pickles and olive",
+              "type": "Meat"
+            },
+            {
+              "menu": "Traditional Menu",
+              "name": "Roasted red fish",
+              "type": "Fish"
+            },
+            {
+              "menu": "Traditional Menu",
+              "name": "Julienne soup",
+              "type": "Soup"
+            }
+          ],
+          "type": "Dinner"
+        }
+      ]
+    }
+  ],
+  "pt-PT": [
+    {
+      "day": "24/2/2014",
+      "meal": [
+        {
+          "info": [
+            {
+              "menu": "Menú Dieta",
+              "name": "Solha grelhada com legumes",
+              "type": "Dieta"
+            },
+            {
+              "menu": "Menú Macrobiótica",
+              "name": "Salada de tofu",
+              "type": "Macrobiótico"
+            },
+            {
+              "menu": "Menú Tradicional",
+              "name": "Bifinhos de porco com esparguete",
+              "type": "Carne"
+            },
+            {
+              "menu": "Menú Tradicional",
+              "name": "Solha au meunier",
+              "type": "Peixe"
+            },
+            {
+              "menu": "Menú Tradicional",
+              "name": "Sopa de feijão verde e cenoura",
+              "type": "Sopa"
+            }
+          ],
+          "type": "Almoço"
+        },
+        {
+          "info": [
+            {
+              "menu": "Menú Macrobiótica",
+              "name": "Pataniscas de legumes com arroz",
+              "type": "Macrobiótico"
+            },
+            {
+              "menu": "Menú Tradicional",
+              "name": "Carne de porco à alentejana",
+              "type": "Carne"
+            },
+            {
+              "menu": "Menú Tradicional",
+              "name": "Red fish assado",
+              "type": "Peixe"
+            },
+            {
+              "menu": "Menú Tradicional",
+              "name": "Sopa juliana",
+              "type": "Sopa"
+            }
+          ],
+          "type": "Jantar"
+        }
+      ]
+    }
   ]
 }
 {% endhighlight %}
@@ -675,6 +815,73 @@ If no academicTerm is defined it returns the degree information for the `current
   }
 ]
 {% endhighlight %}
+
+### GET /domainModel
+
+<i class="icon-lock-open"></i>
+
+This endpoint returns a representation of the domain model for the application.
+While this information is returned in a JSON format, the concepts underlying 
+the domain model can be found on the Fenix Framework site:
+http://fenix-framework.github.io/DML.html
+
+#### Example Request
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/domainModel
+
+#### Example Response
+{% highlight json %}
+{
+  "classes": [
+    {
+      "className": "net.sourceforge.fenixedu.domain.Shift",
+      "interfaces": [],
+      "modifiers": [],
+      "slots": [
+        {
+          "type": "java.lang.Integer",
+          "name": "lotacao",
+          "modifiers": [],
+          "options": []
+        },
+        {
+          "type": "java.lang.String",
+          "name": "nome",
+          "modifiers": [],
+          "options": []
+        },
+        {
+          "type": "java.lang.String",
+          "name": "comment",
+          "modifiers": [],
+          "options": []
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "name": "RootDomainObjectNonRegularTeachingService",
+      "roles": [
+        {
+          "type": "net.sourceforge.fenixedu.domain.NonRegularTeachingService",
+          "name": "nonRegularTeachingServices",
+          "modifiers": [],
+          "multiplicityLower": "0",
+          "multiplicityUpper": "*"
+        },
+        {
+          "type": "org.fenixedu.bennu.core.domain.Bennu",
+          "name": "rootDomainObject",
+          "modifiers": [],
+          "multiplicityLower": "0",
+          "multiplicityUpper": "1"
+        }
+      ]
+    }
+  ]
+}
+{% endhighlight %}
+
 ### GET /person
 
 <i class="icon-lock"></i><i class="icon-user"></i>
@@ -1192,69 +1399,3 @@ This endpoint returns the space's blueprint in the required format
 response content-type : "application/dwg" or "image/jpg"
 
 response content: raw image data
-
-### GET /domainModel
-
-<i class="icon-lock-open"></i>
-
-This endpoint returns a representation of the domain model for the application.
-While this information is returned in a JSON format, the concepts underlying 
-the domain model can be found on the Fenix Framework site:
-http://fenix-framework.github.io/DML.html
-
-#### Example Request
-```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/domainModel
-
-#### Example Response
-{% highlight json %}
-{
-  "classes": [
-    {
-      "className": "net.sourceforge.fenixedu.domain.Shift",
-      "interfaces": [],
-      "modifiers": [],
-      "slots": [
-        {
-          "type": "java.lang.Integer",
-          "name": "lotacao",
-          "modifiers": [],
-          "options": []
-        },
-        {
-          "type": "java.lang.String",
-          "name": "nome",
-          "modifiers": [],
-          "options": []
-        },
-        {
-          "type": "java.lang.String",
-          "name": "comment",
-          "modifiers": [],
-          "options": []
-        }
-      ]
-    }
-  ],
-  "relations": [
-    {
-      "name": "RootDomainObjectNonRegularTeachingService",
-      "roles": [
-        {
-          "type": "net.sourceforge.fenixedu.domain.NonRegularTeachingService",
-          "name": "nonRegularTeachingServices",
-          "modifiers": [],
-          "multiplicityLower": "0",
-          "multiplicityUpper": "*"
-        },
-        {
-          "type": "org.fenixedu.bennu.core.domain.Bennu",
-          "name": "rootDomainObject",
-          "modifiers": [],
-          "multiplicityLower": "0",
-          "multiplicityUpper": "1"
-        }
-      ]
-    }
-  ]
-}
-{% endhighlight %}
