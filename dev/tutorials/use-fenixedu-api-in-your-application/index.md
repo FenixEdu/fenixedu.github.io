@@ -58,7 +58,7 @@ If you still wish to understand the overall flow, or in case you decided not to 
 The first thing your application must do is to obtain authorization from a FenixEdu user. To do this, you application must redirect the user to the authorization form, like the one identified in Figure 2.
 
 {% highlight bash %}
-https://fenix.ist.utl.pt/oauth/userdialog?client_id=<client_id>&redirect_uri=<redirect_uri>
+https://fenix.tecnico.ulisboa.pt/oauth/userdialog?client_id=<client_id>&redirect_uri=<redirect_uri>
 {% endhighlight %}
 
 This page will prompt the user to authorize your application, so that FenixEdu™ can provide the information you requested when you created your application. If the user is not logged in, FenixEdu™ will ask him to login first before he can authorize your application.
@@ -90,7 +90,7 @@ After the user authorizes your application, FenixEdu will invoke a ```GET``` HTT
 The obtained code must be used to obtain an ```access_token``` for that user. For that, you must invoke a ```POST``` HTTP request in the exemplified endpoint:
 
 {% highlight bash %}
-https://fenix.ist.utl.pt/oauth/access_token?client_id=<client_id>&client_secret=<client_secret>&redirect_uri=<redirect_uri>&code=<code>&grant_type=authorization_code
+https://fenix.tecnico.ulisboa.pt/oauth/access_token?client_id=<client_id>&client_secret=<client_secret>&redirect_uri=<redirect_uri>&code=<code>&grant_type=authorization_code
 {% endhighlight %}
 
 If everything is working as intended, an ```HTTP 200 Ok``` response with ```Content-Type: application/json``` should be returned with the following body:
@@ -113,7 +113,7 @@ In the interest of security, every issued access token is only valid for 1 hour.
 
 To get a new ```access_token```, you must invoke a ```POST``` request to the following endpoint:
 
-	https://fenix.ist.utl.pt/oauth/refresh_token?client_id=<client_id>&client_secret=<client_secret>&refresh_token=<refresh_token>&grant_type=refresh_token
+	https://fenix.tecnico.ulisboa.pt/oauth/refresh_token?client_id=<client_id>&client_secret=<client_secret>&refresh_token=<refresh_token>&grant_type=refresh_token
 
 If everything goes smoothly, you should receive an ```HTTP 200 Ok``` response with ```Content-Type: application/json``` as exemplified:
 	
