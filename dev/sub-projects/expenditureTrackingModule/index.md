@@ -138,7 +138,7 @@ This endpoint allows external applications to allocate funds to a supplier.
 #### Example Response
 {% highlight json %}
 {
-	"???": "???"
+	"status": "OK"
 }
 {% endhighlight %}
 
