@@ -41,8 +41,9 @@ it specifies information regarding funds that have been allocated to the
 supplier.
 
 #### Query Parameters
-**access_token** - private token of the application invoking the endpoint
-**userID** - username of the user responsible for the invocation
+ - **access_token** - private token of the application invoking the endpoint
+ - **userID** - username of the user responsible for the invocation
+
 
 #### Example Request
 ```GET``` http://dot.ist.utl.pt/api/expenditures-tracking/v1/suppliers?access_token=xpto&userID=abc123
@@ -96,15 +97,17 @@ supplier.
 
 This endpoint allows external applications to allocate funds to a supplier.
 
+
 #### Query Parameters
-**access_token** - private token of the application invoking the endpoint
-**userID** - username of the user responsible for the invocation
-**supplierID** - internal identification of the supplier
-**value** - value to allocate
-**valueVat** - percentage value of VAT
-**cpvCode** - Common Procurement Vocabulary code that classifies the good or service being provided
-**goodsOrService** - Classification of the acquisition in one of two categories: "***GOODS***", "***SERVICES***"
-**description** - Short description of the provided goods or services
+ - **access_token** - private token of the application invoking the endpoint
+ - **userID** - username of the user responsible for the invocation
+ - **supplierID** - internal identification of the supplier
+ - **value** - value to allocate
+ - **valueVat** - percentage value of VAT
+ - **cpvCode** - Common Procurement Vocabulary code that classifies the good or service being provided
+ - **goodsOrService** - Classification of the acquisition in one of two categories: "**GOODS**", "**SERVICES**"
+ - **description** - Short description of the provided goods or services
+
 
 #### Example Request
 ```POST``` http://dot.ist.utl.pt/api/expenditures-tracking/v1/allocateFunds?access_token=xpto&userID=abc123&supplierID=201863469433&value=10&valueVat=23&cpvCode=30192113-6&goodsOrService=GOODS&description=abc
@@ -125,9 +128,9 @@ This endpoint allows external applications to allocate funds to a supplier.
 This endpoint allows external applications to allocate funds to a supplier.
 
 #### Query Parameters
-**access_token** - private token of the application invoking the endpoint
-**userID** - username of the user responsible for the invocation
-**processID** - process identification of the process to cancel
+ - **access_token** - private token of the application invoking the endpoint
+ - **userID** - username of the user responsible for the invocation
+ - **processID** - process identification of the process to cancel
 
 #### Example Request
 ```PUT``` http://dot.ist.utl.pt/api/expenditures-tracking/v1/cancelFundAllocation?access_token=xpto&userID=abc123&processID=IST/2014/0001
