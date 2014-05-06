@@ -403,6 +403,11 @@
 		height: auto;
 	}
 
+	aside img[alt="JProfiler"] {
+		opacity: 0.18;
+		width: 95px;
+	}
+
 	#sidebarButton {display: none;}
 
 
