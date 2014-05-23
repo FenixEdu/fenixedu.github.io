@@ -25,7 +25,12 @@ If you are using Maven to build your Java project, you just need to add the foll
 {% highlight xml %}
 <dependency>
   <groupId>org.fenixedu</groupId>
-  <artifactId>fenixedu-sdk-core</artifactId>
+  <artifactId>feaf4j-api</artifactId>
+  <version>2.0.0</version>
+</dependency>
+<dependency>
+  <groupId>org.fenixedu</groupId>
+  <artifactId>feaf4j-okhttp</artifactId>
   <version>2.0.0</version>
 </dependency>
 {% endhighlight %}
@@ -41,13 +46,13 @@ In order for Maven to know where to get this dependency from, you will also need
 
 ### Step 2 - Define your Credentials
 
-The next step is to create a file named ```configuration.properties``` and specify both your Consumer Key and Secret:
+The next step is to create a file named ```fenixedu.properties``` in ```src/main/resources``` and specify both your Consumer Key and Secret:
 
 {% highlight properties %}
-fenixedu.oauth.consumer.key=<your-consumer-key>
-fenixedu.oauth.consumer.secret=<your-consumer-secret>
-fenixedu.callback.url=<your-application-callback-url> //e.g. http://localhost:8080/authorization 
-fenixedu.base.url=<fenixedu-installation-base-url> //e.g. https://fenix.tecnico.ulisboa.pt
+oauth.consumer.key=<your-consumer-key>
+oauth.consumer.secret=<your-consumer-secret>
+callback.url=<your-application-callback-url> //e.g. http://localhost:8080/authorization 
+base.url=<fenixedu-installation-base-url> //e.g. https://fenix.tecnico.ulisboa.pt
 {% endhighlight %}
 
 
@@ -63,46 +68,70 @@ When using the client to invoke FenixEdu API endpoints, you should decide either
 After you configured your credentials, you can make synchronous invocations to the API like in the following example:
 
 {% highlight java %}
-FenixEduClient client = new FenixEduClientFactory.getSingleton();
-//redirect the user to the URL provided by client.getAuthorizationUrl();
+
+// create the client from properties file
+ApplicationConfiguration config = ApplicationConfiguration.fromPropertyFilename("/fenixedu.properties");
+FenixEduClientImpl client = new FenixEduClientImpl(config);
+
+//you can invoke public endpoints without any access token.
+JsonObject about = client.getAbout();
+
+//to access user's data, you must redirect the user to the URL provided by client.getAuthorizationUrl();
 //if the user accepts it, the FenixEdu API will invoke the defined callback url passing a query param named code.
 //e.g. http://localhost:8080/authorization?code=<authorization-code>
-//set the received code in the query with client.setCode(code);
-JsonObject personObject = client.getPerson();
+
+//get user's authorization data (access_token and refresh_token) client.
+FenixEduUserDetails userDetails = client.getUserDetailsFromCode(code);
+
+//when requesting user's private data, the authorization object must be passed along.
+JsonObject person = client.getPerson(userDetails.getAuthorization());
 {% endhighlight %}
 
 The above example instantiates a new client and invokes a request to retrieve information about the user that gave authorization to your application.
 
 #### Step 3.2 - Use the Asynchronous Client
 
-If your working mobile, you probably want to use the Asynchronous client. The first thing to do is change your Maven dependency:
+If your working mobile (in this example we are using Android), you probably want to use the Asynchronous client. The first thing to do is change your Maven dependency:
 
 {% highlight xml %}
 <dependency>
   <groupId>org.fenixedu</groupId>
-  <artifactId>fenixedu-sdk-async</artifactId>
+  <artifactId>feaf4j-api</artifactId>
+  <version>2.0.0</version>
+</dependency>
+<dependency>
+  <groupId>org.fenixedu</groupId>
+  <artifactId>feaf4j-okhttp</artifactId>
+  <version>2.0.0</version>
+</dependency>
+<dependency>
+  <groupId>org.fenixedu</groupId>
+  <artifactId>feaf4j-android</artifactId>
   <version>2.0.0</version>
 </dependency>
 {% endhighlight %}
 
-You won't be needing to depend on the fenixedu-sdk-core since it is a transitive dependency through the async library.
-
-Although the authorization part is similar to the synchronous client, the result of the invocation is obtained through a listener, which you must add to the client:
+Although the authorization part is similar to the synchronous client, the result of the invocation is obtained through the execute of an AsyncTask, which you must be created passing the client:
 
 {% highlight java %}
-AsyncFenixEduClient client = new AsyncFenixEduClientFactory.getSingleton();
+FenixEduClientImpl client = new FenixEduClientImpl(ApplicationConfiguration.fromPropertyFilename("/fenixedu.properties"));
+
+//you can invoke public endpoints without any access token.
+
+GetAboutAsyncTask about = new GetAboutAsyncTask(client);
+JsonObject jObj = about.execute().get();
+
 //redirect the user to the URL provided by client.getAuthorizationUrl();
 //if the user accepts it, the FenixEdu API will invoke the defined callback url passing a query param named code.
-//e.g. http://localhost:8080/authorization?code=<authorization-code>
-//set the received code in the query with client.setCode(code);
-client.addListener(new FenixEduClientAdapter() {
-	
-	@Override
-    public void gotPerson(JsonObject person) {
-        System.out.println(person.toString());
-    }
-});
-client.getPerson();
+//e.g. my-mobile-schema://my-mobile-app/authorization?code=<authorization-code>
+
+FenixEduUserDetails userDetails = client.getUserDetailsFromCode(code);
+
+// Use the async task to preform the requests.
+GetPersonAsyncTask personSync = new GetPersonAsyncTask(client,
+                   userDetails.getAuthorization());
+
+JsonObject person = personSync.execute().get();
 {% endhighlight %}
 
 > <span>Attention</span>
