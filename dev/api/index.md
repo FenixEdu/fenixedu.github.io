@@ -1160,7 +1160,7 @@ Complete curriculum (only for students)
           "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ln-2/2012-2013/1-semestre"
         },
         "grade": "10",
-        "credits": 7.5
+        "ects": 7.5
       }
     ]
   }
