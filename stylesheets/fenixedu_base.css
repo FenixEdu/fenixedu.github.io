@@ -168,7 +168,7 @@
 
 	time span {
 		/*font: normal normal 16px/1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-		font: normal normal 28px/0.5 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font: normal normal 21px/0.5 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		float: left;
 	}
 
@@ -364,7 +364,7 @@
 		padding-right: 20px;
 	}
 
-	p.browsehappy,  {
+	p.browsehappy {
 		background: #19accd;
 		color: #fefefe;
 		padding: 15px;

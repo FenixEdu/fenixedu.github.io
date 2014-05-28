@@ -36,8 +36,10 @@ To generate a new project, you just need to execute the following interactive Ma
 
 {% highlight bash %}
 mvn archetype:generate \
-   -DarchetypeGroupId=pt.ist.bennu \
-   -DarchetypeArtifactId=bennu-project-archetype
+   -DarchetypeGroupId=org.fenixedu \
+   -DarchetypeArtifactId=bennu-project-archetype \
+   -DarchetypeVersion=3.0.1 \
+   -DarchetypeRepository=https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository
 {% endhighlight %}
 
 After you run the above command, you will be prompted by a set of properties that are required to scaffold your new project. Most of these properties are Maven properties like the ```groupId```, ```artifactId``` and ```version``` of the artifact. 

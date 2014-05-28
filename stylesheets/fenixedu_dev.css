@@ -398,9 +398,14 @@
 	}
 
 	aside img {
-		padding: 20px 0;
+		padding: 12px 0 10px;
 		width: 118px;
 		height: auto;
+	}
+
+	aside img[alt="JProfiler"] {
+		opacity: 0.18;
+		width: 95px;
 	}
 
 	#sidebarButton {display: none;}
@@ -431,7 +436,7 @@
 		margin-bottom: 26px;
 	}
 
-	p.browsehappy,  {
+	p.browsehappy {
 		background: #19accd;
 		color: #fefefe;
 		padding: 15px;
