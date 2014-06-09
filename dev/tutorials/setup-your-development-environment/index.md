@@ -16,7 +16,7 @@ This tutorial walks you through the system requirements necessary to develop app
 * [Step 3 - Turn Off Unused and Unnecessary Services](#toc_4)
 * [Step 4 - Setup your Firewall](#toc_5)
 * [Step 5 - Install your Software Development Kit](#toc_6)
-	* [Step 5.1 - Oracle's JDK 7](#toc_7)
+	* [Step 5.1 - Oracle's JDK 8](#toc_7)
 	* [Step 5.2 - Apache Maven](#toc_8)
 	* [Step 5.3 - Git](#toc_9)
 	* [Step 5.3 - MySQL](#toc_10)
@@ -62,9 +62,9 @@ Here at DSI, we use Java as our main development language. Hence you should down
 
 Pillow is a project that attempts to ease the setup of the development environment. Pillow is essentially a *bash-script-puppet-manifest-to-be* that automates the installation and configuration of a generic development environment. For now, Pillow should only be runned in Debian-based GNU/Linux distributions, i.e. those who allow you to ```apt-get install``` stuff.
 
-#### Step 5.1 - Oracle's JDK 7
+#### Step 5.1 - Oracle's JDK 8
 
-Although the FenixEdu™ project would theoretically work with any JVM implementation, we <u>strongly advise</u> you use the Oracle's Java Development Kit (JKD) 7.
+The FenixEdu™ project requires the Oracle's Java Development Kit (JKD) 8.
 
 #### Step 5.2 - Apache Maven
 
@@ -75,7 +75,7 @@ Here are some useful macros that you can put in your ```~/.bash_profile```:
 {% highlight bash %}
 alias mcp='mvn clean package';
 alias mcp='mvn clean install';
-alias mcpj='mvn clean package jetty:start';
+alias mct='mvn clean tomcat7:run';
 {% endhighlight %}
 
 
@@ -102,7 +102,7 @@ Hence, you should install the latest [MySQL Server Community Edition][MySQL] in 
 
 #### Step 5.5 - Eclipse IDE for Java Developers
 
-After you have Oracle's JDK 7, Maven and Git, up and running, we recommend you to use the [Eclipse IDE for Java Developers][Eclipse] as we have a codestyle configuration file and a set of automatic save actions to enforce seamless code formatting among our team.
+After you have Oracle's JDK 8, Maven and Git, up and running, we recommend you to use the [Eclipse IDE for Java Developers][Eclipse] as we have a codestyle configuration file and a set of automatic save actions to enforce seamless code formatting among our team.
 
 ##### Configure Eclipse IDE
 
