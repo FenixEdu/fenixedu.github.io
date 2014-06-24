@@ -42,9 +42,6 @@ root: "../../"
 <li id="ricardo">
 	<h4>Ricardo Rodrigues</h4>
 	<p>Developer</p>
-	<a href=""><i aria-hidden="true" class="icon-link">URL</i></a>
-	<a href="https://github.com/nurv"><i aria-hidden="true" class="icon-github">@</i></a>
-	<a href="https://twitter.com/arturventura"><i aria-hidden="true" class="icon-twitter">@</i></a>
 	<img src="http://dali.ist.utl.pt/~ritasevero/solo/ricardo_rodrigues.jpg">
 </li>
 
