@@ -7,6 +7,13 @@ root: "../../"
 ## Meet the FenixEdu Team
 
 <ul class="box_container">
+<li id="luis">
+	<h4>Luís Cruz</h4>
+	<p>Lead Developer</p>
+	<a href="https://github.com/Luis-Cruz"><i aria-hidden="true" class="icon-github">@Luis-Cruz</i></a>
+	<img src="https://avatars2.githubusercontent.com/u/1499685?s=460">
+</li>
+
 <li id="artur">
 	<h4>Artur Ventura</h4>
 	<p>Developer</p>
@@ -30,13 +37,6 @@ root: "../../"
 	<a href="https://github.com/jcarvalho"><i aria-hidden="true" class="icon-github">@jcarvalho</i></a>
 	<a href="https://twitter.com/johnkarva"><i aria-hidden="true" class="icon-twitter">@johnkarva</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/849596?s=460">
-</li>
-
-<li id="luis">
-	<h4>Luís Cruz</h4>
-	<p>Lead Developer</p>
-	<a href="https://github.com/Luis-Cruz"><i aria-hidden="true" class="icon-github">@Luis-Cruz</i></a>
-	<img src="https://avatars2.githubusercontent.com/u/1499685?s=460">
 </li>
 
 <li id="ricardo">
