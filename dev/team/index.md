@@ -120,7 +120,8 @@ root: "../../"
 
 <li id="ricardo">
 	<h4>Ricardo Rodrigues</h4>
-	<p>Developer</p>
+	<p>Chief Dancing Officer</p>
+	<a href="https://github.com/ricardorcr"><i aria-hidden="true" class="icon-github">@ricardorcr</i></a>
 	<img src="http://dali.ist.utl.pt/~ritasevero/solo/ricardo_rodrigues.jpg">
 </li>
 
