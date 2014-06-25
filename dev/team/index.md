@@ -31,7 +31,7 @@ root: "../../"
 
 <li id="artur">
 	<h4>Artur Ventura</h4>
-	<p>Chief MacGyver Officer</p>
+	<p>Developer</p>
 	<a href="http://surf-the-edge.com"><i aria-hidden="true" class="icon-link">surf-the-edge.com</i></a>
 	<a href="https://github.com/nurv"><i aria-hidden="true" class="icon-github">@nurv</i></a>
 	<a href="https://twitter.com/arturventura"><i aria-hidden="true" class="icon-twitter">@arturventura</i></a>
@@ -47,7 +47,7 @@ root: "../../"
 
 <li id="david">
 	<h4>David Martinho</h4>
-	<p>Senior Naming Analyst</p>
+	<p>Junior Developer</p>
 	<a href="https://github.com/davidmartinho"><i aria-hidden="true" class="icon-github">@davidmartinho</i></a>
 	<a href="https://twitter.com/davidmartinho"><i aria-hidden="true" class="icon-twitter">@davidmartinho</i></a>
 	<img src="https://avatars0.githubusercontent.com/u/185608?s=460">
@@ -83,7 +83,7 @@ root: "../../"
 
 <li id="joao">
 	<h4>João Carvalho</h4>
-	<p>Chief Shaman Officer</p>
+	<p>Developer</p>
 	<a href="https://github.com/jcarvalho"><i aria-hidden="true" class="icon-github">@jcarvalho</i></a>
 	<a href="https://twitter.com/johnkarva"><i aria-hidden="true" class="icon-twitter">@johnkarva</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/849596?s=460">
@@ -105,7 +105,7 @@ root: "../../"
 
 <li id="pedro">
 	<h4>Pedro Santos</h4>
-	<p>Chief Ninja Officer</p>
+	<p>Developer</p>
 	<a href="https://github.com/pedrosan7os"><i aria-hidden="true" class="icon-github">@pedrosan7os</i></a>
 	<a href="https://twitter.com/pedrosan7os"><i aria-hidden="true" class="icon-twitter">@pedrosan7os</i></a>
 	<img src="https://avatars2.githubusercontent.com/u/1579125?s=460">
@@ -120,7 +120,7 @@ root: "../../"
 
 <li id="ricardo">
 	<h4>Ricardo Rodrigues</h4>
-	<p>Chief Dancing Officer</p>
+	<p>Developer</p>
 	<a href="https://github.com/ricardorcr"><i aria-hidden="true" class="icon-github">@ricardorcr</i></a>
 	<img src="http://dali.ist.utl.pt/~ritasevero/solo/ricardo_rodrigues.jpg">
 </li>
@@ -143,7 +143,7 @@ root: "../../"
 
 <li id="sergio">
 	<h4>Sérgio Silva</h4>
-	<p>Chief Benfiquista Officer</p>
+	<p>Developer</p>
 	<a href="https://github.com/sergiofbsilva"><i aria-hidden="true" class="icon-github">@sergiofbsilva</i></a>
 	<a href="https://twitter.com/sergiofbsilva"><i aria-hidden="true" class="icon-twitter">@sergiofbsilva</i></a>
 	<img src="https://avatars2.githubusercontent.com/u/1778577?s=460">
