@@ -716,6 +716,13 @@
 		max-width: 100%;
 		height: auto;
 	}
+	main > ul.box_container li {width: 49%;}
+	main > ul.box_container li img {
+		height: 96px;
+		left: 158px;
+		top: 78px;
+	}
+	main > ul.box_container li:last-child {margin-bottom: 40px;}
 	pre {padding: 5px 15px;}
 	blockquote {padding: 15px;}
 	footer span {padding-bottom: 30px;}
@@ -783,8 +790,17 @@
 	.active > .container { left: -70%!important; overflow: visible;}
 	.container .columns {width: 100%!important;}
 	time.one.columns {width: 10%!important; float: left;}
+
+	main > ul.box_container li img {left: 60%;}
 }
 
+@media only screen and (max-width: 545px) {
+	main > ul.box_container li {width: 100%;}
+	main > ul.box_container li img {
+		height: 120px;
+		top: 55px;
+	}
+}
 
 /* Print */
 
