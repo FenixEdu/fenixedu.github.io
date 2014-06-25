@@ -53,3 +53,22 @@ project. To contribute or request a change to a particular project, the develope
 [GitFlow]: http://nvie.com/posts/a-successful-git-branching-model/
 [Maven]: http://maven.apache.org/
 [Semantic Versioning]: http://semver.org/
+
+### Code Conventions
+
+Package names are always lowercase, invalid characters are simply stripped down. All project's java resources are locate in packages under: ```<organization>.<project>.<module>```, or ```<organization>.<project>``` for single module projects. For example, the core module of the bennu project, that is part of the fenixedu organization, has a base package name: ```org.fenixedu.bennu.core```.
+
+Inside the base package, resources are organized as follows:
+
+| Package | Resource Types | Depends on |
+| ------------- | ------------- | ------------- |
+| ```<base>``` | Configuration managers | - |
+| ```<base>.domain``` | Domain entities and related objects | ```<base>``` |
+| ```<base>.service``` | Services | ```<base>, <base>.domain``` |
+| ```<base>.api``` | Rest APIs | ```<base>, <base>.domain, <base>.service``` |
+| ```<base>.ui``` | Controllers, Portal Applications and Functionalities, and all other UI related resources | ```<base>, <base>.domain, <base>.service``` |
+| ```<base>.servlet``` | Servlets, Initializers, Filters | ```<base>, <base>.domain, <base>.service``` |
+| ```<base>.task``` | Scheduller Tasks | ```<base>, <base>.domain, <base>.service``` |
+| ```<base>.bootstrap``` | Bennu Bootstrappers | ```<base>, <base>.domain, <base>.service``` |
+
+If the result includes duplications, like ```org.fenixedu.sotis.ui.ui``` (because the project sotis has a submodule with only the UI parts), just collapse into: ```org.fenixedu.sotis.ui```.
