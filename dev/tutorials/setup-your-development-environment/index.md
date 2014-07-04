@@ -19,8 +19,8 @@ This tutorial walks you through the system requirements necessary to develop app
 	* [Step 5.1 - Oracle's JDK 8](#toc_7)
 	* [Step 5.2 - Apache Maven](#toc_8)
 	* [Step 5.3 - Git](#toc_9)
-	* [Step 5.3 - MySQL](#toc_10)
-	* [Step 5.3 - Eclipse IDE](#toc_11)
+	* [Step 5.4 - MySQL](#toc_10)
+	* [Step 5.5 - Eclipse IDE](#toc_11)
 * [Step 6 - Install and Configure MySQL](#toc_12)
 * [Troubleshooting](#toc_13)
 
@@ -108,10 +108,32 @@ After you have Oracle's JDK 8, Maven and Git, up and running, we recommend you t
 
 1. [Download][EclipseFenixCodeStyleFile] and copy EclipseFenixCodeStyle.xml to your Eclipse installation folder.
 2. While in Eclipse, go to ```Window > Preferences > Java > Code Style > Formatter```, press ```Import...``` and choose the file you copied in the previous step.
-3. While still in the Preferences menu, in ```Java > Editor > Save Actions```, please check the following options:
+3. While still in the Preferences menu, in ```Java > Editor > Save Actions```, please check the following options:  
+    - "Perform the selected actions on save",
+    - "Format source code"
+    - "Organize imports"
+    - "Additional actions"
+4. Press "Configure..." to set the additional actions:
+    - In Code Style, check "Use Blocks in if/while/for/do statements", "Convert for loops to enhanced" and "Use modifier 'final' where possible"
+    - In Missing Code, check all the options
+    - In Unnecessary code, check "Remove unnecessary casts", and "Remove unnecessary $NON-NLS$ tags"
+    - The resulting "Additional actions" should now look like this:
 
-
-
+        > Convert control statement bodies to block  
+        > Convert 'for' loops to enhanced 'for' loops  
+        > Add final modifier to private fields  
+        > Add missing '@Override' annotations  
+        > Add missing '@Override' annotations to implementations of interface methods  
+        > Add missing '@Deprecated' annotations  
+        > Remove unnecessary casts  
+        > Remove unnecessary '$NON-NLS$' tags  
+        
+5. In Java > Editor > Typing, check "Semicolon" and "Braces"
+6. In General > Editors > File Associations, add a new file type of '*.dml', and associate it with the Java Editor.
+7. In General > Editors > Text Editors, check "Show line numbers"
+8. In General > Editors > Text Editors > Spelling, uncheck "Enable spell checking"
+9. In General > Content Types, expand the "Text" node, and for each child node, set the encoding "UTF-8", except for "Java Properties File" which should have the encoding "ISO-8859-1"
+10. In General > Search, uncheck "Reuse editors to show matches" (optional)
 
 We recommend you to use the Eclipse IDE for Java Developers because Maven is already bundled in that version, and most of our projects are built using Maven.
 
