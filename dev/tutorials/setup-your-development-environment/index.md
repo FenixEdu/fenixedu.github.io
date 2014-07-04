@@ -64,7 +64,7 @@ Pillow is a project that attempts to ease the setup of the development environme
 
 #### Step 5.1 - Oracle's JDK 8
 
-The FenixEdu™ project requires the Oracle's Java Development Kit (JKD) 8.
+The FenixEdu™ project requires Oracle's Java Development Kit (JDK) 8, or OpenJDK 8.
 
 #### Step 5.2 - Apache Maven
 
