@@ -398,14 +398,18 @@
 	}
 
 	aside img {
-		padding: 12px 0 10px;
-		width: 118px;
-		height: auto;
+		padding: 15px 0 5px;
+		width: auto;
+		height: 25px;
+		display: block;
+	}
+
+	aside img[alt="LGPL Version 3"] {
+		height: 45px;
 	}
 
 	aside img[alt="JProfiler"] {
 		opacity: 0.18;
-		width: 95px;
 	}
 
 	#sidebarButton {display: none;}
