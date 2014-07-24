@@ -15,7 +15,7 @@ $(document).ready(function() {
 	})
 
 	$("#highlight .anchor").click(function () {
-		$.scrollTo("time", {duration: 'slow', offset: {top:-125}});	
+		$.scrollTo("#calltoaction", {duration: 'slow', offset: {top:-125}});	
 	})
 
 

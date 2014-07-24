@@ -97,6 +97,7 @@
 		font: normal normal 16px/1.4 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #333;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-moz-osx-font-smoothing: grayscale;
 		-webkit-text-size-adjust: 100%;
 		text-rendering: optimizelegibility;
 	}
@@ -148,11 +149,24 @@
 	header nav ul li:last-child {margin-left: 20px;}
 
 	section#highlight {
-		background: url('../images/highlight_bg_ignition.png') repeat 0 0;
+		background: url('../images/highlight_bg.png') repeat 0 0;
 		height: 595px;
 		padding: 120px 0;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+		position: relative;
+	}
+
+	section#highlight > div:after {
+		content: '';
+		background: url('../images/highlight_bg_user.png') no-repeat 0 0;
+		background-size: 100%;
+		width: 470px;
+		height: 625px;
+		position: absolute;
+		right: 0;
+		top: -143px;
+		visibility: visible;
 	}
 
 	time {
@@ -357,7 +371,7 @@
 	}
 
 	p img { margin: 0; }
-	p.lead { font: normal normal 19px/1.45 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; margin-bottom: 92px;}
+	p.lead { font: normal normal 19px/1.45 "KlavikaLightPlain", "Helvetica Neue", Helvetica, Arial, sans-serif; margin-bottom: 92px; color: #222;}
 	.eight.columns > p, p.eight.columns {
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -470,9 +484,10 @@
 		background: #575759;
 	}
 
-	.button.anchor {
+	.button.anchor + .button {
 		background: #f9f9f9;
 		color: #575759;
+		border: 1px solid #999;
 	}
 
 	.button.icon {
@@ -593,7 +608,7 @@
 	}
 
 
-/* Clear after event */
+/* Ignition
 
 	h1, p.lead {
 		margin-top: 35px;
@@ -616,6 +631,8 @@
 		color: #fefefe;
 		border: 1px solid #fefefe;
 	}
+
+*/
 
 
 /* Media Queries */
