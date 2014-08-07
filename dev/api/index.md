@@ -1393,7 +1393,7 @@ This endpoint returns the space's blueprint in the required format
 **format** - "jpeg" or "dwg"
 
 #### Example Request
-```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/spaces/2465311230082/blueprint
+```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/spaces/2448131360897/blueprint?format=jpeg
 
 #### Example Response
 response content-type : "application/dwg" or "image/jpg"
