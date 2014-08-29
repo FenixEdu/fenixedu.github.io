@@ -56,7 +56,7 @@ To securely access a remote MySQL server, without needing to logon to the remote
 ssh -A -fN -L <localport>:localhost:3306 <remoteUserName>@<remote.server.name>
 {% endhighlight %}
 
-### Step 5 - Install you Software Development Kit
+### Step 5 - Install your Software Development Kit
 
 Here at DSI, we use Java as our main development language. Hence you should download the latest [Oracle's Java Development Kit (JDK)][Java Oracle] version and install it.
 
@@ -74,7 +74,7 @@ Here are some useful macros that you can put in your ```~/.bash_profile```:
 
 {% highlight bash %}
 alias mcp='mvn clean package';
-alias mcp='mvn clean install';
+alias mci='mvn clean install';
 alias mct='mvn clean tomcat7:run';
 {% endhighlight %}
 
