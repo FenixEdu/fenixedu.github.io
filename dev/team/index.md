@@ -15,13 +15,6 @@ root: "../../"
 	<img src="https://avatars2.githubusercontent.com/u/1499685?s=460">
 </li>
 
-<li id="afonso">
-	<h4>Afonso Garcia</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/AfonsoFGarcia"><i aria-hidden="true" class="icon-github">@AfonsoFGarcia</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/3868681?s=460">
-</li>
-
 <li id="frederico">
 	<h4>André Nunes</h4>
 	<p>Junior Developer</p>
@@ -36,13 +29,6 @@ root: "../../"
 	<a href="https://github.com/nurv"><i aria-hidden="true" class="icon-github">@nurv</i></a>
 	<a href="https://twitter.com/arturventura"><i aria-hidden="true" class="icon-twitter">@arturventura</i></a>
 	<img src="https://avatars2.githubusercontent.com/u/132118?s=460">
-</li>
-
-<li id="carlos">
-	<h4>Carlos Bartolomeu</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/cbartol"><i aria-hidden="true" class="icon-github">@cbartol</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/4050959?s=460">
 </li>
 
 <li id="david">
@@ -74,26 +60,12 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/1466703?s=460">
 </li>
 
-<li id="amaral">
-	<h4>João Amaral</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/JNPA"><i aria-hidden="true" class="icon-github">@JNPA</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/5670929?s=460">
-</li>
-
 <li id="joao">
 	<h4>João Carvalho</h4>
 	<p>Developer</p>
 	<a href="https://github.com/jcarvalho"><i aria-hidden="true" class="icon-github">@jcarvalho</i></a>
 	<a href="https://twitter.com/johnkarva"><i aria-hidden="true" class="icon-twitter">@johnkarva</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/849596?s=460">
-</li>
-
-<li id="quiterio">
-	<h4>João Quitério</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/joaollq"><i aria-hidden="true" class="icon-github">@joaollq</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/4077285?s=460">
 </li>
 
 <li id="miguel">
