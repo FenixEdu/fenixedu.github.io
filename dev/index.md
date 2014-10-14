@@ -7,7 +7,7 @@ base_url: "./"
 
 <div id="intro"></div>
 
-[Explore the Endpoints][Explore the Endpoints]
+[Documentation][Documentation]
 [Know our Modules][Know our Modules]
 [Create new Modules][Create new Modules]
 
@@ -22,6 +22,6 @@ base_url: "./"
 </article>
 {% endfor %}
 
-[Explore the Endpoints]: /dev/api/
+[Documentation]: http://confluence.fenixedu.org
 [Know our Modules]: /dev/sub-projects/
 [Create new Modules]: /dev/tutorials/create-your-own-application/
