@@ -6,7 +6,7 @@ root: "../../../../../"
 excerpt: "FenixEdu Project is pleased to announce the release of FenixEdu Academic 4.0."
 ---
 
-## Announcing the release of FenixEdu 4.0
+## Announcing the release of FenixEdu Academic 4.0
 
 Hello everyone
 
