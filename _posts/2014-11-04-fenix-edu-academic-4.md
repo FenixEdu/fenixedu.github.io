@@ -44,7 +44,7 @@ That is why we are now moving to Bennu’s Groups, and deprecating the Roles. Ri
 
 ### Bennu Renderers 5
 
-Bennu Renderers is a legacy presentation engine that parts of FenixEdu Academic still use. Renderers now generates bootstrap code, so although rendering and parsing is still managed by legacy code, the look and feel for users is from this side of the centuary. Also, with the introduction of Bennu Toolkit in Bennu v3.4 we are moving some old compontents into the standard Toolkit inputs. 
+Bennu Renderers is a legacy presentation engine that parts of FenixEdu Academic still use. Renderers now generates bootstrap code, so although rendering and parsing is still managed by legacy code, the look and feel for users is from this side of the century. Also, with the introduction of Bennu Toolkit in Bennu v3.4 we are moving some old compontents into the standard Toolkit inputs. 
 
 ### Package Rebranding 
 
