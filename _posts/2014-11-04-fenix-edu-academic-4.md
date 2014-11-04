@@ -46,6 +46,10 @@ That is why we are now moving to Bennu’s Groups, and deprecating the Roles. Ri
 
 Bennu Renderers is a legacy presentation engine that parts of FenixEdu Academic still use. Renderers now generates bootstrap code, so although rendering and parsing is still managed by legacy code, the look and feel for users is from this side of the centuary. Also, with the introduction of Bennu Toolkit in Bennu v3.4 we are moving some old compontents into the standard Toolkit inputs. 
 
+### Package Rebranding 
+
+We are moving the source code from the old package "net.sourceforge.fenixedu" into the new naming scheme "org.fenixedu.academic". You can learn more about our source code organization in our <a href="https://confluence.fenixedu.org/display/FENIXEDU/Methodology">documentation site</a>.
+
 ### Removed modules
 
 In order to have a core Student Information System that can be extensible for other schools we had to move some of the core code into the institution installation, or remove it all together. The new core FenixEdu Academic comes without the following modules:
