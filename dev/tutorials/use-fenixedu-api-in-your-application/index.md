@@ -99,7 +99,7 @@ If everything is working as intended, an ```HTTP 200 Ok``` response with ```Cont
 {
   "access_token": "IGNhbiBjb252ZXJ0IHRleHRzW5nIHNldmVyYWwgY29kZSBwYWdlcpbmcgQ2hhclNl",
   "refresh_token": "dCBwcm9wZXJ0eSkgZnJvbSBVbmlIHN0cmluZyB0byBieXRlIGFycmZCB0aGVuIGNv",
-  "expires": "3600"
+  "expires_in": "3600"
 }
 {% endhighlight %}
 
@@ -117,7 +117,7 @@ To get a new ```access_token```, you must invoke a ```POST``` request to the fol
 
 If everything goes smoothly, you should receive an ```HTTP 200 Ok``` response with ```Content-Type: application/json``` as exemplified:
 	
-	{"access_token":"IGNhbiBjb252ZXJ0IHRleHRzIHVIHNldmVym3r2cgQ2hhclNl", "expires":"3600"}
+	{"access_token":"IGNhbiBjb252ZXJ0IHRleHRzIHVIHNldmVym3r2cgQ2hhclNl", "expires_in":"3600"}
 
 
 ### Troubleshooting
