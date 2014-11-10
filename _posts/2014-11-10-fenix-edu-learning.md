@@ -14,7 +14,7 @@ FenixEdu Project is happy to announce FenixEdu Learning, our new Learning Managm
 
 Teaching changed a lot since we started FenixEdu. 12 years ago, there was no <a href="http://wikipedia.org">Wikipedia</a>, <a href="http://youtube.com">YouTube</a> or <a href="https://www.khanacademy.org/">Khan Academy</a>, tablets or smartphones were almost non existent or social networks like <a href="http://facebook.com">Facebook</a>. But most Learning Managment Systems look and feel like they came from the 1990s, they haven't adapted to the new world where everyone has access to knowledge from almost anywhere, where content consumption can occur from your living room to your train comute to home. 
 
-We want to have a Learning Managment System for our Centuary, allowing the instant sharing of knowledge, anywhere, anytime and as soon as its avaible. That is why we are starting from scratch. rewriting our LMS from the ground up to make a great teaching solution from a small school to a huge university.
+We want to have a Learning Management System for our Century, allowing the instant sharing of knowledge, anywhere, anytime and as soon as its avaible. That is why we are starting from scratch. rewriting our LMS from the ground up to make a great teaching solution from a small school to a huge university.
 
 Like we said last tuesday whebn we've released FenixEdu Academic, our Student Information System, we removed all the Content Managment System code from the Academic product and rewrote it fron the ground up to serve as the foundation for FenixEdu Learning.
 
