@@ -47,7 +47,16 @@
       logo: "logo_school_iscte.png",
       location: [ 38.74803 , -9.15338 ],
       z: 15,
-      numUsers: 52488 }];
+      numUsers: 52488 },
+
+    { name: "ISUTC - Instituto Superior de Transportes e Comunicações",
+      url: "http://www.transcom.co.mz/isutc/",
+      imagePin: "map/map_pin.png",
+      logo: "logo_school_isutc.png",
+      location: [ -25.9558574, 32.6002478 ],
+      z: 15,
+      numUsers: 0 }
+    ];
 
   var featureOpts = [
     {
@@ -88,7 +97,7 @@
   };
 
   var subMapOptions = {
-    zoom: 3,
+    zoom: 0,
     center: new google.maps.LatLng(39.76678 , -15.90475),
     scrollwheel: false,
     panControl: false,
