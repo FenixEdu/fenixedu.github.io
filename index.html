@@ -40,6 +40,20 @@
 	<link rel="stylesheet" href="/map/map.css">
 	<link rel="stylesheet" href="/fonts/entypo/entypo.css">
 
+	<style>
+		table td {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+		table td [class^="icon-"]:before {
+			font-size: 20px;
+		}
+		table tr {
+			border-bottom: 1px solid #EEE;
+			width: 100%;
+		}
+	</style>
+
 	<!-- JS -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -88,7 +102,6 @@
 				<li><a href="#" class="anchor_link">events</a></li>
 				<li><a href="#" class="anchor_link">features</a></li>
 				<li><a href="/dev">dev</a></li>
-				<li><a href="#" class="button anchor_link">getting started</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -216,11 +229,11 @@
 	<section class="anchor_section">
 		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-calendar"></i>getting the word out</h2>
 		<br class="clear" />
- 
+
 		<time datetime="2015-02-10 10:00" class="one columns"><span>10</span><br /><span>FEB</span></time>
 		<p class="seven columns">
 			The University of Lisbon will be officially kicking off the 
-			FenixEdu@ULisboa project aimed at instsalling FenixEdu software at 
+			FenixEdu@ULisboa project aimed at installing FenixEdu software at 
 			14 of the universities schools.
 		</p>
 		<time datetime="2015-02-27 17:00" class="one columns"><span>27</span><br /><span>FEB</span></time>
@@ -228,7 +241,7 @@
 			We will be at SINFO launching some new features and applications
 			we've been working on.
 		</p>
-		 
+
 		<br class="clear" />
 	</section>
 
@@ -240,10 +253,15 @@
 
 	<section class="anchor_section">
 		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-chat"></i>Features</h2>
-		<div class="user_box eight columns">
-			<h5>FenixEdu Academic</h5>
-			<table>
-				<tbody>
+		<div class="user_box eight columns" style="text-align: center">
+			<img style="margin-bottom: 20px" height="26px" src="assets/academic.png" />
+			<table class="eight columns">
+
+				<tbody class="eight columns">
+					<colgroup>
+						<col style="text-align: left; width: 500px"></col>
+						<col style="text-align: center"></col>
+					</colgroup>
 					<tr>
 						<td>Academic Reporting</td>
 						<td><i class="icon-check"></i></td>
@@ -258,27 +276,27 @@
 					</tr>
 					<tr>
 						<td>Attendance Tracking</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Behavior Management</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Bookstore Management</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Cafeteria Management</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Classroom Management</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Clinic Management</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Curriculum Management</td>
@@ -318,11 +336,11 @@
 					</tr>
 					<tr>
 						<td>Independent / Private</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>K-12</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Library Management</td>
@@ -330,7 +348,7 @@
 					</tr>
 					<tr>
 						<td>Parent Portal</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Scheduling</td>
@@ -342,7 +360,7 @@
 					</tr>
 					<tr>
 						<td>Special Education</td>
-						<td><i class="icon-check"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Student Information / Records</td>
@@ -359,25 +377,29 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="user_box eight columns">
-			<h5>FenixEdu Learning</h5>
-			<table>
-				<tbody>
+		<div class="user_box eight columns" style="text-align: center">
+			<img style="margin-bottom: 20px" height="26px" src="assets/learning.png" />
+			<table class="eight columns" style="margin-bottom: 21px">
+				<tbody class="eight columns">
+					<colgroup>
+						<col style="text-align: left; width: 500px"></col>
+						<col style="text-align: center"></col>
+					</colgroup>
 					<tr>
 						<td>Academic / Education</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
 						<td>AICC / SCORM Compliant</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Asynchronous Learning</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Blended Learning</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Built-In Course Authoring</td>
@@ -385,44 +407,43 @@
 					</tr>
 					<tr>
 						<td>Certification Management</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Classroom Management</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Corporate / Business</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>eCommerce</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
-
 					<tr>
 						<td>External Training</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Gamification</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Internal Training</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Live / Video Conferencing</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Mobile Learning</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Social Learning</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Synchronous Learning</td>
@@ -430,22 +451,18 @@
 					</tr>
 					<tr>
 						<td>Tin Can API</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 				</tbody>
 			</table>
-		</div>
-		<br class="clear" />
-		<div class="user_box eight columns">
-			<h5>FenixEdu Scholar</h5>
-			<p>
-			   ...
-			</p>
-		</div>
-		<div class="user_box eight columns">
-			<h5>FenixEdu Drive</h5>
-			<table>
-				<tbody>
+			<br class="clear" />
+			<img style="margin-bottom: 25px" height="26px" src="assets/drive.png" />
+			<table class="eight columns" style="text-align: center">
+				<tbody class="eight columns">
+					<colgroup>
+						<col style="text-align: left; width: 500px"></col>
+						<col style="text-align: center"></col>
+					</colgroup>
 					<tr>
 						<td>Document Repository</td>
 						<td><i class="icon-check"></i></td>
@@ -476,24 +493,27 @@
 					</tr>
 					<tr>
 						<td>Digital Signatures</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Configurable External Backups</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 				</tbody>
 			</table>
 
-
 		</div>
-		<br class="clear" />
-		<div class="user_box eight columns">
-			<h5>FenixEdu Staff</h5>
-			<table>
-				<tbody>
+
+		<div class="user_box eight columns" style="text-align: center">
+			<img style="margin-bottom: 20px" height="26px" src="assets/staff.png" />
+			<table class="eight columns">
+				<tbody class="eight columns">
+					<colgroup>
+						<col style="text-align: left; width: 500px"></col>
+						<col style="text-align: center"></col>
+					</colgroup>
 					<tr>
-						<td>Internal Mobility Annoucment Management</td>
+						<td>Internal Mobility Annoucement Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
@@ -512,11 +532,14 @@
 			</table>
 
 		</div>
-		<div class="user_box eight columns">
-			<h5>FenixEdu Expend</h5>
-
-			<table>
-				<tbody>
+		<div class="user_box eight columns" style="text-align: center">
+			<img style="margin-bottom: 20px" height="26px" src="assets/expend.png" />
+			<table class="eight columns">
+				<tbody class="eight columns">
+					<colgroup>
+						<col style="text-align: left; width: 500px"></col>
+						<col style="text-align: center"></col>
+					</colgroup>
 					<tr>
 						<td>Goods and Services Procument Process</td>
 						<td><i class="icon-check"></i></td>
@@ -533,10 +556,14 @@
 			</table>
 		</div>
 		<br class="clear" />
-		<div class="user_box eight columns">
-			<h5>FenixEdu Gears</h5>
-			<table>
-				<tbody>
+		<div class="user_box eight columns" style="text-align: center">
+			<img style="margin-bottom: 20px" height="26px" src="assets/gears.png" />
+			<table class="eight columns">
+				<tbody class="eight columns">
+					<colgroup>
+						<col style="text-align: left; width: 500px"></col>
+						<col style="text-align: center"></col>
+					</colgroup>
 					<tr>
 						<td>Approval Process Control</td>
 						<td><i class="icon-check"></i></td>
@@ -581,13 +608,17 @@
 			</table>
 
 		</div>
-		<div class="user_box eight columns">
-			<h5>FenixEdu Pages</h5>
-			<table>
-				<tbody>
+		<div class="user_box eight columns" style="text-align: center">
+			<img style="margin-bottom: 20px" height="26px" src="assets/pages.png" />
+			<table class="eight columns" style="margin-bottom: 50px">
+				<tbody class="eight columns">
+					<colgroup>
+						<col style="text-align: left; width: 500px"></col>
+						<col style="text-align: center"></col>
+					</colgroup>
 					<tr>
 						<td>Approval Process Control</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Document Management</td>
@@ -599,7 +630,7 @@
 					</tr>
 					<tr>
 						<td>Indexing</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Permission Management</td>
@@ -611,15 +642,15 @@
 					</tr>
 					<tr>
 						<td>Search Functionality</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>SEO Management</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Version Control</td>
-						<td><i class="icon-cross"></i></td>
+						<td><i class="icon-block"></i></td>
 					</tr>
 					<tr>
 						<td>Web Publishing Templates</td>
@@ -629,6 +660,54 @@
 			</table>
 		</div>
 	</section>
+
+	<div class="user_box sixteen columns" style="text-align: center">
+			<img style="margin-bottom: 20px" height="26px" src="assets/scholar.png" />
+			<table class="sixteen columns">
+				<tbody class="sixteen columns">
+					<colgroup>
+						<col style="text-align: left; width: 940px"></col>
+						<col style="text-align: center"></col>
+					</colgroup>
+					<tr>
+						<td>Document Repository</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Versioned Document</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Private User Repositories</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Group Repositories</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Share Capabilities</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Custom Quota Management</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Document Metadata</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Digital Signatures</td>
+						<td><i class="icon-block"></i></td>
+					</tr>
+					<tr>
+						<td>Configurable External Backups</td>
+						<td><i class="icon-block"></i></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 	<hr />
 
