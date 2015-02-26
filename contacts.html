@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie ie9"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html dir="ltr" lang="en-US"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8">
+	<title>FenixEdu™</title>
+	<meta http-equiv="Content-Language" content="en" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="Description" content="FenixEdu™ is an open-source academic information platform." />
+	<meta name="Keywords" content="FenixEdu, open-source, academic, information, platform, academic administration, higher education, e-learning" />
+	<meta name="Language" content="en-US" />
+	<meta name="Robots" content="all" />
+	<meta name="Author" content="FenixEdu" />
+	<meta name="Email" content="hello@fenixedu.org" />
+	<meta name="Copyright" content="Técnico Lisboa — Instituto Superior Técnico" />
+	<meta name="Distribution" content="Global" />
+	<meta name="Rating" content="General" />
+	
+	<!-- OpenGraph Specific Metas -->
+	<meta property="og:title" content="FenixEdu™" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/images/logo_og.png" />
+	<meta property="og:url" content="http://www.fenixedu.org" />
+	<meta property="og:site_name" content="FenixEdu" />
+	<meta property="og:description" content="FenixEdu™ is an open-source academic information platform." />
+	<meta property="fb:profile_id" content="379238245509413" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/stylesheets/reset.css">
+	<link rel="stylesheet" href="/stylesheets/normalize_v_2_1_3.css">
+	<link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="/stylesheets/skeleton_v_1_2.css">
+	<link rel="stylesheet" href="/stylesheets/fenixedu_base.css">
+	<link rel="stylesheet" href="/map/map.css">
+	<link rel="stylesheet" href="/fonts/entypo/entypo.css">
+
+	<!-- JS -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="/js/scrollTo.js" type="text/javascript"></script>
+	<script src="/js/placeholder.js" type="text/javascript"></script>
+	<script src="/js/events.js" type="text/javascript"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script src="/map/map.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons & TouchIcons-->
+	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
+    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+    <!-- For the iPad mini and the first- and second-generation iPad on iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76-precomposed.png">
+    <!-- For the iPad mini and the first- and second-generation iPad on iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+
+	<style type="text/css">
+	table {
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	th, tr {border-bottom: 1px solid #ddd;}
+	th {font: 14.5px/1.4 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	th, td {text-align: left; padding: 5px 0;}
+	</style>
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<header class="container" role="banner">
+		<a href="/" id="logo" class="three columns"></a>
+		<nav class="thirteen columns" role="navigation">
+			<ul>
+				<li><a href="/#about">about</a></li>
+				<li><a href="/blog">blog</a></li>
+				<!--<li><a href="#" class="anchor_link">events</a></li>-->
+				<li><a href="#" class="anchor_link">users</a></li>
+				<li><a href="#" class="anchor_link">community</a></li>
+				<li><a href="/dev">dev</a></li>
+				<li><a href="#" class="button anchor_link">getting started</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="container">
+
+	<section role="main" name="about" class="anchor_section">
+		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-graduation-cap"></i>Contact Information</h2>
+		<br class="clear" />
+		<p class="sixteen columns">
+            As with most community based projects, it may not be easy for 
+            people new to the project to find the information they need or to 
+            know where to direct questions. If you send us an e-mail to 
+            hello (at) fenixedu.org we'll try to answer your questions as best
+            we can, or redirect you to a more adequate channel. 		
+            <br/><br/>
+		    Before contacting us please take into consideration that this 
+		    project is not responsible for the maintnence of specific 
+		    instalations of our software at any particular institution. If you 
+		    need to contact someone because of a issue regarding a specific 
+		    instalation please direct your contact to the local resources 
+		    responsible for that instalation. The list below might help you 
+		    find a local contact at your institution, but because this is an 
+		    open source project, the list may not be complete.
+		    <br/><br/>
+	</section>
+	</div>
+
+	<div class="container">
+	<section role="main" name="about" class="anchor_section">
+		<h3 class="sixteen columns"><a><span>Local Contact Information</span></a></h3>
+		<br class="clear" />
+		<table>
+			<thead>
+				<tr>
+					<th>
+						Institution
+					</th>
+					<th>
+						Maintainer
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="http://www.esesjcluny.pt/">Escola Superior de Enfermagem S. José de Cluny</a>
+					</td>
+					<td>
+						<a href="http://www.esesjcluny.pt/index.php/acessos">Unknown</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://www.fa.utl.pt/">Faculdade de Arquitetura</a>
+					</td>
+					<td>
+						<a href="http://cifa.fa.ulisboa.pt/">Centro de Informática</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://www.isa.ulisboa.pt/">Instituto Superior de Agronomia</a>
+					</td>
+					<td>
+						<a href="http://ciisa.isa.utl.pt/home/contactos">Informatics Center of ISA</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://www.transcom.co.mz/isutc/">Instituto Superior de Transportes e Comunicações</a>
+					</td>
+					<td>
+						<a href="http://www.transcom.co.mz/isutc/?p=55">Direção de Serviços de Informática</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="iseg.ulisboa.pt/">Lisbon School of Economics and Management</a>
+					</td>
+					<td>
+						<a href="http://aquila.iseg.ulisboa.pt/aquila/unidade/CIISEG?locale=en">IT Department</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://tecnico.ulisboa.pt/">Técnico Lisboa</a>
+					</td>
+					<td>
+						<a href="http://dsi.tecnico.ulisboa.pt/en/contactos/">Computer and Network Services</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://www.ulisboa.pt/">Universidade de Lisboa</a>
+					</td>
+					<td>
+						<a href="http://www.ulisboa.pt/en/inicio/university/organization/university-administration/information-technology-department/">Information Technology Department</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	</div>
+
+	<hr />
+
+	<footer role="contentinfo">
+		<div class="container">
+		
+		<div class="eight columns">
+			<p>FenixEdu is an open-source academic information platform.</p>
+			<p style="margin-top: 20px; font-weight: bold">Contact us via hello (at) fenixedu.org</p>
+		</div>
+		<div class="four columns" style="opacity: 0">
+			<h6>drop us a line</h6>
+			<form action="#" method="POST" autocomplete="on" role="form">
+				<fieldset>
+					<div class="four columns alpha">
+						<label for="fullname">name</label>
+						<input type="text" id="fullname" name="fullname" placeholder="Name *" required>
+						<label for="emailaddress">email</label>
+						<input type="email" id="emailaddress" name="emailaddress" pattern=".*@.*" placeholder="Email *" required>
+						<label for="subject">subject</label>
+						<input type="text" id="subject" name="subject" placeholder="Subject">
+					</div>
+					<div class="four columns omega">
+						<label for="textarea">message</label>
+						<textarea id="textarea" placeholder="Message"></textarea>
+						<a href="" id="submit-message" class="button icon">submit</a>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div class="four columns social">
+			<h6>connect with us</h6>
+			<a style="display:none" href="https://plus.google.com/101300934752009669099" rel="publisher">Google+</a>
+			<a href="http://www.facebook.com/fenixedu" title="Facebook">
+				<span id="facebook-count">238</span><span>followers</span>
+			</a>
+			<br class="clear" />
+			<a href="http://twitter.com/FenixEduProject" title="Twitter">
+				<span id="twitter-count">9</span><span>followers</span>
+			</a>
+		</div>
+
+		<br class="clear" />
+		<a class="four columns" href="http://tecnico.ulisboa.pt"></a>
+		<p class="twelve columns">© 2015 Instituto Superior Técnico. <span>all rights reserved.</span></p>
+		</div>
+	</footer>
+
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-45631967-1', 'fenixedu.org');
+	  ga('send', 'pageview');
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$.getJSON("https://graph.facebook.com/fenixedu", function(data) {
+				$("#facebook-count").html(data.likes);
+			});
+
+			$.getJSON("http://fenixedu.org/ignition/twittercount", function(data) {
+				$("#twitter-count").html(data);
+			});
+			$("#submit-message").click(function(e) {
+				e.preventDefault();
+				var name = $("#fullname").val();
+				var email = $("#emailaddress").val();
+				var subject = $("#subject").val();
+				var msg = $("#textarea").val();
+				if(name != "" && email != "" && subject != "" && msg != "") {
+					var data = {
+						"name": name,
+						"email": email,
+						"subject": subject,
+						"msg": msg
+					};
+					$.ajax({
+						type: "POST",
+						url: "http://fenixedu.org/ignition/contact-form-message",
+						contentType: "application/json; charset=UTF-8",
+						data: JSON.stringify(data),
+						success: function(data) {
+							$("#fullname").val("");
+							$("#emailaddress").val("");
+							$("#subject").val("");
+							$("#textarea").val("");
+							alert("Thank you for your message!");
+						}
+					});
+				}
+			});
+		});
+	</script>
+</body>
+</html>
