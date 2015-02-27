@@ -142,7 +142,7 @@ We recommend you to use the Eclipse IDE for Java Developers because Maven is alr
 Troubleshooting goes here.
 
 
-[EclipseFenixCodeStyleFile]: https://raw.github.com/FenixEdu/fenix/master/EclipseFenixCodeSyle.xml
+[EclipseFenixCodeStyleFile]: https://raw.githubusercontent.com/FenixEdu/fenixedu-java-codestyle/master/EclipseFenixCodeSyle.xml
 [FenixFramework]: http://fenix-framework.github.io/
 [Eclipse]: http://www.eclipse.org/downloads/
 [Methodology]: /dev/methodology
