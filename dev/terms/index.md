@@ -8,7 +8,7 @@ root: "../../"
 
 FenixEDU: The Java(TM) Object-Oriented Framework for University Academic Applications
 
-Copyright © 2002-2013 [Instituto Superior Técnico][Instituto Superior Técnico]
+Copyright © 2002-2015 [Instituto Superior Técnico][Instituto Superior Técnico]
 
 Contact us [here][here] for more information.
 
