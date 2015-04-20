@@ -18,7 +18,9 @@
 	<meta name="Copyright" content="Técnico Lisboa — Instituto Superior Técnico" />
 	<meta name="Distribution" content="Global" />
 	<meta name="Rating" content="General" />
-	
+	<META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="https://fenix-ashes.ist.utl.pt">
+	<META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="https://fenix-ashes.ist.utl.pt/files/FenixEduReleaseInfo.json">
+
 	<!-- OpenGraph Specific Metas -->
 	<meta property="og:title" content="FenixEdu™" />
 	<meta property="og:type" content="website" />
@@ -146,18 +148,17 @@
 		    <br/><br/>
 		    <h3 style="color: #19accd;">Latest Releases</h3>
 		    <br/>
-		    <ul>
-		    	<li>
-		    		2015-04-10
-		    		-
-		    		<a href="https://jira.fenixedu.org/browse/ACDM/">
-			    		FenixEdu Academiv
-		    		</a>
-		    		<a href="https://jira.fenixedu.org/browse/ACDM/fixforversion/10900/">
-			    		v4.2.0
-		    		</a>
-		    	</li>
-		    </ul>
+		    <table style="width: 80%;">
+		    	<thead>
+		    		<tr>
+		    			<th>Module</th>
+		    			<th>Release</th>
+		    			<th>Release Date</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody id="latestReleases">
+		    	</tbody>
+		    </table>
 		</p>
 	</section>
 	</div>
@@ -221,9 +222,18 @@
 				$("#facebook-count").html(data.likes);
 			});
 
-			$.getJSON("http://fenixedu.org/ignition/twittercount", function(data) {
-				$("#twitter-count").html(data);
+			$.getJSON("FenixEduReleaseInfo.json", function(data) {
+				$.each(data, function(i, item) {
+					lr = (item.latestRelease !== null && item.latestRelease !== undefined) ? item.latestRelease : "N/A";
+					lrd = (item.latestReleaseDate !== null && item.latestReleaseDate !== undefined) ? item.latestReleaseDate : "N/A";
+					$("<tr>").html(
+							"<td>" + item.name + "</td>"
+							+ "<td>" + lr + "</td>"
+							+ "<td>" + lrd.substring(0, 10) + "</td>"
+						).appendTo("#latestReleases");
+				});
 			});
+
 			$("#submit-message").click(function(e) {
 				e.preventDefault();
 				var name = $("#fullname").val();
