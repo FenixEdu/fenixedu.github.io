@@ -138,6 +138,22 @@ Depending of your action, you can have different error codes that might help you
 	* ```refreshTokenInvalid``` - Refresh token doesn't match.
 	* ```refreshTokenInvalidFormat``` - Refresh Token not recognized.
 
+### Using Spring Security OAuth2
+
+If you are using [Spring Security OAuth2](http://projects.spring.io/spring-security-oauth/docs/oauth2.html) the configuration should be finetuned as below due to known limitations of Bennu OAuth2 implementation ([BNN-230](https://jira.fenixedu.org/browse/BNN-230) [BNN-231](https://jira.fenixedu.org/browse/BNN-231))
+
+{% highlight python %}
+spring:
+  oauth2:
+    client:
+      accessTokenUri: https://localhost:8080/oauth/access_token
+      userAuthorizationUri: https://localhost:8080/oauth/userdialog
+      clientId: <...>
+      clientSecret: <...>
+      clientAuthenticationScheme: form
+      authenticationScheme: query
+{% endhighlight %}
+
 
 [Java-SDK]: /dev/tutorials/use-fenixedu-api-in-your-application/java
 [Python-SDK]: https://github.com/FenixEdu/fenixedu-python-sdk
