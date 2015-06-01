@@ -15,6 +15,7 @@ In this tutorial, you will learn how to register your third-party application to
 	* [Step 2.2 - Request the User Permission](#step-2.2---request-the-user-permission)
 	* [Step 2.3 - Request the Access Token](#step-2.3---request-the-access-token)
 	* [Step 2.4 - Refresh the Access Token](#step-2.4---refresh-the-access-token)
+* [Using Spring Security OAuth2](#using-spring-security-oauth2)
 * [Troubleshooting](#troubleshooting)
 
 ### Step 1 - Register your Application
@@ -119,6 +120,21 @@ If everything goes smoothly, you should receive an ```HTTP 200 Ok``` response wi
 	
 	{"access_token":"IGNhbiBjb252ZXJ0IHRleHRzIHVIHNldmVym3r2cgQ2hhclNl", "expires_in":"3600"}
 
+### Using Spring Security OAuth2
+
+If you are using [Spring Security OAuth2](http://projects.spring.io/spring-security-oauth/docs/oauth2.html) the configuration should be finetuned as below due to known limitations of Bennu OAuth2 implementation ([BNN-230](https://jira.fenixedu.org/browse/BNN-230) [BNN-231](https://jira.fenixedu.org/browse/BNN-231))
+
+{% highlight python %}
+spring:
+  oauth2:
+    client:
+      accessTokenUri: https://localhost:8080/oauth/access_token
+      userAuthorizationUri: https://localhost:8080/oauth/userdialog
+      clientId: <...>
+      clientSecret: <...>
+      clientAuthenticationScheme: form
+      authenticationScheme: query
+{% endhighlight %}
 
 ### Troubleshooting
 
@@ -138,21 +154,7 @@ Depending of your action, you can have different error codes that might help you
 	* ```refreshTokenInvalid``` - Refresh token doesn't match.
 	* ```refreshTokenInvalidFormat``` - Refresh Token not recognized.
 
-### Using Spring Security OAuth2
 
-If you are using [Spring Security OAuth2](http://projects.spring.io/spring-security-oauth/docs/oauth2.html) the configuration should be finetuned as below due to known limitations of Bennu OAuth2 implementation ([BNN-230](https://jira.fenixedu.org/browse/BNN-230) [BNN-231](https://jira.fenixedu.org/browse/BNN-231))
-
-{% highlight python %}
-spring:
-  oauth2:
-    client:
-      accessTokenUri: https://localhost:8080/oauth/access_token
-      userAuthorizationUri: https://localhost:8080/oauth/userdialog
-      clientId: <...>
-      clientSecret: <...>
-      clientAuthenticationScheme: form
-      authenticationScheme: query
-{% endhighlight %}
 
 
 [Java-SDK]: /dev/tutorials/use-fenixedu-api-in-your-application/java
