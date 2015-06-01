@@ -22,9 +22,9 @@ services will be coupled with the OAuth2 protocol.
 
 
 ### Available Endpoints
-* [GET /suppliers](#toc_2)  <i class="icon-lock"></i>
-* [POST /allocateFunds](#toc_3)  <i class="icon-lock"></i>
-* [PUT /cancelFundAllocation](#toc_4)  <i class="icon-lock"></i>
+* [GET /suppliers](#get-/suppliers)  <i class="icon-lock"></i>
+* [POST /allocateFunds](#post-/allocatefunds)  <i class="icon-lock"></i>
+* [PUT /cancelFundAllocation](#put-/cancelfundallocation)  <i class="icon-lock"></i>
 
 
 > <span>NOTE</span>

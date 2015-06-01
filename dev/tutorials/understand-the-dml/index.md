@@ -12,10 +12,10 @@ In this tutorial you will learn how to define the classes and relations of your 
 
 ### Table of Contents
 
-* [Step 1 - Draw your domain model](#toc_2)
-* [Step 2 - Describe your domain model using the DML](#toc_3)
-* [Step 3 - Generate the Source Code](#toc_4)
-* [Step 4 - Define Transactions](#toc_5)
+* [Step 1 - Draw your domain model](#step-1---draw-your-domain-model)
+* [Step 2 - Describe your domain model using the DML](#step-2---describe-your-domain-model-using-the-dml)
+* [Step 3 - Generate the Source Code](#step-3---generate-the-source-code)
+* [Step 4 - Define Transactions](#step-4---define-transactions)
 
 ### Step 1 - Draw your domain model
 

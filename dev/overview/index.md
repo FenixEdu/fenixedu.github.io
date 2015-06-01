@@ -6,7 +6,7 @@ root: "../"
 
 ## Overview
 
-[Getting started](#toc_1) with the FenixEdu™ project is easy. You can learn more about our [methodology][Methodology],
+[Getting started](#quickstart) with the FenixEdu™ project is easy. You can learn more about our [methodology][Methodology],
 learn how to contribute with our [tutorials][Tutorials], and explore our [sub-projects][SubProjects].
 
 Hoping that FenixEdu™ solutions may be useful to others, we share our software

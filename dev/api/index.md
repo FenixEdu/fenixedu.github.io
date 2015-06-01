@@ -39,7 +39,7 @@ aware that some institutions may choose to restrict access to the API.
 The API supports localized invocations.
 In each endpoint if a `lang` parameter is present and its' value is an available language, the returned information is localized in the specified language. Otherwise the default language is used.
 
-The list of available languages is returned by [/about](#toc_4).
+The list of available languages is returned by [/about](#get-/about).
 
 #### Example request with specified language
 
@@ -48,29 +48,30 @@ https://fenix.tecnico.ulisboa.pt/api/fenix/v1/courses/1610612925989?lang=en-US
 
 
 ### Public Endpoints
-* [GET /about](#toc_4) <i class="icon-lock-open"></i>
-* [GET /academicterms](#toc_7) <i class="icon-lock-open"></i>
-* [GET /canteen](#toc_10) <i class="icon-lock-open"></i>
-* [GET /courses/{id}](#toc_13) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/evaluations](#toc_16) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/groups](#toc_19) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/schedule](#toc_22) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/students](#toc_25) <i class="icon-lock-open"></i>
-* [GET /degrees](#toc_28) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}](#toc_32) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}/courses](#toc_36) <i class="icon-lock-open"></i>
-* [GET /domainModel](#toc_40) <i class="icon-lock-open"></i>
-* [GET /person](#toc_43)  <i class="icon-lock"></i><i class="icon-user"></i>
-* [GET /person/calendar/classes](#toc_46) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/calendar/evaluations](#toc_50) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/courses](#toc_54) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/curriculum](#toc_58) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/evaluations](#toc_61) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [PUT /person/evaluations/{id}](#toc_64) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [GET /person/payments](#toc_68) <i class="icon-lock"></i><i class="icon-basket"></i>
-* [GET /spaces](#toc_71)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}](#toc_74)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}/blueprint](#toc_78)  <i class="icon-lock-open"></i>
+* [GET /about](#get-/about) <i class="icon-lock-open"></i>
+* [GET /academicterms](#get-/academicterms) <i class="icon-lock-open"></i>
+* [GET /canteen](#get-/canteen) <i class="icon-lock-open"></i>
+* [GET /courses/{id}](#get-/courses/{id}) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/evaluations](#get-/courses/{id}/evaluations) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/groups](#get-/courses/{id}/groups) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/schedule](#get-/courses/{id}/schedule) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/students](#get-/courses/{id}/students) <i class="icon-lock-open"></i>
+* [GET /degrees](#get-/degrees) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}](#get-/degrees/{id}) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}/courses](#get-/degrees/{id}/courses) <i class="icon-lock-open"></i>
+* [GET /domainModel](#get-/domainmodel) <i class="icon-lock-open"></i>
+* [GET /person](#get-/person)  <i class="icon-lock"></i><i class="icon-user"></i>
+* [GET /person/calendar/classes](#get-/person/calendar/classes) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/calendar/evaluations](#get-/person/calendar/evaluations) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/courses](#get-/person/courses) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/curriculum](#get-/person/curriculum) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/evaluations](#get-/person/evaluations) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [PUT /person/evaluations/{id}](#put-/person/evaluations/{id}) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+
+* [GET /person/payments](#get-/person/payments) <i class="icon-lock"></i><i class="icon-basket"></i>
+* [GET /spaces](#get-/spaces)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}](#get-/spaces/{id})  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}/blueprint](#get-/spaces/{id}/blueprint)  <i class="icon-lock-open"></i>
 
 
 > <span>NOTE</span>
@@ -672,7 +673,7 @@ This endpoint returns the information for all degrees.
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#toc_7)
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-/academicterms)
 
 #### Example Request
 ```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees?academicTerm=2013/2014
@@ -733,7 +734,7 @@ This endpoint returns the information for the {id} degree.
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#toc_7)
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-/academicterms)
 
 #### Example Request
 ```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513?academicTerm=2013/2014
@@ -791,7 +792,7 @@ If no academicTerm is defined it returns the degree information for the `current
 This endpoint returns the informations for a degree's courses.
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#toc_7)   
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-/academicterms)   
 
 #### Example Request
 ```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513/courses?academicTerm=2013/2014
@@ -1085,7 +1086,7 @@ This endpoint returns the students's evaluations information. This information c
 This endpoint returns the user's course information.
 
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#toc_7)X
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-/academicterms)X
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 #### Example Request
 ```GET``` https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/courses?academicTerm=2013/2014

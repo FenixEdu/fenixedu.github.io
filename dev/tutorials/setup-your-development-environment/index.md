@@ -11,18 +11,18 @@ This tutorial walks you through the system requirements necessary to develop app
 > The suggestions highlighted in this tutorial are for development environments only. Be aware that they may not be adequate for other purposes, in particular for production environments. Also, since we love pinguins, most tweaks are mainly intended for GNU/Linux Operating Systems.
 
 ### Table of Contents
-* [Step 1 - Choose your Operating System](#toc_2)
-* [Step 2 - Tweak your Filesystem](#toc_3)
-* [Step 3 - Turn Off Unused and Unnecessary Services](#toc_4)
-* [Step 4 - Setup your Firewall](#toc_5)
-* [Step 5 - Install your Software Development Kit](#toc_6)
-	* [Step 5.1 - Oracle's JDK 8](#toc_7)
-	* [Step 5.2 - Apache Maven](#toc_8)
-	* [Step 5.3 - Git](#toc_9)
-	* [Step 5.4 - MySQL](#toc_10)
-	* [Step 5.5 - Eclipse IDE](#toc_11)
-* [Step 6 - Install and Configure MySQL](#toc_12)
-* [Troubleshooting](#toc_13)
+* [Step 1 - Choose your Operating System](#step-1---choose-your-operating-system)
+* [Step 2 - Tweak your Filesystem](#step-2---tweak-your-filesystem)
+* [Step 3 - Turn Off Unused and Unnecessary Services](#step-3---turn-off-unused-and-unnecessary-services)
+* [Step 4 - Setup your Firewall](#step-4---setup-your-firewall)
+* [Step 5 - Install your Software Development Kit](#step-5---install-your-software-development-kit)
+	* [Step 5.1 - Oracle's JDK 8](#step-5.1---oracle's-jdk-8)
+	* [Step 5.2 - Apache Maven](#step-5.2---apache-maven)
+	* [Step 5.3 - Git](#step-5.3---git)
+	* [Step 5.4 - MySQL](#step-5.4---mysql)
+	* [Step 5.5 - Eclipse IDE](#step-5.5---eclipse-ide-for-java-developers)
+* [Step 6 - Install and Configure MySQL](#configure-eclipse-ide)
+* [Troubleshooting](#troubleshooting)
 
 
 ### Step 1 - Choose your Operating System

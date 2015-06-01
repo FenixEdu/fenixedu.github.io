@@ -12,11 +12,11 @@ This tutorial walks you through the necessary steps to install FenixEdu™ in a 
 > The steps contained in this tutorial are for development purposes only, and may not be adequate for other purposes, in particular for production environments.
 
 ### Table of Contents
-* [Step 1 - Install the necessary software](#toc_2)
-* [Step 2 - Configure Java and Maven](#toc_3)
-* [Step 3 - Create an empty database](#toc_4)
-* [Step 4 - Generate the FenixEdu software installation through the archetype](#toc_5)
-* [Step 5 - Bootstrap and Run your FenixEdu Application](#toc_6)
+* [Step 1 - Install the necessary software](#step-1---install-the-necessary-software)
+* [Step 2 - Configure Java and Maven](#step-2---configure-java-and-maven)
+* [Step 3 - Create an empty database](#step-3---create-an-empty-database)
+* [Step 4 - Generate the FenixEdu software installation through the archetype](#step-4---generate-the-fenixedu-software-installation-through-the-archetype)
+* [Step 5 - Bootstrap and Run your FenixEdu Application](#step-5---bootstrap-and-run-your-fenixedu-application)
 
 ### Step 1 - Install the necessary software
 Before you can install FenixEdu locally, you must install some software packages in the hosting machine. The following commands, intended for debian-based operating systems, add a new repository that allows you to install Oracle's JDK via apt-get, and installs all the required software: 

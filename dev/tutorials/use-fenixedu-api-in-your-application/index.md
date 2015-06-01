@@ -9,13 +9,13 @@ root: "../../"
 In this tutorial, you will learn how to register your third-party application to use the FenixEdu™ API, and how to use one of the SDKs that we developed to ease the API invocation. Note that you can still use any HTTP client to invoke the endpoints on your own, or perhaps, contribute with a SDK of your favorite language.
 
 ### Table of Contents
-* [Step 1 - Register your Application](#toc_2)
-* [Step 2 - Invoke the REST API Endpoints](#toc_3)
-	* [Step 2.1 - Use one of the official SDKs](#toc_4)
-	* [Step 2.2 - Request the User Permission](#toc_5)
-	* [Step 2.3 - Request the Access Token](#toc_6)
-	* [Step 2.4 - Refresh the Access Token](#toc_7)
-* [Troubleshooting](#toc_8)
+* [Step 1 - Register your Application](#step-1---register-your-application)
+* [Step 2 - Invoke the REST API Endpoints](#step-2---invoke-the-rest-api-endpoints)
+	* [Step 2.1 - Use one of the official SDKs](#step-2.1---use-one-of-the-official-sdks)
+	* [Step 2.2 - Request the User Permission](#step-2.2---request-the-user-permission)
+	* [Step 2.3 - Request the Access Token](#step-2.3---request-the-access-token)
+	* [Step 2.4 - Refresh the Access Token](#step-2.4---refresh-the-access-token)
+* [Troubleshooting](#troubleshooting)
 
 ### Step 1 - Register your Application
 

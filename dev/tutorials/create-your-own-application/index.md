@@ -12,12 +12,12 @@ In this tutorial, you will learn how easy and quick it is to develop new applica
 First, make sure you have [setup your development environment][Setup your development environment] and [understand how the DML works][Understand the DML].
 
 ### Table of Contents
-* [Step 1 - Understand project separation](#toc_2)
-* [Step 2 - Scaffold your project](#toc_3)
-* [Step 3 - Import the project to Eclipse](#toc_4)
-* [Step 4 - Define your domain](#toc_5)
-* [Step 5 - Choose your User Interface (UI) technology](#toc_6)
-* [Step 6 - Build and Run your Application](#toc_7)
+* [Step 1 - Understand project separation](#step-1---understand-project-separation)
+* [Step 2 - Scaffold your project](#step-2---scaffold-your-project)
+* [Step 3 - Import the project to Eclipse](#step-3---import-the-project-to-eclipse)
+* [Step 4 - Define your domain](#step-4---define-your-domain)
+* [Step 5 - Choose your User Interface (UI) technology](#step-5---choose-your-user-interface-(ui)-technology)
+* [Step 6 - Build and Run your Application](#step-6---build-and-run-your-application)
 
 ### Step 1 - Understand Project Separation
 
