@@ -1,6 +1,6 @@
 # Dependencies
 markdown: redcarpet
-highlighter: true
+pygments: true
 
 redcarpet:
   extensions: ["with_toc_data", "tables"]

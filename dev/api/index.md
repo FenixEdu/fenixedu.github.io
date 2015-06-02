@@ -51,6 +51,7 @@ The list of available languages is returned by [/about](#get-/about).
 * [GET /about](#get-/about) <i class="icon-lock-open"></i>
 * [GET /academicterms](#get-/academicterms) <i class="icon-lock-open"></i>
 * [GET /canteen](#get-/canteen) <i class="icon-lock-open"></i>
+* [GET /contacts](#get-/contacts) <i class="icon-lock-open"></i>
 * [GET /courses/{id}](#get-/courses/{id}) <i class="icon-lock-open"></i>
 * [GET /courses/{id}/evaluations](#get-/courses/{id}/evaluations) <i class="icon-lock-open"></i>
 * [GET /courses/{id}/groups](#get-/courses/{id}/groups) <i class="icon-lock-open"></i>
@@ -60,6 +61,7 @@ The list of available languages is returned by [/about](#get-/about).
 * [GET /degrees/{id}](#get-/degrees/{id}) <i class="icon-lock-open"></i>
 * [GET /degrees/{id}/courses](#get-/degrees/{id}/courses) <i class="icon-lock-open"></i>
 * [GET /domainModel](#get-/domainmodel) <i class="icon-lock-open"></i>
+* [GET /parking](#get-/parking) <i class="icon-lock-open"></i>
 * [GET /person](#get-/person)  <i class="icon-lock"></i><i class="icon-user"></i>
 * [GET /person/calendar/classes](#get-/person/calendar/classes) <i class="icon-lock"></i><i class="icon-calendar"></i>
 * [GET /person/calendar/evaluations](#get-/person/calendar/evaluations) <i class="icon-lock"></i><i class="icon-calendar"></i>
@@ -67,12 +69,11 @@ The list of available languages is returned by [/about](#get-/about).
 * [GET /person/curriculum](#get-/person/curriculum) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
 * [GET /person/evaluations](#get-/person/evaluations) <i class="icon-lock"></i><i class="icon-chart-area"></i>
 * [PUT /person/evaluations/{id}](#put-/person/evaluations/{id}) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-
 * [GET /person/payments](#get-/person/payments) <i class="icon-lock"></i><i class="icon-basket"></i>
 * [GET /spaces](#get-/spaces)  <i class="icon-lock-open"></i>
 * [GET /spaces/{id}](#get-/spaces/{id})  <i class="icon-lock-open"></i>
 * [GET /spaces/{id}/blueprint](#get-/spaces/{id}/blueprint)  <i class="icon-lock-open"></i>
-
+* [GET /shuttle](#get-/shuttle)  <i class="icon-lock-open"></i>
 
 > <span>NOTE</span>
 > <i class="icon-lock-open"></i> - Public Endpoint.      
@@ -292,6 +293,36 @@ This endpoint returns the menu information of Alameda's canteen.
 }
 {% endhighlight %}
 
+### GET /contacts
+
+<i class="icon-lock-open"></i>
+
+#### Example Request
+```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/contacts">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/contacts</a>
+
+#### Example Response
+{% highlight json %}
+[
+  {
+    "name": "Campus Alameda",
+    "fax": "+351218499242",
+    "phone": "+351218417000",
+    "email": "",
+    "address": "Av. Rovisco Pais, 1",
+    "postalCode": "1049-001 Lisboa",
+    "workingHours": ""
+  },
+  {
+    "name": "Direção de Serviços de Informática - Alameda",
+    "fax": "",
+    "phone": "+351218417506",
+    "email": "dsi@tecnico.ulisboa.pt",
+    "address": "",
+    "postalCode": "",
+    "workingHours": "9h30 - 12h30 / 14h00 - 16h30"
+  }
+]
+{% endhighlight %}
 
 ### GET /courses/{id}
 
@@ -883,6 +914,39 @@ the domain model can be found on the Fenix Framework site:
 }
 {% endhighlight %}
 
+### GET /parking
+
+<i class="icon-lock-open"></i>
+
+#### Example Request
+```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/parking">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/parking</a>
+
+#### Example Response
+{% highlight json %}
+{
+  "Alameda": {
+    "address": "Avenida Rovisco Pais, 1, 1049-001 Lisboa", 
+    "campus": "Alameda", 
+    "description": "Parque Estacionamento do campus Alameda do IST", 
+    "freeSlots": 624, 
+    "latlng": "38.738137,-9.139135", 
+    "name": "Alameda", 
+    "total": 680, 
+    "workingHours": "24h"
+  }, 
+  "Arco Do Cego": {
+    "address": "Parque do Arco Cego, Avenida JoÃ£o CrisÃ³stomo, 1000-178 Lisboa", 
+    "campus": "Alameda", 
+    "description": "Parque Estacionamento do Arco do Cego", 
+    "freeSlots": 62, 
+    "latlng": "38.73640895,-9.14313902", 
+    "name": "Arco do Cego", 
+    "total": 70, 
+    "workingHours": "24h"
+  }
+}
+{% endhighlight %}
+
 ### GET /person
 
 <i class="icon-lock"></i><i class="icon-user"></i>
@@ -1400,3 +1464,78 @@ This endpoint returns the space's blueprint in the required format
 response content-type : "application/dwg" or "image/jpg"
 
 response content: raw image data
+
+### GET /shuttle
+
+<i class="icon-lock-open"></i>
+
+This endpoint returns the shuttle information
+
+#### Example Request
+```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/shuttle">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/shuttle</a>
+
+#### Example Response
+{% highlight json %}
+{
+  "stations": [
+    {
+      "name": "Alameda",
+      "address": "Avenida Manuel da Maia 36",
+      "latlng": "38.736926,-9.136565"
+    },
+    {
+      "name": "Cacém",
+      "address": "Rua Elias Garcia 2",
+      "latlng": "38.766274,-9.298728"
+    }
+  ],
+  "date": [
+    {
+      "start": "15/09/2014",
+      "end": "30/09/2014",
+      "type": "weekday"
+    },
+    {
+      "start": "01/09/2014",
+      "end": "12/09/2014",
+      "type": "holidays"
+    }
+  ],
+  "trips": [
+    {
+      "type": "weekday",
+      "stations": [
+        {
+          "hour": "07.15",
+          "station": "Alameda"
+        },
+        {
+          "hour": "07.25",
+          "station": "Sete-Rios"
+        },
+        {
+          "hour": "07.55",
+          "station": "Taguspark"
+        }
+      ]
+    },
+    {
+      "type": "holidays",
+      "stations": [
+        {
+          "hour": "08.00",
+          "station": "Alameda"
+        },
+        {
+          "hour": "08.15",
+          "station": "Sete-Rios"
+        },
+        {
+          "hour": "08.40",
+          "station": "Taguspark"
+        }
+      ]
+    }
+  ]
+}
+{% endhighlight %}
