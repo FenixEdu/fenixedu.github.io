@@ -735,7 +735,7 @@
 			</a>
 			<br class="clear" />
 			<a href="http://twitter.com/FenixEduProject" title="Twitter">
-				<span id="twitter-count">9</span><span>followers</span>
+				<span id="twitter-count">165</span><span>followers</span>
 			</a>
 		</div>
 
@@ -760,9 +760,9 @@
 				$("#facebook-count").html(data.likes);
 			});
 
-			$.getJSON("http://fenixedu.org/ignition/twittercount", function(data) {
-				$("#twitter-count").html(data);
-			});
+			//$.getJSON("http://fenixedu.org/ignition/twittercount", function(data) {
+			//	$("#twitter-count").html(data);
+			//});
 			$("#submit-message").click(function(e) {
 				e.preventDefault();
 				var name = $("#fullname").val();
