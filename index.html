@@ -41,20 +41,6 @@
 	<link rel="stylesheet" href="/fonts/entypo/entypo.css">
 	<link rel="stylesheet" href="/stylesheets/mobile_menu.css">
 
-	<style>
-		table td {
-			padding: 6px 10px;
-			vertical-align: middle;
-		}
-		table td [class^="icon-"]:before {
-			font-size: 20px;
-		}
-		table tr {
-			border-bottom: 1px solid #EEE;
-			width: 100%;
-		}
-	</style>
-
 	<!-- JS -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -131,7 +117,8 @@
 			<p class="nine columns lead">FenixEdu is a modular software platform <br />for academic and administrative management <br />of higher education institutions.</p>
 			<br class="clear" />
 			<div>
-				<a href="https://github.com/fenixedu" class="button three columns">github</a>
+				<a href="https://github.com/fenixedu" class="button three columns anchor">github</a>
+				<a href="https://confluence.fenixedu.org/" class="button three columns">documentation</a>
 				<br class="clear" />
 			</div>
 		</div>
@@ -278,219 +265,241 @@
 
 	<section class="anchor_section">
 		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-chat"></i>Features</h2>
-		<div class="user_box eight columns" style="text-align: left">
-			<img style="margin-bottom: 20px" height="26px" src="assets/academic.png" />
-			<table class="eight columns">
-				<tbody class="eight columns">
-					<colgroup>
-						<col style="text-align: left; width: 500px"></col>
-						<col style="text-align: center"></col>
-					</colgroup>
+		<div class="user_box eight columns">
+			<table>
+				<colgroup>
+					<col></col>
+					<col></col>
+				</colgroup>
+				<thead>
 					<tr>
-						<td style="text-align: left">Academic Reporting</td>
+						<th colspan="2">
+							<img src="assets/academic.png" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Academic Reporting</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Admissions Management</td>
+						<td>Admissions Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Assessment Management</td>
+						<td>Assessment Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Attendance Tracking</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td style="text-align: left">Classroom Management</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td style="text-align: left">Curriculum Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Enrollment Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Event Calendar</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Facility Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Faculty / Staff Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Financial Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Fundraising Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Higher Education</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Housing Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">K-12</td>
+						<td>Attendance Tracking</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Library Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Parent Portal</td>
+						<td>Classroom Management</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Scheduling</td>
+						<td>Curriculum Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">School District</td>
+						<td>Enrollment Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Special Education</td>
+						<td>Event Calendar</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Facility Management</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Faculty / Staff Management</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Financial Management</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Fundraising Management</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Higher Education</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Housing Management</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>K-12</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Student Information / Records</td>
+						<td>Library Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Student Portal</td>
+						<td>Parent Portal</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Scheduling</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Teach Portal</td>
+						<td>School District</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Special Education</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Student Information / Records</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Student Portal</td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr>
+						<td>Teach Portal</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-		<div class="user_box eight columns" style="text-align: left">
-			<img style="margin-bottom: 20px" height="26px" src="assets/learning.png" />
-			<table class="eight columns" style="margin-bottom: 97px">
-				<tbody class="eight columns">
-					<colgroup>
-						<col style="text-align: left; width: 500px"></col>
-						<col style="text-align: center"></col>
-					</colgroup>
+
+		<div class="user_box eight columns">
+			<table style="margin-bottom: 76px;">
+				<colgroup>
+					<col></col>
+					<col></col>
+				</colgroup>
+				<thead>
 					<tr>
-						<td style="text-align: left">Academic / Education</td>
+						<th colspan="2">
+							<img src="assets/learning.png" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Academic / Education</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">AICC / SCORM Compliant</td>
+						<td>AICC / SCORM Compliant</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Asynchronous Learning</td>
+						<td>Asynchronous Learning</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Built-In Course Authoring</td>
+						<td>Built-In Course Authoring</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Certification Management</td>
+						<td>Certification Management</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Classroom Management</td>
+						<td>Classroom Management</td>
 						<td></td>
 					</tr>
 
 					<tr>
-						<td style="text-align: left">External Training</td>
+						<td>External Training</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Live / Video Conferencing</td>
+						<td>Live / Video Conferencing</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Social Learning</td>
+						<td>Social Learning</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Synchronous Learning</td>
+						<td>Synchronous Learning</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 				</tbody>
 			</table>
 			<br class="clear" />
-			<img style="margin-bottom: 25px" height="26px" src="assets/drive.png" />
-			<table class="eight columns" style="text-align: center">
-				<tbody class="eight columns">
-					<colgroup>
-						<col style="text-align: left; width: 500px"></col>
-						<col style="text-align: center"></col>
-					</colgroup>
+			<table>
+				<colgroup>
+					<col></col>
+					<col></col>
+				</colgroup>
+				<thead>
 					<tr>
-						<td style="text-align: left">Document Repository</td>
+						<th colspan="2">
+							<img src="assets/drive.png" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Document Repository</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Versioned Document</td>
+						<td>Versioned Document</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Private User Repositories</td>
+						<td>Private User Repositories</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Group Repositories</td>
+						<td>Group Repositories</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Share Capabilities</td>
+						<td>Share Capabilities</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Custom Quota Management</td>
+						<td>Custom Quota Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Document Metadata</td>
+						<td>Document Metadata</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Digital Signatures</td>
+						<td>Digital Signatures</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Configurable External Backups</td>
+						<td>Configurable External Backups</td>
 						<td></td>
 					</tr>
 				</tbody>
 			</table>
-
 		</div>
-
-		<div class="user_box eight columns" style="text-align: left">
-			<img style="margin-bottom: 20px" height="26px" src="assets/staff.png" />
-			<table class="eight columns">
-				<tbody class="eight columns">
-					<colgroup>
-						<col style="text-align: left; width: 500px"></col>
-						<col style="text-align: center"></col>
-					</colgroup>
+		<br class="clear" />
+		<div class="user_box eight columns">
+			<table>
+				<colgroup>
+					<col></col>
+					<col></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan="2">
+							<img src="assets/staff.png" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
 					<tr>
 						<td style="text-align: left">Internal Mobility Annoucement Management</td>
 						<td><i class="icon-check"></i></td>
@@ -509,126 +518,145 @@
 					</tr>
 				</tbody>
 			</table>
-
 		</div>
-		<div class="user_box eight columns" style="text-align: left">
-			<img style="margin-bottom: 20px" height="26px" src="assets/expend.png" />
-			<table class="eight columns">
-				<tbody class="eight columns">
-					<colgroup>
-						<col style="text-align: left; width: 500px"></col>
-						<col style="text-align: center"></col>
-					</colgroup>
+
+		<div class="user_box eight columns">
+			<table>
+				<colgroup>
+					<col></col>
+					<col></col>
+				</colgroup>
+				<thead>
 					<tr>
-						<td style="text-align: left">Goods and Services Procument Process</td>
+						<th colspan="2">
+							<img src="assets/expend.png" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Goods and Services Procument Process</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Business Travel Authorization Process</td>
+						<td>Business Travel Authorization Process</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Custom Authorization Chains</td>
+						<td>Custom Authorization Chains</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 		<br class="clear" />
-		<div class="user_box eight columns" style="text-align: left">
-			<img style="margin-bottom: 20px" height="26px" src="assets/gears.png" />
-			<table class="eight columns" style="margin-bottom: 50px">
-				<tbody class="eight columns">
-					<colgroup>
-						<col style="text-align: left; width: 500px"></col>
-						<col style="text-align: center"></col>
-					</colgroup>
+		<div class="user_box eight columns">
+			<table style="margin-bottom: 50px">
+				<colgroup>
+					<col></col>
+					<col></col>
+				</colgroup>
+				<thead>
 					<tr>
-						<td style="text-align: left">Approval Process Control</td>
+						<th colspan="2">
+							<img src="assets/gears.png" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Approval Process Control</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Asset Management</td>
+						<td>Asset Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Configurable Workflow</td>
+						<td>Configurable Workflow</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Dashboard</td>
+						<td>Dashboard</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Event-Based Notifications</td>
+						<td>Event-Based Notifications</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Graphical Workflow Editor</td>
+						<td>Graphical Workflow Editor</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Help Desk Management</td>
+						<td>Help Desk Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Notifications</td>
+						<td>Notifications</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Resource Management</td>
+						<td>Resource Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">User Activity Monitoring</td>
+						<td>User Activity Monitoring</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 				</tbody>
 			</table>
 
 		</div>
-		<div class="user_box eight columns" style="text-align: left">
-			<img style="margin-bottom: 20px" height="27px" src="assets/pages.png" />
-			<table class="eight columns" style="margin-bottom: 50px">
-				<tbody class="eight columns">
-					<colgroup>
-						<col style="text-align: left; width: 500px"></col>
-						<col style="text-align: center"></col>
-					</colgroup>
+
+		<div class="user_box eight columns">
+			<table>
+				<colgroup>
+					<col></col>
+					<col></col>
+				</colgroup>
+				<thead>
 					<tr>
-						<td style="text-align: left">Approval Process Control</td>
+						<th colspan="2">
+							<img src="assets/pages.png" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Approval Process Control</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Document Management</td>
+						<td>Document Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Format Management</td>
+						<td>Format Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Indexing/Search</td>
+						<td>Indexing/Search</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Permission Management</td>
+						<td>Permission Management</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Rich Text Editor</td>
+						<td>Rich Text Editor</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">SEO Management</td>
+						<td>SEO Management</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Version Control</td>
+						<td>Version Control</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Web Publishing Templates</td>
+						<td>Web Publishing Templates</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 				</tbody>
@@ -636,40 +664,46 @@
 		</div>
 	</section>
 
-	<div class="user_box sixteen columns" style="text-align: left">
-			<img style="margin-bottom: 20px" height="26px" src="assets/scholar.png" />
-			<table class="sixteen columns">
-				<tbody class="sixteen columns">
-					<colgroup>
-						<col style="text-align: left; width: 940px"></col>
-						<col style="text-align: center"></col>
-					</colgroup>
+	<div class="user_box sixteen columns">
+			<table>
+				<colgroup>
+					<col style="width: 940px"></col>
+					<col></col>
+				</colgroup>
+				<thead>
 					<tr>
-						<td style="text-align: left">Publication Storage</td>
+						<th colspan="2">
+							<img src="assets/scholar.png" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Publication Storage</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Full-text Search</td>
+						<td>Full-text Search</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Research Centers</td>
+						<td>Research Centers</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">BibTeX Support</td>
+						<td>BibTeX Support</td>
 						<td><i class="icon-check"></i></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">OAI-PMH Support</td>
+						<td>OAI-PMH Support</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">SCORM Support</td>
+						<td>SCORM Support</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td style="text-align: left">Automated Content Harvesting</td>
+						<td>Automated Content Harvesting</td>
 						<td></td>
 					</tr>
 				</tbody>
