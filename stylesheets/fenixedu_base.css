@@ -211,12 +211,7 @@
 	.user_box > table {width: 100%; margin-bottom: 50px;}
 
 	.user_box table col:first-child {
-		text-align: left; 
-		width: 89%;
-	}
-
-	.user_box table col:last-child {
-		text-align: right;
+		width: 100%;
 	}
 
 	.user_box > table > thead {
@@ -232,6 +227,10 @@
 	.user_box tbody > tr {
 		border-bottom: 1px solid #eee;
 		width: 100%;
+	}
+
+	.user_box tbody > tr:last-child {
+		border: none;
 	}
 
 	.user_box > table td {
