@@ -1,0 +1,170 @@
+.noscroll{
+    overflow:hidden;
+}
+#burguer-menu
+{
+    position: absolute;
+    border: 0;
+    z-index: 21;
+    cursor: pointer;
+    width: 26px;
+    height: 17px;
+    display: none;
+    opacity: 0;
+    bottom: 20px;
+    right: 8px;
+    padding: 20px;
+
+}
+
+#burguer-menu .burguer-lines-wrapper
+{
+    position: relative;
+}
+
+#burguer-menu .burguer-lines-wrapper .burguer-line
+{
+    width: 26px;
+    height: 3px;
+    background: #19ACCD;
+    display: block;
+    position: absolute;
+    -webkit-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+     -ms-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+      -o-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+         transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#burguer-menu .burguer-line:nth-child(1)
+{
+    top: 0;
+}
+
+#burguer-menu .burguer-line:nth-child(2)
+{
+    top: 7px;
+}
+
+#burguer-menu .burguer-line:nth-child(3)
+{
+    top: 14px;
+}
+
+
+header.mobile-menu-active #burguer-menu .burguer-line:nth-child(1)
+{
+    top: 7px;
+    -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+}
+
+header.mobile-menu-active #burguer-menu .burguer-line:nth-child(2)
+{
+    opacity: 0;
+}
+header.mobile-menu-active #burguer-menu .burguer-line:nth-child(3)
+{
+    top: 7px;
+    -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+}
+
+
+@media only screen and (max-width: 767px){
+        header.container{
+                height: auto;
+        }
+        header#mainmenu nav{
+            box-sizing: border-box;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 12;
+            width: 100% !important;
+            height:100%;
+            display: block;
+            overflow: hidden;
+            padding-top: 165px;
+            background-color: #FFF;
+            height: 0;
+            opacity: 0;
+            -webkit-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            -moz-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            -ms-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            -o-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        }
+        header#mainmenu nav ul li{
+            display: block;
+            width: 100% !important;
+            height: 16.66%;
+            text-align: center;
+            border-bottom: 1px solid #EEE;
+            box-sizing: border-box;
+            margin: 0;
+            padding:15px 0;
+
+            -webkit-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            -moz-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            -ms-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            -o-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        }
+
+        #mainmenu.mobile-menu-active{
+            display: block;
+              z-index: 20;
+              position: relative;
+        }
+        #mainmenu #logo{
+            display: block;
+              z-index: 21;
+              position: relative;
+        }
+        #mainmenu.mobile-menu-active nav {
+
+            height: 100%;
+            opacity:1;
+
+        }
+        #mainmenu.mobile-menu-active nav ul{
+            display: block !important;
+            border-top: 2px solid #EEE;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0;
+        }
+        #mainmenu.mobile-menu-active nav ul li{
+            display: block;
+            width: 100% !important;
+            height: 16.66%;
+            text-align: center;
+            border-bottom: 1px solid #EEE;
+            box-sizing: border-box;
+            margin: 0;
+            padding:15px 0;
+
+        }
+        #mainmenu.mobile-menu-active nav ul li a{
+              position: relative;
+              top: 50%;
+              display: block;
+              transform: translateY(-50%);
+        }
+        #mainmenu.mobile-menu-active nav ul li:last-child{
+            margin: 0;
+            padding-right: 0;
+        }
+        #burguer-menu
+        {
+          display: block;
+          opacity: 1;
+        }
+
+
+}
