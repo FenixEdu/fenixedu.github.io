@@ -39,7 +39,7 @@ aware that some institutions may choose to restrict access to the API.
 The API supports localized invocations.
 In each endpoint if a `lang` parameter is present and its' value is an available language, the returned information is localized in the specified language. Otherwise the default language is used.
 
-The list of available languages is returned by [/about](#get-/about).
+The list of available languages is returned by [/about](#get-about).
 
 #### Example request with specified language
 
@@ -54,9 +54,9 @@ The list of available languages is returned by [/about](#get-/about).
 * [GET /contacts](#get-contacts) <i class="icon-lock-open"></i>
 * [GET /courses/{id}](#get-courses-id) <i class="icon-lock-open"></i>
 * [GET /courses/{id}/evaluations](#get-courses-id-evaluations) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/groups](#get-/courses-id-groups) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/schedule](#get-/courses-id-schedule) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/students](#get-/courses-id-students) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/groups](#get-courses-id-groups) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/schedule](#get-courses-id-schedule) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/students](#get-courses-id-students) <i class="icon-lock-open"></i>
 * [GET /degrees](#get-degrees) <i class="icon-lock-open"></i>
 * [GET /degrees/{id}](#get-degrees-id) <i class="icon-lock-open"></i>
 * [GET /degrees/{id}/courses](#get-degrees-id-courses) <i class="icon-lock-open"></i>
@@ -704,7 +704,7 @@ This endpoint returns the information for all degrees.
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#get-/academicterms)
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-academicterms)
 
 #### Example Request
 ```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees?academicTerm=2013/2014">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees?academicTerm=2013/2014</a>
@@ -765,7 +765,7 @@ This endpoint returns the information for the {id} degree.
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#get-/academicterms)
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-academicterms)
 
 #### Example Request
 ```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513?academicTerm=2013/2014">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513?academicTerm=2013/2014</a>
@@ -823,7 +823,7 @@ If no academicTerm is defined it returns the degree information for the `current
 This endpoint returns the informations for a degree's courses.
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#get-/academicterms)   
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-academicterms)   
 
 #### Example Request
 ```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513/courses?academicTerm=2013/2014">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/degrees/2761663977513/courses?academicTerm=2013/2014</a>
@@ -1150,7 +1150,7 @@ This endpoint returns the students's evaluations information. This information c
 This endpoint returns the user's course information.
 
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#get-/academicterms)X
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-academicterms)X
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
 #### Example Request
 ```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/courses?academicTerm=2013/2014">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/courses?academicTerm=2013/2014</a>
