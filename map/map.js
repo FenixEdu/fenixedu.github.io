@@ -25,14 +25,6 @@
       z: 18,
       numUsers: 9296 },
 
-    { name: "Faculdade de Arquitetura de Lisboa",
-      url: "http://www.fa.utl.pt",
-      imagePin: "map/map_pin.png",
-      logo: "logo_school_fa.png",
-      location: [ 38.7144,  -9.1917 ], 
-      z: 17,
-      numUsers: 666 },
-
     { name: "São José de Cluny Nursing School",
       url: "http://www.esesjcluny.pt",
       imagePin: "map/map_pin.png",
@@ -55,7 +47,48 @@
       logo: "logo_school_isutc.png",
       location: [ -25.9558574, 32.6002478 ],
       z: 15,
-      numUsers: 0 }
+      numUsers: 0 },
+
+    { name: "Reitoria da Universidade de Lisboa",
+      url: "http://www.ulisboa.pt/",
+      imagePin: "map/map_pin.png",
+      logo: "logo_school_ul.png",
+      location: [ 38.7525761, -9.158217 ], 
+      z: 21,
+      numUsers: 246 },
+
+    { name: "Faculdade de Farmácia",
+      url: "http://www.ff.ulisboa.pt/",
+      imagePin: "map/map_pin.png",
+      logo: "logo_school_ff.png",
+      location: [ 38.7496069, -9.1593576 ], 
+      z: 17,
+      numUsers: 1686 },
+
+    { name: "Faculdade de Letras",
+      url: "http://www.letras.ulisboa.pt/",
+      imagePin: "map/map_pin.png",
+      logo: "logo_school_flul.png",
+      location: [ 38.7534911, -9.1594998 ], 
+      z: 17,
+      numUsers: 3778 },
+
+    { name: "Faculdade de Medicina Dentária",
+      url: "http://www.fmd.ulisboa.pt/",
+      logo: "logo_school_fmd.png",
+      imagePin: "map/map_pin.png",
+      location: [ 38.7502539, -9.157793 ], 
+      z: 17,
+      numUsers: 560 },
+
+    { name: "Faculdade de Medicina Veterinária",
+      url: "http://www.fmv.ulisboa.pt/",
+      imagePin: "map/map_pin.png",
+      logo: "logo_school_fmv.png",
+      location: [ 38.7149916, -9.1965578 ], 
+      z: 17,
+      numUsers: 937 }
+
     ];
 
   var featureOpts = [
