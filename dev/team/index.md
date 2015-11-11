@@ -15,13 +15,6 @@ root: "../../"
 	<img src="https://avatars2.githubusercontent.com/u/1499685?s=460">
 </li>
 
-<li id="frederico">
-	<h4>André Nunes</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/andre-nunes"><i aria-hidden="true" class="icon-github">@andre-nunes</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/3066457?s=460">
-</li>
-
 <li id="artur">
 	<h4>Artur Ventura</h4>
 	<p>Developer</p>
@@ -68,13 +61,6 @@ root: "../../"
 	<img src="https://avatars3.githubusercontent.com/u/849596?s=460">
 </li>
 
-<li id="miguel">
-	<h4>Miguel Borgez</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/mbborgez"><i aria-hidden="true" class="icon-github">@mbborgez</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/1963763?s=460">
-</li>
-
 <li id="pedro">
 	<h4>Pedro Santos</h4>
 	<p>Developer</p>
@@ -94,7 +80,7 @@ root: "../../"
 	<h4>Ricardo Rodrigues</h4>
 	<p>Developer</p>
 	<a href="https://github.com/ricardorcr"><i aria-hidden="true" class="icon-github">@ricardorcr</i></a>
-	<img src="http://dali.ist.utl.pt/~ritasevero/solo/ricardo_rodrigues.jpg">
+	<img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/11160666_1068250806535947_6210126228602852661_n.jpg?oh=f91fa470e1f2e1f37dfaf5acbb79af9c&oe=56C4D2F2?s=460">
 </li>
 
 <li id="rita">
@@ -104,14 +90,6 @@ root: "../../"
 	<a href="https://twitter.com/ritanoirshoes"><i aria-hidden="true" class="icon-twitter">@ritanoirshoes</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/5889520?s=460">
 </li>
-
-<li id="samuel">
-	<h4>Samuel Coelho</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/samfcmc"><i aria-hidden="true" class="icon-github">@samfcmc</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/4904318?s=460">
-</li>
-
 
 <li id="sergio">
 	<h4>Sérgio Silva</h4>
