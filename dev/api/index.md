@@ -70,10 +70,10 @@ The list of available languages is returned by [/about](#get-about).
 * [GET /person/evaluations](#get-person-evaluations) <i class="icon-lock"></i><i class="icon-chart-area"></i>
 * [PUT /person/evaluations/{id}](#put-person-evaluations-id) <i class="icon-lock"></i><i class="icon-chart-area"></i>
 * [GET /person/payments](#get-person-payments) <i class="icon-lock"></i><i class="icon-basket"></i>
+* [GET /shuttle](#get-shuttle)  <i class="icon-lock-open"></i>
 * [GET /spaces](#get-spaces)  <i class="icon-lock-open"></i>
 * [GET /spaces/{id}](#get-spaces-id)  <i class="icon-lock-open"></i>
 * [GET /spaces/{id}/blueprint](#get-spaces-id-blueprint)  <i class="icon-lock-open"></i>
-* [GET /shuttle](#get-shuttle)  <i class="icon-lock-open"></i>
 
 > <span>NOTE</span>
 > <i class="icon-lock-open"></i> - Public Endpoint.      
@@ -1367,6 +1367,81 @@ This endpoint returns user's payments information.
 }
 {% endhighlight %}
 
+### GET /shuttle
+
+<i class="icon-lock-open"></i>
+
+This endpoint returns the shuttle information
+
+#### Example Request
+```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/shuttle">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/shuttle</a>
+
+#### Example Response
+{% highlight json %}
+{
+  "stations": [
+    {
+      "name": "Alameda",
+      "address": "Avenida Manuel da Maia 36",
+      "latlng": "38.736926,-9.136565"
+    },
+    {
+      "name": "Cacém",
+      "address": "Rua Elias Garcia 2",
+      "latlng": "38.766274,-9.298728"
+    }
+  ],
+  "date": [
+    {
+      "start": "15/09/2014",
+      "end": "30/09/2014",
+      "type": "weekday"
+    },
+    {
+      "start": "01/09/2014",
+      "end": "12/09/2014",
+      "type": "holidays"
+    }
+  ],
+  "trips": [
+    {
+      "type": "weekday",
+      "stations": [
+        {
+          "hour": "07.15",
+          "station": "Alameda"
+        },
+        {
+          "hour": "07.25",
+          "station": "Sete-Rios"
+        },
+        {
+          "hour": "07.55",
+          "station": "Taguspark"
+        }
+      ]
+    },
+    {
+      "type": "holidays",
+      "stations": [
+        {
+          "hour": "08.00",
+          "station": "Alameda"
+        },
+        {
+          "hour": "08.15",
+          "station": "Sete-Rios"
+        },
+        {
+          "hour": "08.40",
+          "station": "Taguspark"
+        }
+      ]
+    }
+  ]
+}
+{% endhighlight %}
+
 ### GET /spaces
 
 <i class="icon-lock-open"></i>
@@ -1464,78 +1539,3 @@ This endpoint returns the space's blueprint in the required format
 response content-type : "application/dwg" or "image/jpg"
 
 response content: raw image data
-
-### GET /shuttle
-
-<i class="icon-lock-open"></i>
-
-This endpoint returns the shuttle information
-
-#### Example Request
-```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/shuttle">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/shuttle</a>
-
-#### Example Response
-{% highlight json %}
-{
-  "stations": [
-    {
-      "name": "Alameda",
-      "address": "Avenida Manuel da Maia 36",
-      "latlng": "38.736926,-9.136565"
-    },
-    {
-      "name": "Cacém",
-      "address": "Rua Elias Garcia 2",
-      "latlng": "38.766274,-9.298728"
-    }
-  ],
-  "date": [
-    {
-      "start": "15/09/2014",
-      "end": "30/09/2014",
-      "type": "weekday"
-    },
-    {
-      "start": "01/09/2014",
-      "end": "12/09/2014",
-      "type": "holidays"
-    }
-  ],
-  "trips": [
-    {
-      "type": "weekday",
-      "stations": [
-        {
-          "hour": "07.15",
-          "station": "Alameda"
-        },
-        {
-          "hour": "07.25",
-          "station": "Sete-Rios"
-        },
-        {
-          "hour": "07.55",
-          "station": "Taguspark"
-        }
-      ]
-    },
-    {
-      "type": "holidays",
-      "stations": [
-        {
-          "hour": "08.00",
-          "station": "Alameda"
-        },
-        {
-          "hour": "08.15",
-          "station": "Sete-Rios"
-        },
-        {
-          "hour": "08.40",
-          "station": "Taguspark"
-        }
-      ]
-    }
-  ]
-}
-{% endhighlight %}
