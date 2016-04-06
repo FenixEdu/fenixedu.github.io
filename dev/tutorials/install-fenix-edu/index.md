@@ -23,7 +23,7 @@ Before you can install FenixEdu locally, you must install some software packages
 
 {% highlight bash %}
 sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get install maven git mysql-server mysql-client oracle-jdk8-installer
+sudo apt-get install maven git mysql-server mysql-client oracle-java8-installer
 {% endhighlight %}
 
 ### Step 2 - Configure Java and Maven
