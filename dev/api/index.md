@@ -109,6 +109,10 @@ application is deployed. It also returns a list of RSS feeds, the current academ
       "url": ""
     }
   ],
+  "rss": {
+    "news": "",
+    "events": ""
+  }
   "currentAcademicTerm": "1ºSemestre 2013/2014",
   "languages": [
     "en-US",
@@ -165,132 +169,68 @@ This endpoint returns the menu information of Alameda's canteen.
 
 #### Example Response
 {% highlight json %}
-{
-  "en-GB": [
-    {
-      "day": "24/2/2014",
-      "meal": [
-        {
-          "info": [
-            {
-              "menu": "Diet Menu",
-              "name": "Grilled flounder with vegetables",
-              "type": "Diet"
-            },
-            {
-              "menu": "Macrobiotic Menu",
-              "name": "Tofu salad",
-              "type": "Macrobiotic"
-            },
-            {
-              "menu": "Traditional Menu",
-              "name": "Pork steak with spaghetti",
-              "type": "Meat"
-            },
-            {
-              "menu": "Traditional Menu",
-              "name": "Fried flounder",
-              "type": "Fish"
-            },
-            {
-              "menu": "Traditional Menu",
-              "name": "Soup of green beans and carrots",
-              "type": "Soup"
-            }
-          ],
-          "type": "Lunch"
-        },
-        {
-          "info": [
-            {
-              "menu": "Macrobiotic Menu",
-              "name": "Fried vegetables with rice",
-              "type": "Macrobiotic"
-            },
-            {
-              "menu": "Traditional Menu",
-              "name": "Pork with pickles and olive",
-              "type": "Meat"
-            },
-            {
-              "menu": "Traditional Menu",
-              "name": "Roasted red fish",
-              "type": "Fish"
-            },
-            {
-              "menu": "Traditional Menu",
-              "name": "Julienne soup",
-              "type": "Soup"
-            }
-          ],
-          "type": "Dinner"
-        }
-      ]
-    }
-  ],
-  "pt-PT": [
-    {
-      "day": "24/2/2014",
-      "meal": [
-        {
-          "info": [
-            {
-              "menu": "Menú Dieta",
-              "name": "Solha grelhada com legumes",
-              "type": "Dieta"
-            },
-            {
-              "menu": "Menú Macrobiótica",
-              "name": "Salada de tofu",
-              "type": "Macrobiótico"
-            },
-            {
-              "menu": "Menú Tradicional",
-              "name": "Bifinhos de porco com esparguete",
-              "type": "Carne"
-            },
-            {
-              "menu": "Menú Tradicional",
-              "name": "Solha au meunier",
-              "type": "Peixe"
-            },
-            {
-              "menu": "Menú Tradicional",
-              "name": "Sopa de feijão verde e cenoura",
-              "type": "Sopa"
-            }
-          ],
-          "type": "Almoço"
-        },
-        {
-          "info": [
-            {
-              "menu": "Menú Macrobiótica",
-              "name": "Pataniscas de legumes com arroz",
-              "type": "Macrobiótico"
-            },
-            {
-              "menu": "Menú Tradicional",
-              "name": "Carne de porco à alentejana",
-              "type": "Carne"
-            },
-            {
-              "menu": "Menú Tradicional",
-              "name": "Red fish assado",
-              "type": "Peixe"
-            },
-            {
-              "menu": "Menú Tradicional",
-              "name": "Sopa juliana",
-              "type": "Sopa"
-            }
-          ],
-          "type": "Jantar"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "day": "24/2/2014",
+    "meal": [
+      {
+        "info": [
+          {
+            "menu": "Menú Dieta",
+            "name": "Solha grelhada com legumes",
+            "type": "Dieta"
+          },
+          {
+            "menu": "Menú Macrobiótica",
+            "name": "Salada de tofu",
+            "type": "Macrobiótico"
+          },
+          {
+            "menu": "Menú Tradicional",
+            "name": "Bifinhos de porco com esparguete",
+            "type": "Carne"
+          },
+          {
+            "menu": "Menú Tradicional",
+            "name": "Solha au meunier",
+            "type": "Peixe"
+          },
+          {
+            "menu": "Menú Tradicional",
+            "name": "Sopa de feijão verde e cenoura",
+            "type": "Sopa"
+          }
+        ],
+        "type": "Almoço"
+      },
+      {
+        "info": [
+          {
+            "menu": "Menú Macrobiótica",
+            "name": "Pataniscas de legumes com arroz",
+            "type": "Macrobiótico"
+          },
+          {
+            "menu": "Menú Tradicional",
+            "name": "Carne de porco à alentejana",
+            "type": "Carne"
+          },
+          {
+            "menu": "Menú Tradicional",
+            "name": "Red fish assado",
+            "type": "Peixe"
+          },
+          {
+            "menu": "Menú Tradicional",
+            "name": "Sopa juliana",
+            "type": "Sopa"
+          }
+        ],
+        "type": "Jantar"
+      }
+    ]
+  }
+]
 {% endhighlight %}
 
 ### GET /contacts
@@ -421,6 +361,11 @@ and ad-hoc evaluations.
         "type": "ROOM",
         "id": "2448131362251",
         "name": "C01 - sala de aula",
+        "topLevelSpace" : {
+          "type" : "CAMPUS",
+          "id" : "2448131360897",
+          "name" : "Alameda"
+        },
         "description": "C01 - Pavilhão Central (Alameda)",
         "capacity": {
           "examCapacity": 56,
@@ -431,6 +376,11 @@ and ad-hoc evaluations.
         "type": "ROOM",
         "id": "2448131362449",
         "name": "C11 - Sala aula",
+        "topLevelSpace" : {
+          "type" : "CAMPUS",
+          "id" : "2448131360897",
+          "name" : "Alameda"
+        }
         "description": "C11 - Pavilhão Central (Alameda)",
         "capacity": {
           "examCapacity": 87,
@@ -567,7 +517,12 @@ shift is the possible schedule in which a student should enrol.
           "room": {
             "type": "ROOM",
             "name": "Ga1",
-            "id": "132115446846"
+            "id": "132115446846",
+            "topLevelSpace" : {
+              "type" : "CAMPUS",
+              "id" : "2448131360897",
+              "name" : "Alameda"
+            }
           }
         },
         {
@@ -576,7 +531,12 @@ shift is the possible schedule in which a student should enrol.
           "room": {
             "type": "ROOM",
             "name": "Ga1",
-            "id": "132115446846"
+            "id": "132115446846",
+            "topLevelSpace" : {
+              "type" : "CAMPUS",
+              "id" : "2448131360897",
+              "name" : "Alameda"
+            }
           }
         },
         {
@@ -585,7 +545,12 @@ shift is the possible schedule in which a student should enrol.
           "room": {
             "type": "ROOM",
             "name": "Ga3",
-            "id": "132115446847"
+            "id": "132115446847",
+            "topLevelSpace" : {
+              "type" : "CAMPUS",
+              "id" : "2448131360897",
+              "name" : "Alameda"
+            }
           }
         }
       ],
@@ -594,6 +559,11 @@ shift is the possible schedule in which a student should enrol.
           "type": "ROOM",
           "id": "132115446847",
           "name": "Ga3 - S. aula",
+          "topLevelSpace" : {
+            "type" : "CAMPUS",
+            "id" : "2448131360897",
+            "name" : "Alameda"
+          },
           "description": "Ga3 - Pavilhão Central (Alameda)",
           "capacity": {
             "normal": 80,
@@ -618,7 +588,12 @@ shift is the possible schedule in which a student should enrol.
           "room": {
             "type": "ROOM",
             "name": "F1",
-            "id": "132115446844"
+            "id": "132115446844",
+            "topLevelSpace" : {
+              "type" : "CAMPUS",
+              "id" : "2448131360897",
+              "name" : "Alameda"
+            }
           }
         },
         {
@@ -627,7 +602,12 @@ shift is the possible schedule in which a student should enrol.
           "room": {
             "type": "ROOM",
             "name": "F2",
-            "id": "132115446843"
+            "id": "132115446843",
+            "topLevelSpace" : {
+              "type" : "CAMPUS",
+              "id" : "2448131360897",
+              "name" : "Alameda"
+            }
           }
         },
         {
@@ -636,7 +616,12 @@ shift is the possible schedule in which a student should enrol.
           "room": {
             "type": "ROOM",
             "name": "F1",
-            "id": "132115446844"
+            "id": "132115446844",
+            "topLevelSpace" : {
+              "type" : "CAMPUS",
+              "id" : "2448131360897",
+              "name" : "Alameda"
+            }
           }
         }
       ],
@@ -645,6 +630,11 @@ shift is the possible schedule in which a student should enrol.
           "type": "ROOM",
           "id": "2448131361685",
           "name": "F1 - Sala de aula",
+          "topLevelSpace" : {
+            "type" : "CAMPUS",
+            "id" : "2448131360897",
+            "name" : "Alameda"
+          },
           "description": "F1 - Pavilhão de Informática I (Alameda)",
           "capacity": {
             "normal": 60,
@@ -932,6 +922,7 @@ the domain model can be found on the Fenix Framework site:
     "latlng": "38.738137,-9.139135", 
     "name": "Alameda", 
     "total": 680, 
+    "updated": "2016-06-26 03:06:56", 
     "workingHours": "24h"
   }, 
   "Arco Do Cego": {
@@ -942,6 +933,7 @@ the domain model can be found on the Fenix Framework site:
     "latlng": "38.73640895,-9.14313902", 
     "name": "Arco do Cego", 
     "total": 70, 
+    "updated": "2016-06-26 02:03:45", 
     "workingHours": "24h"
   }
 }
@@ -999,7 +991,11 @@ This endpoint allows to access the current person information.
       ]
     }
   ],
-  "photo": null,
+  "campus": "Alameda",
+  "photo": {
+    "type": "image/png",
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAGQ..."
+  },
   "name": "John Doe",
   "gender": "MALE",
   "birthday": "21/11/1990",
@@ -1046,7 +1042,12 @@ This endpoint returns the user's class information. This information can be retr
         {
           "type": "ROOM",
           "name": "F4",
-          "id": "2448131363674"
+          "id": "2448131363674",
+          "topLevelSpace" : {
+            "type" : "CAMPUS",
+            "id" : "2448131360897",
+            "name" : "Alameda"
+          }
         }
       ],
       "title": "Gestão : Problemas",
@@ -1067,7 +1068,12 @@ This endpoint returns the user's class information. This information can be retr
         {
           "type": "ROOM",
           "name": "QA02.4",
-          "id": "2448131363664"
+          "id": "2448131363664",
+          "topLevelSpace" : {
+            "type" : "CAMPUS",
+            "id" : "2448131360897",
+            "name" : "Alameda"
+          }
         }
       ],
       "title": "Análise Complexa e Equações Diferenciais : Teórica",
@@ -1125,7 +1131,12 @@ This endpoint returns the students's evaluations information. This information c
         {
           "type": "ROOM",
           "name": "F2",
-          "id": "2448131363664"
+          "id": "2448131363664",
+          "topLevelSpace" : {
+            "type" : "CAMPUS",
+            "id" : "2448131360897",
+            "name" : "Alameda"
+          }
         }
       ],
       "title": "1º Teste : Gestão",
@@ -1150,9 +1161,11 @@ This endpoint returns the students's evaluations information. This information c
 This endpoint returns the user's course information.
 
 #### Query Parameters
-**academicTerm** - one of the academicTerms available at [/academicterms](#get-academicterms)X
+**academicTerm** - one of the academicTerms available at [/academicterms](#get-academicterms)
 If no academicTerm is defined it returns the degree information for the `currentAcademicTerm`.
+
 #### Example Request
+
 ```GET``` <a href="https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/courses?academicTerm=2013/2014">https://fenix.tecnico.ulisboa.pt/api/fenix/v1/person/courses?academicTerm=2013/2014</a>
 
 #### Example Response
@@ -1272,18 +1285,33 @@ This endpoint returns the student's written evaluation information.
       {
         "type": "ROOM",
         "id": "2448131363664",
-        "name": "F2 - Sala de Aula"
+        "name": "F2 - Sala de Aula",
+        "topLevelSpace" : {
+          "type" : "CAMPUS",
+          "id" : "2448131360897",
+          "name" : "Alameda"
+        }
       },
       {
         "type": "ROOM",
         "id": "2448131363667",
-        "name": "FA1 - Anfiteatro"
+        "name": "FA1 - Anfiteatro",
+        "topLevelSpace" : {
+          "type" : "CAMPUS",
+          "id" : "2448131360897",
+          "name" : "Alameda"
+        }
       }
     ],
     "assignedRoom": {
       "type": "ROOM",
       "id": "2448131363674",
-      "name": "F4 - Sala de Aula"
+      "name": "F4 - Sala de Aula",
+      "topLevelSpace" : {
+        "type" : "CAMPUS",
+        "id" : "2448131360897",
+        "name" : "Alameda"
+      }
     }
   },
   {
@@ -1346,6 +1374,7 @@ This endpoint returns user's payments information.
 {
   "completed": [
     {
+      "id" : "845322578300529",
       "amount": "12.34",
       "type": "CASH",
       "description": "Taxa de Secretaria e Seguro - 2012/2013",
@@ -1354,6 +1383,7 @@ This endpoint returns user's payments information.
   ],
   "pending": [
     {
+      "id" : "843325568400987",
       "description": "Propina",
       "paymentPeriod": {
         "start": "13/09/2013 00:00",
@@ -1487,11 +1517,21 @@ This endpoint returns information about the space for a given {id}, its containe
   "type": "ROOM",
   "id": "2448131363667",
   "name": "FA1 - Anfiteatro",
+  "topLevelSpace" : {
+    "type" : "CAMPUS",
+    "id" : "2448131360897",
+    "name" : "Alameda"
+  },
   "containedSpaces": [],
   "parentSpace": {
     "type": "FLOOR",
     "id": "2723009268079",
-    "name": "0"
+    "name": "0",
+    "topLevelSpace" : {
+      "type" : "CAMPUS",
+      "id" : "2448131360897",
+      "name" : "Alameda"
+    }
   },
   "description": "FA1 - Pavilhão de Informática I (Alameda)",
   "capacity": {
