@@ -52,28 +52,28 @@ The list of available languages is returned by [/about](#get-about).
 * [GET /academicterms](#get-academicterms) <i class="icon-lock-open"></i>
 * [GET /canteen](#get-canteen) <i class="icon-lock-open"></i>
 * [GET /contacts](#get-contacts) <i class="icon-lock-open"></i>
-* [GET /courses/{id}](#get-courses-id) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/evaluations](#get-courses-id-evaluations) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/groups](#get-courses-id-groups) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/schedule](#get-courses-id-schedule) <i class="icon-lock-open"></i>
-* [GET /courses/{id}/students](#get-courses-id-students) <i class="icon-lock-open"></i>
+* [GET /courses/{id}](#get-coursesid) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/evaluations](#get-coursesidevaluations) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/groups](#get-coursesidgroups) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/schedule](#get-coursesidschedule) <i class="icon-lock-open"></i>
+* [GET /courses/{id}/students](#get-coursesidstudents) <i class="icon-lock-open"></i>
 * [GET /degrees](#get-degrees) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}](#get-degrees-id) <i class="icon-lock-open"></i>
-* [GET /degrees/{id}/courses](#get-degrees-id-courses) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}](#get-degreesid) <i class="icon-lock-open"></i>
+* [GET /degrees/{id}/courses](#get-degreesidcourses) <i class="icon-lock-open"></i>
 * [GET /domainModel](#get-domainmodel) <i class="icon-lock-open"></i>
 * [GET /parking](#get-parking) <i class="icon-lock-open"></i>
 * [GET /person](#get-person)  <i class="icon-lock"></i><i class="icon-user"></i>
-* [GET /person/calendar/classes](#get-person-calendar-classes) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/calendar/evaluations](#get-person-calendar-evaluations) <i class="icon-lock"></i><i class="icon-calendar"></i>
-* [GET /person/courses](#get-person-courses) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/curriculum](#get-person-curriculum) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
-* [GET /person/evaluations](#get-person-evaluations) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [PUT /person/evaluations/{id}](#put-person-evaluations-id) <i class="icon-lock"></i><i class="icon-chart-area"></i>
-* [GET /person/payments](#get-person-payments) <i class="icon-lock"></i><i class="icon-basket"></i>
+* [GET /person/calendar/classes](#get-personcalendarclasses) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/calendar/evaluations](#get-personcalendarevaluations) <i class="icon-lock"></i><i class="icon-calendar"></i>
+* [GET /person/courses](#get-personcourses) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/curriculum](#get-personcurriculum) <i class="icon-lock"></i><i class="icon-graduation-cap"></i>
+* [GET /person/evaluations](#get-personevaluations) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [PUT /person/evaluations/{id}](#put-personevaluationsid) <i class="icon-lock"></i><i class="icon-chart-area"></i>
+* [GET /person/payments](#get-personpayments) <i class="icon-lock"></i><i class="icon-basket"></i>
 * [GET /shuttle](#get-shuttle)  <i class="icon-lock-open"></i>
 * [GET /spaces](#get-spaces)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}](#get-spaces-id)  <i class="icon-lock-open"></i>
-* [GET /spaces/{id}/blueprint](#get-spaces-id-blueprint)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}](#get-spacesid)  <i class="icon-lock-open"></i>
+* [GET /spaces/{id}/blueprint](#get-spacesidblueprint)  <i class="icon-lock-open"></i>
 
 > <span>NOTE</span>
 > <i class="icon-lock-open"></i> - Public Endpoint.      
