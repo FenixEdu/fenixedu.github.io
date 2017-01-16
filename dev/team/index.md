@@ -30,6 +30,14 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/10809667?v=3&s=460">
 </li>
 
+<li id="david">
+	<h4>David Martinho</h4>
+	<p>Developer</p>
+	<a href="https://github.com/davidmartinho"><i aria-hidden="true" class="icon-github">@davidmartinho</i></a>
+	<a href="https://twitter.com/davidmartinho"><i aria-hidden="true" class="icon-twitter">@davidmartinho</i></a>
+	<img src="https://avatars0.githubusercontent.com/u/185608?s=460">
+</li>
+
 <li id="goncalo">
 	<h4>Gonçalo Sousa</h4>
 	<p>Developer</p>
@@ -64,14 +72,6 @@ root: "../../"
 	<p>Junior Developer</p>
 	<a href="https://github.com/ccostinha91"><i aria-hidden="true" class="icon-github">@ccostinha91</i></a>
 	<img src="https://avatars0.githubusercontent.com/u/19232879?v=3&s=460">
-</li>
-
-<li id="david">
-	<h4>David Martinho</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/davidmartinho"><i aria-hidden="true" class="icon-github">@davidmartinho</i></a>
-	<a href="https://twitter.com/davidmartinho"><i aria-hidden="true" class="icon-twitter">@davidmartinho</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/185608?s=460">
 </li>
 
 <li id="fernando">
