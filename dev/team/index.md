@@ -23,14 +23,14 @@ root: "../../"
 	<img src="https://avatars2.githubusercontent.com/u/1778577?s=460">
 </li>
 
-<li id=“angela”>
+<li id="angela">
 	<h4>Ângela Francisca</h4>
 	<p>Developer</p>
 	<a href="https://github.com/AngelaFrancisca"><i aria-hidden="true" class="icon-github">@AngelaFrancisca</i></a>
 	<img src="https://avatars0.githubusercontent.com/u/10809667?v=3&s=460">
 </li>
 
-<li id=“carlos”>
+<li id="carlos">
 	<h4>Carlos Costinha</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/ccostinha91"><i aria-hidden="true" class="icon-github">@ccostinha91</i></a>
@@ -45,7 +45,7 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/185608?s=460">
 </li>
 
-<li id=“fernando”>
+<li id="fernando">
 	<h4>Fernando Santos</h4>
 	<p>Developer</p>
 	<a href="https://github.com/fernandojps"><i aria-hidden="true" class="icon-github">@fernandojps</i></a>
@@ -66,42 +66,42 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/1466703?s=460">
 </li>
 
-<li id=“luissantos”>
+<li id="luissantos">
 	<h4>Luís Santos</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/luisfsantos"><i aria-hidden="true" class="icon-github">@luisfsantos</i></a>
 	<img src="https://avatars2.githubusercontent.com/u/5561082?v=3&s=460">
 </li>
 
-<li id=“luissilva”>
+<li id="luissilva">
 	<h4>Luís Silva</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/luismrsilva"><i aria-hidden="true" class="icon-github">@luismrsilva</i></a>
 	<img src="https://fenix.tecnico.ulisboa.pt/user/photo/ist177944">
 </li>
 
-<li id=“marco”>
+<li id="marco">
 	<h4>Marco Cerdeira</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/marco-cerdeira"><i aria-hidden="true" class="icon-github">@marco-cerdeira</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/4895866?v=3&s=460">
 </li>
 
-<li id=“miguel”>
+<li id="miguel">
 	<h4>Miguel Pasadinhas</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/pasadinhas"><i aria-hidden="true" class="icon-github">@pasadinhas</i></a>
 	<img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/005/098/195/0ba631e.jpg">
 </li>
 
-<li id=“paulo”>
+<li id="paulo">
 	<h4>Paulo Branco</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/Paulo-Branco"><i aria-hidden="true" class="icon-github">@Paulo-Branco</i></a>
 	<img src="https://avatars0.githubusercontent.com/u/6325243?v=3&s=460">
 </li>
 
-<li id=“ricardoa”>
+<li id="ricardoa">
 	<h4>Ricardo Almeida</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/ricardo-j-almeida"><i aria-hidden="true" class="icon-github">@ricardo-j-almeida</i></a>
