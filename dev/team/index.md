@@ -30,6 +30,35 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/10809667?v=3&s=460">
 </li>
 
+<li id="goncalo">
+	<h4>Gonçalo Sousa</h4>
+	<p>Developer</p>
+	<a href="https://github.com/diutsu"><i aria-hidden="true" class="icon-github">@diutsu</i></a>
+	<img src="https://avatars0.githubusercontent.com/u/1466703?s=460">
+</li>
+
+<li id="ricardo">
+	<h4>Ricardo Rodrigues</h4>
+	<p>Developer</p>
+	<a href="https://github.com/ricardorcr"><i aria-hidden="true" class="icon-github">@ricardorcr</i></a>
+	<img src="https://scontent.flis7-1.fna.fbcdn.net/v/t1.0-9/11160666_1068250806535947_6210126228602852661_n.jpg?oh=501557032d9de8e8041fd70d8857b1b8&oe=591615F2">
+</li>
+
+<li id="rita">
+	<h4>Rita Severo</h4>
+	<p>Designer</p>
+	<a href="https://github.com/arsevero"><i aria-hidden="true" class="icon-github">@arsevero</i></a>
+	<a href="https://twitter.com/ritanoirshoes"><i aria-hidden="true" class="icon-twitter">@ritanoirshoes</i></a>
+	<img src="https://avatars3.githubusercontent.com/u/5889520?s=460">
+</li>
+
+<li id="susana">
+	<h4>Susana Fernandes</h4>
+	<p>Developer</p>
+	<a href="https://github.com/SusanaFernandes"><i aria-hidden="true" class="icon-github">@SusanaFernandes</i></a>
+	<img src="https://avatars0.githubusercontent.com/u/3941560?s=460">
+</li>
+
 <li id="carlos">
 	<h4>Carlos Costinha</h4>
 	<p>Junior Developer</p>
@@ -47,7 +76,7 @@ root: "../../"
 
 <li id="fernando">
 	<h4>Fernando Santos</h4>
-	<p>Developer</p>
+	<p>Junior Developer</p>
 	<a href="https://github.com/fernandojps"><i aria-hidden="true" class="icon-github">@fernandojps</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/3181322?v=3&s=460">
 </li>
@@ -57,13 +86,6 @@ root: "../../"
 	<p>Junior Developer</p>
 	<a href="https://github.com/gil-l"><i aria-hidden="true" class="icon-github">@gil-l</i></a>
 	<img src="https://avatars0.githubusercontent.com/u/5663618?s=460">
-</li>
-
-<li id="goncalo">
-	<h4>Gonçalo Sousa</h4>
-	<p>Developer</p>
-	<a href="https://github.com/diutsu"><i aria-hidden="true" class="icon-github">@diutsu</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/1466703?s=460">
 </li>
 
 <li id="luissantos">
@@ -106,28 +128,6 @@ root: "../../"
 	<p>Junior Developer</p>
 	<a href="https://github.com/ricardo-j-almeida"><i aria-hidden="true" class="icon-github">@ricardo-j-almeida</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/11167694?v=3&s=460">
-</li>
-
-<li id="ricardo">
-	<h4>Ricardo Rodrigues</h4>
-	<p>Developer</p>
-	<a href="https://github.com/ricardorcr"><i aria-hidden="true" class="icon-github">@ricardorcr</i></a>
-	<img src="https://scontent.flis7-1.fna.fbcdn.net/v/t1.0-9/11160666_1068250806535947_6210126228602852661_n.jpg?oh=501557032d9de8e8041fd70d8857b1b8&oe=591615F2">
-</li>
-
-<li id="rita">
-	<h4>Rita Severo</h4>
-	<p>Designer</p>
-	<a href="https://github.com/arsevero"><i aria-hidden="true" class="icon-github">@arsevero</i></a>
-	<a href="https://twitter.com/ritanoirshoes"><i aria-hidden="true" class="icon-twitter">@ritanoirshoes</i></a>
-	<img src="https://avatars3.githubusercontent.com/u/5889520?s=460">
-</li>
-
-<li id="susana">
-	<h4>Susana Fernandes</h4>
-	<p>Developer</p>
-	<a href="https://github.com/SusanaFernandes"><i aria-hidden="true" class="icon-github">@SusanaFernandes</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/3941560?s=460">
 </li>
 
 </ul>
