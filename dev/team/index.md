@@ -15,28 +15,12 @@ root: "../../"
 	<img src="https://avatars2.githubusercontent.com/u/1499685?s=460">
 </li>
 
-<li id="artur">
-	<h4>Artur Ventura</h4>
-	<p>Developer</p>
-	<a href="http://surf-the-edge.com"><i aria-hidden="true" class="icon-link">surf-the-edge.com</i></a>
-	<a href="https://github.com/nurv"><i aria-hidden="true" class="icon-github">@nurv</i></a>
-	<a href="https://twitter.com/arturventura"><i aria-hidden="true" class="icon-twitter">@arturventura</i></a>
-	<img src="https://avatars2.githubusercontent.com/u/132118?s=460">
-</li>
-
 <li id="david">
 	<h4>David Martinho</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/davidmartinho"><i aria-hidden="true" class="icon-github">@davidmartinho</i></a>
 	<a href="https://twitter.com/davidmartinho"><i aria-hidden="true" class="icon-twitter">@davidmartinho</i></a>
 	<img src="https://avatars0.githubusercontent.com/u/185608?s=460">
-</li>
-
-<li id="frederico">
-	<h4>Frederico Sabino</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/Daedalus93"><i aria-hidden="true" class="icon-github">@Daedalus93</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/3332770?s=460">
 </li>
 
 <li id="gil">
@@ -51,29 +35,6 @@ root: "../../"
 	<p>Junior Developer</p>
 	<a href="https://github.com/diutsu"><i aria-hidden="true" class="icon-github">@diutsu</i></a>
 	<img src="https://avatars0.githubusercontent.com/u/1466703?s=460">
-</li>
-
-<li id="joao">
-	<h4>João Carvalho</h4>
-	<p>Developer</p>
-	<a href="https://github.com/jcarvalho"><i aria-hidden="true" class="icon-github">@jcarvalho</i></a>
-	<a href="https://twitter.com/johnkarva"><i aria-hidden="true" class="icon-twitter">@johnkarva</i></a>
-	<img src="https://avatars3.githubusercontent.com/u/849596?s=460">
-</li>
-
-<li id="pedro">
-	<h4>Pedro Santos</h4>
-	<p>Developer</p>
-	<a href="https://github.com/pedrosan7os"><i aria-hidden="true" class="icon-github">@pedrosan7os</i></a>
-	<a href="https://twitter.com/pedrosan7os"><i aria-hidden="true" class="icon-twitter">@pedrosan7os</i></a>
-	<img src="https://avatars2.githubusercontent.com/u/1579125?s=460">
-</li>
-
-<li id="ricardobarata">
-	<h4>Ricardo Barata</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/rsbarata"><i aria-hidden="true" class="icon-github">@rsbarata</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/4720285?s=460">
 </li>
 
 <li id="ricardo">
