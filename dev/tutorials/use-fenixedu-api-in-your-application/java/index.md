@@ -16,7 +16,7 @@ In this tutorial, you will learn how to use the Java SDK to easily invoke the Fe
   * [Step 3.1 - Use the Synchronous Client](#step-3.1---use-the-synchronous-client)
   * [Step 3.2 - Use the Asynchronous Client](#step-3.2---use-the-asynchronous-client)
 
-### Step 1 - Include the Java SDK in your project libs
+### Step 1 - Include the [Java SDK](https://github.com/FenixEdu/fenixedu-java-sdk) in your project libs
 
 In order to ease the use of the FenixEdu API, we developed a Java SDK that you can use in your project by including it in your project libraries.
 
@@ -26,12 +26,12 @@ If you are using Maven to build your Java project, you just need to add the foll
 <dependency>
   <groupId>org.fenixedu</groupId>
   <artifactId>feaf4j-api</artifactId>
-  <version>2.0.0</version>
+  <version>2.3.1</version>
 </dependency>
 <dependency>
   <groupId>org.fenixedu</groupId>
   <artifactId>feaf4j-okhttp</artifactId>
-  <version>2.0.0</version>
+  <version>2.3.1</version>
 </dependency>
 {% endhighlight %}
 
@@ -76,7 +76,7 @@ FenixEduClientImpl client = new FenixEduClientImpl(config);
 //you can invoke public endpoints without any access token.
 JsonObject about = client.getAbout();
 
-//to access user's data, you must redirect the user to the URL provided by client.getAuthorizationUrl();
+//to access user's data, you must redirect the user to the URL provided by client.getAuthenticationUrl();
 //if the user accepts it, the FenixEdu API will invoke the defined callback url passing a query param named code.
 //e.g. http://localhost:8080/authorization?code=<authorization-code>
 
@@ -97,17 +97,17 @@ If your working mobile (in this example we are using Android), you probably want
 <dependency>
   <groupId>org.fenixedu</groupId>
   <artifactId>feaf4j-api</artifactId>
-  <version>2.0.0</version>
+  <version>2.3.1</version>
 </dependency>
 <dependency>
   <groupId>org.fenixedu</groupId>
   <artifactId>feaf4j-okhttp</artifactId>
-  <version>2.0.0</version>
+  <version>2.3.1</version>
 </dependency>
 <dependency>
   <groupId>org.fenixedu</groupId>
   <artifactId>feaf4j-android</artifactId>
-  <version>2.0.0</version>
+  <version>2.3.1</version>
 </dependency>
 {% endhighlight %}
 
@@ -121,7 +121,7 @@ FenixEduClientImpl client = new FenixEduClientImpl(ApplicationConfiguration.from
 GetAboutAsyncTask about = new GetAboutAsyncTask(client);
 JsonObject jObj = about.execute().get();
 
-//redirect the user to the URL provided by client.getAuthorizationUrl();
+//redirect the user to the URL provided by client.getAuthenticationUrl();
 //if the user accepts it, the FenixEdu API will invoke the defined callback url passing a query param named code.
 //e.g. my-mobile-schema://my-mobile-app/authorization?code=<authorization-code>
 
