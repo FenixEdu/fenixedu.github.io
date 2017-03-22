@@ -67,13 +67,6 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/3941560?s=460">
 </li>
 
-<li id="carlos">
-	<h4>Carlos Costinha</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/ccostinha91"><i aria-hidden="true" class="icon-github">@ccostinha91</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/19232879?v=3&s=460">
-</li>
-
 <li id="fernando">
 	<h4>Fernando Santos</h4>
 	<p>Junior Developer</p>
