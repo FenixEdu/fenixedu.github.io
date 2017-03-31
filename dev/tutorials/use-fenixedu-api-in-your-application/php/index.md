@@ -59,7 +59,7 @@ To perform these steps while using the PHP SDK, you should do something like thi
   $fenixEduClient = FenixEduClient::getSingleton();
   $authorizationUrl = $fenixEduClient->getAuthorizationURL();
 
-  header(sprintf("Location: %s", authorizationUrl));
+  header(sprintf("Location: %s", $authorizationUrl));
 ?>
 {% endhighlight %}
 
