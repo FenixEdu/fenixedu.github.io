@@ -8,6 +8,14 @@ root: "../../"
 
 <ul class="box_container">
 
+<li id="david">
+	<h4>David Martinho</h4>
+	<p>Lead Developer</p>
+	<a href="https://github.com/davidmartinho"><i aria-hidden="true" class="icon-github">@davidmartinho</i></a>
+	<a href="https://twitter.com/davidmartinho"><i aria-hidden="true" class="icon-twitter">@davidmartinho</i></a>
+	<img src="https://avatars0.githubusercontent.com/u/185608?s=460">
+</li>
+
 <li id="luis">
 	<h4>Luís Cruz</h4>
 	<p>Lead Developer</p>
@@ -30,26 +38,11 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/10809667?v=3&s=460">
 </li>
 
-<li id="david">
-	<h4>David Martinho</h4>
-	<p>Developer</p>
-	<a href="https://github.com/davidmartinho"><i aria-hidden="true" class="icon-github">@davidmartinho</i></a>
-	<a href="https://twitter.com/davidmartinho"><i aria-hidden="true" class="icon-twitter">@davidmartinho</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/185608?s=460">
-</li>
-
-<li id="goncalo">
-	<h4>Gonçalo Sousa</h4>
-	<p>Developer</p>
-	<a href="https://github.com/diutsu"><i aria-hidden="true" class="icon-github">@diutsu</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/1466703?s=460">
-</li>
-
 <li id="ricardo">
 	<h4>Ricardo Rodrigues</h4>
 	<p>Developer</p>
 	<a href="https://github.com/ricardorcr"><i aria-hidden="true" class="icon-github">@ricardorcr</i></a>
-	<img src="https://scontent.flis7-1.fna.fbcdn.net/v/t1.0-9/11160666_1068250806535947_6210126228602852661_n.jpg?oh=501557032d9de8e8041fd70d8857b1b8&oe=591615F2">
+	<img src="https://avatars0.githubusercontent.com/u/3932757?s=400&v=4">
 </li>
 
 <li id="rita">
@@ -67,11 +60,18 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/3941560?s=460">
 </li>
 
-<li id="fernando">
-	<h4>Fernando Santos</h4>
+<li id="franciscoc">
+	<h4>Francisco Catarrinho</h4>
 	<p>Junior Developer</p>
-	<a href="https://github.com/fernandojps"><i aria-hidden="true" class="icon-github">@fernandojps</i></a>
-	<img src="https://avatars3.githubusercontent.com/u/3181322?v=3&s=460">
+	<a href="https://github.com/francisco-catarrinho"><i aria-hidden="true" class="icon-github">@francisco-catarrinho</i></a>
+	<img src="https://avatars0.githubusercontent.com/u/14894585?s=400&v=4">
+</li>
+
+<li id="franciscon">
+	<h4>Francisco Neves</h4>
+	<p>Junior Developer</p>
+	<a href="https://github.com/francisconeves97"><i aria-hidden="true" class="icon-github">@francisconeves97</i></a>
+	<img src="https://avatars3.githubusercontent.com/u/15033347?s=400&v=4">
 </li>
 
 <li id="gil">
@@ -81,18 +81,26 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/5663618?s=460">
 </li>
 
+<li id="joao">
+	<h4>João Abrantes</h4>
+	<p>Junior Developer</p>
+	<a href="https://github.com/JCAbrantes"><i aria-hidden="true" class="icon-github">@JCAbrantes</i></a>
+	<img src="https://fenix.tecnico.ulisboa.pt/user/photo/ist181845">
+</li>
+
+<li id="luisavila">
+	<h4>Luís Ávila</h4>
+	<p>Junior Developer</p>
+	<a href="https://github.com/luisfavila"><i aria-hidden="true" class="icon-github">@luisfavila</i></a>
+	<a href="https://twitter.com/luisfilipeavila"><i aria-hidden="true" class="icon-twitter">@luisfilipeavila</i></a>
+	<img src="https://avatars3.githubusercontent.com/u/15204687?s=400&v=4">
+</li>
+
 <li id="luissantos">
 	<h4>Luís Santos</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/luisfsantos"><i aria-hidden="true" class="icon-github">@luisfsantos</i></a>
 	<img src="https://avatars2.githubusercontent.com/u/5561082?v=3&s=460">
-</li>
-
-<li id="luissilva">
-	<h4>Luís Silva</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/luismrsilva"><i aria-hidden="true" class="icon-github">@luismrsilva</i></a>
-	<img src="https://fenix.tecnico.ulisboa.pt/user/photo/ist177944">
 </li>
 
 <li id="marco">
@@ -103,10 +111,10 @@ root: "../../"
 </li>
 
 <li id="miguel">
-	<h4>Miguel Pasadinhas</h4>
+	<h4>Miguel Ventura</h4>
 	<p>Junior Developer</p>
-	<a href="https://github.com/pasadinhas"><i aria-hidden="true" class="icon-github">@pasadinhas</i></a>
-	<img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/005/098/195/0ba631e.jpg">
+	<a href="https://github.com/skamv"><i aria-hidden="true" class="icon-github">@skamv</i></a>
+	<img src="https://avatars2.githubusercontent.com/u/5191487?s=400&v=4">
 </li>
 
 <li id="paulo">
