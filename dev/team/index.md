@@ -74,13 +74,6 @@ root: "../../"
 	<img src="https://avatars3.githubusercontent.com/u/15033347?s=400&v=4">
 </li>
 
-<li id="gil">
-	<h4>Gil Lacerda</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/gil-l"><i aria-hidden="true" class="icon-github">@gil-l</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/5663618?s=460">
-</li>
-
 <li id="joao">
 	<h4>João Abrantes</h4>
 	<p>Junior Developer</p>
@@ -94,13 +87,6 @@ root: "../../"
 	<a href="https://github.com/luisfavila"><i aria-hidden="true" class="icon-github">@luisfavila</i></a>
 	<a href="https://twitter.com/luisfilipeavila"><i aria-hidden="true" class="icon-twitter">@luisfilipeavila</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/15204687?s=400&v=4">
-</li>
-
-<li id="luissantos">
-	<h4>Luís Santos</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/luisfsantos"><i aria-hidden="true" class="icon-github">@luisfsantos</i></a>
-	<img src="https://avatars2.githubusercontent.com/u/5561082?v=3&s=460">
 </li>
 
 <li id="marco">
