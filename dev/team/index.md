@@ -12,7 +12,6 @@ root: "../../"
 	<h4>David Martinho</h4>
 	<p>Lead Developer</p>
 	<a href="https://github.com/davidmartinho"><i aria-hidden="true" class="icon-github">@davidmartinho</i></a>
-	<a href="https://twitter.com/davidmartinho"><i aria-hidden="true" class="icon-twitter">@davidmartinho</i></a>
 	<img src="https://avatars0.githubusercontent.com/u/185608?s=460">
 </li>
 
@@ -38,6 +37,19 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/10809667?v=3&s=460">
 </li>
 
+<li id="joaoreid">
+	<h4>João Reis</h4>
+	<p>Developer</p>
+	<img src="https://fenix.tecnico.ulisboa.pt/user/photo/ist175617">
+</li>
+
+<li id="marco">
+	<h4>Marco Cerdeira</h4>
+	<p>Developer</p>
+	<a href="https://github.com/marco-cerdeira"><i aria-hidden="true" class="icon-github">@marco-cerdeira</i></a>
+	<img src="https://avatars3.githubusercontent.com/u/4895866?v=3&s=460">
+</li>
+
 <li id="ricardo">
 	<h4>Ricardo Rodrigues</h4>
 	<p>Developer</p>
@@ -60,6 +72,13 @@ root: "../../"
 	<img src="https://avatars0.githubusercontent.com/u/3941560?s=460">
 </li>
 
+<li id="catarina">
+	<h4>Catarina Cepeda</h4>
+	<p>Junior Developer</p>
+	<a href="https://github.com/catarinacepeda"><i aria-hidden="true" class="icon-github">@catarinacepeda</i></a>
+	<img src="https://fenix.tecnico.ulisboa.pt/user/photo/ist186437">
+</li>
+
 <li id="franciscoc">
 	<h4>Francisco Catarrinho</h4>
 	<p>Junior Developer</p>
@@ -72,6 +91,13 @@ root: "../../"
 	<p>Junior Developer</p>
 	<a href="https://github.com/francisconeves97"><i aria-hidden="true" class="icon-github">@francisconeves97</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/15033347?s=400&v=4">
+</li>
+
+<li id="ines">
+	<h4>Inês Filipe</h4>
+	<p>Junior Developer</p>
+	<a href="https://github.com/inesfilipe"><i aria-hidden="true" class="icon-github">@inesfilipe</i></a>
+	<img src="https://avatars2.githubusercontent.com/u/29131787?s=460&v=4">
 </li>
 
 <li id="joao">
@@ -87,13 +113,6 @@ root: "../../"
 	<a href="https://github.com/luisfavila"><i aria-hidden="true" class="icon-github">@luisfavila</i></a>
 	<a href="https://twitter.com/luisfilipeavila"><i aria-hidden="true" class="icon-twitter">@luisfilipeavila</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/15204687?s=400&v=4">
-</li>
-
-<li id="marco">
-	<h4>Marco Cerdeira</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/marco-cerdeira"><i aria-hidden="true" class="icon-github">@marco-cerdeira</i></a>
-	<img src="https://avatars3.githubusercontent.com/u/4895866?v=3&s=460">
 </li>
 
 </ul>
