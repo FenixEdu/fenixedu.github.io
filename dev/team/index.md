@@ -96,20 +96,6 @@ root: "../../"
 	<img src="https://avatars3.githubusercontent.com/u/4895866?v=3&s=460">
 </li>
 
-<li id="miguel">
-	<h4>Miguel Ventura</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/skamv"><i aria-hidden="true" class="icon-github">@skamv</i></a>
-	<img src="https://avatars2.githubusercontent.com/u/5191487?s=400&v=4">
-</li>
-
-<li id="paulo">
-	<h4>Paulo Branco</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/Paulo-Branco"><i aria-hidden="true" class="icon-github">@Paulo-Branco</i></a>
-	<img src="https://avatars0.githubusercontent.com/u/6325243?v=3&s=460">
-</li>
-
 <li id="ricardoa">
 	<h4>Ricardo Almeida</h4>
 	<p>Junior Developer</p>
