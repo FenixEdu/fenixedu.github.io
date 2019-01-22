@@ -96,11 +96,4 @@ root: "../../"
 	<img src="https://avatars3.githubusercontent.com/u/4895866?v=3&s=460">
 </li>
 
-<li id="ricardoa">
-	<h4>Ricardo Almeida</h4>
-	<p>Junior Developer</p>
-	<a href="https://github.com/ricardo-j-almeida"><i aria-hidden="true" class="icon-github">@ricardo-j-almeida</i></a>
-	<img src="https://avatars3.githubusercontent.com/u/11167694?v=3&s=460">
-</li>
-
 </ul>
