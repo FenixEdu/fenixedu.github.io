@@ -40,7 +40,8 @@ root: "../../"
 <li id="joaoreid">
 	<h4>João Reis</h4>
 	<p>Developer</p>
-	<img src="https://fenix.tecnico.ulisboa.pt/user/photo/ist175617">
+	<a href="https://github.com/joaopiri"><i aria-hidden="true" class="icon-github">@joaopiri</i></a>
+	<img src="https://avatars3.githubusercontent.com/u/17771276?s=400&v=4">
 </li>
 
 <li id="marco">
@@ -113,6 +114,20 @@ root: "../../"
 	<a href="https://github.com/luisfavila"><i aria-hidden="true" class="icon-github">@luisfavila</i></a>
 	<a href="https://twitter.com/luisfilipeavila"><i aria-hidden="true" class="icon-twitter">@luisfilipeavila</i></a>
 	<img src="https://avatars3.githubusercontent.com/u/15204687?s=400&v=4">
+</li>
+
+<li id="rerisson">
+	<h4>Rérisson Rocha</h4>
+	<p>Junior Developer</p>
+	<a href="https://github.com/rerissonrocha"><i aria-hidden="true" class="icon-github">@rerissonrocha</i></a>
+	<img src="https://avatars1.githubusercontent.com/u/35295281?s=400&v=4">
+</li>
+
+<li id="tiagoppinho">
+	<h4>Tiago Pinho</h4>
+	<p>Junior Developer</p>
+	<a href="https://github.com/tiagoppinho"><i aria-hidden="true" class="icon-github">@tiagoppinho</i></a>
+	<img src="https://avatars1.githubusercontent.com/u/35295254?s=400&v=4">
 </li>
 
 </ul>
