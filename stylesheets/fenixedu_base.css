@@ -202,7 +202,7 @@
 		margin: 80px auto 0;
 	}
 
-	.user_box > p {min-height: 135px;}
+	.user_box > p {min-height: 50px;}
 
 	.user_box:nth-last-child(n+3) {
 		margin-bottom: 25px;
@@ -299,7 +299,6 @@
 	.social {margin-top: 8px;}
 
 	.social a:not(:last-child) {
-		display: block;
 		border-bottom: 1px solid #666;
 		padding-bottom: 16px;
 		margin-bottom: -10px;
@@ -319,7 +318,6 @@
 	.social a span:last-child {font: normal normal 15px/1.1 "KlavikaRegularPlain", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 
 	.social a:before {
-		content: '\E8f3';
 		font: normal normal 25px/2.1 "Entypo";
 		background: #666;
 		color: #333;
@@ -336,12 +334,29 @@
 		transition: all 0.25s ease-in-out;
 	}
 
-	.social a:last-child:before {
-		content: '\E8f1';
-	}
-
 	.social a:hover span {color: #ccc;}
 	.social a:hover:before {background: #ccc;}
+
+    .github a:before {
+        content: '\e8eb';
+    }
+
+    .email a:before {
+        content: '\e805';
+    }
+
+    .facebook a:before {
+        content: '\E8f3';
+    }
+
+    .twitter a:before {
+        content: '\E8f1';
+    }
+
+                    <a class="github" href="https://github.com/FenixEdu" title="GitHub"></a>
+                    <a class="email" href="mailto:hello@fenixedu.org" title="Email"></a>
+                    <a class="facebook" href="http://www.facebook.com/fenixedu" title="Facebook"></a>
+                    <a class="twitter" href="http://twitter.com/FenixEduProject" title="Twitter"></a>
 
 	footer > div > a {
 		background: url('../images/logo_ist.svg') no-repeat 0 0;
