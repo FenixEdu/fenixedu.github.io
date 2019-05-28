@@ -1,849 +1,408 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html lang="en" class="ie ie9"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html dir="ltr" lang="en-US"> <!--<![endif]-->
-<head>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>FenixEdu™</title>
+        <meta http-equiv="Content-Language" content="en"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="FenixEdu™ open-source software for higher education."/>
+        <meta name="keywords" content="FenixEdu, open-source, academic administration, higher education software, developer training, software team building"/>
+        <meta name="robots" content="all,NOYDIR,NOOD"/>
+        <meta name="revisit-after" content="1 month"/>
+        <meta name="contact" content="hello@fenixedu.org"/>
+        <meta name="copyright" content="Instituto Superior Tecnico"/>
+        <meta name="distribution" content="global"/>
+        <meta name="googlebot" content="noodp"/>
+        <meta name="language" content="English"/>
+        <meta name="rating" content="General"/>
+        <meta name="reply-to" content="hello@fenixedu.org"/>
+        <meta name="slurp" content="noydir,noodp">
+        <meta name="msnbot" content="noydir,noodp">
 
-	<!-- Basic Page Needs -->
-	<meta charset="utf-8">
-	<title>FenixEdu™</title>
-	<meta http-equiv="Content-Language" content="en" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="Description" content="FenixEdu™ is an open-source academic information platform." />
-	<meta name="Keywords" content="FenixEdu, open-source, academic, information, platform, academic administration, higher education, e-learning" />
-	<meta name="Language" content="en-US" />
-	<meta name="Robots" content="all" />
-	<meta name="Author" content="FenixEdu" />
-	<meta name="Email" content="hello@fenixedu.org" />
-	<meta name="Copyright" content="Técnico Lisboa — Instituto Superior Técnico" />
-	<meta name="Distribution" content="Global" />
-	<meta name="Rating" content="General" />
+        <!-- OpenGraph Specific Metas -->
+        <meta property="og:title" content="FenixEdu™" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/logo_og.png" />
+        <meta property="og:url" content="https://fenixedu.org" />
+        <meta property="og:site_name" content="FenixEdu" />
+        <meta property="og:description" content="FenixEdu™ open-source software for higher education." />
+        <meta property="fb:profile_id" content="379238245509413" />
 
-	<!-- OpenGraph Specific Metas -->
-	<meta property="og:title" content="FenixEdu™" />
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="/images/logo_og.png" />
-	<meta property="og:url" content="http://www.fenixedu.org" />
-	<meta property="og:site_name" content="FenixEdu" />
-	<meta property="og:description" content="FenixEdu™ is an open-source academic information platform." />
-	<meta property="fb:profile_id" content="379238245509413" />
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- CSS -->
+        <link rel="stylesheet" href="/stylesheets/reset.css">
+        <link rel="stylesheet" href="/stylesheets/normalize_v_2_1_3.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link rel="stylesheet" href="/stylesheets/skeleton_v_1_2.css">
+        <link rel="stylesheet" href="/stylesheets/fenixedu_base.css">
+        <link rel="stylesheet" href="/map/map.css">
+        <link rel="stylesheet" href="/fonts/entypo/entypo.css">
+        <link rel="stylesheet" href="/stylesheets/mobile_menu.css">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="/stylesheets/reset.css">
-	<link rel="stylesheet" href="/stylesheets/normalize_v_2_1_3.css">
-	<link rel="stylesheet" href="/stylesheets/main.css">
-	<link rel="stylesheet" href="/stylesheets/skeleton_v_1_2.css">
-	<link rel="stylesheet" href="/stylesheets/fenixedu_base.css">
-	<link rel="stylesheet" href="/map/map.css">
-	<link rel="stylesheet" href="/fonts/entypo/entypo.css">
-	<link rel="stylesheet" href="/stylesheets/mobile_menu.css">
+        <!-- JS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+        <script src="/js/scrollTo.js" type="text/javascript"></script>
+        <script src="/js/placeholder.js" type="text/javascript"></script>
+        <script src="/js/events.js" type="text/javascript"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script src="/map/map.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://googlemaps.github.io/js-info-bubble/src/infobubble.js"></script>
+        <script>
+            $(function() {
+                $("#burguer-menu").click(function() {
+                    $("header#mainmenu").toggleClass("mobile-menu-active", 500);
+                    $("body").toggleClass("noscroll", 500);
+                });
+                $("#mainmenu li a").on("click", function() { 
+                    $(".mobile-menu-active").toggleClass("mobile-menu-active",500); 
+                    $("body").toggleClass("noscroll", 500);
+                });
+            });
+        </script>
 
-	<!-- JS -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-	<script src="/js/scrollTo.js" type="text/javascript"></script>
-	<script src="/js/placeholder.js" type="text/javascript"></script>
-	<script src="/js/events.js" type="text/javascript"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-	<script src="/map/map.js" type="text/javascript"></script>
-	<script type="text/javascript" src="https://googlemaps.github.io/js-info-bubble/src/infobubble.js"></script>
-	<script>
-	$(function() {
-	        $("#burguer-menu").click(function() {
-	            $("header#mainmenu").toggleClass("mobile-menu-active", 500);
-	         	$("body").toggleClass("noscroll", 500);
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-	        });
-	        $("#mainmenu li a").on("click", function() { 
-	        	$(".mobile-menu-active").toggleClass("mobile-menu-active",500); 
-	        	$("body").toggleClass("noscroll", 500);
-	        });
-	});
-	</script>
+        <!-- Favicons & TouchIcons-->
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+        <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
+        <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+        <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120-precomposed.png">
+        <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+        <!-- For the iPad mini and the first- and second-generation iPad on iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76-precomposed.png">
+        <!-- For the iPad mini and the first- and second-generation iPad on iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+        <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-	<!-- Favicons & TouchIcons-->
-	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+        <header class="container" id="mainmenu" role="banner">
+            <a href="#" id="logo" class="three columns"></a>
+            <div id="burguer-menu" class="open-sidebar">
+                <div class="burguer-lines-wrapper">
+                    <span class="burguer-line"></span>
+                    <span class="burguer-line"></span>
+                    <span class="burguer-line"></span>
+                </div>
+            </div>
+            <nav class="thirteen columns" role="navigation">
+                <ul>
+                    <li><a href="#about" class="anchor_link">about</a></li>
+                    <li><a href="#start" class="anchor_link">start</a></li>
+                    <li><a href="#terms" class="anchor_link">terms</a></li>
+                    <li><a href="https://github.com/FenixEdu">github</a></li>
+                    <li><a href="/dev">dev</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
-    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
-    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120-precomposed.png">
-    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
-    <!-- For the iPad mini and the first- and second-generation iPad on iOS ≥ 7: -->
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76-precomposed.png">
-    <!-- For the iPad mini and the first- and second-generation iPad on iOS ≤ 6: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+        <section id="highlight">
+            <div class="container">
+                <h1 class="twelve columns"><span>Collaborate, Encourage,</span><br/><span>Contribute, Share</span></h1>
+                <br class="clear" />
+                <p class="nine columns lead">
+                    We aim to provide useful open-source software for higher education through team work, knowledge creation and knowledge transmission.
+                </p>
+                <br class="clear" />
+                <div>
+                    <a href="#start" class="button three columns anchor">join the community</a>
+                    <a href="https://github.com/FenixEdu" class="button three columns">explore projects</a>
+                    <br class="clear" />
+                </div>
+            </div>
+        </section>
 
-</head>
-<body>
-	<!--[if lt IE 8]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+        <div class="container">
+            <section role="main" id="about" name="about" class="anchor_section">
+                <h2 class="sixteen columns"><i aria-hidden="true" class="icon-graduation-cap"></i>what is fenixedu?</h2>
+                <br class="clear" />
+                <p class="eight columns">
+                    The FenixEdu project aims to produce professional grade useful software 
+                    for the higher education community. We bring together a team of IT 
+                    professionals, students and enthusiasts of computer science and related 
+                    IT areas to collaborate and develop solutions for the community.
+                    <br/><br/>
+                    While the main focus of the project is software for higher education, 
+                    many of the developed components have applications in other areas and 
+                    in vastly different business models.
+                </p>
+                <p class="eight columns">
+                    With the constant evolution of technologies, keeping software up-to-date 
+                    is many times challenging, and can consume allot of resources. On the 
+                    other hand, the use of new and up-to-date technologies keeps contributors 
+                    interested, promotes constant learning and is many times a source of 
+                    motivation.
+                    <br/><br/>
+                    Collaboration is key, and the FenixEdu project unites an interesting  
+                    mix of professionals and aspiring professionals with a common 
+                    love of software and technology. In our experience, the more we collaborate 
+                    the faster and better we evolve, not only our software, but our own capacity.
+                </p>
+                <br class="clearfix" />
+            </section>
+        </div>
 
-	<header class="container" id="mainmenu" role="banner">
-		<a href="#" id="logo" class="three columns"></a>
-		<div id="burguer-menu" class="open-sidebar">
-	                <div class="burguer-lines-wrapper">
-	                    <span class="burguer-line"></span>
-	                    <span class="burguer-line"></span>
-	                    <span class="burguer-line"></span>
-	                </div>
-	            </div>
-		<nav class="thirteen columns" role="navigation">
-			<ul>
-				<li><a href="#" class="anchor_link">about</a></li>
-				<li><a href="/blog">blog</a></li>
-				<!--<li><a href="#" class="anchor_link">events</a></li>-->
-				<li><a href="#" class="anchor_link">events</a></li>
-				<li><a href="#" class="anchor_link">features</a></li>
-				<li><a href="https://github.com/fenixedu">github</a></li>
-				<li><a href="/dev">dev</a></li>
-			</ul>
-		</nav>
-	</header>
+<!-- 
+        <hr/>
 
-	<section id="highlight">
-		<div class="container">
-			<h1 class="twelve columns"><span>learn how fenixedu can help</span><br/><span>managing your school</span></h1>
-			<br class="clear" />
-			<p class="nine columns lead">FenixEdu is a modular software platform <br />for academic and administrative management <br />of higher education institutions.</p>
-			<br class="clear" />
-			<div>
-				<a href="https://github.com/fenixedu" class="button three columns anchor">github</a>
-				<a href="https://confluence.fenixedu.org/" class="button three columns">documentation</a>
-				<br class="clear" />
-			</div>
-		</div>
-	</section>
+        <div class="container">
+            <section class="anchor_section">
+                <h2 class="sixteen columns"><i aria-hidden="true" class="icon-calendar"></i>getting the word out</h2>
+                <br class="clear" />
+                <time datetime="2015-04-23 18:30" class="one columns"><span>23</span><br /><span>APR</span></time>
+                <p class="seven columns">
+                    We will be sharing our experience about how to evolve applications
+                    and not let them stagnate in time at the next
+                    <a href="http://jug.pt/">PT.JUG</a> event hosted at
+                    <a href="http://tecnico.ulisboa.pt/">Técnco Lisboa.</a> Everyone
+                    is invited to participate.
+                </p>
+                <time datetime="2015-06-12 09:30" class="one columns"><span>12</span><br /><span>JUN</span></time>
+                <p class="seven columns">
+                    <a href="http://www.eunis.org/eunis2015/congress-2/#keynoteTabs5">Eunis 2015</a>
+                    is coming up. This year we will be speaking about
+                    Ad-hoc Workflows for Higher Education to show off our cool new
+                    workflow application.
+                </p>
+                <br class="clear" />
+            </section>
+	   </div>
 
-	<div class="container">
+        <hr/>
 
-	<section role="main" name="about" class="anchor_section">
-		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-graduation-cap"></i>what is fenixedu?</h2>
-		<br class="clear" />
-		<p class="eight columns">
-            We want to provide the academic community with the best possible software,
-            customized to the specific needs of each institution.
-            <br/><br/>
-            We hope this project will bring together various stakeholders of
-            the academic community to collaborate on the development and usage
-            of open source solutions focussed on higher education.
-            <br/><br/>
-            Many higher education institutions have in-house development
-            capabilities. Others outsource development to software vendors or
-            consultants. With this project we want to bring everyone together
-            to provide the best solution for each institution.
-		</p>
-		<p class="eight columns">
-            For us, keeping up to date with the latest technologies and
-            providing our users with modern interfaces is important, so we are
-            constantly striving to improve and renew our software.
-            <br/><br/>
-            Building our software as modular configurable components allows us
-            to combine and customize each installation to the needs each specific
-            institution.
-            <br/><br/>
-            Does your school have specific requirements, or does it function
-            differently from other establishments? Through collaboration we
-            want to share common solutions while still maintaining our
-            distinctive characteristics.
-		</p>
-		<br class="clearfix" />
-		<header class="container" role="banner">
-			<nav class="four columns" style="text-align: center; margin-top: 40px; font-weight: bold">
-				<a href="governance.html">Governance</a>
-			</nav>
-			<nav class="four columns" style="text-align: center; margin-top: 40px; font-weight: bold">
-				<a href="license.html">License</a>
-			</nav>
-			<nav class="four columns" style="text-align: center; margin-top: 40px; font-weight: bold">
-				<a href="roadmap.html">Roadmap</a>
-			</nav>
-			<nav class="four columns" style="text-align: center; margin-top: 40px; font-weight: bold">
-				<a href="contacts.html">Contact</a>
-			</nav>
-		</header>
-	</section>
-	</div>
+        <div class="container">
+            <section class="anchor_section">
+                <h2 class="sixteen columns"><i aria-hidden="true" class="icon-chat"></i>Features</h2>
+                <div class="user_box eight columns">
+                </div>
 
-<!--
+                <div class="user_box eight columns">
+                </div>
 
+                <br class="clear" />
 
-            Do you want to have a say in the future of the FenixEdu project?
+                <div class="user_box eight columns">
+                </div>
 
+                <div class="user_box eight columns">
+                </div>
 
-            Why choose FenixEdu? How is it different from other available solutions?
+                <br class="clear" />
 
-            How did the project start?
+                <div class="user_box eight columns">
+                </div>
 
+                <div class="user_box eight columns">
+                </div>
+            </section>
+        </div>
 
-            Why open source?
+ -->
 
-            Code in english?
+       <hr/>
 
-            Code languege? Arquitecture description?
+        <div class="container">
+            <section id="start" class="anchor_section">
+                <h2 class="sixteen columns"><i aria-hidden="true" class="icon-rocket"></i>getting started</h2>
+                <div class="user_box">
+                    <p>
+                        There are many ways to get involved in the project.
+                        You may choose to simply use our software, or have a more active role and contribute in some way.
+                        Hopefully the following topics will interest you in contributing in some way.
+                        Let us know what other topics you want to see listed here.
+                    </p>
+                </div>
+                <div class="user_box eight columns">
+                    <h5>Examples &amp; Demos</h5>
+                    <p>
+                        <!-- 
+                        We provide some demo applications if you want to just try it out.
+                         -->
+                         Soon we will provide some demo applications if you want to just try it out.
+                         Check back in a bit.
+                    </p>
+                </div>
+                <div class="user_box eight columns">
+                    <h5>Download &amp; Installation</h5>
+                    <p>
+                        <!-- 
+                        Try running our software on your environment.
+                         -->
+                         Also coming soon...
+                    </p>
+                </div>
+                <div class="user_box eight columns">
+                    <h5><a href="/dev/api/">APIs &amp; Integrations</a></h5>
+                    <p>
+                        <a href="/dev/api/">Explore</a> our APIs, develop your own software and build custom solutions.
+                    </p>
+                </div>
+                <div class="user_box eight columns">
+                    <h5><a href="/dev/overview/">Developers</a></h5>
+                    <p>
+                        Check out one of our development stacks, customise your applications or help us improve the common code base.
+                        More information will soon be updated <a href="/dev/overview/">here</a>.:
+                    </p>
+                </div>
+            </section>
+        </div>
 
-            What do I need to get started? How to integrate with other systems?
-            How to procede to adopt the software?
-            Scaling?
+       <hr/>
 
-            Migration of existing data?
+        <div class="container">
+            <section id="terms" class="anchor_section">
+                <h2 class="sixteen columns"><i aria-hidden="true" class="icon-feather"></i>Terms and Conditions</h2>
+                <div class="user_box fourteen columns">
+                    <p>
+                        FenixEDU: Collaborate, encourage, contribute and share
+                    </p>
+                    <p>
+                        Copyright © 2002-2019 Instituto Superior Técnico
+                    </p>
+                    <p>
+                        We believe in open and free software. All software developed under the FenixEdu project is
+                        licensed with either a LGPL or an AGPL license. If for some reason you need to use our 
+                        software in a manner that is not compatible with the supplied license, please contact us 
+                        to evaluate the possibility of applying a commercial license.
+                    </p>
+                </div>
+                <div class="user_box eight columns">
+                    <p style="text-align: center;">
+                       <img src="/images/licenses/lgplv3.png" alt="LGPL Version 3" style="width: 30%;">
+                    </p>
+                </div>
+                <div class="user_box eight columns">
+                    <p>
+                       <img src="/images/licenses/agplv3.png" alt="AGPL Version 3" style="width: 30%;">
+                    </p>
+                </div>
+            </section>
+        </div>
 
-            What does the UI look like for each user: student, teachers, staff, ...
+        <hr/>
 
-            Integration with other open source projects?
+        <div class="container">
+            <section class="anchor_section">
+                <h2 class="sixteen columns"><i aria-hidden="true" class="icon-thumbs-up"></i>related & recommended projects</h2>
+                <br class="clear" />
+                <p class="eight columns">
+                    <img src="images/smartsigner.png" width="100%"/>
+                    An easy to use software for digitally signing documents and managing the signature process. It provides such 
+                    features as signing documents in bulk, document certification and more. Check out the
+                    <a href="https://smartsigner.eu">SmartSigner</a>
+                    web page for more information.
+                </p>
+                <p class="eight columns">
+                </p>
+                <br class="clear" />
+            </section>
+       </div>
 
-            What about the copyright?
+        <hr/>
 
-            Governance? How to incorporate other contributors?
+<!-- 
+        <div class="container">
+            <section id="map_box" class="anchor_section">
+                <h2 class="sixteen columns"><i aria-hidden="true" class="icon-location"></i>a world of fenixedu</h2>
+            </section>
+       </div>
 
-            Who is the application for? Can you use only parts of the system or do you have to use everything and may that be overkill for small instances?
+        <hr/>
 
-			FenixEdu provides an integrated solution that spans all levels of the
-			academic management process: from high level management tasks to
-			the daily communication between students, faculty and staff. Among
-			other tools the platform also provides support for many
-			administrative processes, such as procurement, resource management
-			and quality assurance. The distributed nature of the platform
-			enables effective and ubiquitous communication between all the
-			stakeholders. The FenixEdu platform provides a REST API, with strong authentication based on OAuth 2.0, which enables easy
-			interoperability with existing systems, such as Enterprise Resource Planning (ERP) and Content Management Systems (CMS),
+        <section id="calltoaction">
+            <div class="container">
+                <h3 class="sixteen columns"><a href="/blog/2014/06/16/fenixedu-node/"><!--these schools’ systems are powered by fenixedu.<span>be the next</span> - - > 132739 educational paths are powered by fenixedu.<span>be the next</span></a></h3>
+            </div>
+        </section>
+ -->
 
-			 and is a convenient foundation for the development of a rich diversity of external applications. FenixEdu is integrated with an advanced
-			identity management subsystem, which provides single sign-on, federation support, strong authentication based on the national
-			e-ID card and support for European e-ID interoperability.
-			<br /><br />
-			FenixEdu is developed as an open-source project, adopting the Lesser General Public Licence (LGPL), thus offering a basis for
-			open collaboration, free distribution, open availability and customization capabilities to meet the requirements and needs of
-			different institutions.
+        <footer role="contentinfo">
+            <div class="container">
+                <div class="eleven columns">
+                </div>
+                <div class="five columns social">
+                    <h6>connect with us</h6>
+                    <div class="github">
+                        <a href="https://github.com/FenixEdu" title="GitHub"></a>
+                    </div>
+                    <div class="email">
+                        <a href="mailto:hello@fenixedu.org" title="Email"></a>
+                    </div>
+                    <div class="facebook">
+                        <a href="http://www.facebook.com/fenixedu" title="Facebook"></a>
+                    </div>
+                    <div class="twitter">
+                        <a href="http://twitter.com/FenixEduProject" title="Twitter"></a>
+                    </div>
+                </div>
+                <a class="twelve columns" href="https://tecnico.ulisboa.pt"></a>
+                <p class="four columns right">© 2019 - <a style="color: #808080" href="https://tecnico.ulisboa.pt"><span style="text-decoration: none">Instituto Superior Técnico</span></a></p>
+            </div>
+        </footer>
 
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-45631967-1', 'fenixedu.org');
+            ga('send', 'pageview');
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.getJSON("https://graph.facebook.com/fenixedu", function(data) {
+                    $("#facebook-count").html(data.likes);
+                });
 
--->
-
-
-	<hr />
-
-
-<!-- -->
-	<div class="container">
-
-	<section class="anchor_section">
-		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-calendar"></i>getting the word out</h2>
-		<br class="clear" />
-
-		<time datetime="2015-04-23 18:30" class="one columns"><span>23</span><br /><span>APR</span></time>
-		<p class="seven columns">
-			We will be sharing our experience about how to evolve applications
-			and not let them stagnate in time at the next
-			<a href="http://jug.pt/">PT.JUG</a> event hosted at
-			<a href="http://tecnico.ulisboa.pt/">Técnco Lisboa.</a> Everyone
-			is invited to participate.
-		</p>
-		<time datetime="2015-06-12 09:30" class="one columns"><span>12</span><br /><span>JUN</span></time>
-		<p class="seven columns">
-			<a href="http://www.eunis.org/eunis2015/congress-2/#keynoteTabs5">Eunis 2015</a>
-			is coming up. This year we will be speaking about
-			Ad-hoc Workflows for Higher Education to show off our cool new
-			workflow application.
-		</p>
-		<br class="clear" />
-	</section>
-
-	</div>
-
-	<hr />
-
-	<div class="container">
-
-	<section class="anchor_section">
-		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-chat"></i>Features</h2>
-		<div class="user_box eight columns">
-			<table>
-				<colgroup>
-					<col></col>
-					<col></col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th colspan="2">
-							<img src="assets/academic.png" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Academic Reporting</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Admissions Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Assessment Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Attendance Tracking</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Classroom Management</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Curriculum Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Enrollment Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Event Calendar</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Facility Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Faculty / Staff Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Financial Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Fundraising Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Higher Education</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Housing Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>K-12</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Library Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Parent Portal</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Scheduling</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>School District</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Special Education</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Student Information / Records</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Student Portal</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Teach Portal</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="user_box eight columns">
-			<table style="margin-bottom: 76px;">
-				<colgroup>
-					<col></col>
-					<col></col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th colspan="2">
-							<img src="assets/learning.png" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Academic / Education</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>AICC / SCORM Compliant</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Asynchronous Learning</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Built-In Course Authoring</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Certification Management</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Classroom Management</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>External Training</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Live / Video Conferencing</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Social Learning</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Synchronous Learning</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-				</tbody>
-			</table>
-			<br class="clear" />
-			<table>
-				<colgroup>
-					<col></col>
-					<col></col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th colspan="2">
-							<img src="assets/drive.png" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Document Repository</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Versioned Document</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Private User Repositories</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Group Repositories</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Share Capabilities</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Custom Quota Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Document Metadata</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Digital Signatures</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Configurable External Backups</td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<br class="clear" />
-		<div class="user_box eight columns">
-			<table>
-				<colgroup>
-					<col></col>
-					<col></col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th colspan="2">
-							<img src="assets/staff.png" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td style="text-align: left">Internal Mobility Announcement Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Correspondence Registry</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">Protocol Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td style="text-align: left">RegulationX Registry</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="user_box eight columns">
-			<table>
-				<colgroup>
-					<col></col>
-					<col></col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th colspan="2">
-							<img src="assets/expend.png" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Goods and Services Procurement Process</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Business Travel Authorization Process</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Custom Authorization Chains</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<br class="clear" />
-		<div class="user_box eight columns">
-			<table style="margin-bottom: 50px">
-				<colgroup>
-					<col></col>
-					<col></col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th colspan="2">
-							<img src="assets/gears.png" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Approval Process Control</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Asset Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Configurable Workflow</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Dashboard</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Event-Based Notifications</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Graphical Workflow Editor</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Help Desk Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Notifications</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Resource Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>User Activity Monitoring</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-				</tbody>
-			</table>
-
-		</div>
-
-		<div class="user_box eight columns">
-			<table>
-				<colgroup>
-					<col></col>
-					<col></col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th colspan="2">
-							<img src="assets/pages.png" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Approval Process Control</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Document Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Format Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Indexing/Search</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Permission Management</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Rich Text Editor</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>SEO Management</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Version Control</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Web Publishing Templates</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<div class="user_box sixteen columns">
-			<table>
-				<colgroup>
-					<col style="width: 940px"></col>
-					<col></col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th colspan="2">
-							<img src="assets/scholar.png" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Publication Storage</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Full-text Search</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>Research Centers</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>BibTeX Support</td>
-						<td><i class="icon-check"></i></td>
-					</tr>
-					<tr>
-						<td>OAI-PMH Support</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>SCORM Support</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Automated Content Harvesting</td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-	<hr />
-
-	<section id="map_box" class="anchor_section">
-		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-location"></i>a world of fenixedu</h2>
-	</section>
-
-	</div>
-
-	<div id="map" class="sixteen columns"></div>
-	<div><div id="submap"></div></div>
-
-	<div class="container">
-	<section class="anchor_section">
-		<h2 class="sixteen columns"><i aria-hidden="true" class="icon-rocket"></i>getting started</h2>
-		<div class="user_box eight columns">
-			<h5>Examples &amp; Demos</h5>
-			<p>
-				You can discover more about FenixEdu and the provided features by taking a look at <a href="https://confluence.fenixedu.org"> this documentation pages</a>.
-			</p>
-		</div>
-		<div class="user_box eight columns">
-			<h5>Developers</h5>
-			<p>
-				Developers are invited to rummage through our
-				<a href="/dev">project documentation</a> and try out our
-				modules. Each module can be used as a library, extended,
-				rewritten or used remotely via endpoints.
-			</p>
-		</div>
-	</section>
-	</div>
-
-	<section id="calltoaction">
-		<div class="container">
-			<h3 class="sixteen columns"><a href="/blog/2014/06/16/fenixedu-node/"><!--these schools’ systems are powered by fenixedu.<span>be the next</span>-->132739 educational paths are powered by fenixedu.<span>be the next</span></a></h3>
-		</div>
-	</section>
-
-	<footer role="contentinfo">
-		<div class="container">
-
-		<div class="eight columns">
-			<p>FenixEdu is an open-source academic information platform.</p>
-			<p style="margin-top: 20px; font-weight: bold">Contact us via hello (at) fenixedu.org</p>
-		</div>
-		<div class="four columns" style="opacity: 0">
-			<h6>drop us a line</h6>
-			<form action="#" method="POST" autocomplete="on" role="form">
-				<fieldset>
-					<div class="four columns alpha">
-						<label for="fullname">name</label>
-						<input type="text" id="fullname" name="fullname" placeholder="Name *" required>
-						<label for="emailaddress">email</label>
-						<input type="email" id="emailaddress" name="emailaddress" pattern=".*@.*" placeholder="Email *" required>
-						<label for="subject">subject</label>
-						<input type="text" id="subject" name="subject" placeholder="Subject">
-					</div>
-					<div class="four columns omega">
-						<label for="textarea">message</label>
-						<textarea id="textarea" placeholder="Message"></textarea>
-						<a href="" id="submit-message" class="button icon">submit</a>
-					</div>
-				</fieldset>
-			</form>
-		</div>
-		<div class="four columns social">
-			<h6>connect with us</h6>
-			<a style="display:none" href="https://plus.google.com/101300934752009669099" rel="publisher">Google+</a>
-			<a href="http://www.facebook.com/fenixedu" title="Facebook">
-				<span id="facebook-count">238</span><span>followers</span>
-			</a>
-			<br class="clear" />
-			<a href="http://twitter.com/FenixEduProject" title="Twitter">
-				<span id="twitter-count">165</span><span>followers</span>
-			</a>
-		</div>
-
-		<br class="clear" />
-		<a class="four columns" href="http://tecnico.ulisboa.pt"></a>
-		<p class="twelve columns">© 2019 Instituto Superior Técnico. <span>all rights reserved.</span></p>
-		</div>
-	</footer>
-
-    <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-45631967-1', 'fenixedu.org');
-	  ga('send', 'pageview');
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$.getJSON("https://graph.facebook.com/fenixedu", function(data) {
-				$("#facebook-count").html(data.likes);
-			});
-
-			//$.getJSON("http://fenixedu.org/ignition/twittercount", function(data) {
-			//	$("#twitter-count").html(data);
-			//});
-			$("#submit-message").click(function(e) {
-				e.preventDefault();
-				var name = $("#fullname").val();
-				var email = $("#emailaddress").val();
-				var subject = $("#subject").val();
-				var msg = $("#textarea").val();
-				if(name != "" && email != "" && subject != "" && msg != "") {
-					var data = {
-						"name": name,
-						"email": email,
-						"subject": subject,
-						"msg": msg
-					};
-					$.ajax({
-						type: "POST",
-						url: "http://fenixedu.org/ignition/contact-form-message",
-						contentType: "application/json; charset=UTF-8",
-						data: JSON.stringify(data),
-						success: function(data) {
-							$("#fullname").val("");
-							$("#emailaddress").val("");
-							$("#subject").val("");
-							$("#textarea").val("");
-							alert("Thank you for your message!");
-						}
-					});
-				}
-			});
-		});
-	</script>
-</body>
+                //$.getJSON("http://fenixedu.org/ignition/twittercount", function(data) {
+                //	$("#twitter-count").html(data);
+                //});
+                $("#submit-message").click(function(e) {
+                    e.preventDefault();
+                    var name = $("#fullname").val();
+                    var email = $("#emailaddress").val();
+                    var subject = $("#subject").val();
+                    var msg = $("#textarea").val();
+                    if(name != "" && email != "" && subject != "" && msg != "") {
+                        var data = {
+                        	    "name": name,
+                        	    "email": email,
+                        	    "subject": subject,
+                        	    "msg": msg
+                        	    };
+                        $.ajax({
+                            type: "POST",
+                            url: "http://fenixedu.org/ignition/contact-form-message",
+                            contentType: "application/json; charset=UTF-8",
+                            data: JSON.stringify(data),
+                            success: function(data) {
+                                $("#fullname").val("");
+                                $("#emailaddress").val("");
+                                $("#subject").val("");
+                                $("#textarea").val("");
+                                alert("Thank you for your message!");
+                                }
+                        });
+                        }
+                    });
+                });
+        </script>
+    </body>
 </html>
