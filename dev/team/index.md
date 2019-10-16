@@ -77,7 +77,7 @@ root: "../../"
 	<h4>Catarina Cepeda</h4>
 	<p>Junior Developer</p>
 	<a href="https://github.com/catarinacepeda"><i aria-hidden="true" class="icon-github">@catarinacepeda</i></a>
-	<img src="https://fenix.tecnico.ulisboa.pt/user/photo/ist177966">
+	<img src="https://avatars3.githubusercontent.com/u/17128488?s=400&v=4">
 </li>
 
 <li id="franciscoc">
