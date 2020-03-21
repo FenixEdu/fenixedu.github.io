@@ -56,7 +56,7 @@ The command above will create an empty databased named ```fenixedu```.
 ### Step 4 - Generate the FenixEdu software installation through the archetype
 
 {% highlight bash %}
-mvn archetype:generate -DarchetypeGroupId=org.fenixedu -DarchetypeArtifactId=fenix-webapp-archetype -DarchetypeVersion=2.0.0 -DarchetypeRepository=https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository
+mvn -U archetype:generate -DarchetypeGroupId=org.fenixedu -DarchetypeArtifactId=fenix-webapp-archetype -DarchetypeVersion=2.0.0 -DarchetypeRepository=https://repo.fenixedu.org/simple/fenixedu-maven-repository
 {% endhighlight %}
 
 When you execute the command above, you will need to provide some information concerning the artifact to be generated through an interactive prompt.
