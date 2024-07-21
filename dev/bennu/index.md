@@ -6,8 +6,7 @@ base_url: "./"
 
 # [**Welcome**](./bennu.md)
 
-![image1](assets/bennu.png)
-<img src="assets/bennu.png" width="48">
+<img src="assets/bennu.png" width="480">
 
 Bennu is the foundation for building modular Java web applications based on the [fenix-framework](http://fenix-framework.github.io/). It covers the following core features:
 * Runtime installation configuration
