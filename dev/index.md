@@ -22,6 +22,6 @@ base_url: "./"
 </article>
 {% endfor %}
 
-[Documentation]: http://confluence.fenixedu.org
+[Documentation]: /dev/bennu/bennu/
 [Know our Modules]: /dev/sub-projects/
 [Create new Modules]: /dev/tutorials/create-your-own-application/
