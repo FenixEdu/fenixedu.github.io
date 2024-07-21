@@ -25,7 +25,7 @@ Bennu source code is available at our github repository: https://github.com/Feni
 
 ## Documentation
 
-* [Access Groups][AccessGroups]
+* [Access Groups][Access Groups]
 * [Bennu Spring][Bennu Spring]
 * [Extra Modules][Extra Modules]
 * [Indexing and Search][Indexing and Search]
