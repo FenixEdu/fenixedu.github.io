@@ -23,6 +23,29 @@ Bennu is the foundation for building modular Java web applications based on the 
 ## Getting the source code:
 Bennu source code is available at our github repository: https://github.com/FenixEdu/bennu
 
+## Documentation
+
+[Access Groups][AccessGroups]
+[Bennu Spring][Bennu Spring]
+[Extra Modules][Extra Modules]
+[Indexing and Search][Indexing and Search]
+[Portal][Portal]
+[Scheduling][Scheduling]
+[Toolkit][Toolkit]
+[Upgrading][Upgrading]
+[Users and Security][Users and Security]
+[Application Bootstrap][Application Bootstrap]
+[Bennu Admin][Bennu Admin]
+[CSRF Protection][CSRF Protection]
+[Fenix Framework][Fenix Framework]
+[Rest Infrastructure][Rest Infrastructure]
+[Signals][Signals]
+[Transcational IO][Transcational IO]
+[Users and Security][Users and Security]
+
+
+
+
 [Access Groups]: access-groups/access-groups
 [Bennu Spring]: bennu-spring/bennu-spring
 [Extra Modules]: extra-modules/extra-modules
