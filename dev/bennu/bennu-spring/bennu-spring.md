@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 # [Bennu Spring](./bennu-spring.md)
 
 **Bundling**

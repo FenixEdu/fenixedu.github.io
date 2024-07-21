@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [**Scheduling**](./scheduling.md)
 
 In several web applications there is the need of running periodic tasks on the system. Bennu provides a simple way of doing so. To create tasks that can be scheduled the developer needs to implement a **CronTask** and annotate it with **@Task**, like so:

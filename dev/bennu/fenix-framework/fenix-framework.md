@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 # [Fenix Framework](./fenix-framework.md)
 
 "[Fenix Framework](http://fenix-framework.github.io/) allows the development of Java-based applications that need a transactional and persistent domain model"

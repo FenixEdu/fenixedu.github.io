@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [**Access Groups**](./access-groups.md)
 Bennu provides a group infrastructure to enable predicate based access control rules, or generally to express a predicate based group of users. They are used by Bennu itself to define who can access each menu node in the portal, to define access to files using the bennu-io infrastructure, and sometimes used in the Rest API for access control. Outside of Bennu they are also commonly used to define recipients for email messages.
 

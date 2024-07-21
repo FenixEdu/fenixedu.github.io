@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 # [Bennu Admin](./bennu-admin.md)
 Bennu Admin is a module that provides user interfaces for managing a Bennu-based application. It provides system monitoring functionality, user management, file storage management, portal management, scheduler management and a domain browser.
 

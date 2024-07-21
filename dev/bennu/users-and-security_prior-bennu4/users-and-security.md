@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [Users and Security (Prior to Bennu 4)](./users-and-security.md)
 
 **Deprecation Notice**

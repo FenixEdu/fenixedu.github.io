@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 # [Application Bootstrap](./application-bootstrap.md)
 
 When a newly installed Bennu application first runs, instead of its regular web interface, it will display a wizard that will help you configure your application.

@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [Toolkit](./toolkit.md)
 Bennu Toolkit is a library that provides access to Bennu client-side and and provides a set small common controllers available as standard HTML and JavaScript.
 

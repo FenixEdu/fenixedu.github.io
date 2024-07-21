@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [**Rest Infrastructure**](./rest-infrastructure.md)
 
 Bennu provides an out-of-the-box configuration of  [JAX RS 2](https://jax-rs-spec.java.net/). It creates an [Application](https://jax-rs-spec.java.net/nonav/2.0/apidocs/javax/ws/rs/core/Application.html) class, mapped to /api, meaning that all Resource classes will be mapped as follows: /api/<resource-path>.

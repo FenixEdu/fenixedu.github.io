@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [**Transactional IO**](./transactional-io.md)
 Due to the heavily transaction environment provided by Bennu and the Fenix Framework, dealing with side-effects is far from trivial. As transactional file systems are not commonplace, dealing with files in a transactional environment is a challenge.
 

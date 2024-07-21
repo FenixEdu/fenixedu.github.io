@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [Portal](./portal.md)
 Bennu Portal is responsible for handling many of the user-facing features of Bennu.
 

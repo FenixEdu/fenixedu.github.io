@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [**Indexing and Search**](./indexing-and-search.md)
 
 **Deprecation Notice**

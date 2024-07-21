@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 # [CSRF Protection](./csrf-protection.md)
 
 

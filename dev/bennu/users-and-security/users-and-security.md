@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 ## [**Users and Security**](./users-and-security.md)
 
 The Core Bennu Framework provides support for users and pluggable authentication mechanisms.

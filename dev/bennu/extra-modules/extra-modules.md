@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 # [Extra Modules](./extra-modules.md)
 
 This section describes extra modules based on the bennu framework
