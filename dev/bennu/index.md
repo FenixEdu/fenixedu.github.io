@@ -1,3 +1,9 @@
+---
+layout: default
+base_url: "./"
+---
+
+
 # [**Welcome**](./bennu.md)
 
 ![image1](assets/bennu.png)
