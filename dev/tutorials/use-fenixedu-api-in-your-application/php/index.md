@@ -15,26 +15,29 @@ In this tutorial, you will learn how to use the FenixEdu™ PHP SDK to easily in
 
 ### Step 1 - Include the PHP SDK in your project
 
-All you have to do is [download][FenixEduPHPSDK] the FenixEdu™ PHP SDK and unzip it to your project root. In your project root, you should have something like ```fenixedu-sdk/FenixEdu.class.php```. Having this, you should be able to include the FenixEduClient class in your PHP scripts:
+All you have to do is [download][FenixEduPHPSDK] the FenixEdu™ PHP SDK and extract it to your project root. On all examples from this point onward, we shall assume the folder containing the SDK files is named ```fenixedu-php-sdk```. Now you should be able to include the FenixEdu class in your PHP scripts:
 
 {% highlight php %}
 <?php
-  require_once("fenixedu-sdk/FenixEduClient.class.php")
-?>
+  require_once("fenixedu-php-sdk/FenixEdu.php");
 {% endhighlight %}
 
 
 ### Step 2 - Define your credentials
 
-To define your credentials, all you have to do is create a ```fenix.edu.config.inc.php``` file in the ```fenixedu-sdk``` folder and set your FenixEdu™ application credentials, just like in the example below:
+To define your credentials, all you have to do is create an array with your FenixEdu™ application credentials and pass it as an argument when creating the ```FenixEdu``` instance, just like in the example below:
 
 {% highlight php %}
 <?php
-  $_FENIX_EDU['access_key']   = "123524412";
-  $_FENIX_EDU['secret_key']   = "HhU3BB3hJ9h3n2Bhsz";
-  $_FENIX_EDU['callback_url'] = "http://<your_application_callback_url>";
-  $_FENIX_EDU['api_base_url'] = "http://fenix.ist.utl.pt/api";
-?>
+  require_once("fenixedu-php-sdk/FenixEdu.php");
+
+  $credentials = array(
+    'access_key' => "1234567890123456",
+    'secret_key' => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCdefGHIjklMNOpqrSTUwxyZabcDEFghi==",
+    'callback_url' => "https://<your_application_callback_url>",
+    'api_base_url' => "https://fenix.tecnico.ulisboa.pt");
+
+  $fenixedu = new FenixEdu($credentials);
 {% endhighlight %}
 
 Both ```access_key``` and ```secret_key``` are provided in the FenixEdu™ installation where you registered your application. The ```callback_url``` is the endpoint in your application that will handle the callback after an authorization or non-authorization from the end-user. Finally, the ```api_base_url``` is the base endpoint where the API will be invoked.
@@ -44,56 +47,102 @@ Both ```access_key``` and ```secret_key``` are provided in the FenixEdu™ insta
 
 ### Step 3 - Use the Client
 
-After you defined the configuration file, you can start using the SDK and make synchronous invocations to the FenixEdu™ API. However, before you start obtaining information from the end-user, you first need to request authorization.
+After instancing FenixEdu with your credentials, you can start using the SDK and make synchronous invocations to the FenixEdu™ API. However, before you can invoke any of the ```private``` endpoints of the API, you first need to ask the end-user to grant authorization to your application.
 
-#### Step 3.1 - Redirect the User to Authorize your Application
-
-Before you can invoke the API, you must ask the end-user to grant authorization to your application. 
-
-To perform these steps while using the PHP SDK, you should do something like this:
+This will be done automatically if you use the provided domain classes. The following example will automatically trigger the authorization request and print the end-user's username afterwards:
 
 {% highlight php %}
 <?php
-  require_once("fenixedu-sdk/FenixEduClient.class.php")
+  require_once("fenixedu-php-sdk/FenixEdu.php");
+  $credentials = ...
+  $fenixedu = new FenixEdu($credentials);
 
-  $fenixEduClient = FenixEduClient::getSingleton();
-  $authorizationUrl = $fenixEduClient->getAuthorizationURL();
+  //authorization is automatically triggered in the getPerson() call.
+  $person = $fenixedu->getPerson(); 
 
-  header(sprintf("Location: %s", $authorizationUrl));
-?>
+  $username = $person->getIstId();
+
+  echo($username);
 {% endhighlight %}
 
 > <span>Note</span>
-> If you have experience with PHP programming, you already know that the script that redirects the end-user to the ```authorization_url``` must not write anything to the output, or the redirect will not work.
+> When using the domain classes, it is not necessary to explicitly include them in your code. The SDK loads any domain class as soon as it is needed for the first time.
 
-#### Step 3.2 - Handle FenixEdu™ Authorization Callback
-
-If the end-user authorizes your application, FenixEdu™ will invoke your callback endpoint with a query param named ```code``` that you must use to issue an ```access_token``` and a ```refresh_token```. In case the end-user refuses to authorize your application, your callback enpoint will be invoked with two query params: ```error``` and ```error_description``` as explained [here][RequestUserPermissionPage].
-
-When the end-user authorizes your application to access the requested information, you will receive a code in the query param that you must use provide to the SDK:
+If you prefer to use the FenixEduServices interface to call the endpoints directly, instead of using the provided domain classes, you should do something like this:
 
 {% highlight php %}
 <?php
+  require_once("fenixedu-php-sdk/FenixEdu.php");
+  $credentials = ...
+  $fenixedu = new FenixEdu($credentials);
 
-  if(isset($_GET['error'])) {
-    // The end-user refused to give your application authorization.
-  } else if(isset($_GET['code'])) {
-    $code = $_GET['code'];
-    $fenixEduClient = FenixEduClient::getSingleton();
-    $fenixEduClient->setCode($code);
-    $accessToken = $fenixEduClient->getAccessToken();
-    $refreshToken = $fenixEduClient->getRefreshToken();
-  }
-
+  $services = $fenixedu->getServices();
+  
+  //the login() method explicitly triggers the authorization request
+  $services->login();
+  
+  $person = $services->getPerson();
+  $username = $person->username;
+  
+  echo($username);
 ?>
 {% endhighlight %}
 
-The code snippet above exemplifies how you can obtain the ```access_token``` and ```refresh_token``` that allows your application to invoke the FenixEdu™ API and obtain information about the end-user that provided the authorization. Hence, you should store both the ```access_token``` and the ```refresh_token``` for future uses.
+In case you just wish to force the user to login in order to use your application, you can simply call the ```login``` method from ```FenixEdu```, as shown:
 
-> <span>Note</span> 
-> The ```access_token``` has a lifetime of 1 hour, and when it expires, you may issue another one using the respective ```refresh_token```.
+{% highlight php %}
+<?php
+  require_once("fenixedu-php-sdk/FenixEdu.php");
+  $credentials = ...
+  $fenixedu = new FenixEdu($credentials);
+  
+  $fenixedu->login();
+{% endhighlight %}
 
+> <span>Note</span>
+> Behind the curtains, all of the previous examples are actually calling the ```login``` method from the ```FenixEduServices``` class. This method handles all the authorization steps, including the API's callback.
 
+In order to logout the user and clean all their session data, you may either call the ```logout``` method from ```FenixEdu``` or from ```FenixEduServices```.
+
+Finally, we present a simple example of an application that shows the user a list of his final grades on completed courses:
+
+{% highlight php %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<div>
+
+<?php
+  require_once("fenixedu-php-sdk/FenixEdu.php");
+
+  $credentials = array(
+    'access_key' => "1234567890123456",
+    'secret_key' => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCdefGHIjklMNOpqrSTUwxyZabcDEFghi==",
+    'callback_url' => "https://<your_application_callback_url>",
+    'api_base_url' => "https://fenix.tecnico.ulisboa.pt");
+
+  $fenixedu = new FenixEdu($credentials);
+  
+  $person = $fenixedu->getPerson();
+  
+  foreach($person->getCurriculum() as $curriculum) {
+    foreach($curriculum->getApprovedCourses() as $course) {
+        $name = $course->getName();
+        $credits = $course->getCredits();
+        $grade = $course->getGrade();
+        $html = "<div>" . $name . " (" . $credits . ") - " . $grade . "</div>";
+        echo($html);
+    }
+  }
+?>
+
+</div>
+</body>
+</html>
+{% endhighlight %}
 [use-fenix-edu-in-your-application-tutorial]: /dev/tutorials/use-fenixedu-api-in-your-application
 [RequestUserPermissionPage]: /dev/tutorials/use-fenixedu-api-in-your-application/#step_22__request_the_user_permission
 [FenixEduPHPSDK]: http://github.com/ist-dsi/fenixedu-php-sdk
