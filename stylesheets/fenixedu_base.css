@@ -346,11 +346,6 @@
         content: '\E8f1';
     }
 
-                    <a class="github" href="https://github.com/FenixEdu" title="GitHub"></a>
-                    <a class="email" href="mailto:hello@fenixedu.org" title="Email"></a>
-                    <a class="facebook" href="http://www.facebook.com/fenixedu" title="Facebook"></a>
-                    <a class="twitter" href="http://twitter.com/FenixEduProject" title="Twitter"></a>
-
 	footer > div > a {
 		background: url('../images/logo_ist.svg') no-repeat 0 0;
 		display: block;
@@ -742,6 +737,7 @@
 	footer > div > div, footer > div > p {padding: 30px 0 0;}
 	footer > div > div:first-child {padding: 85px 20px 10px 0;}
 	form input[type="text"], form input[type="password"], form input[type="email"], form textarea {width: 97.5%;}
+}
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
