@@ -20,48 +20,41 @@
 	    font-style: normal;
 	}
 
+	/* Klavika Web Basic Medium */
 	@font-face {
-	    font-family: 'KlavikaMediumPlain';
-	    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot');
-	    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('../fonts/klavika/klavikamedium-plain-webfont.woff') format('woff'),
-	         url('../fonts/klavika/klavikamedium-plain-webfont.ttf') format('truetype'),
-	         url('../fonts/klavika/klavikamedium-plain-webfont.svg#klavika') format('svg');
-	    font-weight: normal;
-	    font-style: normal;
+			font-family: 'KlavikaMediumPlain';
+			src: url('../fonts/klavika/KlavikaWebBasicMedium.woff2') format('woff2'),
+				url('../fonts/klavika/KlavikaWebBasicMedium.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
 	}
 
+	/* Klavika Web Basic Regular */
 	@font-face {
-	    font-family: 'KlavikaRegularPlain';
-	    src: url('../fonts/klavika/klavikaregular-plain-webfont.eot');
-	    src: url('../fonts/klavika/klavikaregular-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('../fonts/klavika/klavikaregular-plain-webfont.woff') format('woff'),
-	         url('../fonts/klavika/klavikaregular-plain-webfont.ttf') format('truetype'),
-	         url('../fonts/klavika/klavikaregular-plain-webfont.svg#klavika') format('svg');
-	    font-weight: normal;
-	    font-style: normal;
+		font-family: 'KlavikaRegularPlain';
+		src: url('../fonts/klavika/KlavikaWebBasicRegular.woff2') format('woff2'),
+			url('../fonts/klavika/KlavikaWebBasicRegular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
 	}
-
+		
+	/* Klavika Web Basic Light */
 	@font-face {
-	    font-family: 'KlavikaLightPlain';
-	    src: url('../fonts/klavika/klavikalight-plain-webfont.eot');
-	    src: url('../fonts/klavika/klavikalight-plain-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('../fonts/klavika/klavikalight-plain-webfont.woff') format('woff'),
-	         url('../fonts/klavika/klavikalight-plain-webfont.ttf') format('truetype'),
-	         url('../fonts/klavika/klavikalight-plain-webfont.svg#klavika') format('svg');
-	    font-weight: normal;
-	    font-style: normal;
+		font-family: 'KlavikaLightPlain';
+		src: url('../fonts/klavika/KlavikaWebBasicLight.woff2') format('woff2'),
+			url('../fonts/klavika/KlavikaWebBasicLight.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
 	}
+	
 
+	/* Klavika Web Basic Regular Italic */
 	@font-face {
-	    font-family: 'KlavikaRegularItalic';
-	    src: url('../fonts/klavika/klavikaregular-italic-webfont.eot');
-	    src: url('../fonts/klavika/klavikaregular-italic-webfont.eot?#iefix') format('embedded-opentype'),
-	         url('../fonts/klavika/klavikaregular-italic-webfont.woff') format('woff'),
-	         url('../fonts/klavika/klavikaregular-italic-webfont.ttf') format('truetype'),
-	         url('../fonts/klavika/klavikaregular-italic-webfont.svg#klavika') format('svg');
-	    font-weight: normal;
-	    font-style: normal;
+		font-family: 'KlavikaRegularItalic';
+		src: url('../fonts/klavika/KlavikaWebBasicRegularItalic.woff2') format('woff2'),
+				url('../fonts/klavika/KlavikaWebBasicRegularItalic.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
 	}
 
 	@font-face {
@@ -352,11 +345,6 @@
     .twitter a:before {
         content: '\E8f1';
     }
-
-                    <a class="github" href="https://github.com/FenixEdu" title="GitHub"></a>
-                    <a class="email" href="mailto:hello@fenixedu.org" title="Email"></a>
-                    <a class="facebook" href="http://www.facebook.com/fenixedu" title="Facebook"></a>
-                    <a class="twitter" href="http://twitter.com/FenixEduProject" title="Twitter"></a>
 
 	footer > div > a {
 		background: url('../images/logo_ist.svg') no-repeat 0 0;
@@ -749,6 +737,7 @@
 	footer > div > div, footer > div > p {padding: 30px 0 0;}
 	footer > div > div:first-child {padding: 85px 20px 10px 0;}
 	form input[type="text"], form input[type="password"], form input[type="email"], form textarea {width: 97.5%;}
+}
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
